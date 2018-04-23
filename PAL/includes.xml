@@ -91,7 +91,6 @@
 	<!-- Start Player Controlcommons" -->
 	<include name="PlayerControlCommons">
 		<visible>Window.IsActive(playercontrols)</visible>
-		<visible>![Window.IsActive(favourites) | Window.IsActive(1116) | Window.IsActive(1122)]</visible>
 		<animation effect="slide" time="250" start="-512,0">WindowOpen</animation>
 		<animation effect="fade" time="150">WindowClose</animation>
 	</include>
