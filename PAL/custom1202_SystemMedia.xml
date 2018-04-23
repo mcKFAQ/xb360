@@ -1,0 +1,432 @@
+<window id="1202">
+	<defaultcontrol>9000</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<controls>
+		<include>SystemBackGroundWhitewash</include>
+		<!-- Start Top Category Labels -->
+		<control type="label" id="1">
+			<description>description label</description>
+			<posx>102</posx>
+			<posy>42</posy>
+			<align>left</align>
+			<label>31052</label>
+			<textcolor>TextcolorWhite</textcolor>
+			<shadowcolor>shadow-black</shadowcolor>
+			<font>font18</font>
+			<animation effect="fade" delay="100" time="250">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>
+		</control>
+		<control type="group" id="9000">
+			<posx>80</posx>
+			<posy>5</posy>
+			<animation effect="fade" delay="100" time="250">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<control type="image">
+				<description>Divider image 1</description>
+				<posx>25</posx>
+				<posy>86</posy>
+				<width>220</width>
+				<height>1</height>
+				<texture>divider.png</texture>
+				<visible>!Control.HasFocus(1) + !Control.HasFOcus(3)</visible>
+			</control>
+			<control type="image">
+				<description>Button 1 Highlight Button</description>
+				<posx>0</posx>
+				<posy>86</posy>
+				<width>255</width>
+				<height>367</height>
+				<texture>systemhomebutton-1a.png</texture>
+				<visible>Control.HasFocus(3) + !Control.HasFocus(1)</visible>
+				<animation effect="fade" time="100">WindowOpen</animation>
+			</control>
+			<control type="image">
+				<description>Button 1 Highlight Shadow</description>
+				<posx>0</posx>
+				<posy>86</posy>
+				<width>255</width>
+				<height>367</height>
+				<texture>systemhomebutton-1-shadow.png</texture>
+				<visible>Control.HasFocus(3) + !Control.HasFocus(1)</visible>
+				<include>button-shadow</include>
+			</control>
+			<control type="button" id="3">
+				<description>Button 1 Push Button</description>
+				<include>Home-Button-Commons</include>
+				<posx>35</posx>
+				<posy>90</posy>
+				<label>3</label>
+				<onclick>ActivateWindow(MyVideosSettings)</onclick>
+				<texturefocus>icon-videos.png</texturefocus>
+				<texturenofocus>icon-videos.png</texturenofocus>
+				<visible>!Control.HasFocus(1)</visible>
+				<onleft>3</onleft>
+				<onright>3</onright>
+				<onup>6</onup>
+				<ondown>4</ondown>
+			</control>
+			<control type="multiimage">
+				<description>Button 1 Button Shine</description>
+				<posx>45</posx>
+				<posy>90</posy>
+				<width>200</width>
+				<height>30</height>
+				<include>Shine</include>
+				<visible>Control.HasFocus(3) + !Control.HasFocus(1)</visible>
+			</control>
+			<control type="textbox">
+				<description>Button 1 description Multiline</description>
+				<posx>270</posx>
+				<posy>90</posy>
+				<width>215</width>
+				<height>367</height>
+				<pagecontrol>-</pagecontrol>
+				<label>31122</label>
+				<font>font14</font>
+				<textcolor>TextcolorBlack</textcolor>
+				<shadowcolor>shadow-grey</shadowcolor>
+				<visible>!Skin.HasSetting(nodescriptions) + Control.HasFocus(3)</visible>
+			</control>
+			<control type="image">
+				<description>Divider image 2</description>
+				<posx>25</posx>
+				<posy>121</posy>
+				<width>220</width>
+				<height>1</height>
+				<texture>divider.png</texture>
+				<visible>!Control.HasFocus(1) + ![Control.HasFocus(3) | Control.HasFocus(4)]</visible>
+			</control>
+			<control type="image">
+				<description>Button 2 Highlight Button</description>
+				<posx>0</posx>
+				<posy>86</posy>
+				<width>255</width>
+				<height>367</height>
+				<texture>systemhomebutton-2a.png</texture>
+				<visible>Control.HasFocus(4) + !Control.HasFocus(1)</visible>
+			</control>
+			<control type="image">
+				<description>Button 2 Highlight Shadow</description>
+				<posx>0</posx>
+				<posy>86</posy>
+				<width>255</width>
+				<height>367</height>
+				<texture>systemhomebutton-2-shadow.png</texture>
+				<visible>Control.HasFocus(4) + !Control.HasFocus(1)</visible>
+				<include>button-shadow</include>
+			</control>
+			<control type="button" id="4">
+				<description>Button 2 Push Button</description>
+				<include>Home-Button-Commons</include>
+				<posx>35</posx>
+				<posy>125</posy>
+				<label>2</label>
+				<onclick>ActivateWindow(MyMusicSettings)</onclick>
+				<texturefocus>icon-music.png</texturefocus>
+				<texturenofocus>icon-music.png</texturenofocus>
+				<visible>!Control.HasFocus(1)</visible>
+				<onleft>4</onleft>
+				<onright>4</onright>
+				<onup>3</onup>
+				<ondown>5</ondown>
+			</control>
+			<control type="multiimage">
+				<description>Button 2 Button Shine</description>
+				<posx>45</posx>
+				<posy>125</posy>
+				<width>200</width>
+				<height>30</height>
+				<include>Shine</include>
+				<visible>Control.HasFocus(4) + !Control.HasFocus(1)</visible>
+			</control>
+			<control type="textbox">
+				<description>Button 2 description Multiline</description>
+				<posx>270</posx>
+				<posy>90</posy>
+				<width>215</width>
+				<height>367</height>
+				<pagecontrol>-</pagecontrol>
+				<label>31123</label>
+				<font>font14</font>
+				<textcolor>TextcolorBlack</textcolor>
+				<shadowcolor>shadow-grey</shadowcolor>
+				<visible>!Skin.HasSetting(nodescriptions) + Control.HasFocus(4)</visible>
+			</control>
+			<control type="image">
+				<description>Divider image 3</description>
+				<posx>25</posx>
+				<posy>156</posy>
+				<width>220</width>
+				<height>1</height>
+				<texture>divider.png</texture>
+				<visible>!Control.HasFocus(1) + ![Control.HasFocus(4) | Control.HasFocus(5)]</visible>
+			</control>
+			<control type="image">
+				<description>Button 3 Highlight Button</description>
+				<posx>0</posx>
+				<posy>86</posy>
+				<width>255</width>
+				<height>367</height>
+				<texture>systemhomebutton-3a.png</texture>
+				<visible>Control.HasFocus(5) + !Control.HasFocus(1)</visible>
+			</control>
+			<control type="image">
+				<description>Button 3 Highlight Shadow</description>
+				<posx>0</posx>
+				<posy>86</posy>
+				<width>255</width>
+				<height>367</height>
+				<texture>systemhomebutton-3-shadow.png</texture>
+				<visible>Control.HasFocus(5) + !Control.HasFocus(1)</visible>
+				<include>button-shadow</include>
+			</control>
+			<control type="button" id="5">
+				<description>Button 3 Push Button</description>
+				<include>Home-Button-Commons</include>
+				<posx>35</posx>
+				<posy>160</posy>
+				<label>1</label>
+				<onclick>ActivateWindow(MyPicturesSettings)</onclick>
+				<texturefocus>icon-pictures.png</texturefocus>
+				<texturenofocus>icon-pictures.png</texturenofocus>
+				<visible>!Control.HasFocus(1)</visible>
+				<onleft>5</onleft>
+				<onright>5</onright>
+				<onup>4</onup>
+				<ondown>6</ondown>
+			</control>
+			<control type="multiimage">
+				<description>Button 3 Button Shine</description>
+				<posx>45</posx>
+				<posy>160</posy>
+				<width>200</width>
+				<height>30</height>
+				<include>Shine</include>
+				<visible>Control.HasFocus(5) + !Control.HasFocus(1)</visible>
+			</control>
+			<control type="textbox">
+				<description>Button 3 description Multiline</description>
+				<posx>270</posx>
+				<posy>90</posy>
+				<width>215</width>
+				<height>367</height>
+				<pagecontrol>-</pagecontrol>
+				<label>31124</label>
+				<font>font14</font>
+				<textcolor>TextcolorBlack</textcolor>
+				<shadowcolor>shadow-grey</shadowcolor>
+				<visible>!Skin.HasSetting(nodescriptions) + Control.HasFocus(5)</visible>
+			</control>
+			<control type="image">
+				<description>Divider image 4</description>
+				<posx>25</posx>
+				<posy>191</posy>
+				<width>220</width>
+				<height>1</height>
+				<texture>divider.png</texture>
+				<visible>!Control.HasFocus(1) + ![Control.HasFocus(5) | Control.HasFocus(6)]</visible>
+			</control>
+			<control type="image">
+				<description>Button 4 Highlight Button</description>
+				<posx>0</posx>
+				<posy>86</posy>
+				<width>255</width>
+				<height>367</height>
+				<texture>systemhomebutton-4a.png</texture>
+				<visible>Control.HasFocus(6) + !Control.HasFocus(1)</visible>
+			</control>
+			<control type="image">
+				<description>Button 4 Highlight Shadow</description>
+				<posx>0</posx>
+				<posy>86</posy>
+				<width>255</width>
+				<height>367</height>
+				<texture>systemhomebutton-4-shadow.png</texture>
+				<visible>Control.HasFocus(6) + !Control.HasFocus(1)</visible>
+				<include>button-shadow</include>
+			</control>
+			<control type="button" id="6">
+				<description>Button 4 Push Button</description>
+				<include>Home-Button-Commons</include>
+				<posx>35</posx>
+				<posy>195</posy>
+				<label>0</label>
+				<onclick>ActivateWindow(MyProgramsSettings)</onclick>
+				<texturefocus>icon-apps.png</texturefocus>
+				<texturenofocus>icon-apps.png</texturenofocus>
+				<visible>!Control.HasFocus(1)</visible>
+				<onleft>6</onleft>
+				<onright>6</onright>
+				<onup>5</onup>
+				<ondown>3</ondown>
+			</control>
+			<control type="multiimage">
+				<description>Button 4 Button Shine</description>
+				<posx>45</posx>
+				<posy>195</posy>
+				<width>200</width>
+				<height>30</height>
+				<include>Shine</include>
+				<visible>Control.HasFocus(6) + !Control.HasFocus(1)</visible>
+			</control>
+			<control type="textbox">
+				<description>Button 4 description Multiline</description>
+				<posx>270</posx>
+				<posy>90</posy>
+				<width>215</width>
+				<height>367</height>
+				<pagecontrol>-</pagecontrol>
+				<label>31125</label>
+				<font>font14</font>
+				<textcolor>TextcolorBlack</textcolor>
+				<shadowcolor>shadow-grey</shadowcolor>
+				<visible>!Skin.HasSetting(nodescriptions) + Control.HasFocus(6)</visible>
+			</control>
+			<control type="image">
+				<description>Divider image 5</description>
+				<posx>25</posx>
+				<posy>226</posy>
+				<width>220</width>
+				<height>1</height>
+				<texture>divider.png</texture>
+				<visible>!Control.HasFocus(1) + ![Control.HasFocus(6) | Control.HasFocus(7)]</visible>
+			</control>
+<!--			<control type="image">
+				<description>Button 5 Highlight Button</description>
+				<posx>0</posx>
+				<posy>86</posy>
+				<width>255</width>
+				<height>367</height>
+				<texture>systemhomebutton-5a.png</texture>
+				<visible>Control.HasFocus(7) + !Control.HasFocus(1)</visible>
+			</control>
+			<control type="image">
+				<description>Button 5 Highlight Shadow</description>
+				<posx>0</posx>
+				<posy>86</posy>
+				<width>255</width>
+				<height>367</height>
+				<texture>systemhomebutton-5-shadow.png</texture>
+				<visible>Control.HasFocus(7) + !Control.HasFocus(1)</visible>
+				<include>button-shadow</include>
+			</control>
+			<control type="button" id="7">
+				<description>Button 5 Push Button</description>
+				<include>Home-Button-Commons</include>
+				<posx>35</posx>
+				<posy>230</posy>
+				<label>31054</label>
+				<onclick>ActivateWindow(Profiles)</onclick>
+				<texturefocus>icon-profile.png</texturefocus>
+				<texturenofocus>icon-profile.png</texturenofocus>
+				<visible>!Control.HasFocus(1)</visible>
+				<onleft>1</onleft>
+				<onright>7</onright>
+				<onup>6</onup>
+				<ondown>8</ondown>
+			</control>
+			<control type="multiimage">
+				<description>Button 5 Button Shine</description>
+				<posx>45</posx>
+				<posy>230</posy>
+				<width>200</width>
+				<height>30</height>
+				<include>Shine</include>
+				<visible>Control.HasFocus(7) + !Control.HasFocus(1)</visible>
+			</control>
+			<control type="label">
+				<description>Button 5 description Multi Line</description>
+				<posx>270</posx>
+				<posy>90</posy>
+				<width>230</width>
+				<height>367</height>
+				<wrapmultiline>true</wrapmultiline>
+				<label>31120</label>
+				<font>font14</font>
+				<textcolor>TextcolorBlack</textcolor>
+				<shadowcolor>shadow-grey</shadowcolor>
+				<visible>!Skin.HasSetting(nodescriptions) + Control.HasFocus(7)</visible>
+			</control>
+			<control type="image">
+				<description>Divider image 6</description>
+				<posx>25</posx>
+				<posy>261</posy>
+				<width>220</width>
+				<height>1</height>
+				<texture>divider.png</texture>
+				<visible>!Control.HasFocus(1) + ![Control.HasFocus(7) | Control.HasFocus(8)]</visible>
+			</control>
+			<control type="image">
+				<description>Button 6 Highlight Button</description>
+				<posx>0</posx>
+				<posy>86</posy>
+				<width>255</width>
+				<height>367</height>
+				<texture>systemhomebutton-6a.png</texture>
+				<visible>Control.HasFocus(8) + !Control.HasFocus(1)</visible>
+			</control>
+			<control type="image">
+				<description>Button 6 Highlight Shadow</description>
+				<posx>0</posx>
+				<posy>86</posy>
+				<width>255</width>
+				<height>367</height>
+				<texture>systemhomebutton-6-shadow.png</texture>
+				<visible>Control.HasFocus(8) + !Control.HasFocus(1)</visible>
+				<include>button-shadow</include>
+			</control>
+			<control type="button" id="8">
+				<description>Button 6 Push Button</description>
+				<include>Home-Button-Commons</include>
+				<posx>35</posx>
+				<posy>265</posy>
+				<label>31135</label>
+				<onclick>ActivateWindow(Shutdownmenu)</onclick>
+				<texturefocus>icon-scan.png</texturefocus>
+				<texturenofocus>icon-scan.png</texturenofocus>
+				<visible>!Control.HasFocus(1)</visible>
+				<onleft>1</onleft>
+				<onright>8</onright>
+				<onup>7</onup>
+				<ondown>3</ondown>
+			</control>
+			<control type="multiimage">
+				<description>Button 6 Button Shine</description>
+				<posx>45</posx>
+				<posy>265</posy>
+				<width>200</width>
+				<height>30</height>
+				<include>Shine</include>
+				<visible>Control.HasFocus(8) + !Control.HasFocus(1)</visible>
+			</control>
+			<control type="label">
+				<description>Button 6 description Multi Line</description>
+				<posx>270</posx>
+				<posy>90</posy>
+				<width>230</width>
+				<height>367</height>
+				<wrapmultiline>true</wrapmultiline>
+				<label>31121</label>
+				<font>font14</font>
+				<textcolor>TextcolorBlack</textcolor>
+				<shadowcolor>shadow-grey</shadowcolor>
+				<visible>!Skin.HasSetting(nodescriptions) + Control.HasFocus(8)</visible>
+			</control>
+			<control type="image">
+				<description>Divider image 7</description>
+				<posx>25</posx>
+				<posy>296</posy>
+				<width>220</width>
+				<height>1</height>
+				<texture>divider.png</texture>
+				<visible>!Control.HasFocus(1) + ![Control.HasFocus(8) | Control.HasFocus(9)]</visible>
+			</control>
+-->		</control>
+		<control type="group">
+			<animation effect="fade" delay="100" time="250">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<include>SystemCustomKeymaps</include>
+		</control>
+		<include>SystemCommonsBlades</include>
+	</controls>
+</window>        

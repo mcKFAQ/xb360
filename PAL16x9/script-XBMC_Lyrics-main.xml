@@ -1,0 +1,406 @@
+<window>
+	<allowoverlay>no</allowoverlay>
+	<defaultcontrol always="false">101</defaultcontrol>
+	<controls>
+		<control type="image">
+			<description>Black translucent backdrop</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>576</height>
+			<texture>guide-black.png</texture>
+			<colordiffuse>D0FFFFFF</colordiffuse>
+			<animation effect="fade" time="50">WindowOpen</animation>
+			<animation effect="fade" delay="450" time="100">WindowClose</animation>
+		</control>
+		<control type="group">
+			<animation effect="slide" time="250" start="700,0" end="100">WindowOpen</animation>
+			<animation effect="slide" time="250" delay="250" start="100" end="700,0">WindowClose</animation>
+			<control type="image">
+				<description>Guide Blade Background</description>
+				<posx>46</posx>
+				<posy>0</posy>
+				<width>690</width>
+				<height>576</height>
+				<colordiffuse>5DFFFFFF</colordiffuse>
+				<visible>!Skin.String(GuidePanel)</visible>
+				<texture>background-grey.png</texture>
+			</control>
+			<control type="image">
+				<description>Custom Guide Blade Background</description>
+				<posx>46</posx>
+				<posy>0</posy>
+				<width>690</width>
+				<height>576</height>
+				<texture>-</texture>
+				<colordiffuse>5DFFFFFF</colordiffuse>
+				<info>Skin.String(GuidePanel)</info>
+				<texture>background-grey.png</texture>
+			</control>
+			<control type="image">
+				<description>Guide Blade Overlay</description>
+				<posx>118</posx>
+				<posy>0</posy>
+				<width>612</width>
+				<height>576</height>
+				<texture>guide-blade-overlay-tile.png</texture>
+			</control>
+			<control type="image">
+				<description>Guide Edge Overlay</description>
+				<posx>18</posx>
+				<posy>0</posy>
+				<width>100</width>
+				<height>576</height>
+				<texture>guide-blade-overlay-edge-right.png</texture>
+			</control>
+			<control type="label">
+				<description>dialog Heading</description>
+				<posx>100</posx>
+				<posy>40</posy>
+				<width>270</width>
+				<label>XBMC Lyrics</label>
+				<align>left</align>
+				<include>DialogTitle</include>
+			</control>
+		</control>
+		<!-- ** Required ** Do not change <id> or <type> -->
+		<control type="group">
+			<posx>350</posx>
+			<posy>170</posy>
+			<animation effect="fade" delay="450" time="200">WindowOpen</animation>
+			<animation effect="fade" time="200">WindowClose</animation>
+			<control type="textbox" id="100">
+				<description>textarea</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>350</width>
+				<height>275</height>
+				<onup>101</onup>
+				<ondown>101</ondown>
+				<onleft>101</onleft>
+				<onright>101</onright>
+				<pagecontrol>101</pagecontrol>
+			</control>
+			<control type="spincontrol" id="101">
+				<description>Next page button</description>
+				<posx>300</posx>
+				<posy>275</posy>
+				<subtype>page</subtype>
+				<onleft>101</onleft>
+				<onright>101</onright>
+				<ondown>101</ondown>
+				<onup>101</onup>
+				<showonepage>false</showonepage>
+				<visible>Control.IsVisible(100)</visible>
+			</control>
+			<!-- ** Required ** Do not change <id> or <type> -->
+			<control type="list" id="110">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>350</width>
+				<height>270</height>
+				<onleft>111</onleft>
+				<onright>111</onright>
+				<onup>110</onup>
+				<ondown>110</ondown>
+				<viewtype label="535">list</viewtype>
+				<pagecontrol>111</pagecontrol>
+				<scrolltime>200</scrolltime>
+				<itemlayout height="29">
+					<control type="label">
+						<posx>5</posx>
+						<posy>0</posy>
+						<width>340</width>
+						<height>29</height>
+						<font>font13</font>
+						<align>left</align>
+						<textcolor>TextcolorBlack</textcolor>
+						<selectedcolor>listselectedcolor</selectedcolor>
+						<aligny>center</aligny>
+						<info>ListItem.Label</info>
+					</control>
+				</itemlayout>
+				<focusedlayout height="29">
+					<control type="image">
+						<width>350</width>
+						<height>29</height>
+						<posx>0</posx>
+						<posy>0</posy>
+						<visible>Control.HasFocus(110)</visible>
+						<texture>iconlist-focus.png</texture>
+					</control>
+					<control type="label">
+						<posx>5</posx>
+						<posy>0</posy>
+						<width>340</width>
+						<height>29</height>
+						<font>font13</font>
+						<align>left</align>
+						<textcolor>TextcolorBlack</textcolor>
+						<selectedcolor>listselectedcolor</selectedcolor>
+						<aligny>center</aligny>
+						<info>ListItem.Label</info>
+					</control>
+				</focusedlayout>
+			</control>
+			<control type="spincontrol" id="111">
+				<description>Next page button</description>
+				<posx>300</posx>
+				<posy>275</posy>
+				<subtype>page</subtype>
+				<onleft>110</onleft>
+				<onright>110</onright>
+				<ondown>110</ondown>
+				<onup>110</onup>
+				<showonepage>false</showonepage>
+				<visible>Control.IsVisible(110)</visible>
+			</control>
+			<!-- ** Required ** Do not change <id> or <type> -->
+			<control type="list" id="120">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>350</width>
+				<height>270</height>
+				<onleft>121</onleft>
+				<onright>121</onright>
+				<onup>120</onup>
+				<ondown>120</ondown>
+				<viewtype label="535">list</viewtype>
+				<pagecontrol>121</pagecontrol>
+				<scrolltime>200</scrolltime>
+				<itemlayout height="29">
+					<control type="image">
+						<width>350</width>
+						<height>29</height>
+						<posx>0</posx>
+						<posy>0</posy>
+						<texture>iconlist-nofocus.png</texture>
+					</control>
+					<control type="label">
+						<posx>5</posx>
+						<posy>0</posy>
+						<width>340</width>
+						<height>29</height>
+						<font>font13</font>
+						<align>left</align>
+						<textcolor>TextcolorBlack</textcolor>
+						<selectedcolor>listselectedcolor</selectedcolor>
+						<aligny>center</aligny>
+						<info>ListItem.Label</info>
+					</control>
+				</itemlayout>
+				<focusedlayout height="29">
+					<control type="image">
+						<width>350</width>
+						<height>29</height>
+						<posx>0</posx>
+						<posy>0</posy>
+						<visible>!Control.HasFocus(120)</visible>
+						<texture>iconlist-nofocus.png</texture>
+					</control>
+					<control type="image">
+						<width>350</width>
+						<height>29</height>
+						<posx>0</posx>
+						<posy>0</posy>
+						<visible>Control.HasFocus(120)</visible>
+						<texture>iconlist-focus.png</texture>
+					</control>
+					<control type="label">
+						<posx>5</posx>
+						<posy>0</posy>
+						<width>340</width>
+						<height>29</height>
+						<font>font13</font>
+						<align>left</align>
+						<textcolor>TextcolorBlack</textcolor>
+						<selectedcolor>listselectedcolor</selectedcolor>
+						<aligny>center</aligny>
+						<info>ListItem.Label</info>
+					</control>
+				</focusedlayout>
+			</control>
+			<control type="spincontrol" id="121">
+				<description>Next page button</description>
+				<posx>300</posx>
+				<posy>275</posy>
+				<subtype>page</subtype>
+				<onleft>120</onleft>
+				<onright>120</onright>
+				<ondown>120</ondown>
+				<onup>120</onup>
+				<showonepage>false</showonepage>
+				<visible>Control.IsVisible(120)</visible>
+			</control>
+		</control>
+		<!-- media infos -->
+		<control type="group">
+			<posx>200</posx>
+			<posy>80</posy>
+			<animation effect="fade" delay="450" time="200">WindowOpen</animation>
+			<animation effect="fade" time="200">WindowClose</animation>
+			<control type="fadelabel">
+				<description>Artist label</description>
+				<width>390</width>
+				<posx>0</posx>
+				<posy>0</posy>
+				<info>MusicPlayer.Artist</info>
+				<align>left</align>
+				<font>font14</font>
+			</control>
+			<control type="fadelabel">
+				<description>Title label</description>
+				<width>500</width>
+				<posx>0</posx>
+				<posy>25</posy>
+				<info>MusicPlayer.Title</info>
+				<align>left</align>
+				<font>font16</font>
+			</control>
+			<control type="fadelabel">
+				<description>Album label</description>
+				<width>390</width>
+				<posx>0</posx>
+				<posy>55</posy>
+				<info>MusicPlayer.Album</info>
+				<align>left</align>
+				<font>font12</font>
+			</control>
+			<control type="label" id="200">
+				<description>Scraper Label</description>
+				<width>200</width>
+				<posx>480</posx>
+				<posy>55</posy>
+				<label>-</label>
+				<align>right</align>
+				<font>font12</font>
+			</control>
+			<control type="image">
+				<description>Jewel CD Case Back</description>
+				<posx>0</posx>
+				<posy>80</posy>
+				<width>500</width>
+				<height>1</height>
+				<texture>divider.png</texture>
+			</control>
+			<control type="label">
+				<description>time label</description>
+				<width>300</width>
+				<posx>0</posx>
+				<posy>280</posy>
+				<label>$INFO[musicplayer.Time]$INFO[musicplayer.Duration, / ]</label>
+				<align>left</align>
+				<font>font12</font>
+			</control>
+			<control type="label">
+				<description>Bitrate</description>
+				<width>200</width>
+				<posx>0</posx>
+				<posy>305</posy>
+				<label>$INFO[musicplayer.BitRate,, kbs]</label>
+				<font>font12</font>
+			</control>
+			<control type="label">
+				<description>Playlist</description>
+				<width>200</width>
+				<posx>0</posx>
+				<posy>330</posy>
+				<label>$INFO[musicplayer.Playlistposition,$LOCALIZE[435] ]$INFO[musicplayer.Playlistlength, / ]</label>
+				<font>font12</font>
+			</control>
+		</control>
+		<control type="group">
+			<posx>190</posx>
+			<posy>170</posy>
+			<animation effect="fade" delay="450" time="200">WindowOpen</animation>
+			<animation effect="fade" time="200">WindowClose</animation>
+			<control type="image">
+				<description>Jewel CD Case Back</description>
+				<posx>23</posx>
+				<posy>8</posy>
+				<width>115</width>
+				<height>156</height>
+				<texture>music-overlay-caseinside.png</texture>
+			</control>
+			<control type="image">
+				<description>music logo</description>
+				<posx>23</posx>
+				<posy>8</posy>
+				<width>115</width>
+				<height>156</height>
+				<info>MusicPlayer.Cover</info>
+			</control>
+			<control type="image">
+				<description>Jewel CD Case</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>147</width>
+				<height>179</height>
+				<texture>music-overlay-cdcase.png</texture>
+			</control>
+		</control>
+		<control type="group">
+			<animation effect="slide" time="250" start="600,0" end="0">WindowOpen</animation>
+			<animation effect="slide" time="250" delay="250" start="0" end="600,0">WindowClose</animation>
+			<control type="image">
+				<description>Back Button</description>
+				<posx>650</posx>
+				<posy>475</posy>
+				<include>Button-Map-Texture-Width</include>
+				<height>21</height>
+				<texture>button-Back.png</texture>
+			</control>
+			<control type="image">
+				<description>A Button</description>
+				<posx>665</posx>
+				<posy>498</posy>
+				<include>Button-Map-Texture-Width</include>
+				<height>21</height>
+				<texture>button-A.png</texture>
+			</control>
+			<control type="label">
+				<description>Back Label</description>
+				<posx>642</posx>
+				<posy>479</posy>
+				<label>31027</label>
+				<align>right</align>
+				<font>font12</font>
+				<textcolor>TextcolorWhite</textcolor>
+			</control>
+			<control type="label">
+				<description>Select Label</description>
+				<posx>656</posx>
+				<posy>501</posy>
+				<label>31024</label>
+				<align>right</align>
+				<font>font12</font>
+				<textcolor>TextcolorWhite</textcolor>
+			</control>
+			<control type="image">
+				<description>Y Button</description>
+				<posx>220</posx>
+				<posy>475</posy>
+				<include>Button-Map-Texture-Width</include>
+				<height>21</height>
+				<texture>button-Y.png</texture>
+			</control>
+			<control type="label">
+				<description>Settings Label</description>
+				<posx>250</posx>
+				<posy>479</posy>
+				<label>5</label>
+				<align>left</align>
+				<font>font12</font>
+				<textcolor>TextcolorWhite</textcolor>
+			</control>
+			<control type="image">
+				<description>X Button</description>
+				<posx>205</posx>
+				<posy>498</posy>
+				<include>Button-Map-Texture-Width</include>
+				<height>21</height>
+				<texture>button-X-turnedoff.png</texture>
+			</control>
+		</control>
+	</controls>
+</window>

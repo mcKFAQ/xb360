@@ -1,0 +1,51 @@
+﻿<window id="110">
+	<defaultcontrol>0</defaultcontrol>
+	<animation effect="fade" time="200">WindowOpen</animation>
+	<animation effect="fade" delay="1050" time="50">WindowClose</animation>
+	<controls>
+		<include>TheDialogs</include>
+		<control type="label">
+			<description>dialog Heading</description>
+			<posx>365</posx>
+			<posy>40</posy>
+			<width>270</width>
+			<label>12325</label>
+			<align>left</align>
+			<include>DialogTitle</include>
+			<animation effect="fade" delay="450" time="200">WindowOpen</animation>
+			<animation effect="fade" time="200">WindowClose</animation>
+		</control>
+		<control type="label" id="2">
+			<description>dialog line 1</description>
+			<wrapmultiline>true</wrapmultiline>
+			<posx>365</posx>
+			<posy>115</posy>
+			<width>330</width>
+			<font>font14</font>
+			<label>12330</label>
+			<textcolor>TextcolorBlack</textcolor>
+			<animation effect="fade" delay="450" time="200">WindowOpen</animation>
+			<animation effect="fade" time="200">WindowClose</animation>
+		</control>
+		<control type="label" id="3">
+			<description>dialog line 2</description>
+			<posx>365</posx>
+			<posy>175</posy>
+			<label>12331</label>
+			<font>font14</font>
+			<textcolor>TextcolorBlack</textcolor>
+			<animation effect="fade" delay="450" time="200">WindowOpen</animation>
+			<animation effect="fade" time="200">WindowClose</animation>
+		</control>
+		<control type="label" id="4">
+			<description>dialog line 3</description>
+			<posx>365</posx>
+			<posy>205</posy>
+			<label>12323</label>
+			<font>font14</font>
+			<textcolor>TextcolorBlack</textcolor>
+			<animation effect="fade" delay="450" time="200">WindowOpen</animation>
+			<animation effect="fade" time="200">WindowClose</animation>
+		</control>
+	</controls>
+</window>

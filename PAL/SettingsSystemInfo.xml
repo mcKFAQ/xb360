@@ -1,0 +1,256 @@
+<window id="7">
+	<defaultcontrol always="true">95</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<controls>
+		<control type="group">
+			<visible>Window.Previous(1114)</visible>
+			<include>LiveBackGroundWhitewash</include>
+		</control>
+		<control type="group">
+			<visible>Window.Previous(1112)</visible>
+			<include>ProgramBackGroundWhiteWash</include>
+		</control>
+		<control type="group">
+			<visible>![Window.Previous(1112) | Window.Previous(home) | Window.Previous(1114)]</visible>
+			<include>SystemBackGroundWhitewash</include>
+		</control>
+		<control type="group">
+			<visible>Window.Previous(home)</visible>
+			<control type="visualisation">
+				<posx>18</posx>
+				<posy>0</posy>
+				<width>702</width>
+				<height>576</height>
+				<visible>!Skin.HasSetting(backgroundvis)</visible>
+				<animation effect="zoom" center="552.147,288" end="86.895,100" time="100" reversible="false" condition="Window.Next(Home)">WindowClose</animation>
+				<animation effect="zoom" center="552.147,288" start="86.895,100" time="100" reversible="false" condition="Window.Previous(Home)">WindowOpen</animation>
+			</control>
+			<control type="videowindow">
+				<description>video preview window</description>
+				<posx>18</posx>
+				<posy>0</posy>
+				<width>702</width>
+				<height>576</height>
+				<animation effect="zoom" center="552.147,288" end="86.895,100" time="100" reversible="false" condition="Window.Next(Home)">WindowClose</animation>
+				<animation effect="zoom" center="552.147,288" start="86.895,100" time="100" reversible="false" condition="Window.Previous(Home)">WindowOpen</animation>
+			</control>
+			<include>MediaIconBackGroundWhiteWash</include>
+		</control>
+		<!-- Start Normal Window Controls -->
+		<control type="group">
+			<animation effect="fade" delay="100" time="250">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<control type="label">
+				<description>System Info Label</description>
+				<posx>102</posx>
+				<posy>42</posy>
+				<label>130</label>
+				<align>left</align>
+				<font>font18</font>
+				<shadowcolor>shadow-black</shadowcolor>
+			</control>
+			<control type="label" id="40">
+				<description>Section Label</description>
+				<posx>253</posx>
+				<posy>91</posy>
+				<textcolor>TextcolorBlack</textcolor>
+				<shadowcolor>shadow-grey</shadowcolor>
+				<font>font14</font>
+				<label>139</label>
+			</control>
+			<control type="image">
+				<description>Divider image 1</description>
+				<posx>90</posx>
+				<posy>60</posy>
+				<width>150</width>
+				<height>33</height>
+				<texture>button-nofocus.png</texture>
+			</control>
+			<control type="button" id="95">
+				<description>Button Default Values</description>
+				<posy>90</posy>
+				<label>13278</label>
+				<onleft>95</onleft>
+				<onright>95</onright>
+				<onup>98</onup>
+				<ondown>94</ondown>
+				<include>SystemInfoButton</include>
+			</control>
+			<control type="button" id="94">
+				<description>Button Storage</description>
+				<posy>120</posy>
+				<label>13277</label>
+				<onleft>94</onleft>
+				<onright>94</onright>
+				<onup>95</onup>
+				<ondown>92</ondown>
+				<include>SystemInfoButton</include>
+			</control>
+			<control type="button" id="92">
+				<description>Button HDD</description>
+				<posy>150</posy>
+				<label>13275</label>
+				<onleft>92</onleft>
+				<onright>92</onright>
+				<onup>94</onup>
+				<ondown>93</ondown>
+				<include>SystemInfoButton</include>
+			</control>
+			<control type="button" id="93">
+				<description>Button DVD</description>
+				<posy>180</posy>
+				<label>13276</label>
+				<onleft>93</onleft>
+				<onright>93</onright>
+				<onup>92</onup>
+				<ondown>96</ondown>
+				<include>SystemInfoButton</include>
+			</control>
+			<control type="button" id="96">
+				<description>Button Network</description>
+				<posy>210</posy>
+				<label>13279</label>
+				<onleft>96</onleft>
+				<onright>96</onright>
+				<onup>93</onup>
+				<ondown>97</ondown>
+				<include>SystemInfoButton</include>
+			</control>
+			<control type="button" id="97">
+				<description>Button VIDEO</description>
+				<posy>240</posy>
+				<label>13280</label>
+				<onleft>97</onleft>
+				<onright>97</onright>
+				<onup>96</onup>
+				<ondown>98</ondown>
+				<include>SystemInfoButton</include>
+			</control>
+			<control type="button" id="98">
+				<description>Button XBOX Hardware</description>
+				<posy>270</posy>
+				<label>13281</label>
+				<onleft>98</onleft>
+				<onright>98</onright>
+				<onup>97</onup>
+				<ondown>95</ondown>
+				<include>SystemInfoButton</include>
+			</control>
+			<control type="image">
+				<description>separator image</description>
+				<posy>120</posy>
+				<posx>250</posx>
+				<width>390</width>
+				<height>3</height>
+				<texture>divider.png</texture>
+			</control>
+			<control type="label" id="2">
+				<description>Label 2</description>
+				<posy>135</posy>
+				<include>SystemInfoLabels</include>
+			</control>
+			<control type="label" id="3">
+				<description>Label 3</description>
+				<posy>165</posy>
+				<include>SystemInfoLabels</include>
+			</control>
+			<control type="label" id="4">
+				<description>Label 4</description>
+				<posy>195</posy>
+				<include>SystemInfoLabels</include>
+			</control>
+			<control type="label" id="5">
+				<description>Label 5</description>
+				<posy>225</posy>
+				<include>SystemInfoLabels</include>
+			</control>
+			<control type="label" id="6">
+				<description>Label 6</description>
+				<posy>255</posy>
+				<include>SystemInfoLabels</include>
+			</control>
+			<control type="label" id="7">
+				<description>Label 7</description>
+				<posy>285</posy>
+				<include>SystemInfoLabels</include>
+			</control>
+			<control type="label" id="8">
+				<description>Label 8</description>
+				<posy>315</posy>
+				<include>SystemInfoLabels</include>
+			</control>
+			<control type="label" id="9">
+				<description>Label 9</description>
+				<posy>345</posy>
+				<include>SystemInfoLabels</include>
+			</control>
+			<control type="label" id="10">
+				<description>Label 10</description>
+				<posy>375</posy>
+				<include>SystemInfoLabels</include>
+			</control>
+			<control type="label" id="11">
+				<description>Label 11</description>
+				<posy>395</posy>
+				<include>SystemInfoLabels</include>
+			</control>
+			<control type="label" id="12">
+				<description>Label 12</description>
+				<posy>425</posy>
+				<include>SystemInfoLabels</include>
+			</control>
+			<control type="image">
+				<description>separator image</description>
+				<posy>420</posy>
+				<posx>95</posx>
+				<width>550</width>
+				<height>3</height>
+				<texture>divider.png</texture>
+			</control>
+			<control type="label" id="50">
+				<description>Current Time</description>
+				<posx>95</posx>
+				<posy>428</posy>
+				<label>144</label>
+				<textcolor>TextcolorBlack</textcolor>
+				<shadowcolor>shadow-grey</shadowcolor>
+				<font>font14</font>
+			</control>
+			<control type="label" id="52">
+				<description>XBMC XBE BUILD Version</description>
+				<posx>95</posx>
+				<posy>450</posy>
+				<label>144</label>
+				<textcolor>TextcolorBlack</textcolor>
+				<shadowcolor>shadow-grey</shadowcolor>
+				<font>font14</font>
+			</control>
+			<control type="label" id="53">
+				<description>Mplayer DLL Version</description>
+				<posx>95</posx>
+				<posy>470</posy>
+				<label>144</label>
+				<textcolor>TextcolorBlack</textcolor>
+				<shadowcolor>shadow-grey</shadowcolor>
+				<font>font14</font>
+			</control>
+			<include>ProgramCommonsKeymaps</include>
+		</control>
+		<control type="group">
+			<visible>Window.Previous(1114)</visible>
+			<include>LiveCommonsBlades</include>
+		</control>
+		<control type="group">
+			<visible>![Window.Previous(1112) | Window.Previous(home) | Window.Previous(1114)]</visible>
+			<include>SystemCommonsBlades</include>
+		</control>
+		<control type="group">
+			<visible>Window.Previous(1112)</visible>
+			<include>ProgramsCommonsBlades</include>
+		</control>
+		<control type="group">
+			<visible>Window.Previous(home)</visible>
+			<include>MediaCommonsBlades</include>
+		</control>
+	</controls>
+</window>      

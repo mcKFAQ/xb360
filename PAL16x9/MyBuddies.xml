@@ -1,0 +1,787 @@
+<window id="2700">
+	<defaultcontrol>3012</defaultcontrol>
+	<previouswindow>1114</previouswindow>
+	<allowoverlay>no</allowoverlay>
+	<controls>
+		<!--Start main backgrounds and animations -->
+		<control type="image">
+			<description>Orange Background Static Alpha</description>
+			<posx>18</posx>
+			<posy>0</posy>
+			<width>610</width>
+			<height>576</height>
+			<visible>!Control.HasFocus(2) + !Skin.String(KAI)</visible>
+			<texture>background-orange-alpha.png</texture>
+		</control>
+		<control type="image">
+			<description>XBMCLive Custom Background Static</description>
+			<posx>18</posx>
+			<posy>0</posy>
+			<width>610</width>
+			<height>576</height>
+			<texture>-</texture>
+			<info>Skin.String(KAI)</info>
+			<colordiffuse>D1FFFFFF</colordiffuse>
+		</control>
+		<!-- Begin XLink Controls -->
+		<control type="image">
+			<description>Whitewash Glass Top Left</description>
+			<posx>70</posx>
+			<posy>0</posy>
+			<width>16</width>
+			<height>64</height>
+			<include>Image-whitewash-glass-top-left</include>
+			<visible>!Control.HasFocus(2) + !Skin.String(KAI)</visible>
+		</control>
+		<control type="image">
+			<description>Whitewash Glass Top Middle</description>
+			<posx>86</posx>
+			<posy>0</posy>
+			<width>492</width>
+			<height>64</height>
+			<include>Image-whitewash-glass-top-middle</include>
+			<visible>!Control.HasFocus(2) + !Skin.String(KAI)</visible>
+		</control>
+		<control type="image">
+			<description>Whitewash Glass Top Right</description>
+			<posx>578</posx>
+			<posy>0</posy>
+			<width>16</width>
+			<height>64</height>
+			<include>Image-whitewash-glass-top-right</include>
+			<visible>!Control.HasFocus(2) + !Skin.String(KAI)</visible>
+		</control>
+		<control type="image">
+			<description>Whitewash Glass Bottom Left</description>
+			<posx>70</posx>
+			<posy>512</posy>
+			<width>16</width>
+			<height>64</height>
+			<include>Image-whitewash-glass-bottom-left</include>
+			<visible>!Control.HasFocus(2) + !Skin.String(KAI)</visible>
+		</control>
+		<control type="image">
+			<description>Whitewash Glass Bottom Middle</description>
+			<posx>86</posx>
+			<posy>512</posy>
+			<width>492</width>
+			<height>64</height>
+			<include>Image-whitewash-glass-bottom-middle</include>
+			<visible>!Control.HasFocus(2) + !Skin.String(KAI)</visible>
+		</control>
+		<control type="image">
+			<description>Whitewash Glass Bottom Right</description>
+			<posx>578</posx>
+			<posy>512</posy>
+			<width>16</width>
+			<height>64</height>
+			<include>Image-whitewash-glass-bottom-right</include>
+			<visible>!Control.HasFocus(2) + !Skin.String(KAI)</visible>
+		</control>
+		<control type="image">
+			<description>Whitewash Overlay Left</description>
+			<posx>60</posx>
+			<posy>0</posy>
+			<width>32</width>
+			<height>576</height>
+			<include>Image-whitewash-overlay-left</include>
+			<visible>!Control.HasFocus(2)</visible>
+		</control>
+		<control type="image">
+			<description>Whitewash Overlay Middle</description>
+			<posx>92</posx>
+			<posy>0</posy>
+			<width>453</width>
+			<height>576</height>
+			<include>Image-whitewash-overlay-middle</include>
+			<visible>!Control.HasFocus(2)</visible>
+		</control>
+		<control type="image">
+			<description>Whitewash Overlay Right</description>
+			<posx>545</posx>
+			<posy>0</posy>
+			<width>64</width>
+			<height>576</height>
+			<include>Image-whitewash-overlay-right</include>
+			<visible>!Control.HasFocus(2)</visible>
+		</control>
+		<!-- End Games Blink -->
+		<!-- Begin Real Blade Runners -->
+		<control type="image">
+			<description>Left Blade Runner</description>
+			<posx>-61</posx>
+			<posy>-50</posy>
+			<width>128</width>
+			<height>676</height>
+			<texture>blades-runner-left.png</texture>
+		</control>
+		<control type="image">
+			<description>Right Blade Runner</description>
+			<posx>665</posx>
+			<posy>-50</posy>
+			<width>128</width>
+			<height>676</height>
+			<texture>blades-runner-right.png</texture>
+		</control>
+		<!-- End Real Blade Runners -->
+		<!-- Begin Real Set of Blades -->
+		<control type="image">
+			<description>XBMC Live Blade</description>
+			<posx>18</posx>
+			<posy>-50</posy>
+			<width>80</width>
+			<height>676</height>
+			<texture>blades-size4-header.png</texture>
+		</control>
+		<control type="label">
+			<description>XBMC Live Label</description>
+			<label>31018</label>
+			<posx>80</posx>
+			<posy>120</posy>
+			<font>BladeFont</font>
+			<textcolor>TextcolorBlack</textcolor>
+			<aligny>top</aligny>
+			<angle>270</angle>
+		</control>
+		<control type="image">
+			<description>System Blade</description>
+			<posx>633</posx>
+			<posy>-50</posy>
+			<width>80</width>
+			<height>676</height>
+			<texture>blades-size1-right-NF.png</texture>
+		</control>
+		<control type="label">
+			<description>System Label</description>
+			<label>31014</label>
+			<posx>677</posx>
+			<posy>148</posy>
+			<font>BladeFont</font>
+			<textcolor>TextcolorDarkGrey</textcolor>
+			<aligny>top</aligny>
+			<angle>270</angle>
+		</control>
+		<control type="image">
+			<description>Media Blade</description>
+			<posx>598</posx>
+			<posy>-50</posy>
+			<width>80</width>
+			<height>676</height>
+			<texture>blades-size2-right-NF.png</texture>
+		</control>
+		<control type="label">
+			<description>Media Label</description>
+			<label>31012</label>
+			<posx>642</posx>
+			<posy>140</posy>
+			<font>BladeFont</font>
+			<textcolor>TextcolorDarkGrey</textcolor>
+			<aligny>top</aligny>
+			<angle>270</angle>
+		</control>
+		<control type="image">
+			<description>Games Blade Image on Right</description>
+			<posx>563</posx>
+			<posy>-50</posy>
+			<width>80</width>
+			<height>676</height>
+			<texture>blades-size3-right-NF.png</texture>
+		</control>
+		<control type="label">
+			<description>Games Blade Label on Right</description>
+			<label>31011</label>
+			<posx>607</posx>
+			<posy>132</posy>
+			<font>BladeFont</font>
+			<textcolor>TextcolorDarkGrey</textcolor>
+			<aligny>top</aligny>
+			<angle>270</angle>
+		</control>
+		<control type="image">
+			<description>XBMC Live Blade Haze Left</description>
+			<posx>0</posx>
+			<posy>288</posy>
+			<width>98</width>
+			<height>288</height>
+			<texture>haze-orange.png</texture>
+			<visible>!Skin.HasSetting(DisableHazes)</visible>
+		</control>
+		<control type="image">
+			<description>XBMC Live Blade Haze Right</description>
+			<posx>563</posx>
+			<posy>288</posy>
+			<width>157</width>
+			<height>288</height>
+			<texture>haze-orange.png</texture>
+			<visible>!Skin.HasSetting(DisableHazes)</visible>
+		</control>
+		<!-- End Real Set of Blades -->
+		<!-- start of guide Blade -->
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>750</width>
+			<height>662</height>
+			<texture>guide-black.png</texture>
+			<colordiffuse>D0FFFFFF</colordiffuse>
+			<animation effect="fade" time="5">WindowOpen</animation>
+			<animation effect="fade" delay="500" time="100">WindowClose</animation>
+		</control>
+		<control type="image">
+			<description>Guide Blade Background</description>
+			<posx>-27</posx>
+			<posy>0</posy>
+			<width>710</width>
+			<height>576</height>
+			<visible>!Skin.String(GuidePanel)</visible>
+			<texture>background-grey.png</texture>
+			<animation effect="slide" time="250" start="-795,0">WindowOpen</animation>
+			<animation effect="slide" time="250" end="-795,0">WindowClose</animation>
+		</control>
+		<control type="image">
+			<description>Custom Guide Blade Background</description>
+			<posx>-27</posx>
+			<posy>0</posy>
+			<width>710</width>
+			<height>576</height>
+			<info>Skin.String(GuidePanel)</info>
+			<aspectratio>scale</aspectratio>
+			<animation effect="slide" time="250" start="-795,0">WindowOpen</animation>
+			<animation effect="slide" time="250" end="-795,0">WindowClose</animation>
+		</control>
+		<control type="image">
+			<description>Guide Blade Tiled Background Overlay</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>608</width>
+			<height>576</height>
+			<texture>guide-blade-overlay-tile.png</texture>
+			<animation effect="slide" time="250" start="-795,0">WindowOpen</animation>
+			<animation effect="slide" time="250" end="-795,0">WindowClose</animation>
+		</control>
+		<control type="label" id="1">
+			<description>description label</description>
+			<posx>20</posx>
+			<posy>40</posy>
+			<align>left</align>
+			<label>31093</label>
+			<font>font18</font>
+			<animation effect="slide" time="250" start="-795,0">WindowOpen</animation>
+			<animation effect="slide" time="250" end="-795,0">WindowClose</animation>
+		</control>
+		<control type="image">
+			<description>Guide Blade Edge Left Overlay</description>
+			<posx>608</posx>
+			<posy>0</posy>
+			<width>100</width>
+			<height>576</height>
+			<texture>guide-blade-overlay-edge-left.png</texture>
+			<animation effect="slide" time="250" start="-795,0">WindowOpen</animation>
+			<animation effect="slide" time="250" end="-795,0">WindowClose</animation>
+		</control>
+		<control type="label">
+			<description>Gamercard Name</description>
+			<posx>605</posx>
+			<posy>200</posy>
+			<width>122</width>
+			<align>center</align>
+			<info>XLinkKai.UserName</info>
+			<label>-</label>
+			<angle>270</angle>
+			<font>bold14</font>
+			<textcolor>TextcolorBlack</textcolor>
+			<shadowcolor>shadow-grey</shadowcolor>
+			<animation effect="fade" delay="450" time="200">WindowOpen</animation>
+			<animation effect="fade" time="0">WindowClose</animation>
+		</control>
+		<!-- end of guide Blade -->
+		<!-- End main backgrounds and animations -->
+		<!-- Start Top Orizzontal Tabs with Icons -->
+		<control type="button" id="3080">
+			<description>friends button</description>
+			<posx>0</posx>
+			<posy>71</posy>
+			<width>165</width>
+			<height>40</height>
+			<texturefocus>button-tab-focus-left.png</texturefocus>
+			<texturenofocus>button-tab-nofocus.png</texturenofocus>
+			<label>15010</label>
+			<textoffsetx>50</textoffsetx>
+			<shadowcolor>shadow-grey</shadowcolor>
+			<align>left</align>
+			<aligny>center</aligny>
+			<font>font14</font>
+			<animation effect="fade" delay="450" time="200">WindowOpen</animation>
+			<animation effect="fade" time="0">WindowClose</animation>
+		</control>
+		<control type="image">
+			<description>friends icon</description>
+			<posx>25</posx>
+			<posy>79</posy>
+			<width>22</width>
+			<height>22</height>
+			<texture>icon-friends.png</texture>
+			<animation effect="fade" delay="450" time="200">WindowOpen</animation>
+			<animation effect="fade" time="0">WindowClose</animation>
+		</control>
+		<control type="button" id="3081">
+			<description>games tab</description>
+			<posx>166</posx>
+			<posy>71</posy>
+			<width>165</width>
+			<height>40</height>
+			<texturefocus>button-tab-focus.png</texturefocus>
+			<texturenofocus>button-tab-nofocus.png</texturenofocus>
+			<label>15016</label>
+			<textoffsetx>50</textoffsetx>
+			<shadowcolor>shadow-grey</shadowcolor>
+			<align>left</align>
+			<aligny>center</aligny>
+			<font>font14</font>
+			<animation effect="fade" delay="450" time="200">WindowOpen</animation>
+			<animation effect="fade" time="0">WindowClose</animation>
+		</control>
+		<control type="image">
+			<description>games icon</description>
+			<posx>187</posx>
+			<posy>80</posy>
+			<width>22</width>
+			<height>22</height>
+			<texture>icon-games.png</texture>
+			<animation effect="fade" delay="450" time="200">WindowOpen</animation>
+			<animation effect="fade" time="0">WindowClose</animation>
+		</control>
+		<control type="button" id="3082">
+			<description>arenas tab</description>
+			<posx>330</posx>
+			<posy>71</posy>
+			<width>165</width>
+			<height>40</height>
+			<texturefocus>button-tab-focus.png</texturefocus>
+			<texturenofocus>button-tab-nofocus.png</texturenofocus>
+			<label>15021</label>
+			<textoffsetx>50</textoffsetx>
+			<shadowcolor>shadow-grey</shadowcolor>
+			<align>left</align>
+			<aligny>center</aligny>
+			<font>font14</font>
+			<animation effect="fade" delay="450" time="200">WindowOpen</animation>
+			<animation effect="fade" time="0">WindowClose</animation>
+		</control>
+		<control type="image">
+			<description>arenas icon</description>
+			<posx>350</posx>
+			<posy>80</posy>
+			<width>22</width>
+			<height>22</height>
+			<texture>icon-arena.png</texture>
+			<animation effect="fade" delay="450" time="200">WindowOpen</animation>
+			<animation effect="fade" time="0">WindowClose</animation>
+		</control>
+		<control type="button" id="3083">
+			<description>chat tab</description>
+			<posx>495</posx>
+			<posy>71</posy>
+			<width>145</width>
+			<height>40</height>
+			<texturefocus>button-tab-focus-right.png</texturefocus>
+			<texturenofocus>button-tab-nofocus.png</texturenofocus>
+			<label>15026</label>
+			<textoffsetx>50</textoffsetx>
+			<shadowcolor>shadow-grey</shadowcolor>
+			<align>left</align>
+			<aligny>center</aligny>
+			<font>font14</font>
+			<animation effect="fade" delay="450" time="200">WindowOpen</animation>
+			<animation effect="fade" time="0">WindowClose</animation>
+		</control>
+		<control type="image">
+			<description>chat icon</description>
+			<posx>515</posx>
+			<posy>80</posy>
+			<width>22</width>
+			<height>22</height>
+			<texture>icon-messages.png</texture>
+			<animation effect="fade" delay="450" time="200">WindowOpen</animation>
+			<animation effect="fade" time="0">WindowClose</animation>
+		</control>
+		<!-- End Top Orizzontal Tabs with Icons -->
+		<!-- Start Gamercard controls -->
+		<control type="image">
+			<description>Gamercard BG</description>
+			<posx>26</posx>
+			<posy>110</posy>
+			<width>150</width>
+			<height>120</height>
+			<texture>gamecard_home.png</texture>
+			<animation effect="fade" delay="450" time="200">WindowOpen</animation>
+			<animation effect="fade" time="0">WindowClose</animation>
+		</control>
+		<control type="image">
+			<description>My avatar BG</description>
+			<posx>30</posx>
+			<posy>146</posy>
+			<width>64</width>
+			<height>64</height>
+			<texture>gamercard_iconoutline.png</texture>
+			<animation effect="fade" delay="450" time="200">WindowOpen</animation>
+			<animation effect="fade" time="0">WindowClose</animation>
+		</control>
+		<control type="image" id="3064">
+			<description>My avatar icon</description>
+			<posx>38</posx>
+			<posy>154</posy>
+			<width>50</width>
+			<height>49</height>
+			<texture>buddyitem-default-avatar.png</texture>
+			<animation effect="fade" delay="450" time="200">WindowOpen</animation>
+			<animation effect="fade" time="0">WindowClose</animation>
+		</control>
+		<control type="label" id="3051">
+			<description>Username</description>
+			<posx>34</posx>
+			<posy>120</posy>
+			<label>-</label>
+			<align>left</align>
+			<font>bold14</font>
+			<textcolor>TextcolorBlack</textcolor>
+			<shadowcolor>shadow-grey</shadowcolor>
+			<animation effect="fade" delay="450" time="200">WindowOpen</animation>
+			<animation effect="fade" time="0">WindowClose</animation>
+		</control>
+		<!-- End Gamercard controls -->
+		<control type="image">
+			<description>Arena Name BG</description>
+			<posx>175</posx>
+			<posy>110</posy>
+			<width>438</width>
+			<height>30</height>
+			<texture>guide-panel1.png</texture>
+			<animation effect="fade" delay="450" time="200">WindowOpen</animation>
+			<animation effect="fade" time="0">WindowClose</animation>
+		</control>
+		<control type="label" id="3052">
+			<description>Arena Name</description>
+			<posx>180</posx>
+			<posy>114</posy>
+			<width>428</width>
+			<label>-</label>
+			<font>font13</font>
+			<align>center</align>
+			<shadowcolor>shadow-grey</shadowcolor>
+			<textcolor>TextcolorBlack</textcolor>
+			<animation effect="fade" delay="450" time="200">WindowOpen</animation>
+			<animation effect="fade" time="0">WindowClose</animation>
+		</control>
+		<!-- Start Left Buttons -->
+		<control type="image">
+			<description>button image 1</description>
+			<posx>20</posx>
+			<posy>200</posy>
+			<width>150</width>
+			<height>33</height>
+			<texture>button-nofocus.png</texture>
+			<animation effect="fade" delay="450" time="200">WindowOpen</animation>
+			<animation effect="fade" time="0">WindowClose</animation>
+		</control>
+		<control type="button" id="3012">
+			<description>Mode Button</description>
+			<posx>20</posx>
+			<posy>230</posy>
+			<onleft>3012</onleft>
+			<onright>3031</onright>
+			<onup>3015</onup>
+			<ondown>3013</ondown>
+			<shadowcolor>shadow-grey</shadowcolor>
+			<animation effect="fade" delay="450" time="200">WindowOpen</animation>
+			<animation effect="fade" time="0">WindowClose</animation>
+		</control>
+		<control type="button" id="3013">
+			<description>Join (Friends)</description>
+			<posx>20</posx>
+			<posy>260</posy>
+			<onleft>3013</onleft>
+			<onright>3031</onright>
+			<onup>3012</onup>
+			<ondown>3016</ondown>
+			<shadowcolor>shadow-grey</shadowcolor>
+			<animation effect="fade" delay="450" time="200">WindowOpen</animation>
+			<animation effect="fade" time="0">WindowClose</animation>
+		</control>
+		<control type="button" id="3016">
+			<description>Speex (Friends)</description>
+			<posx>20</posx>
+			<posy>290</posy>
+			<onleft>3016</onleft>
+			<onright>3031</onright>
+			<onup>3013</onup>
+			<ondown>3014</ondown>
+			<shadowcolor>shadow-grey</shadowcolor>
+			<animation effect="fade" delay="450" time="200">WindowOpen</animation>
+			<animation effect="fade" time="0">WindowClose</animation>
+		</control>
+		<control type="button" id="3014">
+			<description>Invite (Friends)</description>
+			<posx>20</posx>
+			<posy>320</posy>
+			<onleft>3014</onleft>
+			<onright>3031</onright>
+			<onup>3016</onup>
+			<ondown>3015</ondown>
+			<shadowcolor>shadow-grey</shadowcolor>
+			<animation effect="fade" delay="450" time="200">WindowOpen</animation>
+			<animation effect="fade" time="0">WindowClose</animation>
+		</control>
+		<control type="button" id="3015">
+			<description>Remove (Friends)</description>
+			<posx>20</posx>
+			<posy>350</posy>
+			<onleft>3015</onleft>
+			<onright>3031</onright>
+			<onup>3014</onup>
+			<ondown>3012</ondown>
+			<shadowcolor>shadow-grey</shadowcolor>
+			<animation effect="fade" delay="450" time="200">WindowOpen</animation>
+			<animation effect="fade" time="0">WindowClose</animation>
+		</control>
+		<control type="button" id="3036">
+			<description>Keyboard (chat)</description>
+			<posx>20</posx>
+			<posy>260</posy>
+			<onleft>3036</onleft>
+			<onright>3036</onright>
+			<onup>3012</onup>
+			<ondown>3012</ondown>
+			<shadowcolor>shadow-grey</shadowcolor>
+			<animation effect="fade" delay="450" time="200">WindowOpen</animation>
+			<animation effect="fade" time="0">WindowClose</animation>
+		</control>
+		<control type="button" id="3033">
+			<description>Play (Arenas)</description>
+			<posx>20</posx>
+			<posy>260</posy>
+			<onleft>3033</onleft>
+			<onright>3031</onright>
+			<onup>3012</onup>
+			<ondown>3035</ondown>
+			<shadowcolor>shadow-grey</shadowcolor>
+			<animation effect="fade" delay="450" time="200">WindowOpen</animation>
+			<animation effect="fade" time="0">WindowClose</animation>
+		</control>
+		<control type="button" id="3035">
+			<description>Host (Arenas)</description>
+			<posx>20</posx>
+			<posy>290</posy>
+			<onleft>3035</onleft>
+			<onright>3031</onright>
+			<onup>3033</onup>
+			<ondown>3034</ondown>
+			<shadowcolor>shadow-grey</shadowcolor>
+			<animation effect="fade" delay="450" time="200">WindowOpen</animation>
+			<animation effect="fade" time="0">WindowClose</animation>
+		</control>
+		<control type="button" id="3034">
+			<description>Add (Arenas)</description>
+			<posx>20</posx>
+			<posy>320</posy>
+			<onleft>3034</onleft>
+			<onright>3031</onright>
+			<onup>3035</onup>
+			<ondown>3012</ondown>
+			<shadowcolor>shadow-grey</shadowcolor>
+			<animation effect="fade" delay="450" time="200">WindowOpen</animation>
+			<animation effect="fade" time="0">WindowClose</animation>
+		</control>
+		<!-- End Left Buttons -->
+		<!-- Start Chat Controls -->
+		<control type="console" id="3074">
+			<description>Chat control</description>
+			<posx>200</posx>
+			<posy>145</posy>
+			<width>390</width>
+			<height>300</height>
+			<font>font12</font>
+			<spinposx>38</spinposx>
+			<spinposy>230</spinposy>
+			<spincolor>ff000000</spincolor>
+			<spinfont>font12</spinfont>
+			<textcolor>TextcolorBlack</textcolor>
+			<textcolor2>bb000000</textcolor2>
+			<titlecolor>FF000000</titlecolor>
+			<selectedcolor>listselectedcolor</selectedcolor>
+			<textureup>sortup-nofocus.png</textureup>
+			<texturedown>sortdown-nofocus.png</texturedown>
+			<textureupfocus>sortup-focus.png</textureupfocus>
+			<texturedownfocus>sortdown-focus.png</texturedownfocus>
+			<texturefocus>iconlist-focus.png</texturefocus>
+			<texturenofocus>iconlist-nofocus.png</texturenofocus>
+			<shadowcolor>shadow-grey</shadowcolor>
+			<onleft>3074</onleft>
+			<onright>3074</onright>
+			<onup>3074</onup>
+			<ondown>3074</ondown>
+			<visible>!window.isactive(108) + !window.isactive(102)</visible>
+			<animation effect="fade" delay="450" time="200">WindowOpen</animation>
+			<animation effect="fade" time="0">WindowClose</animation>
+		</control>
+		<control type="image" id="3076">
+			<description>Chat Background</description>
+			<posx>175</posx>
+			<posy>140</posy>
+			<width>438</width>
+			<height>310</height>
+			<texture>guide-panel2.png</texture>
+			<visible>!window.isactive(108) + !window.isactive(102) + control.isvisible(3074)</visible>
+			<animation effect="fade" delay="450" time="200">WindowOpen</animation>
+			<animation effect="fade" time="0">WindowClose</animation>
+		</control>
+		<control type="edit" id="3075">
+			<description>Edit control</description>
+			<posx>180</posx>
+			<posy>380</posy>
+			<width>390</width>
+			<label>-</label>
+			<shadowcolor>shadow-grey</shadowcolor>
+			<font>font12</font>
+			<visible>!window.isactive(108) + !window.isactive(102)</visible>
+			<animation effect="fade" delay="450" time="200">WindowOpen</animation>
+			<animation effect="fade" time="0">WindowClose</animation>
+		</control>
+		<!-- End Chat Controls -->
+		<!-- Start Arena\Friends\Games List and description controls -->
+		<control type="listcontrolex" id="3031">
+			<description>Arena\Friends\Games List</description>
+			<posx>180</posx>
+			<posy>145</posy>
+			<width>428</width>
+			<height>260</height>
+			<spinwidth>18</spinwidth>
+			<spinheight>16</spinheight>
+			<spinposx>378</spinposx>
+			<spinposy>230</spinposy>
+			<spincolor>ffffffff</spincolor>
+			<spinfont>font12</spinfont>
+			<textureup>sortup-nofocus.png</textureup>
+			<texturedown>sortdown-nofocus.png</texturedown>
+			<textureupfocus>sortup-focus.png</textureupfocus>
+			<texturedownfocus>sortdown-focus.png</texturedownfocus>
+			<texturefocus>iconlist-focus.png</texturefocus>
+			<texturenofocus>iconlist-nofocus.png</texturenofocus>
+			<colordiffuse>ffffffff</colordiffuse>
+			<shadowcolor>shadow-grey</shadowcolor>
+			<onleft>3012</onleft>
+			<onright>3031</onright>
+			<onup>3031</onup>
+			<ondown>3031</ondown>
+			<visible>!window.isactive(108) + !window.isactive(102)</visible>
+			<animation effect="fade" delay="450" time="200">WindowOpen</animation>
+			<animation effect="fade" time="0">WindowClose</animation>
+		</control>
+		<control type="label" id="3073">
+			<description>Hosting status</description>
+			<posx>530</posx>
+			<posy>115</posy>
+			<label>-</label>
+			<font>font13</font>
+			<shadowcolor>shadow-grey</shadowcolor>
+			<textcolor>TextcolorBlack</textcolor>
+			<animation effect="fade" delay="450" time="200">WindowOpen</animation>
+			<animation effect="fade" time="0">WindowClose</animation>
+		</control>
+		<control type="image">
+			<description>Arenas Description Background</description>
+			<posx>175</posx>
+			<posy>395</posy>
+			<width>438</width>
+			<height>70</height>
+			<texture>guide-panel1.png</texture>
+			<visible>!window.isactive(108) + control.isvisible(3031)</visible>
+			<animation effect="fade" delay="450" time="200">WindowOpen</animation>
+			<animation effect="fade" time="0">WindowClose</animation>
+		</control>
+		<control type="image" id="3060">
+			<description>Buddy (offline) icon</description>
+			<posx>190</posx>
+			<posy>404</posy>
+			<width>50</width>
+			<height>50</height>
+			<texture>buddy-offline.png</texture>
+			<visible>!window.isactive(108)</visible>
+			<animation effect="fade" delay="450" time="200">WindowOpen</animation>
+			<animation effect="fade" time="0">WindowClose</animation>
+		</control>
+		<control type="image" id="3061">
+			<description>Buddy (online) icon</description>
+			<posx>190</posx>
+			<posy>404</posy>
+			<width>50</width>
+			<height>50</height>
+			<texture>buddy-online.png</texture>
+			<visible>!window.isactive(108)</visible>
+			<animation effect="fade" delay="450" time="200">WindowOpen</animation>
+			<animation effect="fade" time="0">WindowClose</animation>
+		</control>
+		<control type="image" id="3062">
+			<description>Opponent icon</description>
+			<posx>190</posx>
+			<posy>404</posy>
+			<width>50</width>
+			<height>50</height>
+			<texture>opponent.png</texture>
+			<visible>!window.isactive(108)</visible>
+			<animation effect="fade" delay="450" time="200">WindowOpen</animation>
+			<animation effect="fade" time="0">WindowClose</animation>
+		</control>
+		<control type="image" id="3063">
+			<description>Arena icon</description>
+			<posx>190</posx>
+			<posy>404</posy>
+			<width>50</width>
+			<height>50</height>
+			<texture>arena.png</texture>
+			<visible>!window.isactive(108)</visible>
+			<animation effect="fade" delay="450" time="200">WindowOpen</animation>
+			<animation effect="fade" time="0">WindowClose</animation>
+		</control>
+		<control type="fadelabel" id="3070">
+			<description>Buddy Name</description>
+			<posx>260</posx>
+			<posy>405</posy>
+			<width>212</width>
+			<label>-</label>
+			<font>font13</font>
+			<textcolor>TextcolorBlack</textcolor>
+			<shadowcolor>shadow-grey</shadowcolor>
+			<visible>!window.isactive(108)</visible>
+			<animation effect="fade" delay="450" time="200">WindowOpen</animation>
+			<animation effect="fade" time="0">WindowClose</animation>
+		</control>
+		<control type="fadelabel" id="3071">
+			<description>Buddy Status</description>
+			<posx>260</posx>
+			<posy>432</posy>
+			<width>212</width>
+			<label>-</label>
+			<font>font12</font>
+			<textcolor>TextcolorBlack</textcolor>
+			<shadowcolor>shadow-grey</shadowcolor>
+			<visible>!window.isactive(108)</visible>
+			<animation effect="fade" delay="450" time="200">WindowOpen</animation>
+			<animation effect="fade" time="0">WindowClose</animation>
+		</control>
+		<control type="label" id="3072">
+			<description>Buddy Invitation Status</description>
+			<posx>260</posx>
+			<posy>460</posy>
+			<width>50</width>
+			<label>-</label>
+			<font>font13</font>
+			<textcolor>TextcolorBlack</textcolor>
+			<shadowcolor>shadow-grey</shadowcolor>
+			<visible>!window.isactive(108)</visible>
+			<animation effect="fade" delay="450" time="200">WindowOpen</animation>
+			<animation effect="fade" time="0">WindowClose</animation>
+		</control>
+		<!-- End Arena\Friends\Games List and description controls -->
+	</controls>
+</window>

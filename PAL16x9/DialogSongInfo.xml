@@ -1,0 +1,314 @@
+<window id="135">
+	<defaultcontrol>10</defaultcontrol>
+	<animation effect="fade" time="200">WindowOpen</animation>
+	<animation effect="fade" delay="1050" time="50">WindowClose</animation>
+	<controls>
+		<include>TheDialogs</include>
+		<control type="group">
+			<animation effect="fade" delay="450" time="200">WindowOpen</animation>
+			<animation effect="fade" time="200">WindowClose</animation>
+			<control type="label">
+				<description>dialog Heading</description>
+				<posx>365</posx>
+				<posy>40</posy>
+				<width>270</width>
+				<label>658</label>
+				<align>left</align>
+				<include>DialogTitle</include>
+			</control>
+			<control type="image">
+				<description>Album Cover</description>
+				<posx>380</posx>
+				<posy>293</posy>
+				<width>112</width>
+				<height>160</height>
+				<info>listitem.icon</info>
+			</control>
+			<control type="image">
+				<description>Jewel CD Case</description>
+				<posx>365</posx>
+				<posy>285</posy>
+				<width>135</width>
+				<height>180</height>
+				<texture>music-overlay-cdcase.png</texture>
+			</control>
+			<control type="fadelabel">
+				<description>Song Title value</description>
+				<posx>365</posx>
+				<posy>95</posy>
+				<width>335</width>
+				<font>font13</font>
+				<info>ListItem.Title</info>
+				<textcolor>TextcolorBlack</textcolor>
+				<shadowcolor>shadow-white</shadowcolor>
+			</control>
+			<control type="label">
+				<description>Artist Title</description>
+				<posx>365</posx>
+				<posy>125</posy>
+				<width>335</width>
+				<font>font12</font>
+				<label>171</label>
+				<textcolor>TextcolorBlack</textcolor>
+				<shadowcolor>shadow-white</shadowcolor>
+			</control>
+			<control type="fadelabel">
+				<description>Artist value</description>
+				<posx>450</posx>
+				<posy>125</posy>
+				<width>250</width>
+				<font>font12</font>
+				<info>ListItem.Artist</info>
+				<textcolor>TextcolorBlack</textcolor>
+				<shadowcolor>shadow-white</shadowcolor>
+			</control>
+			<control type="label">
+				<description>Album Title</description>
+				<posx>365</posx>
+				<posy>150</posy>
+				<width>335</width>
+				<font>font12</font>
+				<label>170</label>
+				<textcolor>TextcolorBlack</textcolor>
+				<shadowcolor>shadow-white</shadowcolor>
+			</control>
+			<control type="fadelabel">
+				<description>Album value</description>
+				<posx>450</posx>
+				<posy>150</posy>
+				<width>250</width>
+				<font>font12</font>
+				<info>ListItem.Album</info>
+				<textcolor>TextcolorBlack</textcolor>
+				<shadowcolor>shadow-white</shadowcolor>
+			</control>
+			<control type="label">
+				<description>Genre Title</description>
+				<posx>365</posx>
+				<posy>175</posy>
+				<width>335</width>
+				<font>font12</font>
+				<label>174</label>
+				<textcolor>TextcolorBlack</textcolor>
+				<shadowcolor>shadow-white</shadowcolor>
+			</control>
+			<control type="fadelabel">
+				<description>Genre value</description>
+				<posx>450</posx>
+				<posy>175</posy>
+				<width>250</width>
+				<font>font12</font>
+				<info>ListItem.Genre</info>
+				<textcolor>TextcolorBlack</textcolor>
+				<shadowcolor>shadow-white</shadowcolor>
+			</control>
+			<control type="label">
+				<description>Year Title</description>
+				<posx>365</posx>
+				<posy>200</posy>
+				<width>335</width>
+				<font>font12</font>
+				<label>201</label>
+				<textcolor>TextcolorBlack</textcolor>
+				<shadowcolor>shadow-white</shadowcolor>
+			</control>
+			<control type="fadelabel">
+				<description>Year value</description>
+				<posx>450</posx>
+				<posy>200</posy>
+				<width>250</width>
+				<font>font12</font>
+				<info>ListItem.Year</info>
+				<textcolor>TextcolorBlack</textcolor>
+				<shadowcolor>shadow-white</shadowcolor>
+			</control>
+			<control type="label">
+				<description>Track Title</description>
+				<posx>365</posx>
+				<posy>225</posy>
+				<width>335</width>
+				<font>font12</font>
+				<label>$LOCALIZE[435] :</label>
+				<textcolor>TextcolorBlack</textcolor>
+				<shadowcolor>shadow-white</shadowcolor>
+			</control>
+			<control type="fadelabel">
+				<description>Track value</description>
+				<posx>450</posx>
+				<posy>225</posy>
+				<width>250</width>
+				<font>font12</font>
+				<info>ListItem.tracknumber</info>
+				<textcolor>TextcolorBlack</textcolor>
+				<shadowcolor>shadow-white</shadowcolor>
+			</control>
+			<control type="label">
+				<description>Rating Title</description>
+				<posx>365</posx>
+				<posy>255</posy>
+				<width>335</width>
+				<font>font12</font>
+				<label>173</label>
+				<textcolor>TextcolorBlack</textcolor>
+				<shadowcolor>shadow-white</shadowcolor>
+			</control>
+			<control type="image">
+				<description>Rating value</description>
+				<posx>435</posx>
+				<posy>252</posy>
+				<width>120</width>
+				<height>30</height>
+				<info>ListItem.Rating</info>
+			</control>
+			<control type="button" id="99">
+				<description>Left Arrow</description>
+				<posx>430</posx>
+				<posy>254</posy>
+				<width>12</width>
+				<height>24</height>
+				<texturefocus>selectarrow-left.png</texturefocus>
+				<texturenofocus>selectarrow-left.png</texturenofocus>
+				<onfocus>DecreaseRating</onfocus>
+				<onfocus>SetFocus(100)</onfocus>
+				<visible>Control.hasfocus(99) | Control.hasfocus(100) | Control.hasfocus(101)</visible>
+			</control>
+			<control type="button" id="100">
+				<description>Fake Rating focus</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1</width>
+				<height>1</height>
+				<texturefocus>-</texturefocus>
+				<texturenofocus></texturenofocus>
+				<onleft>99</onleft>
+				<onright>101</onright>
+				<onup>13</onup>
+				<ondown>10</ondown>
+			</control>
+			<control type="button" id="101">
+				<description>Right Arrow</description>
+				<posx>560</posx>
+				<posy>254</posy>
+				<width>12</width>
+				<height>24</height>
+				<texturefocus>selectarrow-right.png</texturefocus>
+				<texturenofocus>selectarrow-right.png</texturenofocus>
+				<visible>Control.hasfocus(99) | Control.hasfocus(100) | Control.hasfocus(101)</visible>
+				<onfocus>IncreaseRating</onfocus>
+				<onfocus>SetFocus(100)</onfocus>
+			</control>
+			<control type="image">
+				<description>Divider</description>
+				<posx>505</posx>
+				<posy>295</posy>
+				<width>190</width>
+				<height>1</height>
+				<texture>divider.png</texture>
+			</control>
+			<control type="image">
+				<description>Divider</description>
+				<posx>505</posx>
+				<posy>332</posy>
+				<width>190</width>
+				<height>1</height>
+				<texture>divider.png</texture>
+			</control>
+			<control type="image">
+				<description>Divider</description>
+				<posx>505</posx>
+				<posy>369</posy>
+				<width>190</width>
+				<height>1</height>
+				<texture>divider.png</texture>
+			</control>
+			<control type="image">
+				<description>Divider</description>
+				<posx>505</posx>
+				<posy>406</posy>
+				<width>190</width>
+				<height>1</height>
+				<texture>divider.png</texture>
+			</control>
+			<control type="image">
+				<description>Divider</description>
+				<posx>505</posx>
+				<posy>443</posy>
+				<width>190</width>
+				<height>1</height>
+				<texture>divider.png</texture>
+			</control>
+			<control type="button" id="10">
+				<description>OK button</description>
+				<posx>485</posx>
+				<posy>285</posy>
+				<width>230</width>
+				<height>59</height>
+				<texturefocus>guide-button-focus.png</texturefocus>
+				<texturenofocus>guide-button-nofocus</texturenofocus>
+				<pulseonselect>no</pulseonselect>
+				<onleft>10</onleft>
+				<onright>10</onright>
+				<onup>100</onup>
+				<ondown>11</ondown>
+				<font>font14</font>
+				<label>186</label>
+				<textoffsetx>40</textoffsetx>
+				<textcolor>TextcolorBlack</textcolor>
+			</control>
+			<control type="button" id="11">
+				<description>Cancel button</description>
+				<posx>485</posx>
+				<posy>322</posy>
+				<width>230</width>
+				<height>59</height>
+				<texturefocus>guide-button-focus.png</texturefocus>
+				<texturenofocus>guide-button-nofocus</texturenofocus>
+				<pulseonselect>no</pulseonselect>
+				<onleft>10</onleft>
+				<onright>10</onright>
+				<onup>10</onup>
+				<ondown>12</ondown>
+				<font>font14</font>
+				<label>222</label>
+				<textoffsetx>40</textoffsetx>
+				<textcolor>TextcolorBlack</textcolor>
+			</control>
+			<control type="button" id="12">
+				<description>Album Info button</description>
+				<posx>485</posx>
+				<posy>359</posy>
+				<width>230</width>
+				<height>59</height>
+				<texturefocus>guide-button-focus.png</texturefocus>
+				<texturenofocus>guide-button-nofocus</texturenofocus>
+				<pulseonselect>no</pulseonselect>
+				<onleft>10</onleft>
+				<onright>10</onright>
+				<onup>11</onup>
+				<ondown>13</ondown>
+				<font>font14</font>
+				<label>10523</label>
+				<textoffsetx>40</textoffsetx>
+				<textcolor>TextcolorBlack</textcolor>
+			</control>
+			<control type="button" id="13">
+				<description>Get Thumb button</description>
+				<posx>485</posx>
+				<posy>396</posy>
+				<width>230</width>
+				<height>59</height>
+				<texturefocus>guide-button-focus.png</texturefocus>
+				<texturenofocus>guide-button-nofocus</texturenofocus>
+				<pulseonselect>no</pulseonselect>
+				<onleft>10</onleft>
+				<onright>10</onright>
+				<onup>12</onup>
+				<ondown>100</ondown>
+				<font>font14</font>
+				<label>13405</label>
+				<textoffsetx>40</textoffsetx>
+				<textcolor>TextcolorBlack</textcolor>
+			</control>
+		</control>
+	</controls>
+</window>

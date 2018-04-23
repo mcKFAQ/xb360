@@ -1,0 +1,537 @@
+<window type="dialog" id="1121">
+	<defaultcontrol>10</defaultcontrol>
+	<controls>
+		<control type="image">
+			<description>Divider</description>
+			<posx>45</posx>
+			<posy>98</posy>
+			<width>248</width>
+			<height>1</height>
+			<texture>divider.png</texture>
+			<visible>!Window.IsActive(filebrowser)</visible>
+			<animation effect="fade" time="100">WindowOpen</animation>
+		</control>
+		<control type="image">
+			<description>Button 1 Image</description>
+			<posx>22</posx>
+			<posy>88</posy>
+			<width>290</width>
+			<height>59</height>
+			<texture>guide-button-focus.png</texture>
+			<visible>!Window.IsActive(filebrowser) + [Control.HasFocus(10) | Control.HasFocus(9)]</visible>
+			<animation effect="fade" start="30" time="275" reversible="false">visible</animation>
+			<animation effect="fade" time="100">WindowOpen</animation>
+		</control>
+		<control type="button" id="10">
+			<description>Custom Guide Panel Selection Label</description>
+			<posx>22</posx>
+			<posy>88</posy>
+			<width>290</width>
+			<height>59</height>
+			<texturefocus>-</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<onclick>Skin.SetImage(GuidePanel)</onclick>
+			<pulseonselect>no</pulseonselect>
+			<onleft>9</onleft>
+			<onright>9</onright>
+			<onup>11</onup>
+			<ondown>1</ondown>
+			<font>font14</font>
+			<label>31069</label>
+			<textoffsetx>30</textoffsetx>
+			<textcolor>TextcolorBlack</textcolor>
+			<shadowcolor>shadow-grey</shadowcolor>
+			<visible allowhiddenfocus="true">!Window.IsActive(filebrowser) + [Control.HasFocus(10) | !Control.IsVisible(9)]</visible>
+			<animation effect="slide" end="-2,0" time="275" reversible="false">focus</animation>
+			<animation effect="fade" time="100">WindowOpen</animation>
+		</control>
+		<control type="button" id="9">
+			<description>Reset Custom Guide Panel Selection Label</description>
+			<posx>22</posx>
+			<posy>88</posy>
+			<width>290</width>
+			<height>59</height>
+			<texturefocus>-</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<onclick>Skin.Reset(GuidePanel)</onclick>
+			<pulseonselect>no</pulseonselect>
+			<onleft>10</onleft>
+			<onright>10</onright>
+			<onup>11</onup>
+			<ondown>1</ondown>
+			<font>font14</font>
+			<label>31088</label>
+			<textoffsetx>30</textoffsetx>
+			<textcolor>TextcolorBlack</textcolor>
+			<shadowcolor>shadow-grey</shadowcolor>
+			<visible allowhiddenfocus="true">!Window.IsActive(filebrowser) + [Control.HasFocus(9) + !Control.HasFocus(10)] + Skin.String(GuidePanel)</visible>
+			<animation effect="slide" end="-2,0" time="275" reversible="false">focus</animation>
+			<animation effect="fade" time="100">WindowOpen</animation>
+		</control>
+		<control type="image">
+			<description>Divider</description>
+			<posx>45</posx>
+			<posy>134</posy>
+			<width>248</width>
+			<height>1</height>
+			<texture>divider.png</texture>
+			<visible>!Window.IsActive(filebrowser)</visible>
+			<animation effect="fade" time="100">WindowOpen</animation>
+		</control>
+		<control type="image">
+			<description>Button 2 Image</description>
+			<posx>22</posx>
+			<posy>124</posy>
+			<width>290</width>
+			<height>59</height>
+			<texture>guide-button-focus.png</texture>
+			<visible>!Window.IsActive(filebrowser) + Control.HasFocus(1) | Control.HasFocus(5)</visible>
+			<animation effect="fade" start="30" time="275" reversible="false">visible</animation>
+			<animation effect="fade" time="100">WindowOpen</animation>
+		</control>
+		<control type="button" id="1">
+			<description>XBMC Live Label</description>
+			<posx>22</posx>
+			<posy>124</posy>
+			<width>290</width>
+			<height>59</height>
+			<texturefocus>-</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<onclick>Skin.SetImage(KAI)</onclick>
+			<pulseonselect>no</pulseonselect>
+			<onleft>5</onleft>
+			<onright>5</onright>
+			<onup>10</onup>
+			<ondown>2</ondown>
+			<font>font14</font>
+			<label>31049</label>
+			<textoffsetx>30</textoffsetx>
+			<textcolor>TextcolorBlack</textcolor>
+			<shadowcolor>shadow-grey</shadowcolor>
+			<visible allowhiddenfocus="true">!Window.IsActive(filebrowser) + [Control.HasFocus(1) | !Control.IsVisible(5)]</visible>
+			<animation effect="slide" end="-2,0" time="275" reversible="false">focus</animation>
+			<animation effect="fade" time="100">WindowOpen</animation>
+		</control>
+		<control type="button" id="5">
+			<description>Reset Extras Label</description>
+			<posx>22</posx>
+			<posy>124</posy>
+			<width>290</width>
+			<height>59</height>
+			<texturefocus>-</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<onclick>Skin.Reset(KAI)</onclick>
+			<pulseonselect>no</pulseonselect>
+			<onleft>1</onleft>
+			<onright>1</onright>
+			<onup>10</onup>
+			<ondown>2</ondown>
+			<font>font14</font>
+			<label>31088</label>
+			<textoffsetx>30</textoffsetx>
+			<textcolor>TextcolorBlack</textcolor>
+			<shadowcolor>shadow-grey</shadowcolor>
+			<visible allowhiddenfocus="true">!Window.IsActive(filebrowser) + [Control.HasFocus(5) + !Control.HasFocus(1)] + Skin.String(KAI)</visible>
+			<animation effect="slide" end="-2,0" time="275" reversible="false">focus</animation>
+			<animation effect="fade" time="100">WindowOpen</animation>
+		</control>
+		<control type="image">
+			<description>Divider</description>
+			<posx>45</posx>
+			<posy>170</posy>
+			<width>248</width>
+			<height>1</height>
+			<texture>divider.png</texture>
+			<visible>!Window.IsActive(filebrowser)</visible>
+			<animation effect="fade" time="100">WindowOpen</animation>
+		</control>
+		<control type="image">
+			<description>Button 3 Image</description>
+			<posx>22</posx>
+			<posy>160</posy>
+			<width>290</width>
+			<height>59</height>
+			<texture>guide-button-focus.png</texture>
+			<visible>!Window.IsActive(filebrowser) + [Control.HasFocus(2) | Control.HasFocus(6)]</visible>
+			<animation effect="fade" start="30" time="275" reversible="false">visible</animation>
+			<animation effect="fade" time="100">WindowOpen</animation>
+		</control>
+		<control type="button" id="2">
+			<description>Games Label</description>
+			<posx>22</posx>
+			<posy>160</posy>
+			<width>290</width>
+			<height>59</height>
+			<texturefocus>-</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<onclick>Skin.SetImage(Games)</onclick>
+			<pulseonselect>no</pulseonselect>
+			<onleft>6</onleft>
+			<onright>6</onright>
+			<onup>1</onup>
+			<ondown>3</ondown>
+			<font>font14</font>
+			<label>31002</label>
+			<textoffsetx>30</textoffsetx>
+			<textcolor>TextcolorBlack</textcolor>
+			<shadowcolor>shadow-grey</shadowcolor>
+			<visible allowhiddenfocus="true">!Window.IsActive(filebrowser) + [Control.HasFocus(2) | !Control.IsVisible(6)]</visible>
+			<animation effect="slide" end="-2,0" time="275" reversible="false">focus</animation>
+			<animation effect="fade" time="100">WindowOpen</animation>
+		</control>
+		<control type="button" id="6">
+			<description>Reset Games Label</description>
+			<posx>22</posx>
+			<posy>160</posy>
+			<width>290</width>
+			<height>59</height>
+			<texturefocus>-</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<onclick>Skin.reset(Games)</onclick>
+			<pulseonselect>no</pulseonselect>
+			<onleft>2</onleft>
+			<onright>2</onright>
+			<onup>1</onup>
+			<ondown>3</ondown>
+			<font>font14</font>
+			<label>31088</label>
+			<textoffsetx>30</textoffsetx>
+			<textcolor>TextcolorBlack</textcolor>
+			<shadowcolor>shadow-grey</shadowcolor>
+			<visible allowhiddenfocus="true">!Window.IsActive(filebrowser) + [Control.HasFocus(6) + !Control.HasFocus(2)] + Skin.String(Games)</visible>
+			<animation effect="slide" end="-2,0" time="275" reversible="false">focus</animation>
+			<animation effect="fade" time="100">WindowOpen</animation>
+		</control>
+		<control type="image">
+			<description>Divider</description>
+			<posx>45</posx>
+			<posy>206</posy>
+			<width>248</width>
+			<height>1</height>
+			<texture>divider.png</texture>
+			<visible>!Window.IsActive(filebrowser)</visible>
+			<animation effect="fade" time="100">WindowOpen</animation>
+		</control>
+		<control type="image">
+			<description>Button 4 Image</description>
+			<posx>22</posx>
+			<posy>196</posy>
+			<width>290</width>
+			<height>59</height>
+			<texture>guide-button-focus.png</texture>
+			<visible>!Window.IsActive(filebrowser) + [Control.HasFocus(3) | Control.HasFocus(7)]</visible>
+			<animation effect="fade" start="30" time="275" reversible="false">visible</animation>
+			<animation effect="fade" time="100">WindowOpen</animation>
+		</control>
+		<control type="button" id="3">
+			<description>Media Label</description>
+			<posx>22</posx>
+			<posy>196</posy>
+			<width>290</width>
+			<height>59</height>
+			<texturefocus>-</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<onclick>Skin.SetImage(Media)</onclick>
+			<pulseonselect>no</pulseonselect>
+			<onleft>7</onleft>
+			<onright>7</onright>
+			<onup>2</onup>
+			<ondown>4</ondown>
+			<font>font14</font>
+			<label>31003</label>
+			<textoffsetx>30</textoffsetx>
+			<textcolor>TextcolorBlack</textcolor>
+			<shadowcolor>shadow-grey</shadowcolor>
+			<visible allowhiddenfocus="true">!Window.IsActive(filebrowser) + [Control.HasFocus(3) | !Control.IsVisible(7)]</visible>
+			<animation effect="slide" end="-2,0" time="275" reversible="false">focus</animation>
+			<animation effect="fade" time="100">WindowOpen</animation>
+		</control>
+		<control type="button" id="7">
+			<description>Reset Media Label</description>
+			<posx>22</posx>
+			<posy>196</posy>
+			<width>290</width>
+			<height>59</height>
+			<texturefocus>-</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<onclick>Skin.reset(Media)</onclick>
+			<pulseonselect>no</pulseonselect>
+			<onleft>3</onleft>
+			<onright>3</onright>
+			<onup>2</onup>
+			<ondown>4</ondown>
+			<font>font14</font>
+			<label>31088</label>
+			<textoffsetx>30</textoffsetx>
+			<textcolor>TextcolorBlack</textcolor>
+			<shadowcolor>shadow-grey</shadowcolor>
+			<visible allowhiddenfocus="true">!Window.IsActive(filebrowser) + [Control.HasFocus(7) + !Control.HasFocus(3)] + Skin.String(Media)</visible>
+			<animation effect="slide" end="-2,0" time="275" reversible="false">focus</animation>
+			<animation effect="fade" time="100">WindowOpen</animation>
+		</control>
+		<control type="image">
+			<description>Divider</description>
+			<posx>45</posx>
+			<posy>242</posy>
+			<width>248</width>
+			<height>1</height>
+			<texture>divider.png</texture>
+			<visible>!Window.IsActive(filebrowser)</visible>
+			<animation effect="fade" time="100">WindowOpen</animation>
+		</control>
+		<control type="image">
+			<description>Button 5 Image</description>
+			<posx>22</posx>
+			<posy>232</posy>
+			<width>290</width>
+			<height>59</height>
+			<texture>guide-button-focus.png</texture>
+			<visible>!Window.IsActive(filebrowser) + [Control.HasFocus(4) | Control.HasFocus(8)]</visible>
+			<animation effect="fade" start="30" time="275" reversible="false">visible</animation>
+			<animation effect="fade" time="100">WindowOpen</animation>
+		</control>
+		<control type="button" id="4">
+			<description>System Button</description>
+			<posx>22</posx>
+			<posy>232</posy>
+			<width>290</width>
+			<height>59</height>
+			<texturefocus>-</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<onclick>Skin.SetImage(System)</onclick>
+			<pulseonselect>no</pulseonselect>
+			<onleft>8</onleft>
+			<onright>8</onright>
+			<onup>3</onup>
+			<ondown>11</ondown>
+			<font>font14</font>
+			<label>31005</label>
+			<textoffsetx>30</textoffsetx>
+			<textcolor>TextcolorBlack</textcolor>
+			<shadowcolor>shadow-grey</shadowcolor>
+			<visible allowhiddenfocus="true">!Window.IsActive(filebrowser) + [Control.HasFocus(4) | !Control.IsVisible(8)]</visible>
+			<animation effect="slide" end="-2,0" time="275" reversible="false">focus</animation>
+			<animation effect="fade" time="100">WindowOpen</animation>
+		</control>
+		<control type="button" id="8">
+			<description>Reset System Label</description>
+			<posx>22</posx>
+			<posy>232</posy>
+			<width>290</width>
+			<height>59</height>
+			<texturefocus>-</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<onclick>Skin.reset(System)</onclick>
+			<pulseonselect>no</pulseonselect>
+			<onleft>4</onleft>
+			<onright>4</onright>
+			<onup>3</onup>
+			<ondown>11</ondown>
+			<font>font14</font>
+			<label>31088</label>
+			<textoffsetx>30</textoffsetx>
+			<textcolor>TextcolorBlack</textcolor>
+			<shadowcolor>shadow-grey</shadowcolor>
+			<visible allowhiddenfocus="true">!Window.IsActive(filebrowser) + [Control.HasFocus(8) + !Control.HasFocus(4)] + Skin.String(System)</visible>
+			<animation effect="slide" end="-2,0" time="275" reversible="false">focus</animation>
+			<animation effect="fade" time="100">WindowOpen</animation>
+		</control>
+		<control type="image">
+			<description>Divider</description>
+			<posx>45</posx>
+			<posy>278</posy>
+			<width>248</width>
+			<height>1</height>
+			<texture>divider.png</texture>
+			<visible>!Window.IsActive(filebrowser)</visible>
+			<animation effect="fade" time="100">WindowOpen</animation>
+		</control>
+		<control type="image">
+			<description>Button 6 Image</description>
+			<posx>22</posx>
+			<posy>268</posy>
+			<width>290</width>
+			<height>59</height>
+			<texture>guide-button-focus.png</texture>
+			<visible>!Window.IsActive(filebrowser) + [Control.HasFocus(11) | Control.HasFocus(12)]</visible>
+			<animation effect="fade" start="30" time="275" reversible="false">visible</animation>
+			<animation effect="fade" time="100">WindowOpen</animation>
+		</control>
+		<control type="button" id="11">
+			<description>Login Button</description>
+			<posx>22</posx>
+			<posy>268</posy>
+			<width>290</width>
+			<height>59</height>
+			<texturefocus>-</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<onclick>Skin.SetImage(Login)</onclick>
+			<pulseonselect>no</pulseonselect>
+			<onleft>12</onleft>
+			<onright>12</onright>
+			<onup>4</onup>
+			<ondown>10</ondown>
+			<font>font14</font>
+			<label>31019</label>
+			<textoffsetx>30</textoffsetx>
+			<textcolor>TextcolorBlack</textcolor>
+			<shadowcolor>shadow-grey</shadowcolor>
+			<visible allowhiddenfocus="true">!Window.IsActive(filebrowser) + [Control.HasFocus(11) | !Control.IsVisible(12)]</visible>
+			<animation effect="slide" end="-2,0" time="275" reversible="false">focus</animation>
+			<animation effect="fade" time="100">WindowOpen</animation>
+		</control>
+		<control type="button" id="12">
+			<description>Reset Login Label</description>
+			<posx>22</posx>
+			<posy>268</posy>
+			<width>290</width>
+			<height>59</height>
+			<texturefocus>-</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<onclick>Skin.reset(Login)</onclick>
+			<pulseonselect>no</pulseonselect>
+			<onleft>11</onleft>
+			<onright>11</onright>
+			<onup>4</onup>
+			<ondown>10</ondown>
+			<font>font14</font>
+			<label>31088</label>
+			<textoffsetx>30</textoffsetx>
+			<textcolor>TextcolorBlack</textcolor>
+			<shadowcolor>shadow-grey</shadowcolor>
+			<visible allowhiddenfocus="true">!Window.IsActive(filebrowser) + [Control.HasFocus(12) + !Control.HasFocus(11)] + Skin.String(Login)</visible>
+			<animation effect="slide" end="-2,0" time="275" reversible="false">focus</animation>
+			<animation effect="fade" time="100">WindowOpen</animation>
+		</control>
+		<control type="image">
+			<description>Divider</description>
+			<posx>45</posx>
+			<posy>314</posy>
+			<width>248</width>
+			<height>1</height>
+			<texture>divider.png</texture>
+			<visible>!Window.IsActive(filebrowser)</visible>
+			<animation effect="fade" time="100">WindowOpen</animation>
+		</control>
+		<control type="image">
+			<description>Left Arrow</description>
+			<posx>27</posx>
+			<posy>102</posy>
+			<width>16</width>
+			<height>32</height>
+			<texture>selectarrow-left.png</texture>
+			<visible>!Window.IsActive(filebrowser) + [Control.HasFocus(10) | Control.IsVisible(9)] + Skin.String(GuidePanel)</visible>
+			<animation effect="fade" time="100">WindowOpen</animation>
+		</control>
+		<control type="image">
+			<description>Right Arrow</description>
+			<posx>292</posx>
+			<posy>102</posy>
+			<width>16</width>
+			<height>32</height>
+			<texture>selectarrow-right.png</texture>
+			<visible>!Window.IsActive(filebrowser) + [Control.HasFocus(10) | Control.IsVisible(9)] + Skin.String(GuidePanel)</visible>
+			<animation effect="fade" time="100">WindowOpen</animation>
+		</control>
+		<control type="image">
+			<description>Left Arrow</description>
+			<posx>27</posx>
+			<posy>138</posy>
+			<width>16</width>
+			<height>32</height>
+			<texture>selectarrow-left.png</texture>
+			<visible>!Window.IsActive(filebrowser) + [Control.HasFocus(1) | Control.IsVisible(5)] + Skin.String(KAI)</visible>
+			<animation effect="fade" time="100">WindowOpen</animation>
+		</control>
+		<control type="image">
+			<description>Right Arrow</description>
+			<posx>292</posx>
+			<posy>138</posy>
+			<width>16</width>
+			<height>32</height>
+			<texture>selectarrow-right.png</texture>
+			<visible>!Window.IsActive(filebrowser) + [Control.HasFocus(1) | Control.IsVisible(5)] + Skin.String(KAI)</visible>
+			<animation effect="fade" time="100">WindowOpen</animation>
+		</control>
+		<control type="image">
+			<description>Left Arrow</description>
+			<posx>27</posx>
+			<posy>174</posy>
+			<width>16</width>
+			<height>32</height>
+			<texture>selectarrow-left.png</texture>
+			<visible>!Window.IsActive(filebrowser) + [Control.HasFocus(2) | Control.IsVisible(6)] + Skin.String(Games)</visible>
+			<animation effect="fade" time="100">WindowOpen</animation>
+		</control>
+		<control type="image">
+			<description>Right Arrow</description>
+			<posx>292</posx>
+			<posy>174</posy>
+			<width>16</width>
+			<height>32</height>
+			<texture>selectarrow-right.png</texture>
+			<visible>!Window.IsActive(filebrowser) + [Control.HasFocus(2) | Control.IsVisible(6)] + Skin.String(Games)</visible>
+			<animation effect="fade" time="100">WindowOpen</animation>
+		</control>
+		<control type="image">
+			<description>Left Arrow</description>
+			<posx>27</posx>
+			<posy>210</posy>
+			<width>16</width>
+			<height>32</height>
+			<texture>selectarrow-left.png</texture>
+			<visible>!Window.IsActive(filebrowser) + [Control.HasFocus(3) | Control.IsVisible(7)] + Skin.String(Media)</visible>
+			<animation effect="fade" time="100">WindowOpen</animation>
+		</control>
+		<control type="image">
+			<description>Right Arrow</description>
+			<posx>292</posx>
+			<posy>210</posy>
+			<width>16</width>
+			<height>32</height>
+			<texture>selectarrow-right.png</texture>
+			<visible>!Window.IsActive(filebrowser) + [Control.HasFocus(3) | Control.IsVisible(7)] + Skin.String(Media)</visible>
+			<animation effect="fade" time="100">WindowOpen</animation>
+		</control>
+		<control type="image">
+			<description>Left Arrow</description>
+			<posx>27</posx>
+			<posy>246</posy>
+			<width>16</width>
+			<height>32</height>
+			<texture>selectarrow-left.png</texture>
+			<visible>!Window.IsActive(filebrowser) + [Control.HasFocus(4) | Control.IsVisible(8)] + Skin.String(System)</visible>
+			<animation effect="fade" time="100">WindowOpen</animation>
+		</control>
+		<control type="image">
+			<description>Right Arrow</description>
+			<posx>292</posx>
+			<posy>246</posy>
+			<width>16</width>
+			<height>32</height>
+			<texture>selectarrow-right.png</texture>
+			<visible>!Window.IsActive(filebrowser) + [Control.HasFocus(4) | Control.IsVisible(8)] + Skin.String(System)</visible>
+			<animation effect="fade" time="100">WindowOpen</animation>
+		</control>
+		<control type="image">
+			<description>Left Arrow</description>
+			<posx>27</posx>
+			<posy>282</posy>
+			<width>16</width>
+			<height>32</height>
+			<texture>selectarrow-left.png</texture>
+			<visible>!Window.IsActive(filebrowser) + [Control.HasFocus(11) | Control.IsVisible(12)] + Skin.String(Login)</visible>
+			<animation effect="fade" time="100">WindowOpen</animation>
+		</control>
+		<control type="image">
+			<description>Right Arrow</description>
+			<posx>292</posx>
+			<posy>282</posy>
+			<width>16</width>
+			<height>32</height>
+			<texture>selectarrow-right.png</texture>
+			<visible>!Window.IsActive(filebrowser) + [Control.HasFocus(11) | Control.IsVisible(12)] + Skin.String(Login)</visible>
+			<animation effect="fade" time="100">WindowOpen</animation>
+		</control>
+	</controls>
+</window>    

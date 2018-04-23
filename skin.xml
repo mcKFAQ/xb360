@@ -1,0 +1,18 @@
+<skin>
+  <defaultresolution>pal</defaultresolution>
+  <defaultresolutionwide>pal16x9</defaultresolutionwide>
+  <defaultthemename>Textures.xpr</defaultthemename>
+  <version>2.1</version>
+  <skinversion>1039</skinversion>
+  <effectslowdown>1</effectslowdown>
+  <credits>
+    <skinname>xk360</skinname>
+    <name>MC360 By Team Blackbolt, modified by KFAQ</name>
+  </credits>
+  <startupwindows>
+    <window id="1114">Xlink Kai Blade</window>
+    <window id="1112">Games Blade</window>
+    <window id="0">Media Blade</window>
+    <window id="4">System Blade</window>
+  </startupwindows>
+</skin>

@@ -1,0 +1,297 @@
+<window id="502">
+	<defaultcontrol>50</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<controls>
+		<include>MediaIconBackGroundWhiteWash</include>
+		<include>MediaCommons</include>
+		<control type="label">
+			<description>Music - Library Label</description>
+			<posx>102</posx>
+			<posy>42</posy>
+			<label>31042</label>
+			<align>left</align>
+			<font>font18</font>
+			<shadowcolor>shadow-black</shadowcolor>
+			<include>media-button-fades</include>
+		</control>
+		<control type="group" id="9000">
+			<posy>8</posy>
+			<control type="image">
+				<description>Divider image 5</description>
+				<posx>95</posx>
+				<posy>220</posy>
+				<width>185</width>
+				<height>1</height>
+				<texture>divider.png</texture>
+				<include>media-button-fades</include>
+			</control>
+			<control type="image">
+				<description>Divider image 6</description>
+				<posx>95</posx>
+				<posy>255</posy>
+				<width>185</width>
+				<height>1</height>
+				<texture>divider.png</texture>
+				<include>media-button-fades</include>
+			</control>
+			<control type="image">
+				<description>View As Highlight Image</description>
+				<posx>75</posx>
+				<posy>80</posy>
+				<width>215</width>
+				<height>367</height>
+				<texture>systemhomebutton-1a.png</texture>
+				<visible>Control.HasFocus(2)</visible>
+				<include>media-button-fades</include>
+			</control>
+			<control type="image">
+				<description>View As Highlight Image Shadow</description>
+				<posx>75</posx>
+				<posy>80</posy>
+				<width>215</width>
+				<height>367</height>
+				<texture>systemhomebutton-1-shadow.png</texture>
+				<visible>Control.HasFocus(2)</visible>
+				<include>button-shadow</include>
+				<include>media-button-fades</include>
+			</control>
+			<control type="button" id="2">
+				<description>View As Push Button</description>
+				<include>Sub-Blade-Button-Commons</include>
+				<posx>98</posx>
+				<posy>85</posy>
+				<label>100</label>
+				<texturefocus>icon-viewas.png</texturefocus>
+				<texturenofocus>icon-viewas.png</texturenofocus>
+				<onleft>50</onleft>
+				<onright>50</onright>
+				<onup>16</onup>
+				<ondown>3</ondown>
+				<include>media-button-fades</include>
+			</control>
+			<control type="image">
+				<description>Sort by Highlight Image</description>
+				<posx>75</posx>
+				<posy>80</posy>
+				<width>215</width>
+				<height>367</height>
+				<texture>systemhomebutton-2a.png</texture>
+				<visible>Control.HasFocus(3) | Control.HasFocus(4)</visible>
+				<include>media-button-fades</include>
+			</control>
+			<control type="image">
+				<description>Sort by Highlight Image Shadow</description>
+				<posx>75</posx>
+				<posy>80</posy>
+				<width>215</width>
+				<height>367</height>
+				<texture>systemhomebutton-2-shadow.png</texture>
+				<visible>Control.HasFocus(3) | Control.HasFocus(4)</visible>
+				<include>button-shadow</include>
+				<include>media-button-fades</include>
+			</control>
+			<control type="button" id="3">
+				<description>Sort by Push Button</description>
+				<include>Sub-Blade-Button-Commons</include>
+				<posx>98</posx>
+				<posy>120</posy>
+				<label>103</label>
+				<texturefocus>icon-sortby.png</texturefocus>
+				<texturenofocus>icon-sortby.png</texturenofocus>
+				<onleft>50</onleft>
+				<onright>4</onright>
+				<onup>2</onup>
+				<ondown>99</ondown>
+				<include>media-button-fades</include>
+			</control>
+			<control type="togglebutton" id="4">
+				<description>Sort asc</description>
+				<posx>250</posx>
+				<posy>127</posy>
+				<width>16</width>
+				<height>16</height>
+				<label>-</label>
+				<texturefocus>sortup-focus.png</texturefocus>
+				<texturenofocus>sortup-nofocus.png</texturenofocus>
+				<alttexturefocus>sortdown-focus.png</alttexturefocus>
+				<alttexturenofocus>sortdown-nofocus.png</alttexturenofocus>
+				<onleft>3</onleft>
+				<onright>50</onright>
+				<onup>2</onup>
+				<ondown>99</ondown>
+				<shadowcolor>shadow-grey</shadowcolor>
+				<pulseonselect>no</pulseonselect>
+				<include>media-button-fades</include>
+			</control>
+			<control type="image">
+				<description>Switch View Highlight Image</description>
+				<posx>75</posx>
+				<posy>80</posy>
+				<width>215</width>
+				<height>367</height>
+				<texture>systemhomebutton-3a.png</texture>
+				<visible>Control.HasFocus(99)</visible>
+				<include>media-button-fades</include>
+			</control>
+			<control type="image">
+				<description>Switch View Highlight Image Shadow</description>
+				<posx>75</posx>
+				<posy>80</posy>
+				<width>215</width>
+				<height>367</height>
+				<texture>systemhomebutton-3-shadow.png</texture>
+				<visible>Control.HasFocus(99)</visible>
+				<include>button-shadow</include>
+				<include>media-button-fades</include>
+			</control>
+			<control type="image">
+				<description>Switch View Icon</description>
+				<posx>98</posx>
+				<posy>155</posy>
+				<include>Sub-Common-Icon-Width</include>
+				<height>28</height>
+				<texture>icon-switchview.png</texture>
+				<include>media-button-fades</include>
+				<visible>Control.HasFocus(99)</visible>
+				<animation effect="slide" end="-3,0" time="275" reversible="false">Visible</animation>
+			</control>
+			<control type="image">
+				<description>Switch View Icon</description>
+				<posx>98</posx>
+				<posy>155</posy>
+				<include>Sub-Common-Icon-Width</include>
+				<height>28</height>
+				<texture>icon-switchview.png</texture>
+				<include>media-button-fades</include>
+				<visible>!Control.HasFocus(99)</visible>
+			</control>
+			<control type="radiobutton" id="99">
+				<description>Switch View button</description>
+				<include>Sub-Common-Button-TextX</include>
+				<posy>155</posy>
+				<height>28</height>
+				<width>142</width>
+				<textoffsetx>0</textoffsetx>
+				<texturefocus>-</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<texturebg>-</texturebg>
+				<label>$LOCALIZE[14022] $LOCALIZE[456]</label>
+				<onclick>ReplaceWindow(mymusicfiles)</onclick>
+				<onclick>SetFocus(99)</onclick>
+				<selected>Window.IsVisible(mymusiclibrary)</selected>
+				<onleft>50</onleft>
+				<onright>50</onright>
+				<onup>3</onup>
+				<ondown>8</ondown>
+				<shadowcolor>shadow-grey</shadowcolor>
+				<include>media-button-fades</include>
+				<animation effect="slide" end="-3,0" time="275" reversible="false">focus</animation>
+			</control>
+			<control type="image">
+				<description>Search Highlight Image</description>
+				<posx>75</posx>
+				<posy>80</posy>
+				<width>215</width>
+				<height>367</height>
+				<texture>systemhomebutton-4a.png</texture>
+				<visible>Control.HasFocus(8)</visible>
+				<include>media-button-fades</include>
+			</control>
+			<control type="image">
+				<description>Search Highlight Image Shadow</description>
+				<posx>75</posx>
+				<posy>80</posy>
+				<width>215</width>
+				<height>367</height>
+				<texture>systemhomebutton-4-shadow.png</texture>
+				<visible>Control.HasFocus(8)</visible>
+				<include>button-shadow</include>
+				<include>media-button-fades</include>
+			</control>
+			<control type="button" id="8">
+				<description>Search Push Button</description>
+				<include>Sub-Blade-Button-Commons</include>
+				<posx>98</posx>
+				<posy>190</posy>
+				<label>137</label>
+				<texturefocus>icon-search.png</texturefocus>
+				<texturenofocus>icon-search.png</texturenofocus>
+				<onleft>50</onleft>
+				<onright>50</onright>
+				<onup>99</onup>
+				<ondown>16</ondown>
+				<include>media-button-fades</include>
+			</control>
+			<control type="image">
+				<description>Party Mode Highlight Image</description>
+				<posx>75</posx>
+				<posy>80</posy>
+				<width>215</width>
+				<height>367</height>
+				<texture>systemhomebutton-5a.png</texture>
+				<visible>Control.HasFocus(16)</visible>
+				<include>media-button-fades</include>
+			</control>
+			<control type="image">
+				<description>Party Mode Highlight Image Shadow</description>
+				<posx>75</posx>
+				<posy>80</posy>
+				<width>215</width>
+				<height>367</height>
+				<texture>systemhomebutton-5-shadow.png</texture>
+				<visible>Control.HasFocus(16)</visible>
+				<include>button-shadow</include>
+				<include>media-button-fades</include>
+			</control>
+			<control type="image">
+				<description>Party Mode Icon</description>
+				<posx>98</posx>
+				<posy>225</posy>
+				<include>Sub-Common-Icon-Width</include>
+				<height>28</height>
+				<texture>icon-partymode.png</texture>
+				<include>media-button-fades</include>
+				<visible>Control.HasFocus(16)</visible>
+				<animation effect="slide" end="-3,0" time="275" reversible="false">Visible</animation>
+			</control>
+			<control type="image">
+				<description>Party Mode Icon</description>
+				<posx>98</posx>
+				<posy>225</posy>
+				<include>Sub-Common-Icon-Width</include>
+				<height>28</height>
+				<texture>icon-partymode.png</texture>
+				<include>media-button-fades</include>
+				<visible>!Control.HasFocus(16)</visible>
+			</control>
+			<control type="radiobutton" id="16">
+				<description>Party Mode button</description>
+				<include>Sub-Common-Button-TextX</include>
+				<posy>225</posy>
+				<height>28</height>
+				<width>142</width>
+				<textoffsetx>0</textoffsetx>
+				<texturefocus>-</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<label>589</label>
+				<onleft>50</onleft>
+				<onright>50</onright>
+				<onup>8</onup>
+				<ondown>2</ondown>
+				<shadowcolor>shadow-grey</shadowcolor>
+				<include>media-button-fades</include>
+				<animation effect="slide" end="-3,0" time="275" reversible="false">focus</animation>
+			</control>
+		</control>
+		<include>ListItemThumb</include>
+		<include>NowPlayingItemThumb</include>
+		<include>OldCommonListView</include>
+		<include>NewMusicListView</include>
+		<include>CommonThumbnailPanel</include>
+		<include>CommonBigThumbnailPanel</include>
+		<include>MusicViewCommons_BigList</include>
+		<include>AllViewCommonPageControls</include>
+		<include>MediaCommonsKeymaps</include>
+		<include>MediaCommonsBlades</include>
+	</controls>
+</window>    

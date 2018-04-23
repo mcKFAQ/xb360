@@ -1,0 +1,161 @@
+﻿<window id="2004">
+	<defaultcontrol>5</defaultcontrol>
+	<controls>
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>576</height>
+			<texture>guide-black.png</texture>
+			<colordiffuse>DDFFFFFF</colordiffuse>
+			<animation effect="fade" time="50">WindowOpen</animation>
+			<animation effect="fade" delay="450" time="100">WindowClose</animation>
+		</control>
+		<control type="image">
+			<description>Guide Blade Background</description>
+			<posx>-27</posx>
+			<posy>0</posy>
+			<width>548</width>
+			<height>576</height>
+			<visible>!Skin.String(GuidePanel)</visible>
+			<texture>background-grey.png</texture>
+			<animation effect="slide" time="250" start="-655,0">WindowOpen</animation>
+			<animation effect="slide" time="250" delay="250" end="-655,0">WindowClose</animation>
+		</control>
+		<control type="image">
+			<description>Custom Guide Blade Background</description>
+			<posx>-27</posx>
+			<posy>0</posy>
+			<width>548</width>
+			<height>576</height>
+			<texture>-</texture>
+			<info>Skin.String(GuidePanel)</info>
+			<animation effect="slide" time="250" start="-655,0">WindowOpen</animation>
+			<animation effect="slide" time="250" delay="250" end="-655,0">WindowClose</animation>
+		</control>
+		<control type="image">
+			<description>Guide Blade Overlay</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>450</width>
+			<height>576</height>
+			<texture>guide-blade-overlay-tile.png</texture>
+			<animation effect="slide" time="250" start="-655,0">WindowOpen</animation>
+			<animation effect="slide" time="250" delay="250" end="-655,0">WindowClose</animation>
+		</control>
+		<control type="image">
+			<description>Guide Edge Overlay</description>
+			<posx>450</posx>
+			<posy>0</posy>
+			<width>100</width>
+			<height>576</height>
+			<texture>guide-blade-overlay-edge-left.png</texture>
+			<animation effect="slide" time="250" start="-655,0">WindowOpen</animation>
+			<animation effect="slide" time="250" delay="250" end="-655,0">WindowClose</animation>
+		</control>
+		<control type="label">
+			<description>GamerTag Label</description>
+			<posx>510</posx>
+			<posy>200</posy>
+			<angle>270</angle>
+			<label>time</label>
+			<include>GamerName</include>
+			<textcolor>TextcolorBlack</textcolor>
+			<font>font14</font>
+			<animation effect="slide" time="250" start="-655,0">WindowOpen</animation>
+			<animation effect="slide" time="250" delay="250" end="-655,0">WindowClose</animation>
+		</control>
+		<control type="label">
+			<description>Script Output Heading</description>
+			<label>262</label>
+			<posx>31</posx>
+			<posy>45</posy>
+			<font>font14</font>
+			<align>left</align>
+			<animation effect="slide" time="250" start="-655,0">WindowOpen</animation>
+			<animation effect="slide" time="250" delay="250" end="-655,0">WindowClose</animation>
+		</control>
+		<control type="label">
+			<description>Time label</description>
+			<posx>470</posx>
+			<posy>50</posy>
+			<label>time</label>
+			<info>System.Time</info>
+			<align>right</align>
+			<textcolor>TextcolorWhite</textcolor>
+			<font>font12</font>
+			<animation effect="slide" time="250" start="-655,0">WindowOpen</animation>
+			<animation effect="slide" time="250" delay="250" end="-655,0">WindowClose</animation>
+		</control>
+		<control type="textbox" id="5">
+			<description>Script Output Text Area</description>
+			<posx>35</posx>
+			<posy>90</posy>
+			<width>420</width>
+			<height>350</height>
+			<font>font12</font>
+			<animation effect="fade" delay="350" time="200">WindowOpen</animation>
+			<animation effect="fade" time="200">WindowClose</animation>
+		</control>
+		<control type="image">
+			<description>Back Button</description>
+			<posx>430</posx>
+			<posy>475</posy>
+			<include>Button-Map-Texture-Width</include>
+			<height>21</height>
+			<texture>button-Back.png</texture>
+			<animation effect="slide" time="250" start="-655,0">WindowOpen</animation>
+			<animation effect="slide" time="250" delay="250" end="-655,0">WindowClose</animation>
+		</control>
+		<control type="image">
+			<description>A Button</description>
+			<posx>445</posx>
+			<posy>498</posy>
+			<include>Button-Map-Texture-Width</include>
+			<height>21</height>
+			<texture>button-A.png</texture>
+			<animation effect="slide" time="250" start="-655,0">WindowOpen</animation>
+			<animation effect="slide" time="250" delay="250" end="-655,0">WindowClose</animation>
+		</control>
+		<control type="image">
+			<description>Y Button</description>
+			<posx>60</posx>
+			<posy>475</posy>
+			<include>Button-Map-Texture-Width</include>
+			<height>21</height>
+			<texture>button-Y-turnedoff.png</texture>
+			<animation effect="slide" time="250" start="-512,0">WindowOpen</animation>
+			<animation effect="slide" time="250" delay="250" end="-512,0">WindowClose</animation>
+		</control>
+		<control type="image">
+			<description>X Button</description>
+			<posx>45</posx>
+			<posy>498</posy>
+			<include>Button-Map-Texture-Width</include>
+			<height>21</height>
+			<texture>button-X-turnedoff.png</texture>
+			<animation effect="slide" time="250" start="-512,0">WindowOpen</animation>
+			<animation effect="slide" time="250" delay="250" end="-512,0">WindowClose</animation>
+		</control>
+		<control type="label">
+			<description>Back Label</description>
+			<posx>424</posx>
+			<posy>479</posy>
+			<label>31027</label>
+			<align>right</align>
+			<font>font12</font>
+			<animation effect="slide" time="250" start="-655,0">WindowOpen</animation>
+			<animation effect="slide" time="250" delay="250" end="-655,0">WindowClose</animation>
+		</control>
+		<control type="label">
+			<description>Select Label</description>
+			<posx>436</posx>
+			<posy>502</posy>
+			<label>31024</label>
+			<align>right</align>
+			<font>font12</font>
+			<animation effect="slide" time="250" start="-655,0">WindowOpen</animation>
+			<animation effect="slide" time="250" delay="250" end="-655,0">WindowClose</animation>
+		</control>
+	</controls>
+</window>

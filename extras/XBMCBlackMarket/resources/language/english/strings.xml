@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<strings>
+  <string id="0">Theme Browser</string>
+  <string id="1">Theme Preview</string>
+
+  <string id="15">Themes</string>
+  <string id="20">© </string>
+  <string id="25">KB</string>
+  <string id="30">MB</string>
+
+  <string id="101">Author: </string>
+  <string id="102">Size: </string>
+  <string id="103">Submitted: </string>
+  <string id="104">Downloads: </string>
+  <string id="105">Description</string>
+
+  <string id="250">Ok</string>
+  <string id="251">Cancel</string>
+  <string id="252">Update</string>
+  <string id="253">Credits</string>
+  <string id="254">Download</string>
+  <string id="255">Preview</string>
+  <string id="256">Back</string>
+
+  <!-- Download Dialog/Notifications -->
+  <string id="300">Downloading Theme:</string>
+  <string id="301">Theme Installed</string>
+  <string id="302">Download Failed</string>
+  <string id="303">Download Cancelled</string>
+
+  <!-- Completed/Installed Dialog -->
+  <string id="305">Download Completed</string>
+  <string id="306"> </string>
+  <string id="307">Go to Appearance settings to apply theme.</string>
+
+  <!-- Cancel/Failed Dialog -->
+  <string id="310">Download Aborted</string>
+  <string id="311"> </string>
+  <string id="312">Failed to download theme from server</string>
+
+  <!-- Already Installed Dialog -->
+  <string id="315">Theme already installed.</string>
+  <string id="316"> </string>
+  <string id="317">Do you want to download it again?</string>
+
+  <!-- Current/Active Theme Dialog -->
+  <string id="320">Can not download active theme!</string>
+  <string id="321"> </string>
+  <string id="322">Go to Appearance settings to change&#10;current theme to download this theme again.</string>
+
+  <!-- Reset Cache Dialog -->
+  <string id="325">Resetting the cache is going to restart the script.</string>
+  <string id="326"> </string>
+  <string id="327">Are you sure you want to reset the cache?</string>
+
+  <!-- Sorting Categories -->
+  <string id="401">Alphabethical Index</string>
+  <string id="402">Latest Additions</string>
+  <string id="403">Most Downloaded</string>
+
+  <string id="500">Unknown</string>
+  <string id="501">No description available</string>
+  <string id="502">Loading</string>
+  <string id="503">Not available</string>
+
+  <!-- Startup Errors -->
+  <string id="638">To run the Theme Browser, your XBOX requires&#10;a working network connection.&#10;&#10;Please re-check your network settings&#10;and try again.</string>
+  <string id="639">This script only supports&#10;Team Blackbolt's MC360 skin.</string>
+  <string id="641">The server cannot be reached.&#10;Please try again.</string>
+  <string id="642">Could not retrieve the list of themes.&#10;Please try again.</string>
+</strings>

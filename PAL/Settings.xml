@@ -1,0 +1,1060 @@
+<window id="4">
+	<defaultcontrol always="true">9000</defaultcontrol>
+	<previouswindow>4</previouswindow>
+	<controls>
+		<control type="group">
+			<posx>105</posx>
+			<include>Background-animation-blades</include>
+		</control>
+		<control type="visualisation">
+			<posx>123</posx>
+			<posy>0</posy>
+			<width>610</width>
+			<height>576</height>
+			<visible>!Control.HasFocus(1) + [!Skin.HasSetting(backgroundvis) + Player.HasAudio]</visible>
+			<animation effect="fade" time="100">WindowOpen</animation>
+		</control>
+		<control type="videowindow">
+			<description>video preview window</description>
+			<posx>123</posx>
+			<posy>0</posy>
+			<width>610</width>
+			<height>576</height>
+			<visible>!Control.HasFocus(1) + [!Skin.HasSetting(backgroundvideo) + Player.HasVideo]</visible>
+			<animation effect="fade" time="100">WindowOpen</animation>
+		</control>
+		<control type="image">
+			<description>Purple Background Static Alpha</description>
+			<posx>123</posx>
+			<posy>0</posy>
+			<width>610</width>
+			<height>576</height>
+			<visible>!Control.HasFocus(1) + !Skin.String(System)</visible>
+			<texture>background-purple-alpha.png</texture>
+		</control>
+		<control type="image">
+			<description>System Custom Background Static</description>
+			<posx>123</posx>
+			<posy>0</posy>
+			<width>610</width>
+			<height>576</height>
+			<texture>-</texture>
+			<info>Skin.String(System)</info>
+			<colordiffuse>D1FFFFFF</colordiffuse>
+			<visible>!Control.HasFocus(1)</visible>
+		</control>
+		<!-- Begin System Controls -->
+		<control type="image">
+			<description>Whitewash Glass Top Left</description>
+			<posx>175</posx>
+			<posy>0</posy>
+			<width>16</width>
+			<height>64</height>
+			<include>Image-whitewash-glass-top-left</include>
+			<visible>!Control.HasFocus(1) + !Skin.String(System)</visible>
+		</control>
+		<control type="image">
+			<description>Whitewash Glass Top Middle</description>
+			<posx>191</posx>
+			<posy>0</posy>
+			<width>484</width>
+			<height>64</height>
+			<include>Image-whitewash-glass-top-middle</include>
+			<visible>!Control.HasFocus(1) + !Skin.String(System)</visible>
+		</control>
+		<control type="image">
+			<description>Whitewash Glass Top Right</description>
+			<posx>675</posx>
+			<posy>0</posy>
+			<width>16</width>
+			<height>64</height>
+			<include>Image-whitewash-glass-top-right</include>
+			<visible>!Control.HasFocus(1) + !Skin.String(System)</visible>
+		</control>
+		<control type="image">
+			<description>Whitewash Glass Bottom Left</description>
+			<posx>175</posx>
+			<posy>512</posy>
+			<width>16</width>
+			<height>64</height>
+			<include>Image-whitewash-glass-bottom-left</include>
+			<visible>!Control.HasFocus(1) + !Skin.String(System)</visible>
+		</control>
+		<control type="image">
+			<description>Whitewash Glass Bottom Middle</description>
+			<posx>191</posx>
+			<posy>512</posy>
+			<width>484</width>
+			<height>64</height>
+			<include>Image-whitewash-glass-bottom-middle</include>
+			<visible>!Control.HasFocus(1) + !Skin.String(System)</visible>
+		</control>
+		<control type="image">
+			<description>Whitewash Glass Bottom Right</description>
+			<posx>675</posx>
+			<posy>512</posy>
+			<width>16</width>
+			<height>64</height>
+			<include>Image-whitewash-glass-bottom-right</include>
+			<visible>!Control.HasFocus(1) + !Skin.String(System)</visible>
+		</control>
+		<control type="image">
+			<description>Whitewash Overlay Left</description>
+			<posx>165</posx>
+			<posy>0</posy>
+			<width>32</width>
+			<height>576</height>
+			<include>Image-whitewash-overlay-left</include>
+			<visible>!Control.HasFocus(1)</visible>
+		</control>
+		<control type="image">
+			<description>Whitewash Overlay Middle</description>
+			<posx>197</posx>
+			<posy>0</posy>
+			<width>446</width>
+			<height>576</height>
+			<include>Image-whitewash-overlay-middle</include>
+			<visible>!Control.HasFocus(1)</visible>
+		</control>
+		<control type="image">
+			<description>Whitewash Overlay Right</description>
+			<posx>643</posx>
+			<posy>0</posy>
+			<width>64</width>
+			<height>576</height>
+			<include>Image-whitewash-overlay-right</include>
+			<visible>!Control.HasFocus(1)</visible>
+		</control>
+		<control type="rss">
+			<description>RSS Feeds</description>
+			<posx>185</posx>
+			<posy>8</posy>
+			<width>505</width>
+			<font>special13</font>
+			<scroll>true</scroll>
+			<urlset>1</urlset>
+			<titlecolor>E1ffffff</titlecolor>
+			<headlinecolor>A1FFFFFF</headlinecolor>
+			<textcolor>TextcolorWhite</textcolor>
+			<visible>!Control.HasFocus(1)</visible>
+			<visible>!Skin.HasSetting(rss-feeds)</visible>
+			<animation effect="fade" time="100">WindowOpen</animation>
+		</control>
+		<control type="label">
+			<description>System Label</description>
+			<posx>207</posx>
+			<posy>42</posy>
+			<label>31005</label>
+			<align>left</align>
+			<font>font18</font>
+			<shadowcolor>shadow-black</shadowcolor>
+			<visible>!Control.HasFocus(1)</visible>
+			<animation effect="fade" time="100">WindowOpen</animation>
+		</control>
+		<control type="label">
+			<description>Clock Label</description>
+			<posx>660</posx>
+			<posy>48</posy>
+			<info>System.Time</info>
+			<align>right</align>
+			<font>bold14</font>
+			<shadowcolor>shadow-black</shadowcolor>
+			<visible>Skin.HasSetting(BladeClock) + !Control.HasFocus(1) + !Control.HasFocus(2)</visible>
+			<animation effect="fade" time="100">WindowOpen</animation>
+		</control>
+		<control type="group" id="9000">
+			<posx>175</posx>
+			<posy>5</posy>
+			<animation effect="fade" time="100">WindowOpen</animation>
+			<control type="image">
+				<description>Divider image 1</description>
+				<posx>25</posx>
+				<posy>86</posy>
+				<width>220</width>
+				<height>1</height>
+				<texture>divider.png</texture>
+				<visible>!Control.HasFocus(1) + !Control.HasFOcus(3)</visible>
+			</control>
+			<control type="image">
+				<description>Button 1 Highlight Button</description>
+				<posx>0</posx>
+				<posy>86</posy>
+				<width>255</width>
+				<height>367</height>
+				<texture>systemhomebutton-1a.png</texture>
+				<visible>Control.HasFocus(3) + !Control.HasFocus(1)</visible>
+				<animation effect="fade" time="100">WindowOpen</animation>
+			</control>
+			<control type="image">
+				<description>Button 1 Highlight Shadow</description>
+				<posx>0</posx>
+				<posy>86</posy>
+				<width>255</width>
+				<height>367</height>
+				<texture>systemhomebutton-1-shadow.png</texture>
+				<visible>Control.HasFocus(3) + !Control.HasFocus(1)</visible>
+				<include>button-shadow</include>
+			</control>
+			<control type="button" id="3">
+				<description>Button 1 Push Button</description>
+				<include>Home-Button-Commons</include>
+				<posx>35</posx>
+				<posy>90</posy>
+				<label>31010</label>
+				<onclick>ActivateWindow(1201)</onclick>
+				<texturefocus>icon-gamesaves.png</texturefocus>
+				<texturenofocus>icon-gamesaves.png</texturenofocus>
+				<visible>!Control.HasFocus(1)</visible>
+				<onleft>1</onleft>
+				<onright>3</onright>
+				<onup>8</onup>
+				<ondown>4</ondown>
+			</control>
+			<control type="multiimage">
+				<description>Button 1 Button Shine</description>
+				<posx>45</posx>
+				<posy>90</posy>
+				<width>200</width>
+				<height>30</height>
+				<include>Shine</include>
+				<visible>Control.HasFocus(3) + !Control.HasFocus(1)</visible>
+			</control>
+			<control type="textbox">
+				<description>Button 1 description Multiline</description>
+				<posx>270</posx>
+				<posy>90</posy>
+				<width>215</width>
+				<height>367</height>
+				<pagecontrol>-</pagecontrol>
+				<label>31116</label>
+				<font>font14</font>
+				<align>right</align>
+				<textcolor>TextcolorBlack</textcolor>
+				<shadowcolor>shadow-grey</shadowcolor>
+				<visible>!Skin.HasSetting(nodescriptions) + Control.HasFocus(3)</visible>
+			</control>
+			<control type="image">
+				<description>Divider image 2</description>
+				<posx>25</posx>
+				<posy>121</posy>
+				<width>220</width>
+				<height>1</height>
+				<texture>divider.png</texture>
+				<visible>!Control.HasFocus(1) + ![Control.HasFocus(3) | Control.HasFocus(4)]</visible>
+			</control>
+			<control type="image">
+				<description>Button 2 Highlight Button</description>
+				<posx>0</posx>
+				<posy>86</posy>
+				<width>255</width>
+				<height>367</height>
+				<texture>systemhomebutton-2a.png</texture>
+				<visible>Control.HasFocus(4) + !Control.HasFocus(1)</visible>
+			</control>
+			<control type="image">
+				<description>Button 2 Highlight Shadow</description>
+				<posx>0</posx>
+				<posy>86</posy>
+				<width>255</width>
+				<height>367</height>
+				<texture>systemhomebutton-2-shadow.png</texture>
+				<visible>Control.HasFocus(4) + !Control.HasFocus(1)</visible>
+				<include>button-shadow</include>
+			</control>
+			<control type="button" id="4">
+				<description>Button 2 Push Button</description>
+				<include>Home-Button-Commons</include>
+				<posx>35</posx>
+				<posy>125</posy>
+				<label>480</label>
+				<onclick>ActivateWindow(AppearanceSettings)</onclick>
+				<texturefocus>icon-appearance.png</texturefocus>
+				<texturenofocus>icon-appearance.png</texturenofocus>
+				<visible>!Control.HasFocus(1)</visible>
+				<onleft>1</onleft>
+				<onright>4</onright>
+				<onup>3</onup>
+				<ondown>5</ondown>
+			</control>
+			<control type="multiimage">
+				<description>Button 2 Button Shine</description>
+				<posx>45</posx>
+				<posy>125</posy>
+				<width>200</width>
+				<height>30</height>
+				<include>Shine</include>
+				<visible>Control.HasFocus(4) + !Control.HasFocus(1)</visible>
+			</control>
+			<control type="textbox">
+				<description>Button 2 description Multiline</description>
+				<posx>270</posx>
+				<posy>90</posy>
+				<width>215</width>
+				<height>367</height>
+				<pagecontrol>-</pagecontrol>
+				<label>31117</label>
+				<font>font14</font>
+				<textcolor>TextcolorBlack</textcolor>
+				<shadowcolor>shadow-grey</shadowcolor>
+				<visible>!Skin.HasSetting(nodescriptions) + Control.HasFocus(4)</visible>
+			</control>
+			<control type="image">
+				<description>Divider image 3</description>
+				<posx>25</posx>
+				<posy>156</posy>
+				<width>220</width>
+				<height>1</height>
+				<texture>divider.png</texture>
+				<visible>!Control.HasFocus(1) + ![Control.HasFocus(4) | Control.HasFocus(5)]</visible>
+			</control>
+			<control type="image">
+				<description>Button 3 Highlight Button</description>
+				<posx>0</posx>
+				<posy>86</posy>
+				<width>255</width>
+				<height>367</height>
+				<texture>systemhomebutton-3a.png</texture>
+				<visible>Control.HasFocus(5) + !Control.HasFocus(1)</visible>
+			</control>
+			<control type="image">
+				<description>Button 3 Highlight Shadow</description>
+				<posx>0</posx>
+				<posy>86</posy>
+				<width>255</width>
+				<height>367</height>
+				<texture>systemhomebutton-3-shadow.png</texture>
+				<visible>Control.HasFocus(5) + !Control.HasFocus(1)</visible>
+				<include>button-shadow</include>
+			</control>
+			<control type="button" id="5">
+				<description>Button 3 Push Button</description>
+				<include>Home-Button-Commons</include>
+				<posx>35</posx>
+				<posy>160</posy>
+				<label>31052</label>
+				<onclick>ActivateWindow(1202)</onclick>
+				<texturefocus>icon-videos.png</texturefocus>
+				<texturenofocus>icon-videos.png</texturenofocus>
+				<visible>!Control.HasFocus(1)</visible>
+				<onleft>1</onleft>
+				<onright>5</onright>
+				<onup>4</onup>
+				<ondown>6</ondown>
+			</control>
+			<control type="multiimage">
+				<description>Button 3 Button Shine</description>
+				<posx>45</posx>
+				<posy>160</posy>
+				<width>200</width>
+				<height>30</height>
+				<include>Shine</include>
+				<visible>Control.HasFocus(5) + !Control.HasFocus(1)</visible>
+			</control>
+			<control type="textbox">
+				<description>Button 3 description Multiline</description>
+				<posx>270</posx>
+				<posy>90</posy>
+				<width>215</width>
+				<height>367</height>
+				<pagecontrol>-</pagecontrol>
+				<label>31118</label>
+				<font>font14</font>
+				<textcolor>TextcolorBlack</textcolor>
+				<shadowcolor>shadow-grey</shadowcolor>
+				<visible>!Skin.HasSetting(nodescriptions) + Control.HasFocus(5)</visible>
+			</control>
+			<control type="image">
+				<description>Divider image 4</description>
+				<posx>25</posx>
+				<posy>191</posy>
+				<width>220</width>
+				<height>1</height>
+				<texture>divider.png</texture>
+				<visible>!Control.HasFocus(1) + ![Control.HasFocus(5) | Control.HasFocus(6)]</visible>
+			</control>
+			<control type="image">
+				<description>Button 4 Highlight Button</description>
+				<posx>0</posx>
+				<posy>86</posy>
+				<width>255</width>
+				<height>367</height>
+				<texture>systemhomebutton-4a.png</texture>
+				<visible>Control.HasFocus(6) + !Control.HasFocus(1)</visible>
+			</control>
+			<control type="image">
+				<description>Button 4 Highlight Shadow</description>
+				<posx>0</posx>
+				<posy>86</posy>
+				<width>255</width>
+				<height>367</height>
+				<texture>systemhomebutton-4-shadow.png</texture>
+				<visible>Control.HasFocus(6) + !Control.HasFocus(1)</visible>
+				<include>button-shadow</include>
+			</control>
+			<control type="button" id="6">
+				<description>Button 4 Push Button</description>
+				<include>Home-Button-Commons</include>
+				<posx>35</posx>
+				<posy>195</posy>
+				<label>31053</label>
+				<onclick>ActivateWindow(1203)</onclick>
+				<texturefocus>icon-scripts.png</texturefocus>
+				<texturenofocus>icon-scripts.png</texturenofocus>
+				<visible>!Control.HasFocus(1)</visible>
+				<onleft>1</onleft>
+				<onright>6</onright>
+				<onup>5</onup>
+				<ondown>7</ondown>
+			</control>
+			<control type="multiimage">
+				<description>Button 4 Button Shine</description>
+				<posx>45</posx>
+				<posy>195</posy>
+				<width>200</width>
+				<height>30</height>
+				<include>Shine</include>
+				<visible>Control.HasFocus(6) + !Control.HasFocus(1)</visible>
+			</control>
+			<control type="textbox">
+				<description>Button 4 description Multiline</description>
+				<posx>270</posx>
+				<posy>90</posy>
+				<width>215</width>
+				<height>367</height>
+				<pagecontrol>-</pagecontrol>
+				<label>31119</label>
+				<font>font14</font>
+				<textcolor>TextcolorBlack</textcolor>
+				<shadowcolor>shadow-grey</shadowcolor>
+				<visible>!Skin.HasSetting(nodescriptions) + Control.HasFocus(6)</visible>
+			</control>
+			<control type="image">
+				<description>Divider image 5</description>
+				<posx>25</posx>
+				<posy>226</posy>
+				<width>220</width>
+				<height>1</height>
+				<texture>divider.png</texture>
+				<visible>!Control.HasFocus(1) + ![Control.HasFocus(6) | Control.HasFocus(7)]</visible>
+			</control>
+			<control type="image">
+				<description>Button 5 Highlight Button</description>
+				<posx>0</posx>
+				<posy>86</posy>
+				<width>255</width>
+				<height>367</height>
+				<texture>systemhomebutton-5a.png</texture>
+				<visible>Control.HasFocus(7) + !Control.HasFocus(1)</visible>
+			</control>
+			<control type="image">
+				<description>Button 5 Highlight Shadow</description>
+				<posx>0</posx>
+				<posy>86</posy>
+				<width>255</width>
+				<height>367</height>
+				<texture>systemhomebutton-5-shadow.png</texture>
+				<visible>Control.HasFocus(7) + !Control.HasFocus(1)</visible>
+				<include>button-shadow</include>
+			</control>
+			<control type="button" id="7">
+				<description>Button 5 Push Button</description>
+				<include>Home-Button-Commons</include>
+				<posx>35</posx>
+				<posy>230</posy>
+				<label>31054</label>
+				<onclick>ActivateWindow(Profiles)</onclick>
+				<texturefocus>icon-profile.png</texturefocus>
+				<texturenofocus>icon-profile.png</texturenofocus>
+				<visible>!Control.HasFocus(1)</visible>
+				<onleft>1</onleft>
+				<onright>7</onright>
+				<onup>6</onup>
+				<ondown>8</ondown>
+			</control>
+			<control type="multiimage">
+				<description>Button 5 Button Shine</description>
+				<posx>45</posx>
+				<posy>230</posy>
+				<width>200</width>
+				<height>30</height>
+				<include>Shine</include>
+				<visible>Control.HasFocus(7) + !Control.HasFocus(1)</visible>
+			</control>
+			<control type="textbox">
+				<description>Button 5 description Multiline</description>
+				<posx>270</posx>
+				<posy>90</posy>
+				<width>215</width>
+				<height>367</height>
+				<pagecontrol>-</pagecontrol>
+				<label>31120</label>
+				<font>font14</font>
+				<textcolor>TextcolorBlack</textcolor>
+				<shadowcolor>shadow-grey</shadowcolor>
+				<visible>!Skin.HasSetting(nodescriptions) + Control.HasFocus(7)</visible>
+			</control>
+			<control type="image">
+				<description>Divider image 6</description>
+				<posx>25</posx>
+				<posy>261</posy>
+				<width>220</width>
+				<height>1</height>
+				<texture>divider.png</texture>
+				<visible>!Control.HasFocus(1) + ![Control.HasFocus(7) | Control.HasFocus(8)]</visible>
+			</control>
+			<control type="image">
+				<description>Button 6 Highlight Button</description>
+				<posx>0</posx>
+				<posy>86</posy>
+				<width>255</width>
+				<height>367</height>
+				<texture>systemhomebutton-6a.png</texture>
+				<visible>Control.HasFocus(8) + !Control.HasFocus(1)</visible>
+			</control>
+			<control type="image">
+				<description>Button 6 Highlight Shadow</description>
+				<posx>0</posx>
+				<posy>86</posy>
+				<width>255</width>
+				<height>367</height>
+				<texture>systemhomebutton-6-shadow.png</texture>
+				<visible>Control.HasFocus(8) + !Control.HasFocus(1)</visible>
+				<include>button-shadow</include>
+			</control>
+			<control type="button" id="8">
+				<description>Button 6 Push Button</description>
+				<include>Home-Button-Commons</include>
+				<posx>35</posx>
+				<posy>265</posy>
+				<label>31135</label>
+				<onclick>ActivateWindow(Shutdownmenu)</onclick>
+				<texturefocus>icon-power.png</texturefocus>
+				<texturenofocus>icon-power.png</texturenofocus>
+				<visible>!Control.HasFocus(1)</visible>
+				<onleft>1</onleft>
+				<onright>8</onright>
+				<onup>7</onup>
+				<ondown>3</ondown>
+			</control>
+			<control type="multiimage">
+				<description>Button 6 Button Shine</description>
+				<posx>45</posx>
+				<posy>265</posy>
+				<width>200</width>
+				<height>30</height>
+				<include>Shine</include>
+				<visible>Control.HasFocus(8) + !Control.HasFocus(1)</visible>
+			</control>
+			<control type="textbox">
+				<description>Button 6 description Multiline</description>
+				<posx>270</posx>
+				<posy>90</posy>
+				<width>215</width>
+				<height>367</height>
+				<pagecontrol>-</pagecontrol>
+				<label>31121</label>
+				<font>font14</font>
+				<textcolor>TextcolorBlack</textcolor>
+				<shadowcolor>shadow-grey</shadowcolor>
+				<visible>!Skin.HasSetting(nodescriptions) + Control.HasFocus(8)</visible>
+			</control>
+			<control type="image">
+				<description>Divider image 7</description>
+				<posx>25</posx>
+				<posy>296</posy>
+				<width>220</width>
+				<height>1</height>
+				<texture>divider.png</texture>
+				<visible>!Control.HasFocus(1) + ![Control.HasFocus(8) | Control.HasFocus(9)]</visible>
+			</control>
+		</control>
+		<control type="image">
+			<description>Y Button</description>
+			<posx>230</posx>
+			<posy>505</posy>
+			<include>Button-Map-Texture-Width</include>
+			<height>21</height>
+			<texture>button-Y-turnedoff.png</texture>
+			<visible>!Control.HasFocus(1)</visible>
+			<animation effect="fade" time="100">WindowOpen</animation>
+		</control>
+		<control type="image">
+			<description>X Button</description>
+			<posx>217</posx>
+			<posy>525</posy>
+			<include>Button-Map-Texture-Width</include>
+			<height>21</height>
+			<texture>button-X-turnedoff.png</texture>
+			<visible>!Control.HasFocus(1) + !Player.HasMedia</visible>
+			<animation effect="fade" time="100">WindowOpen</animation>
+		</control>
+		<control type="image">
+			<description>X Button</description>
+			<posx>217</posx>
+			<posy>525</posy>
+			<include>Button-Map-Texture-Width</include>
+			<height>21</height>
+			<texture>button-X.png</texture>
+			<visible>!Control.HasFocus(1) + Player.HasMedia</visible>
+			<animation effect="fade" time="100">WindowOpen</animation>
+		</control>
+		<control type="label">
+			<description>Full-Screen Visualisation Label</description>
+			<include>KeymapFont</include>
+			<posx>248</posx>
+			<posy>528</posy>
+			<label>31180</label>
+			<align>left</align>
+			<visible>!Control.HasFocus(1) + Player.HasAudio</visible>
+			<animation effect="fade" time="100">WindowOpen</animation>
+		</control>
+		<control type="label">
+			<description>Full-Screen Video Label</description>
+			<include>KeymapFont</include>
+			<posx>248</posx>
+			<posy>528</posy>
+			<label>31181</label>
+			<align>left</align>
+			<visible>!Control.HasFocus(1) + Player.HasVideo</visible>
+			<animation effect="fade" time="100">WindowOpen</animation>
+		</control>
+		<control type="image">
+			<description>B Button</description>
+			<posx>620</posx>
+			<posy>505</posy>
+			<include>Button-Map-Texture-Width</include>
+			<height>21</height>
+			<texture>button-B-turnedoff.png</texture>
+			<visible>!Control.HasFocus(1)</visible>
+			<animation effect="fade" time="100">WindowOpen</animation>
+		</control>
+		<control type="image">
+			<description>A Button</description>
+			<posx>633</posx>
+			<posy>525</posy>
+			<include>Button-Map-Texture-Width</include>
+			<height>21</height>
+			<texture>button-A.png</texture>
+			<visible>!Control.HasFocus(1)</visible>
+			<animation effect="fade" time="100">WindowOpen</animation>
+		</control>
+		<control type="label">
+			<description>Select Label</description>
+			<include>KeymapFont</include>
+			<posx>623</posx>
+			<posy>528</posy>
+			<label>31024</label>
+			<align>right</align>
+			<visible>!Control.HasFocus(1)</visible>
+			<animation effect="fade" time="100">WindowOpen</animation>
+		</control>
+		<!-- End System Controls -->
+		<control type="image">
+			<description>Blue Background Slide Right Alpha</description>
+			<posx>88</posx>
+			<posy>0</posy>
+			<width>610</width>
+			<height>576</height>
+			<visible>Control.HasFocus(1) + !Skin.String(Media)</visible>
+			<animation effect="slide" start="-585,0" time="100">Visible</animation>
+			<texture>background-blue-alpha.png</texture>
+		</control>
+		<control type="image">
+			<description>Media Custom Background Slide Right</description>
+			<posx>88</posx>
+			<posy>0</posy>
+			<width>610</width>
+			<height>576</height>
+			<texture>-</texture>
+			<info>Skin.String(Media)</info>
+			<colordiffuse>D1FFFFFF</colordiffuse>
+			<visible>Control.HasFocus(1)</visible>
+			<animation effect="slide" start="-585,0" time="100">Visible</animation>
+		</control>
+		<!-- Begin Media Blink -->
+		<control type="image">
+			<description>Whitewash Glass Top Left</description>
+			<posx>140</posx>
+			<posy>0</posy>
+			<width>16</width>
+			<height>64</height>
+			<include>Image-whitewash-glass-top-left</include>
+			<visible>Control.HasFocus(1) + !Skin.String(Media)</visible>
+		</control>
+		<control type="image">
+			<description>Whitewash Glass Top Middle</description>
+			<posx>156</posx>
+			<posy>0</posy>
+			<width>492</width>
+			<height>64</height>
+			<include>Image-whitewash-glass-top-middle</include>
+			<visible>Control.HasFocus(1) + !Skin.String(Media)</visible>
+		</control>
+		<control type="image">
+			<description>Whitewash Glass Top Right</description>
+			<posx>648</posx>
+			<posy>0</posy>
+			<width>16</width>
+			<height>64</height>
+			<include>Image-whitewash-glass-top-right</include>
+			<visible>Control.HasFocus(1) + !Skin.String(Media)</visible>
+		</control>
+		<control type="image">
+			<description>Whitewash Glass Bottom Left</description>
+			<posx>140</posx>
+			<posy>512</posy>
+			<width>16</width>
+			<height>64</height>
+			<include>Image-whitewash-glass-bottom-left</include>
+			<visible>Control.HasFocus(1) + !Skin.String(Media)</visible>
+		</control>
+		<control type="image">
+			<description>Whitewash Glass Bottom Middle</description>
+			<posx>156</posx>
+			<posy>512</posy>
+			<width>492</width>
+			<height>64</height>
+			<include>Image-whitewash-glass-bottom-middle</include>
+			<visible>Control.HasFocus(1) + !Skin.String(Media)</visible>
+		</control>
+		<control type="image">
+			<description>Whitewash Glass Bottom Right</description>
+			<posx>648</posx>
+			<posy>512</posy>
+			<width>16</width>
+			<height>64</height>
+			<include>Image-whitewash-glass-bottom-right</include>
+			<visible>Control.HasFocus(1) + !Skin.String(Media)</visible>
+		</control>
+		<control type="image">
+			<description>Whitewash Overlay Left</description>
+			<posx>130</posx>
+			<posy>0</posy>
+			<width>32</width>
+			<height>576</height>
+			<include>Image-whitewash-overlay-left</include>
+			<visible>Control.HasFocus(1)</visible>
+			<animation effect="zoom" center="146,288" start="100,30" time="100">visible</animation>
+		</control>
+		<control type="image">
+			<description>Whitewash Overlay Middle</description>
+			<posx>162</posx>
+			<posy>0</posy>
+			<width>453</width>
+			<height>576</height>
+			<include>Image-whitewash-overlay-middle</include>
+			<visible>Control.HasFocus(1)</visible>
+			<animation effect="zoom" center="388,288" start="100,30" time="100">visible</animation>
+		</control>
+		<control type="image">
+			<description>Whitewash Overlay Right</description>
+			<posx>615</posx>
+			<posy>0</posy>
+			<width>64</width>
+			<height>576</height>
+			<include>Image-whitewash-overlay-right</include>
+			<visible>Control.HasFocus(1)</visible>
+			<animation effect="zoom" center="647,288" start="100,30" time="100">visible</animation>
+		</control>
+		<!-- End Media Blink -->
+		<control type="image">
+			<description>Purple Background Slide Right</description>
+			<posx>123</posx>
+			<posy>0</posy>
+			<width>610</width>
+			<height>576</height>
+			<visible>Control.HasFocus(1) + !Skin.String(System)</visible>
+			<animation effect="slide" end="585,0" time="100">Visible</animation>
+			<texture>background-purple.png</texture>
+		</control>
+		<control type="image">
+			<description>System Custom Background Slide Right</description>
+			<posx>123</posx>
+			<posy>0</posy>
+			<width>610</width>
+			<height>576</height>
+			<texture>-</texture>
+			<info>Skin.String(System)</info>
+			<visible>Control.HasFocus(1)</visible>
+			<animation effect="slide" end="585,0" time="100">Visible</animation>
+		</control>
+		<control type="image">
+			<description>Whitewash Glass Top Middle</description>
+			<posx>107</posx>
+			<posy>0</posy>
+			<width>610</width>
+			<height>64</height>
+			<include>Image-whitewash-glass-top-middle</include>
+			<visible>Control.HasFocus(1) + !Skin.String(System)</visible>
+			<animation effect="slide" end="585,0" time="100">Visible</animation>
+		</control>
+		<control type="image">
+			<description>Whitewash Glass Bottom Middle</description>
+			<posx>107</posx>
+			<posy>512</posy>
+			<width>610</width>
+			<height>64</height>
+			<include>Image-whitewash-glass-bottom-middle</include>
+			<visible>Control.HasFocus(1) + !Skin.String(System)</visible>
+			<animation effect="slide" end="585,0" time="100">Visible</animation>
+		</control>
+		<control type="image">
+			<description>Whitewash Overlay Left</description>
+			<posx>125</posx>
+			<posy>100</posy>
+			<width>20</width>
+			<height>360</height>
+			<include>Image-whitewash-overlay-left</include>
+			<visible>Control.HasFocus(1)</visible>
+			<animation effect="slide" end="585,0" time="100">Visible</animation>
+		</control>
+		<control type="image">
+			<description>Whitewash Overlay Middle</description>
+			<posx>145</posx>
+			<posy>100</posy>
+			<width>577</width>
+			<height>360</height>
+			<include>Image-whitewash-overlay-middle</include>
+			<visible>Control.HasFocus(1)</visible>
+			<animation effect="slide" end="585,0" time="100">Visible</animation>
+		</control>
+		<!-- Begin Slide Textures -->
+		<control type="image">
+			<description>Blank Blade Slide Right</description>
+			<posx>78</posx>
+			<posy>0</posy>
+			<width>80</width>
+			<height>576</height>
+			<texture>blades-blank-left.png</texture>
+			<visible>Control.HasFocus(1)</visible>
+			<animation effect="slide" end="585,0" time="100">Visible</animation>
+		</control>
+		<!-- End Slide Textures -->
+		<!-- Begin Real Blade Runners -->
+		<control type="image">
+			<description>Left Blade Runner</description>
+			<posx>-61</posx>
+			<posy>0</posy>
+			<width>128</width>
+			<height>576</height>
+			<texture>blades-runner-left.png</texture>
+		</control>
+		<control type="image">
+			<description>Right Blade Runner</description>
+			<posx>665</posx>
+			<posy>0</posy>
+			<width>128</width>
+			<height>576</height>
+			<texture>blades-runner-right.png</texture>
+		</control>
+		<!-- End Real Blade Runners -->
+		<!-- Begin Real Blades -->
+		<control type="image">
+			<description>XBMC Live Blade</description>
+			<posx>18</posx>
+			<posy>0</posy>
+			<width>80</width>
+			<height>576</height>
+			<texture>blades-size1-left-NF.png</texture>
+			<visible>!Control.HasFocus(1)</visible>
+		</control>
+		<control type="label">
+			<description>XBMC Live Label</description>
+			<label>31018</label>
+			<posx>79</posx>
+			<posy>177</posy>
+			<font>BladeFont</font>
+			<textcolor>TextcolorDarkGrey</textcolor>
+			<aligny>top</aligny>
+			<angle>270</angle>
+			<visible>!Control.HasFocus(1)</visible>
+		</control>
+		<control type="image">
+			<description>Games Blade</description>
+			<posx>53</posx>
+			<posy>0</posy>
+			<width>80</width>
+			<height>576</height>
+			<texture>blades-size2-left-NF.png</texture>
+			<visible>!Control.HasFocus(1)</visible>
+		</control>
+		<control type="label">
+			<description>Games Label</description>
+			<label>31011</label>
+			<posx>114</posx>
+			<posy>170</posy>
+			<font>BladeFont</font>
+			<textcolor>TextcolorDarkGrey</textcolor>
+			<aligny>top</aligny>
+			<angle>270</angle>
+			<visible>!Control.HasFocus(1)</visible>
+		</control>
+		<control type="image">
+			<description>Media Blade</description>
+			<posx>88</posx>
+			<posy>0</posy>
+			<width>80</width>
+			<height>576</height>
+			<texture>blades-size3-left-NF.png</texture>
+			<visible>!Control.HasFocus(1)</visible>
+		</control>
+		<control type="label">
+			<description>Media Label</description>
+			<label>31012</label>
+			<posx>149</posx>
+			<posy>163</posy>
+			<font>BladeFont</font>
+			<textcolor>TextcolorDarkGrey</textcolor>
+			<aligny>top</aligny>
+			<angle>270</angle>
+			<visible>!Control.HasFocus(1)</visible>
+		</control>
+		<control type="image">
+			<description>System Blade Image Focus on Left</description>
+			<posx>123</posx>
+			<posy>0</posy>
+			<width>80</width>
+			<height>576</height>
+			<texture>blades-size4-header.png</texture>
+			<visible>!Control.HasFocus(1)</visible>
+		</control>
+		<control type="label">
+			<description>System Blade Label on Left</description>
+			<label>31014</label>
+			<posx>184</posx>
+			<posy>155</posy>
+			<font>BladeFont</font>
+			<textcolor>TextcolorBlack</textcolor>
+			<aligny>top</aligny>
+			<angle>270</angle>
+			<visible>!Control.HasFocus(1)</visible>
+		</control>
+		<control type="image">
+			<description>System Blade Haze Left</description>
+			<posx>35</posx>
+			<posy>350</posy>
+			<width>150</width>
+			<height>228</height>
+			<texture>haze-purple-left.png</texture>
+			<visible>!Control.HasFocus(1) + !Skin.HasSetting(DisableHazes)</visible>
+			<animation effect="fade" time="100">Hidden</animation>
+		</control>
+		<control type="image">
+			<description>System Blade Haze Right</description>
+			<posx>660</posx>
+			<posy>350</posy>
+			<width>150</width>
+			<height>228</height>
+			<texture>haze-purple-right.png</texture>
+			<visible>!Control.HasFocus(1) + !Skin.HasSetting(DisableHazes)</visible>
+			<animation effect="fade" time="100">Hidden</animation>
+		</control>
+		<!-- End Real Blades -->
+		<!-- Begin Media Blades -->
+		<control type="image">
+			<description>XBMC Live Blade</description>
+			<posx>18</posx>
+			<posy>0</posy>
+			<width>80</width>
+			<height>576</height>
+			<texture>blades-size2-left-NF.png</texture>
+			<visible>Control.HasFocus(1)</visible>
+		</control>
+		<control type="label">
+			<description>XBMC Live Label</description>
+			<label>31018</label>
+			<posx>79</posx>
+			<posy>170</posy>
+			<font>BladeFont</font>
+			<textcolor>TextcolorDarkGrey</textcolor>
+			<aligny>top</aligny>
+			<angle>270</angle>
+			<visible>Control.HasFocus(1)</visible>
+		</control>
+		<control type="image">
+			<description>Games Blade</description>
+			<posx>53</posx>
+			<posy>0</posy>
+			<width>80</width>
+			<height>576</height>
+			<texture>blades-size3-left-NF.png</texture>
+			<visible>Control.HasFocus(1)</visible>
+		</control>
+		<control type="label">
+			<description>Games Label</description>
+			<label>31011</label>
+			<posx>114</posx>
+			<posy>163</posy>
+			<font>BladeFont</font>
+			<textcolor>TextcolorDarkGrey</textcolor>
+			<aligny>top</aligny>
+			<angle>270</angle>
+			<visible>Control.HasFocus(1)</visible>
+		</control>
+		<control type="image">
+			<description>Media Blade</description>
+			<posx>88</posx>
+			<posy>0</posy>
+			<width>80</width>
+			<height>576</height>
+			<texture>blades-size4-header.png</texture>
+			<visible>Control.HasFocus(1)</visible>
+		</control>
+		<control type="label">
+			<description>Media Label</description>
+			<label>31012</label>
+			<posx>149</posx>
+			<posy>155</posy>
+			<font>BladeFont</font>
+			<textcolor>TextcolorBlack</textcolor>
+			<aligny>top</aligny>
+			<angle>270</angle>
+			<visible>Control.HasFocus(1)</visible>
+		</control>
+		<control type="button" id="1">
+			<description>System Blade Image on Right</description>
+			<posx>633</posx>
+			<posy>0</posy>
+			<width>80</width>
+			<height>576</height>
+			<label>31014</label>
+			<font>BladeFont</font>
+			<textcolor>TextcolorDarkGrey</textcolor>
+			<aligny>top</aligny>
+			<textoffsetx>43</textoffsetx>
+			<textoffsety>163</textoffsety>
+			<angle>270</angle>
+			<onup>1</onup>
+			<ondown>1</ondown>
+			<onleft>1</onleft>
+			<onright>1</onright>
+			<pulseonselect>no</pulseonselect>
+			<visible allowhiddenfocus="true">Control.HasFocus(1)</visible>
+			<animation effect="fade" time="100">Focus</animation>
+			<texturefocus>blades-size3-right-NF.png</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<onfocus>XBMC.ReplaceWindow(Home)</onfocus>
+		</control>
+		<control type="image">
+			<description>Media Blade Haze Left</description>
+			<posx>0</posx>
+			<posy>350</posy>
+			<width>150</width>
+			<height>228</height>
+			<texture>haze-blue-left.png</texture>
+			<visible>Control.HasFocus(1) + !Skin.HasSetting(DisableHazes)</visible>
+			<animation effect="fade" time="100">Visible</animation>
+		</control>
+		<control type="image">
+			<description>Media Blade Haze Right</description>
+			<posx>657</posx>
+			<posy>350</posy>
+			<width>150</width>
+			<height>228</height>
+			<texture>haze-blue-right.png</texture>
+			<visible>Control.HasFocus(1) + !Skin.HasSetting(DisableHazes)</visible>
+			<animation effect="fade" time="100">Visible</animation>
+		</control>
+		<!-- End Media Blades -->
+	</controls>
+</window>          

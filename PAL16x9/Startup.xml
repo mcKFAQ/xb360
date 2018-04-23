@@ -1,0 +1,1525 @@
+<!-- Startup Animation window -->
+<!-- This XML was created by Team Blackbolt 2006 -->
+<window>
+	<defaultcontrol always="true">1</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<controls>
+		<!-- Startup Window as Extras -->
+		<control type="image">
+			<description>Orange Background Static Alpha</description>
+			<posx>18</posx>
+			<posy>0</posy>
+			<width>610</width>
+			<height>576</height>
+			<visible>!Skin.String(KAI)</visible>
+			<texture>background-orange-alpha.png</texture>
+			<visible>![Window.Next(1112) | Window.Next(Home) | Window.Next(settings)]</visible>
+			<animation effect="fade" end="0">WindowOpen</animation>
+			<animation effect="zoom" center="465.336,288" start="63.115,100" time="500">WindowClose</animation>
+		</control>
+		<control type="image">
+			<description>XBMC Live Custom Background Static</description>
+			<posx>18</posx>
+			<posy>0</posy>
+			<width>610</width>
+			<height>576</height>
+			<texture>-</texture>
+			<info>Skin.String(KAI)</info>
+			<colordiffuse>D1FFFFFF</colordiffuse>
+			<visible>![Window.Next(1112) | Window.Next(Home) | Window.Next(settings)]</visible>
+			<animation effect="fade" end="0">WindowOpen</animation>
+			<animation effect="zoom" center="465.336,288" start="63.115,100" time="500">WindowClose</animation>
+		</control>
+		<control type="image">
+			<description>Whitewash Glass Top Left</description>
+			<posx>70</posx>
+			<posy>0</posy>
+			<width>16</width>
+			<height>64</height>
+			<include>Image-whitewash-glass-top-left</include>
+			<visible>!Skin.String(KAI)</visible>
+			<visible>![Window.Next(1112) | Window.Next(Home) | Window.Next(settings)]</visible>
+			<animation effect="fade" end="0">WindowOpen</animation>
+			<animation effect="fade" start="0" end="100" time="500">WindowClose</animation>
+		</control>
+		<control type="image">
+			<description>Whitewash Glass Top Middle</description>
+			<posx>86</posx>
+			<posy>0</posy>
+			<width>492</width>
+			<height>64</height>
+			<include>Image-whitewash-glass-top-middle</include>
+			<visible>!Skin.String(KAI)</visible>
+			<visible>![Window.Next(1112) | Window.Next(Home) | Window.Next(settings)]</visible>
+			<animation effect="fade" end="0">WindowOpen</animation>
+			<animation effect="fade" start="0" end="100" time="500">WindowClose</animation>
+		</control>
+		<control type="image">
+			<description>Whitewash Glass Top Right</description>
+			<posx>578</posx>
+			<posy>0</posy>
+			<width>16</width>
+			<height>64</height>
+			<include>Image-whitewash-glass-top-right</include>
+			<visible>!Skin.String(KAI)</visible>
+			<visible>![Window.Next(1112) | Window.Next(Home) | Window.Next(settings)]</visible>
+			<animation effect="fade" end="0">WindowOpen</animation>
+			<animation effect="fade" start="0" end="100" time="500">WindowClose</animation>
+		</control>
+		<control type="image">
+			<description>Whitewash Glass Bottom Left</description>
+			<posx>70</posx>
+			<posy>512</posy>
+			<width>16</width>
+			<height>64</height>
+			<include>Image-whitewash-glass-bottom-left</include>
+			<visible>!Skin.String(KAI)</visible>
+			<visible>![Window.Next(1112) | Window.Next(Home) | Window.Next(settings)]</visible>
+			<animation effect="fade" end="0">WindowOpen</animation>
+			<animation effect="fade" start="0" end="100" time="500">WindowClose</animation>
+		</control>
+		<control type="image">
+			<description>Whitewash Glass Bottom Middle</description>
+			<posx>86</posx>
+			<posy>512</posy>
+			<width>492</width>
+			<height>64</height>
+			<include>Image-whitewash-glass-bottom-middle</include>
+			<visible>!Skin.String(KAI)</visible>
+			<visible>![Window.Next(1112) | Window.Next(Home) | Window.Next(settings)]</visible>
+			<animation effect="fade" end="0">WindowOpen</animation>
+			<animation effect="fade" start="0" end="100" time="500">WindowClose</animation>
+		</control>
+		<control type="image">
+			<description>Whitewash Glass Bottom Right</description>
+			<posx>578</posx>
+			<posy>512</posy>
+			<width>16</width>
+			<height>64</height>
+			<include>Image-whitewash-glass-bottom-right</include>
+			<visible>!Skin.String(KAI)</visible>
+			<visible>![Window.Next(1112) | Window.Next(Home) | Window.Next(settings)]</visible>
+			<animation effect="fade" end="0">WindowOpen</animation>
+			<animation effect="fade" start="0" end="100" time="500">WindowClose</animation>
+		</control>
+		<control type="image">
+			<description>Whitewash Overlay Left</description>
+			<posx>60</posx>
+			<posy>0</posy>
+			<width>32</width>
+			<height>576</height>
+			<include>Image-whitewash-overlay-left</include>
+			<visible>![Window.Next(1112) | Window.Next(Home) | Window.Next(settings)]</visible>
+			<animation effect="fade" end="0">WindowOpen</animation>
+			<animation effect="zoom" center="76,288" start="100,30" delay="150" time="500">WindowClose</animation>
+		</control>
+		<control type="image">
+			<description>Whitewash Overlay Middle</description>
+			<posx>92</posx>
+			<posy>0</posy>
+			<width>453</width>
+			<height>576</height>
+			<include>Image-whitewash-overlay-middle</include>
+			<visible>![Window.Next(1112) | Window.Next(Home) | Window.Next(settings)]</visible>
+			<animation effect="fade" end="0">WindowOpen</animation>
+			<animation effect="zoom" center="318,288" start="100,30" delay="150" time="500">WindowClose</animation>
+		</control>
+		<control type="image">
+			<description>Whitewash Overlay Right</description>
+			<posx>545</posx>
+			<posy>0</posy>
+			<width>64</width>
+			<height>576</height>
+			<include>Image-whitewash-overlay-right</include>
+			<visible>![Window.Next(1112) | Window.Next(Home) | Window.Next(settings)]</visible>
+			<animation effect="fade" end="0">WindowOpen</animation>
+			<animation effect="zoom" center="577,288" start="100,30" delay="150" time="500">WindowClose</animation>
+		</control>
+		<control type="image">
+			<description>XBMC Live Blade</description>
+			<posx>18</posx>
+			<posy>-50</posy>
+			<width>80</width>
+			<height>676</height>
+			<texture>blades-size4-header.png</texture>
+			<visible>![Window.Next(1112) | Window.Next(Home) | Window.Next(settings)]</visible>
+			<animation effect="fade" end="0">WindowOpen</animation>
+			<animation effect="fade" start="100" end="0" delay="500" time="0">WindowClose</animation>
+		</control>
+		<control type="label">
+			<description>XBMC Live Label</description>
+			<label>31018</label>
+			<posx>80</posx>
+			<posy>120</posy>
+			<font>BladeFont</font>
+			<textcolor>TextcolorBlack</textcolor>
+			<aligny>top</aligny>
+			<angle>270</angle>
+			<visible>![Window.Next(1112) | Window.Next(Home) | Window.Next(settings)]</visible>
+			<animation effect="fade" end="0">WindowOpen</animation>
+			<animation effect="fade" start="100" end="0" delay="500" time="0">WindowClose</animation>
+		</control>
+		<control type="image">
+			<description>System Blade</description>
+			<posx>633</posx>
+			<posy>-50</posy>
+			<width>80</width>
+			<height>676</height>
+			<texture>blades-size1-right-NF.png</texture>
+			<visible>![Window.Next(1112) | Window.Next(Home) | Window.Next(settings)]</visible>
+			<animation effect="fade" end="0">WindowOpen</animation>
+			<animation effect="fade" start="100" end="0" delay="500" time="0">WindowClose</animation>
+		</control>
+		<control type="label">
+			<description>System Label</description>
+			<label>31014</label>
+			<posx>677</posx>
+			<posy>148</posy>
+			<font>BladeFont</font>
+			<textcolor>TextcolorDarkGrey</textcolor>
+			<aligny>top</aligny>
+			<angle>270</angle>
+			<visible>![Window.Next(1112) | Window.Next(Home) | Window.Next(settings)]</visible>
+			<animation effect="fade" end="0">WindowOpen</animation>
+			<animation effect="fade" start="100" end="0" delay="500" time="0">WindowClose</animation>
+		</control>
+		<control type="image">
+			<description>Media Blade</description>
+			<posx>598</posx>
+			<posy>-50</posy>
+			<width>80</width>
+			<height>676</height>
+			<texture>blades-size2-right-NF.png</texture>
+			<visible>![Window.Next(1112) | Window.Next(Home) | Window.Next(settings)]</visible>
+			<animation effect="fade" end="0">WindowOpen</animation>
+		</control>
+		<control type="label">
+			<description>Media Label</description>
+			<label>31012</label>
+			<posx>642</posx>
+			<posy>140</posy>
+			<font>BladeFont</font>
+			<textcolor>TextcolorDarkGrey</textcolor>
+			<aligny>top</aligny>
+			<angle>270</angle>
+			<visible>![Window.Next(1112) | Window.Next(Home) | Window.Next(settings)]</visible>
+			<animation effect="fade" end="0">WindowOpen</animation>
+		</control>
+		<control type="image">
+			<description>Games Blade Image on Right</description>
+			<posx>563</posx>
+			<posy>-50</posy>
+			<width>80</width>
+			<height>676</height>
+			<texture>blades-size3-right-NF.png</texture>
+			<visible>![Window.Next(1112) | Window.Next(Home) | Window.Next(settings)]</visible>
+			<animation effect="fade" end="0">WindowOpen</animation>
+		</control>
+		<control type="label">
+			<description>Games Blade Label on Right</description>
+			<label>31011</label>
+			<posx>607</posx>
+			<posy>132</posy>
+			<font>BladeFont</font>
+			<textcolor>TextcolorDarkGrey</textcolor>
+			<aligny>top</aligny>
+			<angle>270</angle>
+			<visible>![Window.Next(1112) | Window.Next(Home) | Window.Next(settings)]</visible>
+			<animation effect="fade" end="0">WindowOpen</animation>
+		</control>
+		<!-- Startup Window as Games -->
+		<control type="image">
+			<description>Green Background Static Alpha FS Stretch</description>
+			<posx>53</posx>
+			<posy>0</posy>
+			<width>610</width>
+			<height>576</height>
+			<visible>!Skin.String(Games)</visible>
+			<texture>background-green-alpha.png</texture>
+			<visible>![Window.Next(1114) | Window.Next(Home) | Window.Next(settings)]</visible>
+			<animation effect="fade" end="0">WindowOpen</animation>
+			<animation effect="zoom" center="405.447,288" start="63.115,100" time="500">WindowClose</animation>
+		</control>
+		<control type="image">
+			<description>Games Custom Background Static</description>
+			<posx>53</posx>
+			<posy>0</posy>
+			<width>610</width>
+			<height>576</height>
+			<texture>-</texture>
+			<info>Skin.String(Games)</info>
+			<colordiffuse>D1FFFFFF</colordiffuse>
+			<visible>![Window.Next(1114) | Window.Next(Home) | Window.Next(settings)]</visible>
+			<animation effect="fade" end="0">WindowOpen</animation>
+			<animation effect="zoom" center="405.447,288" start="63.115,100" time="500">WindowClose</animation>
+		</control>
+		<control type="image">
+			<description>Whitewash Glass Top Left</description>
+			<posx>105</posx>
+			<posy>0</posy>
+			<width>16</width>
+			<height>64</height>
+			<include>Image-whitewash-glass-top-left</include>
+			<visible>!Skin.String(Games)</visible>
+			<visible>![Window.Next(1114) | Window.Next(Home) | Window.Next(settings)]</visible>
+			<animation effect="fade" end="0">WindowOpen</animation>
+			<animation effect="fade" start="0" end="100" time="500">WindowClose</animation>
+		</control>
+		<control type="image">
+			<description>Whitewash Glass Top Middle</description>
+			<posx>121</posx>
+			<posy>0</posy>
+			<width>492</width>
+			<height>64</height>
+			<include>Image-whitewash-glass-top-middle</include>
+			<visible>!Skin.String(Games)</visible>
+			<visible>![Window.Next(1114) | Window.Next(Home) | Window.Next(settings)]</visible>
+			<animation effect="fade" end="0">WindowOpen</animation>
+			<animation effect="fade" start="0" end="100" time="500">WindowClose</animation>
+		</control>
+		<control type="image">
+			<description>Whitewash Glass Top Right</description>
+			<posx>613</posx>
+			<posy>0</posy>
+			<width>16</width>
+			<height>64</height>
+			<include>Image-whitewash-glass-top-right</include>
+			<visible>!Skin.String(Games)</visible>
+			<visible>![Window.Next(1114) | Window.Next(Home) | Window.Next(settings)]</visible>
+			<animation effect="fade" end="0">WindowOpen</animation>
+			<animation effect="fade" start="0" end="100" time="500">WindowClose</animation>
+		</control>
+		<control type="image">
+			<description>Whitewash Glass Bottom Left</description>
+			<posx>105</posx>
+			<posy>512</posy>
+			<width>16</width>
+			<height>64</height>
+			<include>Image-whitewash-glass-bottom-left</include>
+			<visible>!Skin.String(Games)</visible>
+			<visible>![Window.Next(1114) | Window.Next(Home) | Window.Next(settings)]</visible>
+			<animation effect="fade" end="0">WindowOpen</animation>
+			<animation effect="fade" start="0" end="100" time="500">WindowClose</animation>
+		</control>
+		<control type="image">
+			<description>Whitewash Glass Bottom Middle</description>
+			<posx>121</posx>
+			<posy>512</posy>
+			<width>492</width>
+			<height>64</height>
+			<include>Image-whitewash-glass-bottom-middle</include>
+			<visible>!Skin.String(Games)</visible>
+			<visible>![Window.Next(1114) | Window.Next(Home) | Window.Next(settings)]</visible>
+			<animation effect="fade" end="0">WindowOpen</animation>
+			<animation effect="fade" start="0" end="100" time="500">WindowClose</animation>
+		</control>
+		<control type="image">
+			<description>Whitewash Glass Bottom Right</description>
+			<posx>613</posx>
+			<posy>512</posy>
+			<width>16</width>
+			<height>64</height>
+			<include>Image-whitewash-glass-bottom-right</include>
+			<visible>!Skin.String(Games)</visible>
+			<visible>![Window.Next(1114) | Window.Next(Home) | Window.Next(settings)]</visible>
+			<animation effect="fade" end="0">WindowOpen</animation>
+			<animation effect="fade" start="0" end="100" time="500">WindowClose</animation>
+		</control>
+		<control type="image">
+			<description>Whitewash Overlay Left</description>
+			<posx>95</posx>
+			<posy>0</posy>
+			<width>32</width>
+			<height>576</height>
+			<include>Image-whitewash-overlay-left</include>
+			<visible>![Window.Next(1114) | Window.Next(Home) | Window.Next(settings)]</visible>
+			<animation effect="fade" end="0">WindowOpen</animation>
+			<animation effect="zoom" center="111,288" start="100,30" delay="150" time="500">WindowClose</animation>
+		</control>
+		<control type="image">
+			<description>Whitewash Overlay Middle</description>
+			<posx>127</posx>
+			<posy>0</posy>
+			<width>453</width>
+			<height>576</height>
+			<include>Image-whitewash-overlay-middle</include>
+			<visible>![Window.Next(1114) | Window.Next(Home) | Window.Next(settings)]</visible>
+			<animation effect="fade" end="0">WindowOpen</animation>
+			<animation effect="zoom" center="353,288" start="100,30" delay="150" time="500">WindowClose</animation>
+		</control>
+		<control type="image">
+			<description>Whitewash Overlay Right</description>
+			<posx>580</posx>
+			<posy>0</posy>
+			<width>64</width>
+			<height>576</height>
+			<include>Image-whitewash-overlay-right</include>
+			<visible>![Window.Next(1114) | Window.Next(Home) | Window.Next(settings)]</visible>
+			<animation effect="fade" end="0">WindowOpen</animation>
+			<animation effect="zoom" center="612,288" start="100,30" delay="150" time="500">WindowClose</animation>
+		</control>
+		<control type="image">
+			<description>Games Blade Image Focus on Left</description>
+			<posx>53</posx>
+			<posy>-50</posy>
+			<width>80</width>
+			<height>676</height>
+			<texture>blades-size4-header.png</texture>
+			<visible>![Window.Next(1114) | Window.Next(Home) | Window.Next(settings)]</visible>
+			<animation effect="fade" end="0">WindowOpen</animation>
+			<animation effect="fade" start="100" end="0" delay="500" time="0">WindowClose</animation>
+		</control>
+		<control type="label">
+			<description>Games Blade Label on Left</description>
+			<label>31011</label>
+			<posx>115</posx>
+			<posy>120</posy>
+			<font>BladeFont</font>
+			<textcolor>TextcolorBlack</textcolor>
+			<aligny>top</aligny>
+			<angle>270</angle>
+			<visible>![Window.Next(1114) | Window.Next(Home) | Window.Next(settings)]</visible>
+			<animation effect="fade" end="0">WindowOpen</animation>
+			<animation effect="fade" start="100" end="0" delay="500" time="0">WindowClose</animation>
+		</control>
+		<control type="image">
+			<description>XBMC Live Blade</description>
+			<posx>18</posx>
+			<posy>-50</posy>
+			<width>80</width>
+			<height>676</height>
+			<texture>blades-size3-left-NF.png</texture>
+			<visible>![Window.Next(1114) | Window.Next(Home) | Window.Next(settings)]</visible>
+			<animation effect="fade" end="0">WindowOpen</animation>
+			<animation effect="fade" start="100" end="0" delay="500" time="0">WindowClose</animation>
+		</control>
+		<control type="label">
+			<description>XBMC Live Label</description>
+			<label>31018</label>
+			<posx>80</posx>
+			<posy>132</posy>
+			<font>BladeFont</font>
+			<textcolor>TextcolorDarkGrey</textcolor>
+			<aligny>top</aligny>
+			<angle>270</angle>
+			<visible>![Window.Next(1114) | Window.Next(Home) | Window.Next(settings)]</visible>
+			<animation effect="fade" end="0">WindowOpen</animation>
+			<animation effect="fade" start="100" end="0" delay="500" time="0">WindowClose</animation>
+		</control>
+		<control type="image">
+			<description>System Blade</description>
+			<posx>633</posx>
+			<posy>-50</posy>
+			<width>80</width>
+			<height>676</height>
+			<texture>blades-size2-right-NF.png</texture>
+			<visible>![Window.Next(1114) | Window.Next(Home) | Window.Next(settings)]</visible>
+			<animation effect="fade" end="0">WindowOpen</animation>
+			<animation effect="fade" start="100" end="0" delay="500" time="0">WindowClose</animation>
+		</control>
+		<control type="label">
+			<description>System Label</description>
+			<label>31014</label>
+			<posx>677</posx>
+			<posy>148</posy>
+			<font>BladeFont</font>
+			<textcolor>TextcolorDarkGrey</textcolor>
+			<aligny>top</aligny>
+			<angle>270</angle>
+			<visible>![Window.Next(1114) | Window.Next(Home) | Window.Next(settings)]</visible>
+			<animation effect="fade" end="0">WindowOpen</animation>
+			<animation effect="fade" start="100" end="0" delay="500" time="0">WindowClose</animation>
+		</control>
+		<control type="image">
+			<description>Media Blade Image on Right</description>
+			<posx>598</posx>
+			<posy>-50</posy>
+			<width>80</width>
+			<height>676</height>
+			<texture>blades-size3-right-NF.png</texture>
+			<visible>![Window.Next(1114) | Window.Next(Home) | Window.Next(settings)]</visible>
+			<animation effect="fade" end="0">WindowOpen</animation>
+		</control>
+		<control type="label">
+			<description>Media Blade Label on Right</description>
+			<label>31012</label>
+			<posx>642</posx>
+			<posy>132</posy>
+			<font>BladeFont</font>
+			<textcolor>TextcolorDarkGrey</textcolor>
+			<aligny>top</aligny>
+			<angle>270</angle>
+			<visible>![Window.Next(1114) | Window.Next(Home) | Window.Next(settings)]</visible>
+			<animation effect="fade" end="0">WindowOpen</animation>
+		</control>
+		<!-- Media as Startup Window -->
+		<control type="image">
+			<description>Blue Background static Alpha</description>
+			<posx>88</posx>
+			<posy>0</posy>
+			<width>610</width>
+			<height>576</height>
+			<visible>!Skin.String(Media)</visible>
+			<texture>background-blue-alpha.png</texture>
+			<visible>![Window.Next(1114) | Window.Next(1112) | Window.Next(settings)]</visible>
+			<animation effect="fade" end="0">WindowOpen</animation>
+			<animation effect="zoom" center="345.557,288" start="63.115,100" time="500">WindowClose</animation>
+		</control>
+		<control type="image">
+			<description>Media Custom Background static</description>
+			<posx>88</posx>
+			<posy>0</posy>
+			<width>610</width>
+			<height>576</height>
+			<texture>-</texture>
+			<info>Skin.String(Media)</info>
+			<colordiffuse>D1FFFFFF</colordiffuse>
+			<visible>![Window.Next(1114) | Window.Next(1112) | Window.Next(settings)]</visible>
+			<animation effect="fade" end="0">WindowOpen</animation>
+			<animation effect="zoom" center="345.557,288" start="63.115,100" time="500">WindowClose</animation>
+		</control>
+		<control type="image">
+			<description>Whitewash Glass Top Left</description>
+			<posx>140</posx>
+			<posy>0</posy>
+			<width>16</width>
+			<height>64</height>
+			<include>Image-whitewash-glass-top-left</include>
+			<visible>!Skin.String(Media)</visible>
+			<visible>![Window.Next(1114) | Window.Next(1112) | Window.Next(settings)]</visible>
+			<animation effect="fade" end="0">WindowOpen</animation>
+			<animation effect="fade" start="0" end="100" time="500">WindowClose</animation>
+		</control>
+		<control type="image">
+			<description>Whitewash Glass Top Middle</description>
+			<posx>156</posx>
+			<posy>0</posy>
+			<width>492</width>
+			<height>64</height>
+			<include>Image-whitewash-glass-top-middle</include>
+			<visible>!Skin.String(Media)</visible>
+			<visible>![Window.Next(1114) | Window.Next(1112) | Window.Next(settings)]</visible>
+			<animation effect="fade" end="0">WindowOpen</animation>
+			<animation effect="fade" start="0" end="100" time="500">WindowClose</animation>
+		</control>
+		<control type="image">
+			<description>Whitewash Glass Top Right</description>
+			<posx>648</posx>
+			<posy>0</posy>
+			<width>16</width>
+			<height>64</height>
+			<include>Image-whitewash-glass-top-right</include>
+			<visible>!Skin.String(Media)</visible>
+			<visible>![Window.Next(1114) | Window.Next(1112) | Window.Next(settings)]</visible>
+			<animation effect="fade" end="0">WindowOpen</animation>
+			<animation effect="fade" start="0" end="100" time="500">WindowClose</animation>
+		</control>
+		<control type="image">
+			<description>Whitewash Glass Bottom Left</description>
+			<posx>140</posx>
+			<posy>512</posy>
+			<width>16</width>
+			<height>64</height>
+			<include>Image-whitewash-glass-bottom-left</include>
+			<visible>!Skin.String(Media)</visible>
+			<visible>![Window.Next(1114) | Window.Next(1112) | Window.Next(settings)]</visible>
+			<animation effect="fade" end="0">WindowOpen</animation>
+			<animation effect="fade" start="0" end="100" time="500">WindowClose</animation>
+		</control>
+		<control type="image">
+			<description>Whitewash Glass Bottom Middle</description>
+			<posx>156</posx>
+			<posy>512</posy>
+			<width>492</width>
+			<height>64</height>
+			<include>Image-whitewash-glass-bottom-middle</include>
+			<visible>!Skin.String(Media)</visible>
+			<visible>![Window.Next(1114) | Window.Next(1112) | Window.Next(settings)]</visible>
+			<animation effect="fade" end="0">WindowOpen</animation>
+			<animation effect="fade" start="0" end="100" time="500">WindowClose</animation>
+		</control>
+		<control type="image">
+			<description>Whitewash Glass Bottom Right</description>
+			<posx>648</posx>
+			<posy>512</posy>
+			<width>16</width>
+			<height>64</height>
+			<include>Image-whitewash-glass-bottom-right</include>
+			<visible>!Skin.String(Media)</visible>
+			<visible>![Window.Next(1114) | Window.Next(1112) | Window.Next(settings)]</visible>
+			<animation effect="fade" end="0">WindowOpen</animation>
+			<animation effect="fade" start="0" end="100" time="500">WindowClose</animation>
+		</control>
+		<control type="image">
+			<description>Whitewash Overlay Left</description>
+			<posx>130</posx>
+			<posy>0</posy>
+			<width>32</width>
+			<height>576</height>
+			<include>Image-whitewash-overlay-left</include>
+			<visible>![Window.Next(1114) | Window.Next(1112) | Window.Next(settings)]</visible>
+			<animation effect="fade" end="0">WindowOpen</animation>
+			<animation effect="zoom" center="146,288" start="100,30" delay="150" time="500">WindowClose</animation>
+		</control>
+		<control type="image">
+			<description>Whitewash Overlay Middle</description>
+			<posx>162</posx>
+			<posy>0</posy>
+			<width>453</width>
+			<height>576</height>
+			<include>Image-whitewash-overlay-middle</include>
+			<visible>![Window.Next(1114) | Window.Next(1112) | Window.Next(settings)]</visible>
+			<animation effect="fade" end="0">WindowOpen</animation>
+			<animation effect="zoom" center="388,288" start="100,30" delay="150" time="500">WindowClose</animation>
+		</control>
+		<control type="image">
+			<description>Whitewash Overlay Right</description>
+			<posx>615</posx>
+			<posy>0</posy>
+			<width>64</width>
+			<height>576</height>
+			<include>Image-whitewash-overlay-right</include>
+			<visible>![Window.Next(1114) | Window.Next(1112) | Window.Next(settings)]</visible>
+			<animation effect="fade" end="0">WindowOpen</animation>
+			<animation effect="zoom" center="647,288" start="100,30" delay="150" time="500">WindowClose</animation>
+		</control>
+		<control type="image">
+			<description>XBMC Live Blade</description>
+			<posx>18</posx>
+			<posy>-50</posy>
+			<width>80</width>
+			<height>676</height>
+			<texture>blades-size2-left-NF.png</texture>
+			<visible>![Window.Next(1114) | Window.Next(1112) | Window.Next(settings)]</visible>
+			<animation effect="fade" end="0">WindowOpen</animation>
+			<animation effect="fade" start="100" end="0" delay="500" time="0">WindowClose</animation>
+		</control>
+		<control type="label">
+			<description>XBMC Live Label</description>
+			<label>31018</label>
+			<posx>80</posx>
+			<posy>140</posy>
+			<font>BladeFont</font>
+			<textcolor>TextcolorDarkGrey</textcolor>
+			<aligny>top</aligny>
+			<angle>270</angle>
+			<visible>![Window.Next(1114) | Window.Next(1112) | Window.Next(settings)]</visible>
+			<animation effect="fade" end="0">WindowOpen</animation>
+			<animation effect="fade" start="100" end="0" delay="500" time="0">WindowClose</animation>
+		</control>
+		<control type="image">
+			<description>Games Blade</description>
+			<posx>53</posx>
+			<posy>-50</posy>
+			<width>80</width>
+			<height>676</height>
+			<texture>blades-size3-left-NF.png</texture>
+			<visible>![Window.Next(1114) | Window.Next(1112) | Window.Next(settings)]</visible>
+			<animation effect="fade" end="0">WindowOpen</animation>
+			<animation effect="fade" start="100" end="0" delay="500" time="0">WindowClose</animation>
+		</control>
+		<control type="label">
+			<description>Games Label</description>
+			<label>31011</label>
+			<posx>115</posx>
+			<posy>132</posy>
+			<font>BladeFont</font>
+			<textcolor>TextcolorDarkGrey</textcolor>
+			<aligny>top</aligny>
+			<angle>270</angle>
+			<visible>![Window.Next(1114) | Window.Next(1112) | Window.Next(settings)]</visible>
+			<animation effect="fade" end="0">WindowOpen</animation>
+			<animation effect="fade" start="100" end="0" delay="500" time="0">WindowClose</animation>
+		</control>
+		<control type="image">
+			<description>Media Blade Image Focus on Left</description>
+			<posx>88</posx>
+			<posy>-50</posy>
+			<width>80</width>
+			<height>676</height>
+			<texture>blades-size4-header.png</texture>
+			<visible>![Window.Next(1114) | Window.Next(1112) | Window.Next(settings)]</visible>
+			<animation effect="fade" end="0">WindowOpen</animation>
+			<animation effect="fade" start="100" end="0" delay="500" time="0">WindowClose</animation>
+		</control>
+		<control type="label">
+			<description>Media Blade Label on Left</description>
+			<label>31012</label>
+			<posx>150</posx>
+			<posy>120</posy>
+			<font>BladeFont</font>
+			<textcolor>TextcolorBlack</textcolor>
+			<aligny>top</aligny>
+			<angle>270</angle>
+			<visible>![Window.Next(1114) | Window.Next(1112) | Window.Next(settings)]</visible>
+			<animation effect="fade" end="0">WindowOpen</animation>
+			<animation effect="fade" start="100" end="0" delay="500" time="0">WindowClose</animation>
+		</control>
+		<control type="image">
+			<description>System Blade Image on Right</description>
+			<posx>633</posx>
+			<posy>-50</posy>
+			<width>80</width>
+			<height>676</height>
+			<texture>blades-size3-right-NF.png</texture>
+			<visible>![Window.Next(1114) | Window.Next(1112) | Window.Next(settings)]</visible>
+			<animation effect="fade" end="0">WindowOpen</animation>
+			<animation effect="fade" start="100" end="0" delay="500" time="0">WindowClose</animation>
+		</control>
+		<control type="label">
+			<description>System Blade Label on Right</description>
+			<label>31014</label>
+			<posx>677</posx>
+			<posy>132</posy>
+			<font>BladeFont</font>
+			<textcolor>TextcolorDarkGrey</textcolor>
+			<aligny>top</aligny>
+			<angle>270</angle>
+			<visible>![Window.Next(1114) | Window.Next(1112) | Window.Next(settings)]</visible>
+			<animation effect="fade" end="0">WindowOpen</animation>
+			<animation effect="fade" start="100" end="0" delay="500" time="0">WindowClose</animation>
+		</control>
+		<!-- System as Startup Window -->
+		<control type="image">
+			<description>Purple Background Static Alpha</description>
+			<posx>123</posx>
+			<posy>0</posy>
+			<width>610</width>
+			<height>576</height>
+			<visible>!Skin.String(System)</visible>
+			<texture>background-purple-alpha.png</texture>
+			<visible>![Window.Next(1114) | Window.Next(1112) | Window.Next(Home)]</visible>
+			<animation effect="fade" end="0">WindowOpen</animation>
+			<animation effect="zoom" center="285.668,288" start="63.115,100" time="500">WindowClose</animation>
+		</control>
+		<control type="image">
+			<description>System Custom Background Static</description>
+			<posx>123</posx>
+			<posy>0</posy>
+			<width>610</width>
+			<height>576</height>
+			<texture>-</texture>
+			<info>Skin.String(System)</info>
+			<colordiffuse>D1FFFFFF</colordiffuse>
+			<visible>![Window.Next(1114) | Window.Next(1112) | Window.Next(Home)]</visible>
+			<animation effect="fade" end="0">WindowOpen</animation>
+			<animation effect="zoom" center="285.668,288" start="63.115,100" time="500">WindowClose</animation>
+		</control>
+		<control type="image">
+			<description>Whitewash Glass Top Left</description>
+			<posx>175</posx>
+			<posy>0</posy>
+			<width>16</width>
+			<height>64</height>
+			<include>Image-whitewash-glass-top-left</include>
+			<visible>!Skin.String(System)</visible>
+			<visible>![Window.Next(1114) | Window.Next(1112) | Window.Next(Home)]</visible>
+			<animation effect="fade" end="0">WindowOpen</animation>
+			<animation effect="fade" start="0" end="100" time="500">WindowClose</animation>
+		</control>
+		<control type="image">
+			<description>Whitewash Glass Top Middle</description>
+			<posx>191</posx>
+			<posy>0</posy>
+			<width>484</width>
+			<height>64</height>
+			<include>Image-whitewash-glass-top-middle</include>
+			<visible>!Skin.String(System)</visible>
+			<visible>![Window.Next(1114) | Window.Next(1112) | Window.Next(Home)]</visible>
+			<animation effect="fade" end="0">WindowOpen</animation>
+			<animation effect="fade" start="0" end="100" time="500">WindowClose</animation>
+		</control>
+		<control type="image">
+			<description>Whitewash Glass Top Right</description>
+			<posx>675</posx>
+			<posy>0</posy>
+			<width>16</width>
+			<height>64</height>
+			<include>Image-whitewash-glass-top-right</include>
+			<visible>!Skin.String(System)</visible>
+			<visible>![Window.Next(1114) | Window.Next(1112) | Window.Next(Home)]</visible>
+			<animation effect="fade" end="0">WindowOpen</animation>
+			<animation effect="fade" start="0" end="100" time="500">WindowClose</animation>
+		</control>
+		<control type="image">
+			<description>Whitewash Glass Bottom Left</description>
+			<posx>175</posx>
+			<posy>512</posy>
+			<width>16</width>
+			<height>64</height>
+			<include>Image-whitewash-glass-bottom-left</include>
+			<visible>!Skin.String(System)</visible>
+			<visible>![Window.Next(1114) | Window.Next(1112) | Window.Next(Home)]</visible>
+			<animation effect="fade" end="0">WindowOpen</animation>
+			<animation effect="fade" start="0" end="100" time="500">WindowClose</animation>
+		</control>
+		<control type="image">
+			<description>Whitewash Glass Bottom Middle</description>
+			<posx>191</posx>
+			<posy>512</posy>
+			<width>484</width>
+			<height>64</height>
+			<include>Image-whitewash-glass-bottom-middle</include>
+			<visible>!Skin.String(System)</visible>
+			<visible>![Window.Next(1114) | Window.Next(1112) | Window.Next(Home)]</visible>
+			<animation effect="fade" end="0">WindowOpen</animation>
+			<animation effect="fade" start="0" end="100" time="500">WindowClose</animation>
+		</control>
+		<control type="image">
+			<description>Whitewash Glass Bottom Right</description>
+			<posx>675</posx>
+			<posy>512</posy>
+			<width>16</width>
+			<height>64</height>
+			<include>Image-whitewash-glass-bottom-right</include>
+			<visible>!Skin.String(System)</visible>
+			<visible>![Window.Next(1114) | Window.Next(1112) | Window.Next(Home)]</visible>
+			<animation effect="fade" end="0">WindowOpen</animation>
+			<animation effect="fade" start="0" end="100" time="500">WindowClose</animation>
+		</control>
+		<control type="image">
+			<description>Whitewash Overlay Left</description>
+			<posx>165</posx>
+			<posy>0</posy>
+			<width>32</width>
+			<height>576</height>
+			<include>Image-whitewash-overlay-left</include>
+			<visible>![Window.Next(1114) | Window.Next(1112) | Window.Next(Home)]</visible>
+			<animation effect="fade" end="0">WindowOpen</animation>
+			<animation effect="zoom" center="181,288" start="100,30" delay="150" time="500">WindowClose</animation>
+		</control>
+		<control type="image">
+			<description>Whitewash Overlay Middle</description>
+			<posx>197</posx>
+			<posy>0</posy>
+			<width>446</width>
+			<height>576</height>
+			<include>Image-whitewash-overlay-middle</include>
+			<visible>![Window.Next(1114) | Window.Next(1112) | Window.Next(Home)]</visible>
+			<animation effect="fade" end="0">WindowOpen</animation>
+			<animation effect="zoom" center="423,288" start="100,30" delay="150" time="500">WindowClose</animation>
+		</control>
+		<control type="image">
+			<description>Whitewash Overlay Right</description>
+			<posx>643</posx>
+			<posy>0</posy>
+			<width>64</width>
+			<height>576</height>
+			<include>Image-whitewash-overlay-right</include>
+			<visible>![Window.Next(1114) | Window.Next(1112) | Window.Next(Home)]</visible>
+			<animation effect="fade" end="0">WindowOpen</animation>
+			<animation effect="zoom" center="682,288" start="100,30" delay="150" time="500">WindowClose</animation>
+		</control>
+		<control type="image">
+			<description>XBMC Live Blade</description>
+			<posx>18</posx>
+			<posy>-50</posy>
+			<width>80</width>
+			<height>676</height>
+			<texture>blades-size1-left-NF.png</texture>
+			<visible>![Window.Next(1114) | Window.Next(1112) | Window.Next(Home)]</visible>
+			<animation effect="fade" end="0">WindowOpen</animation>
+			<animation effect="fade" start="100" end="0" delay="500" time="0">WindowClose</animation>
+		</control>
+		<control type="label">
+			<description>XBMC Live Label</description>
+			<label>31018</label>
+			<posx>80</posx>
+			<posy>148</posy>
+			<font>BladeFont</font>
+			<textcolor>TextcolorDarkGrey</textcolor>
+			<aligny>top</aligny>
+			<angle>270</angle>
+			<visible>![Window.Next(1114) | Window.Next(1112) | Window.Next(Home)]</visible>
+			<animation effect="fade" end="0">WindowOpen</animation>
+			<animation effect="fade" start="100" end="0" delay="500" time="0">WindowClose</animation>
+		</control>
+		<control type="image">
+			<description>Games Blade</description>
+			<posx>53</posx>
+			<posy>-50</posy>
+			<width>80</width>
+			<height>676</height>
+			<texture>blades-size2-left-NF.png</texture>
+			<visible>![Window.Next(1114) | Window.Next(1112) | Window.Next(Home)]</visible>
+			<animation effect="fade" end="0">WindowOpen</animation>
+			<animation effect="fade" start="100" end="0" delay="500" time="0">WindowClose</animation>
+		</control>
+		<control type="label">
+			<description>Games Label</description>
+			<label>31011</label>
+			<posx>115</posx>
+			<posy>140</posy>
+			<font>BladeFont</font>
+			<textcolor>TextcolorDarkGrey</textcolor>
+			<aligny>top</aligny>
+			<angle>270</angle>
+			<visible>![Window.Next(1114) | Window.Next(1112) | Window.Next(Home)]</visible>
+			<animation effect="fade" end="0">WindowOpen</animation>
+			<animation effect="fade" start="100" end="0" delay="500" time="0">WindowClose</animation>
+		</control>
+		<control type="image">
+			<description>Media Blade</description>
+			<posx>88</posx>
+			<posy>-50</posy>
+			<width>80</width>
+			<height>676</height>
+			<texture>blades-size3-left-NF.png</texture>
+			<visible>![Window.Next(1114) | Window.Next(1112) | Window.Next(Home)]</visible>
+			<animation effect="fade" end="0">WindowOpen</animation>
+			<animation effect="fade" start="100" end="0" delay="500" time="0">WindowClose</animation>
+		</control>
+		<control type="label">
+			<description>Media Label</description>
+			<label>31012</label>
+			<posx>150</posx>
+			<posy>132</posy>
+			<font>BladeFont</font>
+			<textcolor>TextcolorDarkGrey</textcolor>
+			<aligny>top</aligny>
+			<angle>270</angle>
+			<visible>![Window.Next(1114) | Window.Next(1112) | Window.Next(Home)]</visible>
+			<animation effect="fade" end="0">WindowOpen</animation>
+			<animation effect="fade" start="100" end="0" delay="500" time="0">WindowClose</animation>
+		</control>
+		<control type="image">
+			<description>System Blade Image Focus on Left</description>
+			<posx>123</posx>
+			<posy>-50</posy>
+			<width>80</width>
+			<height>676</height>
+			<texture>blades-size4-header.png</texture>
+			<visible>![Window.Next(1114) | Window.Next(1112) | Window.Next(Home)]</visible>
+			<animation effect="fade" end="0">WindowOpen</animation>
+			<animation effect="fade" start="100" end="0" delay="500" time="0">WindowClose</animation>
+		</control>
+		<control type="label">
+			<description>System Blade Label on Left</description>
+			<label>31014</label>
+			<posx>185</posx>
+			<posy>120</posy>
+			<font>BladeFont</font>
+			<textcolor>TextcolorBlack</textcolor>
+			<aligny>top</aligny>
+			<angle>270</angle>
+			<visible>![Window.Next(1114) | Window.Next(1112) | Window.Next(Home)]</visible>
+			<animation effect="fade" end="0">WindowOpen</animation>
+			<animation effect="fade" start="100" end="0" delay="500" time="0">WindowClose</animation>
+		</control>
+		<!-- Main Animation -->
+		<control type="button" id="1">
+			<posx>720</posx>
+			<posy>0</posy>
+			<width>0</width>
+			<height>0</height>
+			<onleft>1</onleft>
+			<onright>1</onright>
+			<ondown>1</ondown>
+			<onup>1</onup>
+			<texturefocus>-</texturefocus>
+			<visible>Skin.HasSetting(UpdateCheck) + Skin.HasSetting(UpdateCard)</visible>
+			<onfocus>ReplaceWindow(startwindow)</onfocus>
+			<onfocus>RunScript(Q:\skin\MC360\extras\gamercardupdate.py)</onfocus>
+			<onfocus>RunScript(Q:\skin\MC360\extras\updatecheck.py)</onfocus>
+			<animation effect="fade" start="0" end="0">Focus</animation>
+		</control>
+		<control type="button" id="1">
+			<posx>720</posx>
+			<posy>0</posy>
+			<width>0</width>
+			<height>0</height>
+			<onleft>1</onleft>
+			<onright>1</onright>
+			<ondown>1</ondown>
+			<onup>1</onup>
+			<texturefocus>-</texturefocus>
+			<visible>Skin.HasSetting(UpdateCheck) + !Skin.HasSetting(UpdateCard)</visible>
+			<onfocus>ReplaceWindow(startwindow)</onfocus>
+			<onfocus>RunScript(Q:\skin\MC360\extras\updatecheck.py)</onfocus>
+			<animation effect="fade" start="0" end="0">Focus</animation>
+		</control>
+		<control type="button" id="1">
+			<posx>720</posx>
+			<posy>0</posy>
+			<width>0</width>
+			<height>0</height>
+			<onleft>1</onleft>
+			<onright>1</onright>
+			<ondown>1</ondown>
+			<onup>1</onup>
+			<texturefocus>-</texturefocus>
+			<visible>!Skin.HasSetting(UpdateCheck) + Skin.HasSetting(UpdateCard)</visible>
+			<onfocus>ReplaceWindow(startwindow)</onfocus>
+			<onfocus>RunScript(Q:\skin\MC360\extras\gamercardupdate.py)</onfocus>
+			<animation effect="fade" start="0" end="0">Focus</animation>
+		</control>
+		<control type="button" id="1">
+			<posx>720</posx>
+			<posy>0</posy>
+			<width>0</width>
+			<height>0</height>
+			<onleft>1</onleft>
+			<onright>1</onright>
+			<ondown>1</ondown>
+			<onup>1</onup>
+			<texturefocus>-</texturefocus>
+			<visible>!Skin.HasSetting(UpdateCheck) + !Skin.HasSetting(UpdateCard)</visible>
+			<onfocus>ReplaceWindow(startwindow)</onfocus>
+			<animation effect="fade" start="0" end="0">Focus</animation>
+		</control>
+		<control type="image">
+			<description>Intro Background</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>576</height>
+			<texture>background-intro.png</texture>
+			<visible>!Skin.String(Login)</visible>
+			<animation effect="fade" start="100" end="0" time="750">WindowClose</animation>
+		</control>
+		<control type="image">
+			<description>Custom Intro Background</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>576</height>
+			<info>Skin.String(Login)</info>
+			<colordiffuse>D1FFFFFF</colordiffuse>
+			<animation effect="fade" start="100" end="0" time="750">WindowClose</animation>
+		</control>
+		<control type="image">
+			<description>Left Blade Runner Fill-In</description>
+			<posx>0</posx>
+			<posy>-50</posy>
+			<width>104</width>
+			<height>676</height>
+			<texture>background-grey1.png</texture>
+			<animation effect="slide" end="-170,0" time="500">WindowClose</animation>
+		</control>
+		<control type="image">
+			<description>Left Blade Runner</description>
+			<posx>104</posx>
+			<posy>-50</posy>
+			<width>128</width>
+			<height>676</height>
+			<texture>blades-runner-left1.png</texture>
+			<animation effect="slide" end="-170,0" time="500">WindowClose</animation>
+		</control>
+		<control type="image">
+			<description>Left Blade Runner</description>
+			<posx>-61</posx>
+			<posy>-50</posy>
+			<width>128</width>
+			<height>676</height>
+			<texture>blades-runner-left.png</texture>
+			<animation effect="fade" end="0">WindowOpen</animation>
+			<animation effect="fade" start="0" end="100" delay="500" time="0">WindowClose</animation>
+		</control>
+		<control type="image">
+			<description>Right Blade Runner Fill-In</description>
+			<posx>628</posx>
+			<posy>-50</posy>
+			<width>92</width>
+			<height>676</height>
+			<texture>background-grey1.png</texture>
+			<animation effect="slide" end="165,0" time="500">WindowClose</animation>
+		</control>
+		<control type="image">
+			<description>Right Blade Runner</description>
+			<posx>500</posx>
+			<posy>-50</posy>
+			<width>128</width>
+			<height>676</height>
+			<texture>blades-runner-right.png</texture>
+			<animation effect="slide" end="165,0" time="500">WindowClose</animation>
+		</control>
+		<!-- Xlink Blade Overlays -->
+		<control type="image">
+			<description>XBMC Live Blade</description>
+			<posx>18</posx>
+			<posy>-50</posy>
+			<width>80</width>
+			<height>676</height>
+			<texture>blades-size4-header.png</texture>
+			<visible>![Window.Next(1112) | Window.Next(Home) | Window.Next(settings)]</visible>
+			<animation effect="fade" end="0">WindowOpen</animation>
+			<animation effect="fade" start="0" end="100" delay="500" time="0">WindowClose</animation>
+		</control>
+		<control type="label">
+			<description>XBMC Live Label</description>
+			<label>31018</label>
+			<posx>80</posx>
+			<posy>120</posy>
+			<font>BladeFont</font>
+			<textcolor>TextcolorBlack</textcolor>
+			<aligny>top</aligny>
+			<angle>270</angle>
+			<visible>![Window.Next(1112) | Window.Next(Home) | Window.Next(settings)]</visible>
+			<animation effect="fade" end="0">WindowOpen</animation>
+			<animation effect="fade" start="0" end="100" delay="500" time="0">WindowClose</animation>
+		</control>
+		<control type="image">
+			<description>System Blade</description>
+			<posx>633</posx>
+			<posy>-50</posy>
+			<width>80</width>
+			<height>676</height>
+			<texture>blades-size1-right-NF.png</texture>
+			<visible>![Window.Next(1112) | Window.Next(Home) | Window.Next(settings)]</visible>
+			<animation effect="fade" end="0">WindowOpen</animation>
+			<animation effect="fade" start="0" end="100" delay="500" time="0">WindowClose</animation>
+		</control>
+		<control type="label">
+			<description>System Label</description>
+			<label>31014</label>
+			<posx>676</posx>
+			<posy>148</posy>
+			<font>BladeFont</font>
+			<textcolor>TextcolorDarkGrey</textcolor>
+			<aligny>top</aligny>
+			<angle>270</angle>
+			<visible>![Window.Next(1112) | Window.Next(Home) | Window.Next(settings)]</visible>
+			<animation effect="fade" end="0">WindowOpen</animation>
+			<animation effect="fade" start="0" end="100" delay="500" time="0">WindowClose</animation>
+		</control>
+		<control type="image">
+			<description>Media Blade</description>
+			<posx>598</posx>
+			<posy>-50</posy>
+			<width>80</width>
+			<height>676</height>
+			<texture>blades-size2-right-NF.png</texture>
+			<visible>![Window.Next(1112) | Window.Next(Home) | Window.Next(settings)]</visible>
+			<animation effect="fade" end="0">WindowOpen</animation>
+			<animation effect="fade" start="0" end="100" delay="500" time="0">WindowClose</animation>
+		</control>
+		<control type="label">
+			<description>Media Label</description>
+			<label>31012</label>
+			<posx>642</posx>
+			<posy>140</posy>
+			<font>BladeFont</font>
+			<textcolor>TextcolorDarkGrey</textcolor>
+			<aligny>top</aligny>
+			<angle>270</angle>
+			<visible>![Window.Next(1112) | Window.Next(Home) | Window.Next(settings)]</visible>
+			<animation effect="fade" end="0">WindowOpen</animation>
+			<animation effect="fade" start="0" end="100" delay="500" time="0">WindowClose</animation>
+		</control>
+		<control type="image">
+			<description>Games Blade Image on Right</description>
+			<posx>563</posx>
+			<posy>-50</posy>
+			<width>80</width>
+			<height>676</height>
+			<texture>blades-size3-right-NF.png</texture>
+			<visible>![Window.Next(1112) | Window.Next(Home) | Window.Next(settings)]</visible>
+			<animation effect="fade" end="0">WindowOpen</animation>
+			<animation effect="fade" start="0" end="100" delay="500" time="0">WindowClose</animation>
+		</control>
+		<control type="label">
+			<description>Games Blade Label on Right</description>
+			<label>31011</label>
+			<posx>607</posx>
+			<posy>132</posy>
+			<font>BladeFont</font>
+			<textcolor>TextcolorDarkGrey</textcolor>
+			<aligny>top</aligny>
+			<angle>270</angle>
+			<visible>![Window.Next(1112) | Window.Next(Home) | Window.Next(settings)]</visible>
+			<animation effect="fade" end="0">WindowOpen</animation>
+			<animation effect="fade" start="0" end="100" delay="500" time="0">WindowClose</animation>
+		</control>
+		<!-- XLink Blade Hazes -->
+		<control type="image">
+			<description>XBMC Live Blade Haze Left</description>
+			<posx>-76</posx>
+			<posy>350</posy>
+			<width>150</width>
+			<height>228</height>
+			<texture>haze-orange-left.png</texture>
+			<visible>!Skin.HasSetting(DisableHazes)</visible>
+			<visible>![Window.Next(1112) | Window.Next(Home) | Window.Next(settings)]</visible>
+			<animation effect="fade" end="0">WindowOpen</animation>
+			<animation effect="fade" start="0" end="100" time="500">WindowClose</animation>
+		</control>
+		<control type="image">
+			<description>XBMC Live Blade Haze Right</description>
+			<posx>590</posx>
+			<posy>350</posy>
+			<width>150</width>
+			<height>228</height>
+			<texture>haze-orange-right.png</texture>
+			<visible>!Skin.HasSetting(DisableHazes)</visible>
+			<visible>![Window.Next(1112) | Window.Next(Home) | Window.Next(settings)]</visible>
+			<animation effect="fade" end="0">WindowOpen</animation>
+			<animation effect="fade" start="0" end="100" time="500">WindowClose</animation>
+		</control>
+		<!-- Games Blade Overlays -->
+		<control type="image">
+			<description>XBMC Live Blade</description>
+			<posx>18</posx>
+			<posy>-50</posy>
+			<width>80</width>
+			<height>676</height>
+			<texture>blades-size3-left-NF.png</texture>
+			<visible>![Window.Next(1114) | Window.Next(Home) | Window.Next(settings)]</visible>
+			<animation effect="fade" end="0">WindowOpen</animation>
+			<animation effect="fade" start="0" end="100" delay="500" time="0">WindowClose</animation>
+		</control>
+		<control type="label">
+			<description>XBMC Live Label</description>
+			<label>31018</label>
+			<posx>80</posx>
+			<posy>132</posy>
+			<font>BladeFont</font>
+			<textcolor>TextcolorDarkGrey</textcolor>
+			<aligny>top</aligny>
+			<angle>270</angle>
+			<visible>![Window.Next(1114) | Window.Next(Home) | Window.Next(settings)]</visible>
+			<animation effect="fade" end="0">WindowOpen</animation>
+			<animation effect="fade" start="0" end="100" delay="500" time="0">WindowClose</animation>
+		</control>
+		<control type="image">
+			<description>Games Blade Image Focus on Left</description>
+			<posx>53</posx>
+			<posy>-50</posy>
+			<width>80</width>
+			<height>676</height>
+			<texture>blades-size4-header.png</texture>
+			<visible>![Window.Next(1114) | Window.Next(Home) | Window.Next(settings)]</visible>
+			<animation effect="fade" end="0">WindowOpen</animation>
+			<animation effect="fade" start="0" end="100" delay="500" time="0">WindowClose</animation>
+		</control>
+		<control type="label">
+			<description>Games Blade Label on Left</description>
+			<label>31011</label>
+			<posx>115</posx>
+			<posy>120</posy>
+			<font>BladeFont</font>
+			<textcolor>TextcolorBlack</textcolor>
+			<aligny>top</aligny>
+			<angle>270</angle>
+			<visible>![Window.Next(1114) | Window.Next(Home) | Window.Next(settings)]</visible>
+			<animation effect="fade" end="0">WindowOpen</animation>
+			<animation effect="fade" start="0" end="100" delay="500" time="0">WindowClose</animation>
+		</control>
+		<control type="image">
+			<description>System Blade</description>
+			<posx>633</posx>
+			<posy>-50</posy>
+			<width>80</width>
+			<height>676</height>
+			<texture>blades-size2-right-NF.png</texture>
+			<visible>![Window.Next(1114) | Window.Next(Home) | Window.Next(settings)]</visible>
+			<animation effect="fade" end="0">WindowOpen</animation>
+			<animation effect="fade" start="0" end="100" delay="500" time="0">WindowClose</animation>
+		</control>
+		<control type="label">
+			<description>System Label</description>
+			<label>31014</label>
+			<posx>677</posx>
+			<posy>148</posy>
+			<font>BladeFont</font>
+			<textcolor>TextcolorDarkGrey</textcolor>
+			<aligny>top</aligny>
+			<angle>270</angle>
+			<visible>![Window.Next(1114) | Window.Next(Home) | Window.Next(settings)]</visible>
+			<animation effect="fade" end="0">WindowOpen</animation>
+			<animation effect="fade" start="0" end="100" delay="500" time="0">WindowClose</animation>
+		</control>
+		<control type="image">
+			<description>Media Blade Image on Right</description>
+			<posx>598</posx>
+			<posy>-50</posy>
+			<width>80</width>
+			<height>676</height>
+			<texture>blades-size3-right-NF.png</texture>
+			<visible>![Window.Next(1114) | Window.Next(Home) | Window.Next(settings)]</visible>
+			<animation effect="fade" end="0">WindowOpen</animation>
+			<animation effect="fade" start="0" end="100" delay="500" time="0">WindowClose</animation>
+		</control>
+		<control type="label">
+			<description>Media Blade Label on Right</description>
+			<label>31012</label>
+			<posx>642</posx>
+			<posy>132</posy>
+			<font>BladeFont</font>
+			<textcolor>TextcolorDarkGrey</textcolor>
+			<aligny>top</aligny>
+			<angle>270</angle>
+			<visible>![Window.Next(1114) | Window.Next(Home) | Window.Next(settings)]</visible>
+			<animation effect="fade" end="0">WindowOpen</animation>
+			<animation effect="fade" start="0" end="100" delay="500" time="0">WindowClose</animation>
+		</control>
+		<!-- Games Blade Hazes -->
+		<control type="image">
+			<description>Games Blade Haze Left</description>
+			<posx>-41</posx>
+			<posy>350</posy>
+			<width>150</width>
+			<height>228</height>
+			<texture>haze-green-left.png</texture>
+			<visible>!Skin.HasSetting(DisableHazes)</visible>
+			<visible>![Window.Next(1114) | Window.Next(Home) | Window.Next(settings)]</visible>
+			<animation effect="fade" end="0">WindowOpen</animation>
+			<animation effect="fade" start="0" end="100" time="500">WindowClose</animation>
+		</control>
+		<control type="image">
+			<description>Games Blade Haze Right</description>
+			<posx>615</posx>
+			<posy>350</posy>
+			<width>150</width>
+			<height>228</height>
+			<texture>haze-green-right.png</texture>
+			<visible>!Skin.HasSetting(DisableHazes)</visible>
+			<visible>![Window.Next(1114) | Window.Next(Home) | Window.Next(settings)]</visible>
+			<animation effect="fade" end="0">WindowOpen</animation>
+			<animation effect="fade" start="0" end="100" time="500">WindowClose</animation>
+		</control>
+		<!-- Media Blade Overlays -->
+		<control type="image">
+			<description>XBMC Live Blade</description>
+			<posx>18</posx>
+			<posy>-50</posy>
+			<width>80</width>
+			<height>676</height>
+			<texture>blades-size2-left-NF.png</texture>
+			<visible>![Window.Next(1114) | Window.Next(1112) | Window.Next(settings)]</visible>
+			<animation effect="fade" end="0">WindowOpen</animation>
+			<animation effect="fade" start="0" end="100" delay="500" time="0">WindowClose</animation>
+		</control>
+		<control type="label">
+			<description>XBMC Live Label</description>
+			<label>31018</label>
+			<posx>80</posx>
+			<posy>140</posy>
+			<font>BladeFont</font>
+			<textcolor>TextcolorDarkGrey</textcolor>
+			<aligny>top</aligny>
+			<angle>270</angle>
+			<visible>![Window.Next(1114) | Window.Next(1112) | Window.Next(settings)]</visible>
+			<animation effect="fade" end="0">WindowOpen</animation>
+			<animation effect="fade" start="0" end="100" delay="500" time="0">WindowClose</animation>
+		</control>
+		<control type="image">
+			<description>Games Blade</description>
+			<posx>53</posx>
+			<posy>-50</posy>
+			<width>80</width>
+			<height>676</height>
+			<texture>blades-size3-left-NF.png</texture>
+			<visible>![Window.Next(1114) | Window.Next(1112) | Window.Next(settings)]</visible>
+			<animation effect="fade" end="0">WindowOpen</animation>
+			<animation effect="fade" start="0" end="100" delay="500" time="0">WindowClose</animation>
+		</control>
+		<control type="label">
+			<description>Games Label</description>
+			<label>31011</label>
+			<posx>115</posx>
+			<posy>132</posy>
+			<font>BladeFont</font>
+			<textcolor>TextcolorDarkGrey</textcolor>
+			<aligny>top</aligny>
+			<angle>270</angle>
+			<visible>![Window.Next(1114) | Window.Next(1112) | Window.Next(settings)]</visible>
+			<animation effect="fade" end="0">WindowOpen</animation>
+			<animation effect="fade" start="0" end="100" delay="500" time="0">WindowClose</animation>
+		</control>
+		<control type="image">
+			<description>Media Blade Image Focus on Left</description>
+			<posx>88</posx>
+			<posy>-50</posy>
+			<width>80</width>
+			<height>676</height>
+			<texture>blades-size4-header.png</texture>
+			<visible>![Window.Next(1114) | Window.Next(1112) | Window.Next(settings)]</visible>
+			<animation effect="fade" end="0">WindowOpen</animation>
+			<animation effect="fade" start="0" end="100" delay="500" time="0">WindowClose</animation>
+		</control>
+		<control type="label">
+			<description>Media Blade Label on Left</description>
+			<label>31012</label>
+			<posx>150</posx>
+			<posy>120</posy>
+			<font>BladeFont</font>
+			<textcolor>TextcolorBlack</textcolor>
+			<aligny>top</aligny>
+			<angle>270</angle>
+			<visible>![Window.Next(1114) | Window.Next(1112) | Window.Next(settings)]</visible>
+			<animation effect="fade" end="0">WindowOpen</animation>
+			<animation effect="fade" start="0" end="100" delay="500" time="0">WindowClose</animation>
+		</control>
+		<control type="image">
+			<description>System Blade Image on Right</description>
+			<posx>633</posx>
+			<posy>-50</posy>
+			<width>80</width>
+			<height>676</height>
+			<texture>blades-size3-right-NF.png</texture>
+			<visible>![Window.Next(1114) | Window.Next(1112) | Window.Next(settings)]</visible>
+			<animation effect="fade" end="0">WindowOpen</animation>
+			<animation effect="fade" start="0" end="100" delay="500" time="0">WindowClose</animation>
+		</control>
+		<control type="label">
+			<description>System Blade Label on Right</description>
+			<label>31014</label>
+			<posx>677</posx>
+			<posy>132</posy>
+			<font>BladeFont</font>
+			<textcolor>TextcolorDarkGrey</textcolor>
+			<aligny>top</aligny>
+			<angle>270</angle>
+			<visible>![Window.Next(1114) | Window.Next(1112) | Window.Next(settings)]</visible>
+			<animation effect="fade" end="0">WindowOpen</animation>
+			<animation effect="fade" start="0" end="100" delay="500" time="0">WindowClose</animation>
+		</control>
+		<!-- Media Blade Hazes -->
+		<control type="image">
+			<description>Media Blade Haze Left</description>
+			<posx>0</posx>
+			<posy>350</posy>
+			<width>150</width>
+			<height>228</height>
+			<texture>haze-blue-left.png</texture>
+			<visible>!Skin.HasSetting(DisableHazes)</visible>
+			<visible>![Window.Next(1114) | Window.Next(1112) | Window.Next(settings)]</visible>
+			<animation effect="fade" end="0">WindowOpen</animation>
+			<animation effect="fade" start="0" end="100" time="500">WindowClose</animation>
+		</control>
+		<control type="image">
+			<description>Media Blade Haze Right</description>
+			<posx>657</posx>
+			<posy>350</posy>
+			<width>150</width>
+			<height>228</height>
+			<texture>haze-blue-right.png</texture>
+			<visible>!Skin.HasSetting(DisableHazes)</visible>
+			<visible>![Window.Next(1114) | Window.Next(1112) | Window.Next(settings)]</visible>
+			<animation effect="fade" end="0">WindowOpen</animation>
+			<animation effect="fade" start="0" end="100" time="500">WindowClose</animation>
+		</control>
+		<!-- System Blade Overlays -->
+		<control type="image">
+			<description>XBMC Live Blade</description>
+			<posx>18</posx>
+			<posy>-50</posy>
+			<width>80</width>
+			<height>676</height>
+			<texture>blades-size1-left-NF.png</texture>
+			<visible>![Window.Next(1114) | Window.Next(1112) | Window.Next(Home)]</visible>
+			<animation effect="fade" end="0">WindowOpen</animation>
+			<animation effect="fade" start="0" end="100" delay="500" time="0">WindowClose</animation>
+		</control>
+		<control type="label">
+			<description>XBMC Live Label</description>
+			<label>31018</label>
+			<posx>80</posx>
+			<posy>148</posy>
+			<font>BladeFont</font>
+			<textcolor>TextcolorDarkGrey</textcolor>
+			<aligny>top</aligny>
+			<angle>270</angle>
+			<visible>![Window.Next(1114) | Window.Next(1112) | Window.Next(Home)]</visible>
+			<animation effect="fade" end="0">WindowOpen</animation>
+			<animation effect="fade" start="0" end="100" delay="500" time="0">WindowClose</animation>
+		</control>
+		<control type="image">
+			<description>Games Blade</description>
+			<posx>53</posx>
+			<posy>-50</posy>
+			<width>80</width>
+			<height>676</height>
+			<texture>blades-size2-left-NF.png</texture>
+			<visible>![Window.Next(1114) | Window.Next(1112) | Window.Next(Home)]</visible>
+			<animation effect="fade" end="0">WindowOpen</animation>
+			<animation effect="fade" start="0" end="100" delay="500" time="0">WindowClose</animation>
+		</control>
+		<control type="label">
+			<description>Games Label</description>
+			<label>31011</label>
+			<posx>115</posx>
+			<posy>140</posy>
+			<font>BladeFont</font>
+			<textcolor>TextcolorDarkGrey</textcolor>
+			<aligny>top</aligny>
+			<angle>270</angle>
+			<visible>![Window.Next(1114) | Window.Next(1112) | Window.Next(Home)]</visible>
+			<animation effect="fade" end="0">WindowOpen</animation>
+			<animation effect="fade" start="0" end="100" delay="500" time="0">WindowClose</animation>
+		</control>
+		<control type="image">
+			<description>Media Blade</description>
+			<posx>88</posx>
+			<posy>-50</posy>
+			<width>80</width>
+			<height>676</height>
+			<texture>blades-size3-left-NF.png</texture>
+			<visible>![Window.Next(1114) | Window.Next(1112) | Window.Next(Home)]</visible>
+			<animation effect="fade" end="0">WindowOpen</animation>
+			<animation effect="fade" start="0" end="100" delay="500" time="0">WindowClose</animation>
+		</control>
+		<control type="label">
+			<description>Media Label</description>
+			<label>31012</label>
+			<posx>150</posx>
+			<posy>132</posy>
+			<font>BladeFont</font>
+			<textcolor>TextcolorDarkGrey</textcolor>
+			<aligny>top</aligny>
+			<angle>270</angle>
+			<visible>![Window.Next(1114) | Window.Next(1112) | Window.Next(Home)]</visible>
+			<animation effect="fade" end="0">WindowOpen</animation>
+			<animation effect="fade" start="0" end="100" delay="500" time="0">WindowClose</animation>
+		</control>
+		<control type="image">
+			<description>System Blade Image Focus on Left</description>
+			<posx>123</posx>
+			<posy>-50</posy>
+			<width>80</width>
+			<height>676</height>
+			<texture>blades-size4-header.png</texture>
+			<visible>![Window.Next(1114) | Window.Next(1112) | Window.Next(Home)]</visible>
+			<animation effect="fade" end="0">WindowOpen</animation>
+			<animation effect="fade" start="0" end="100" delay="500" time="0">WindowClose</animation>
+		</control>
+		<control type="label">
+			<description>System Blade Label on Left</description>
+			<label>31014</label>
+			<posx>185</posx>
+			<posy>120</posy>
+			<font>BladeFont</font>
+			<textcolor>TextcolorBlack</textcolor>
+			<aligny>top</aligny>
+			<angle>270</angle>
+			<visible>![Window.Next(1114) | Window.Next(1112) | Window.Next(Home)]</visible>
+			<animation effect="fade" end="0">WindowOpen</animation>
+			<animation effect="fade" start="0" end="100" delay="500" time="0">WindowClose</animation>
+		</control>
+		<!-- System Blade Hazes -->
+		<control type="image">
+			<description>System Blade Haze Left</description>
+			<posx>35</posx>
+			<posy>350</posy>
+			<width>150</width>
+			<height>228</height>
+			<texture>haze-purple-left.png</texture>
+			<visible>!Skin.HasSetting(DisableHazes)</visible>
+			<visible>![Window.Next(1114) | Window.Next(1112) | Window.Next(Home)]</visible>
+			<animation effect="fade" end="0">WindowOpen</animation>
+			<animation effect="fade" start="0" end="100" time="500">WindowClose</animation>
+		</control>
+		<control type="image">
+			<description>System Blade Haze Right</description>
+			<posx>660</posx>
+			<posy>350</posy>
+			<width>150</width>
+			<height>228</height>
+			<texture>haze-purple-left.png</texture>
+			<visible>!Skin.HasSetting(DisableHazes)</visible>
+			<visible>![Window.Next(1114) | Window.Next(1112) | Window.Next(Home)]</visible>
+			<animation effect="fade" end="0">WindowOpen</animation>
+			<animation effect="fade" start="0" end="100" time="500">WindowClose</animation>
+		</control>
+	</controls>
+</window>

@@ -1,0 +1,498 @@
+<window>
+
+	<defaultcontrol always="true">10</defaultcontrol>
+	<resolution>PAL16x9</resolution>
+	<useincludes>false</useincludes>
+
+	<controls>
+		<!-- START: Images -->
+		<control type="image" id="1">
+			<description>Background Image</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>576</height>
+			<texture>background-orange-alpha.png</texture>
+		</control>
+
+		<control type="image" id="1">
+			<description>Background Image</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>576</height>
+			<texture>background-overlay-whitewash-centertile.png</texture>
+		</control>
+
+		<control type="image">
+			<description>Whitewash Glass Top Middle</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>64</height>
+			<texture>bkgd-whitewash-glass-top-middle.png</texture>
+		</control>
+		<control type="image">
+			<description>Whitewash Glass Bottom Middle</description>
+			<posx>0</posx>
+			<posy>512</posy>
+			<width>720</width>
+			<height>64</height>
+			<texture>bkgd-whitewash-glass-bottom-middle</texture>
+		</control>
+		<control type="image" id="1">
+			<posx>40</posx>
+			<posy>5</posy>
+			<width>290</width>
+			<height>70</height>
+			<texture>button-liveplace-big-nofocus.png</texture>
+			<visible>Control.HasFocus(1)</visible>
+		</control>
+		<control type="image" id="1">
+			<posx>45</posx>
+			<posy>7</posy>
+			<width>280</width>
+			<height>64</height>
+			<texture>XBMCLivePlace\icon-YouTube.png</texture>
+		</control>
+		<!-- END: Images -->
+
+		<!-- START: Labels -->
+		<control type="label" id="1">
+			<description>YouTube Label</description>
+			<width>427</width>
+			<posx>50</posx>
+			<posy>5</posy>
+			<align>left</align>
+			<aligny>center</aligny>
+			<label>Watch Online Videos</label>
+			<font>font13</font>
+			<textcolor>FF000000</textcolor>
+		</control>
+		<control type="label" id="5">
+			<description>Feed Label</description>
+			<width>427</width>
+			<posx>680</posx>
+			<posy>5</posy>
+			<align>right</align>
+			<aligny>center</aligny>
+			<label> </label>
+			<font>font13</font>
+			<textcolor>FF000000</textcolor>
+		</control>
+		<!-- END: Labels -->
+
+		<!-- START: Lists -->
+		<control type="list" id="0">
+			<description>Content List</description>
+			<font>font13</font>
+			<posx>200</posx>
+			<posy>85</posy>
+			<spinposx>320</spinposx>
+			<spinposy>392</spinposy>
+			<width>460</width>
+			<height>420</height>
+			<textcolor>ff000000</textcolor>
+			<selectedcolor>FFFFFFFF</selectedcolor>
+			<textureup>sortup-nofocus.png</textureup>
+			<texturedown>sortdown-nofocus.png</texturedown>
+			<textureupfocus>sortup-focus.png</textureupfocus>
+			<texturedownfocus>sortdown-focus.png</texturedownfocus>
+			<texturefocus>iconlist-focus.png</texturefocus>
+			<texturenofocus>iconlist-nofocus.png</texturenofocus>
+			<textureheight>26</textureheight>
+			<textxoff>-20</textxoff>
+			<suffix>|</suffix>
+			<aligny>center</aligny>
+			<onup>100</onup>
+			<ondown>100</ondown>
+			<onleft>10</onleft>
+		</control>
+		<!-- END: Lists -->
+
+		<!-- START: Main menu buttons -->
+		<control type="image" id="1">
+			<description>button image 1</description>
+			<posx>45</posx>
+			<posy>80</posy>
+			<width>140</width>
+			<height>1</height>
+			<texture>divider.png</texture>
+		</control>
+		<control type="button" id="10">
+			<description>Feeds Button</description>
+			<label>Feeds</label>
+			<posx>40</posx>
+			<posy>80</posy>
+			<width>150</width>
+			<height>40</height>
+			<onright>0</onright>
+			<onup>13</onup>
+			<ondown>11</ondown>
+			<texturefocus>button-focus.png</texturefocus>
+			<texturenofocus>button-nofocus.png</texturenofocus>
+			<textcolor>ff000000</textcolor>
+			<focusedcolor>ff000000</focusedcolor>
+			<disabledcolor>ff000000</disabledcolor>
+			<textoffsetx>17</textoffsetx>
+			<aligny>center</aligny>
+		</control>
+
+		<control type="button" id="11">
+			<description>Users Button</description>
+			<label>Users</label>
+			<posx>40</posx>
+			<posy>115</posy>
+			<width>150</width>
+			<height>40</height>
+			<onright>0</onright>
+			<onup>10</onup>
+			<ondown>12</ondown>
+			<texturefocus>button-focus.png</texturefocus>
+			<texturenofocus>button-nofocus.png</texturenofocus>
+			<textcolor>ff000000</textcolor>
+			<disabledcolor>60ffffff</disabledcolor>
+			<textoffsetx>17</textoffsetx>
+			<aligny>center</aligny>
+		</control>
+
+		<control type="button" id="12">
+			<description>Search Button</description>
+			<label>Search</label>
+			<posx>40</posx>
+			<posy>150</posy>
+			<width>150</width>
+			<height>40</height>
+			<onright>0</onright>
+			<onup>11</onup>
+			<ondown>13</ondown>
+			<texturefocus>button-focus.png</texturefocus>
+			<texturenofocus>button-nofocus.png</texturenofocus>
+			<textcolor>ff000000</textcolor>
+			<disabledcolor>60ffffff</disabledcolor>
+			<textoffsetx>17</textoffsetx>
+			<aligny>center</aligny>
+		</control>
+
+		<control type="button" id="13">
+			<description>About Button</description>
+			<label>About</label>
+			<posx>40</posx>
+			<posy>185</posy>
+			<width>150</width>
+			<height>40</height>
+			<onright>0</onright>
+			<onup>12</onup>
+			<ondown>10</ondown>
+			<texturefocus>button-focus.png</texturefocus>
+			<texturenofocus>button-nofocus.png</texturenofocus>
+			<textcolor>ff000000</textcolor>
+			<disabledcolor>60ffffff</disabledcolor>
+			<textoffsetx>17</textoffsetx>
+			<aligny>center</aligny>
+		</control>
+		<!-- END: Main menu buttons -->
+
+		<!-- START: Feeds menu buttons -->
+		<control type="button" id="20">
+			<description>Recently Added Button</description>
+			<label>Recently Added</label>
+			<posx>40</posx>
+			<posy>80</posy>
+			<width>150</width>
+			<height>40</height>
+			<onright>0</onright>
+			<onup>25</onup>
+			<ondown>21</ondown>
+			<visible>false</visible>
+			<texturefocus>button-focus.png</texturefocus>
+			<texturenofocus>button-nofocus.png</texturenofocus>
+			<textcolor>ff000000</textcolor>
+			<disabledcolor>60ffffff</disabledcolor>
+			<textoffsetx>17</textoffsetx>
+			<aligny>center</aligny>
+		</control>
+
+		<control type="button" id="21">
+			<description>Recently Featured Button</description>
+			<label>Recently Featured</label>
+			<posx>40</posx>
+			<posy>115</posy>
+			<width>150</width>
+			<height>40</height>
+			<onright>0</onright>
+			<onup>20</onup>
+			<ondown>22</ondown>
+			<visible>false</visible>
+			<texturefocus>button-focus.png</texturefocus>
+			<texturenofocus>button-nofocus.png</texturenofocus>
+			<textcolor>ff000000</textcolor>
+			<disabledcolor>60ffffff</disabledcolor>
+			<textoffsetx>17</textoffsetx>
+			<aligny>center</aligny>
+		</control>
+
+		<control type="button" id="22">
+			<description>Top Favorites Button</description>
+			<label>Top Favorites</label>
+			<posx>40</posx>
+			<posy>150</posy>
+			<width>150</width>
+			<height>40</height>
+			<onright>0</onright>
+			<onup>21</onup>
+			<ondown>23</ondown>
+			<visible>false</visible>
+			<texturefocus>button-focus.png</texturefocus>
+			<texturenofocus>button-nofocus.png</texturenofocus>
+			<textcolor>ff000000</textcolor>
+			<disabledcolor>60ffffff</disabledcolor>
+			<textoffsetx>17</textoffsetx>
+			<aligny>center</aligny>
+		</control>
+
+		<control type="button" id="23">
+			<description>Top Rated Button</description>
+			<label>Top Rated</label>
+			<posx>40</posx>
+			<posy>185</posy>
+			<width>150</width>
+			<height>40</height>
+			<onright>0</onright>
+			<onup>22</onup>
+			<ondown>24</ondown>
+			<visible>false</visible>
+			<texturefocus>button-focus.png</texturefocus>
+			<texturenofocus>button-nofocus.png</texturenofocus>
+			<textcolor>ff000000</textcolor>
+			<disabledcolor>60ffffff</disabledcolor>
+			<textoffsetx>17</textoffsetx>
+			<aligny>center</aligny>
+		</control>
+
+		<control type="button" id="24">
+			<description>Most Viewed Button</description>
+			<label>Most Viewed</label>
+			<posx>40</posx>
+			<posy>220</posy>
+			<width>150</width>
+			<height>40</height>
+			<onright>0</onright>
+			<onup>23</onup>
+			<ondown>25</ondown>
+			<visible>false</visible>
+			<texturefocus>button-focus.png</texturefocus>
+			<texturenofocus>button-nofocus.png</texturenofocus>
+			<textcolor>ff000000</textcolor>
+			<disabledcolor>60ffffff</disabledcolor>
+			<textoffsetx>17</textoffsetx>
+			<aligny>center</aligny>
+		</control>
+
+		<control type="button" id="25">
+			<description>Most Discussed Button</description>
+			<label>Most Discussed</label>
+			<posx>40</posx>
+			<posy>255</posy>
+			<width>150</width>
+			<height>40</height>
+			<onright>0</onright>
+			<onup>24</onup>
+			<ondown>20</ondown>
+			<visible>false</visible>
+			<texturefocus>button-focus.png</texturefocus>
+			<texturenofocus>button-nofocus.png</texturenofocus>
+			<textcolor>ff000000</textcolor>
+			<disabledcolor>60ffffff</disabledcolor>
+			<textoffsetx>17</textoffsetx>
+			<aligny>center</aligny>
+		</control>
+		<!-- END: Feeds menu buttons -->
+
+		<!-- START: Time frame buttons -->
+		<control type="image" id="1">
+			<description>button image 1</description>
+			<posx>45</posx>
+			<posy>325</posy>
+			<width>140</width>
+			<height>1</height>
+			<texture>divider.png</texture>
+			<visible>Control.IsVisible(30)</visible>
+		</control>
+		<control type="button" id="30">
+			<description>Today Button</description>
+			<label>Today</label>
+			<posx>40</posx>
+			<posy>325</posy>
+			<width>150</width>
+			<height>40</height>
+			<onright>0</onright>
+			<onup>33</onup>
+			<ondown>31</ondown>
+			<visible>false</visible>
+			<texturefocus>button-focus.png</texturefocus>
+			<texturenofocus>button-nofocus.png</texturenofocus>
+			<textcolor>ff000000</textcolor>
+			<disabledcolor>60ffffff</disabledcolor>
+			<textoffsetx>17</textoffsetx>
+			<aligny>center</aligny>
+		</control>
+
+		<control type="button" id="31">
+			<description>This Week Button</description>
+			<label>This Week</label>
+			<posx>40</posx>
+			<posy>360</posy>
+			<width>150</width>
+			<height>40</height>
+			<onright>0</onright>
+			<onup>30</onup>
+			<ondown>32</ondown>
+			<visible>false</visible>
+			<texturefocus>button-focus.png</texturefocus>
+			<texturenofocus>button-nofocus.png</texturenofocus>
+			<textcolor>ff000000</textcolor>
+			<disabledcolor>60ffffff</disabledcolor>
+			<textoffsetx>17</textoffsetx>
+			<aligny>center</aligny>
+		</control>
+
+		<control type="button" id="32">
+			<description>This Month Button</description>
+			<label>This Month</label>
+			<posx>40</posx>
+			<posy>395</posy>
+			<width>150</width>
+			<height>40</height>
+			<onright>0</onright>
+			<onup>31</onup>
+			<ondown>33</ondown>
+			<visible>false</visible>
+			<texturefocus>button-focus.png</texturefocus>
+			<texturenofocus>button-nofocus.png</texturenofocus>
+			<textcolor>ff000000</textcolor>
+			<disabledcolor>60ffffff</disabledcolor>
+			<textoffsetx>17</textoffsetx>
+			<aligny>center</aligny>
+		</control>
+
+		<control type="button" id="33">
+			<description>All Time Button</description>
+			<label>All Time</label>
+			<posx>40</posx>
+			<posy>430</posy>
+			<width>150</width>
+			<height>40</height>
+			<onright>0</onright>
+			<onup>32</onup>
+			<ondown>30</ondown>
+			<visible>false</visible>
+			<texturefocus>button-focus.png</texturefocus>
+			<texturenofocus>button-nofocus.png</texturenofocus>
+			<textcolor>ff000000</textcolor>
+			<disabledcolor>60ffffff</disabledcolor>
+			<textoffsetx>17</textoffsetx>
+			<aligny>center</aligny>
+		</control>
+		<!-- END: Time frame buttons -->
+
+		<!-- START: Search menu buttons -->
+		<control type="button" id="40">
+			<description>Search Entry Button</description>
+			<label>Search</label>
+			<posx>40</posx>
+			<posy>80</posy>
+			<width>150</width>
+			<height>40</height>
+			<onright>0</onright>
+			<onup>41</onup>
+			<ondown>41</ondown>
+			<visible>false</visible>
+			<texturefocus>button-focus.png</texturefocus>
+			<texturenofocus>button-nofocus.png</texturenofocus>
+			<textcolor>ff000000</textcolor>
+			<disabledcolor>60ffffff</disabledcolor>
+			<textoffsetx>17</textoffsetx>
+			<aligny>center</aligny>
+		</control>
+
+		<control type="button" id="41">
+			<description>Search History Button</description>
+			<label>History</label>
+			<posx>40</posx>
+			<posy>115</posy>
+			<width>150</width>
+			<height>40</height>
+			<onright>0</onright>
+			<onup>40</onup>
+			<ondown>40</ondown>
+			<visible>false</visible>
+			<texturefocus>button-focus.png</texturefocus>
+			<texturenofocus>button-nofocus.png</texturenofocus>
+			<textcolor>ff000000</textcolor>
+			<disabledcolor>60ffffff</disabledcolor>
+			<textoffsetx>17</textoffsetx>
+			<aligny>center</aligny>
+		</control>
+		<!-- END: Search menu buttons -->
+
+		<!-- START: User menu buttons -->
+		<control type="button" id="50">
+			<description>User Favorites Button</description>
+			<label>User Favorites</label>
+			<posx>40</posx>
+			<posy>80</posy>
+			<width>150</width>
+			<height>40</height>
+			<onright>0</onright>
+			<onup>52</onup>
+			<ondown>51</ondown>
+			<visible>false</visible>
+			<texturefocus>button-focus.png</texturefocus>
+			<texturenofocus>button-nofocus.png</texturenofocus>
+			<textcolor>ff000000</textcolor>
+			<disabledcolor>60ffffff</disabledcolor>
+			<textoffsetx>17</textoffsetx>
+			<aligny>center</aligny>
+		</control>
+
+		<control type="button" id="51">
+			<description>User Videos Button</description>
+			<label>User Videos</label>
+			<posx>40</posx>
+			<posy>115</posy>
+			<width>150</width>
+			<height>40</height>
+			<onright>0</onright>
+			<onup>50</onup>
+			<ondown>52</ondown>
+			<visible>false</visible>
+			<texturefocus>button-focus.png</texturefocus>
+			<texturenofocus>button-nofocus.png</texturenofocus>
+			<textcolor>ff000000</textcolor>
+			<disabledcolor>60ffffff</disabledcolor>
+			<textoffsetx>17</textoffsetx>
+			<aligny>center</aligny>
+		</control>
+
+		<control type="button" id="52">
+			<description>User Friends Button</description>
+			<label>User Friends</label>
+			<posx>40</posx>
+			<posy>150</posy>
+			<width>150</width>
+			<height>40</height>
+			<onright>0</onright>
+			<onup>51</onup>
+			<ondown>50</ondown>
+			<visible>false</visible>
+			<texturefocus>button-focus.png</texturefocus>
+			<texturenofocus>button-nofocus.png</texturenofocus>
+			<textcolor>ff000000</textcolor>
+			<disabledcolor>60ffffff</disabledcolor>
+			<textoffsetx>17</textoffsetx>
+			<aligny>center</aligny>
+		</control>
+		<!-- END: User menu buttons -->
+	</controls>
+</window>

@@ -1,0 +1,274 @@
+<window id="115">
+	<defaultcontrol>1</defaultcontrol>
+	<coordinates>
+		<system>1</system>
+		<posx>60</posx>
+		<posy>60</posy>
+	</coordinates>
+	<visible>Player.Seeking | Player.DisplayAfterSeek | [Player.ShowInfo + Window.IsActive(FullScreenVideo)] | Window.IsActive(VideoOSD) | Window.IsActive(MusicOSD) | Player.Paused | Player.Forwarding | Player.Rewinding</visible>
+	<controls>
+		<control type="image">
+			<description>Seekbar Background</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>240</width>
+			<height>64</height>
+			<texture>Scan-panel-bg.png</texture>
+			<!--			<animation effect="fade" time="100" delay="25">WindowOpen</animation>
+			<animation effect="fade" time="100">WindowClose</animation>
+-->
+		</control>
+		<!-- playstate images -->
+		<control type="image">
+			<description>playing image</description>
+			<align>right</align>
+			<posx>20</posx>
+			<posy>23</posy>
+			<height>16</height>
+			<width>60</width>
+			<visible>Player.Playing</visible>
+			<texture>video-seek-default.png</texture>
+			<!--			<animation effect="fade" time="100" delay="25">WindowOpen</animation>
+			<animation effect="fade" time="100">WindowClose</animation>
+-->
+		</control>
+		<control type="image">
+			<description>pause image</description>
+			<align>right</align>
+			<posx>20</posx>
+			<posy>23</posy>
+			<height>16</height>
+			<width>60</width>
+			<visible>Player.Paused</visible>
+			<texture>video-pause.png</texture>
+			<!--			<animation effect="fade" time="100" delay="25">WindowOpen</animation>
+			<animation effect="fade" time="100">WindowClose</animation>
+-->
+		</control>
+		<control type="image">
+			<description>2x image</description>
+			<align>right</align>
+			<posx>20</posx>
+			<posy>23</posy>
+			<height>16</height>
+			<width>60</width>
+			<visible>Player.Forwarding2x</visible>
+			<texture>video-2x.png</texture>
+			<!--			<animation effect="fade" time="100" delay="25">WindowOpen</animation>
+			<animation effect="fade" time="100">WindowClose</animation>
+-->
+		</control>
+		<control type="image">
+			<description>4x image</description>
+			<align>right</align>
+			<posx>20</posx>
+			<posy>23</posy>
+			<height>16</height>
+			<width>60</width>
+			<visible>Player.Forwarding4x</visible>
+			<texture>video-4x.png</texture>
+			<!--			<animation effect="fade" time="100" delay="25">WindowOpen</animation>
+			<animation effect="fade" time="100">WindowClose</animation>
+-->
+		</control>
+		<control type="image">
+			<description>8x image</description>
+			<align>right</align>
+			<posx>20</posx>
+			<posy>23</posy>
+			<height>16</height>
+			<width>60</width>
+			<visible>Player.Forwarding8x</visible>
+			<texture>video-8x.png</texture>
+			<!--			<animation effect="fade" time="100" delay="25">WindowOpen</animation>
+			<animation effect="fade" time="100">WindowClose</animation>
+-->
+		</control>
+		<control type="image">
+			<description>16x image</description>
+			<align>right</align>
+			<posx>20</posx>
+			<posy>23</posy>
+			<height>16</height>
+			<width>60</width>
+			<visible>Player.Forwarding16x</visible>
+			<texture>video-16x.png</texture>
+			<!--			<animation effect="fade" time="100" delay="25">WindowOpen</animation>
+			<animation effect="fade" time="100">WindowClose</animation>
+-->
+		</control>
+		<control type="image">
+			<description>32x image</description>
+			<align>right</align>
+			<posx>20</posx>
+			<posy>23</posy>
+			<height>16</height>
+			<width>60</width>
+			<visible>Player.Forwarding32x</visible>
+			<texture>video-32x.png</texture>
+			<!--			<animation effect="fade" time="100" delay="25">WindowOpen</animation>
+			<animation effect="fade" time="100">WindowClose</animation>
+-->
+		</control>
+		<control type="image">
+			<description>-2x image</description>
+			<align>right</align>
+			<posx>20</posx>
+			<posy>23</posy>
+			<height>16</height>
+			<width>60</width>
+			<visible>Player.Rewinding2x</visible>
+			<texture>video-2xr.png</texture>
+			<!--			<animation effect="fade" time="100" delay="25">WindowOpen</animation>
+			<animation effect="fade" time="100">WindowClose</animation>
+-->
+		</control>
+		<control type="image">
+			<description>-4x image</description>
+			<align>right</align>
+			<posx>20</posx>
+			<posy>23</posy>
+			<height>16</height>
+			<width>60</width>
+			<visible>Player.Rewinding4x</visible>
+			<texture>video-4xr.png</texture>
+			<!--			<animation effect="fade" time="100" delay="25">WindowOpen</animation>
+			<animation effect="fade" time="100">WindowClose</animation>
+-->
+		</control>
+		<control type="image">
+			<description>-8x image</description>
+			<align>right</align>
+			<posx>20</posx>
+			<posy>23</posy>
+			<height>16</height>
+			<width>60</width>
+			<visible>Player.Rewinding8x</visible>
+			<texture>video-8xr.png</texture>
+			<!--			<animation effect="fade" time="100" delay="25">WindowOpen</animation>
+			<animation effect="fade" time="100">WindowClose</animation>
+-->
+		</control>
+		<control type="image">
+			<description>-16x image</description>
+			<align>right</align>
+			<posx>20</posx>
+			<posy>23</posy>
+			<height>16</height>
+			<width>60</width>
+			<visible>Player.Rewinding16x</visible>
+			<texture>video-16xr.png</texture>
+			<!--			<animation effect="fade" time="100" delay="25">WindowOpen</animation>
+			<animation effect="fade" time="100">WindowClose</animation>
+-->
+		</control>
+		<control type="image">
+			<description>-32x image</description>
+			<align>right</align>
+			<posx>20</posx>
+			<posy>23</posy>
+			<height>16</height>
+			<width>60</width>
+			<visible>Player.Rewinding32x</visible>
+			<texture>video-32xr.png</texture>
+			<!--			<animation effect="fade" time="100" delay="25">WindowOpen</animation>
+			<animation effect="fade" time="100">WindowClose</animation>
+-->
+		</control>
+		<!-- progressbar dialog -->
+		<!-- control>
+			<description>Popup Seek Dialog Background</description>
+			<type>image</type>
+			<id>23</id>
+			<posx>474</posx>
+			<posy>42</posy>
+			<width>184</width>
+			<height>75</height>
+			<texture>voulume-panel-bg.png</texture>
+		</control -->
+		<control type="label">
+			<description>Elapsed Time Label</description>
+			<posx>150</posx>
+			<posy>12</posy>
+			<font>font12</font>
+			<align>right</align>
+			<info>Player.Time</info>
+			<width>100</width>
+			<height>16</height>
+			<visible>!Player.Seeking</visible>
+			<!--			<animation effect="fade" time="100" delay="25">WindowOpen</animation>
+			<animation effect="fade" time="100">WindowClose</animation>
+-->
+		</control>
+		<control type="label">
+			<description>Seek Time Label</description>
+			<posx>150</posx>
+			<posy>12</posy>
+			<font>font12</font>
+			<align>right</align>
+			<info>Player.SeekTime</info>
+			<width>100</width>
+			<visible>Player.Seeking</visible>
+			<!--			<animation effect="fade" time="100" delay="25">WindowOpen</animation>
+			<animation effect="fade" time="100">WindowClose</animation>
+-->
+		</control>
+		<control type="label">
+			<description>suffix label</description>
+			<posx>153</posx>
+			<posy>12</posy>
+			<label>/</label>
+			<align>left</align>
+			<font>font12</font>
+			<!--			<animation effect="fade" time="100" delay="25">WindowOpen</animation>
+			<animation effect="fade" time="100">WindowClose</animation>
+-->
+		</control>
+		<control type="label" id="999">
+			<description>Duration Label</description>
+			<posx>158</posx>
+			<posy>12</posy>
+			<info>Player.Duration</info>
+			<font>font12</font>
+			<align>left</align>
+			<width>100</width>
+			<!--			<animation effect="fade" time="100" delay="25">WindowOpen</animation>
+			<animation effect="fade" time="100">WindowClose</animation>
+-->
+		</control>
+		<control type="progress" id="23">
+			<description>Progressbar</description>
+			<posx>90</posx>
+			<posy>33</posy>
+			<width>128</width>
+			<height>5</height>
+			<info>Player.Progress</info>
+			<texturebg>progress_back.png</texturebg>
+			<lefttexture>progress_left.png</lefttexture>
+			<midtexture>progress_mid.png</midtexture>
+			<righttexture>progress_right.png</righttexture>
+			<overlaytexture>-</overlaytexture>
+			<!--			<animation effect="fade" time="100" delay="25">WindowOpen</animation>
+			<animation effect="fade" time="100">WindowClose</animation>
+-->
+		</control>
+		<control type="slider" id="401">
+			<description>Seek Slider</description>
+			<posx>90</posx>
+			<posy>32</posy>
+			<width>128</width>
+			<height>6</height>
+			<texturesliderbar>progress_back.png</texturesliderbar>
+			<textureslidernib>slider_nibFO.png</textureslidernib>
+			<textureslidernibfocus>slider_nibFO.png</textureslidernibfocus>
+			<visible>true</visible>
+			<onup>1</onup>
+			<ondown>1</ondown>
+			<onleft>1</onleft>
+			<onright>1</onright>
+			<!--			<animation effect="fade" time="100" delay="25">WindowOpen</animation>
+			<animation effect="fade" time="100">WindowClose</animation>
+-->
+		</control>
+	</controls>
+</window>

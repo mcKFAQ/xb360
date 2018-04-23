@@ -1,0 +1,669 @@
+<window id="126">
+	<defaultcontrol>450</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<controls>
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>576</height>
+			<texture>guide-black.png</texture>
+			<colordiffuse>DDFFFFFF</colordiffuse>
+			<visible>![Window.IsActive(1120) | Window.IsActive(1121)  | Window.IsActive(1122) | [Window.IsActive(mediasource) + !Window.IsActive(NetworkSettings)]]</visible>
+			<animation effect="fade" time="50">WindowOpen</animation>
+			<animation effect="fade" delay="450" time="100">WindowClose</animation>
+		</control>
+		<control type="image">
+			<description>Guide Blade Background</description>
+			<posx>-159</posx>
+			<posy>0</posy>
+			<width>548</width>
+			<height>576</height>
+			<visible>!Skin.String(GuidePanel) + ![Window.IsActive(1120) | Window.IsActive(1121)  | Window.IsActive(1122) | [Window.IsActive(mediasource) + !Window.IsActive(NetworkSettings)]]</visible>
+			<texture>background-grey.png</texture>
+			<animation effect="slide" time="250" start="-512,0">WindowOpen</animation>
+			<animation effect="slide" time="250" delay="250" end="-512,0">WindowClose</animation>
+		</control>
+		<control type="image">
+			<description>Custom Guide Blade Background</description>
+			<posx>-159</posx>
+			<posy>0</posy>
+			<width>548</width>
+			<height>576</height>
+			<texture>-</texture>
+			<info>Skin.String(GuidePanel)</info>
+			<aspectratio>scale</aspectratio>
+			<visible>![Window.IsActive(1120) | Window.IsActive(1121)  | Window.IsActive(1122) | [Window.IsActive(mediasource) + !Window.IsActive(NetworkSettings)]]</visible>
+			<animation effect="slide" time="250" start="-512,0">WindowOpen</animation>
+			<animation effect="slide" time="250" delay="250" end="-512,0">WindowClose</animation>
+		</control>
+		<control type="image">
+			<description>Guide Blade Overlay</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>318</width>
+			<height>576</height>
+			<texture>guide-blade-overlay-tile.png</texture>
+			<visible>![Window.IsActive(1120) | Window.IsActive(1121)  | Window.IsActive(1122) | [Window.IsActive(mediasource) + !Window.IsActive(NetworkSettings)]]</visible>
+			<animation effect="slide" time="250" start="-512,0">WindowOpen</animation>
+			<animation effect="slide" time="250" delay="250" end="-512,0">WindowClose</animation>
+		</control>
+		<control type="image">
+			<description>Guide Edge Overlay</description>
+			<posx>318</posx>
+			<posy>0</posy>
+			<width>100</width>
+			<height>576</height>
+			<texture>guide-blade-overlay-edge-left.png</texture>
+			<visible>![Window.IsActive(1120) | Window.IsActive(1121)  | Window.IsActive(1122) | [Window.IsActive(mediasource) + !Window.IsActive(NetworkSettings)]]</visible>
+			<animation effect="slide" time="250" start="-512,0">WindowOpen</animation>
+			<animation effect="slide" time="250" delay="250" end="-512,0">WindowClose</animation>
+		</control>
+		<control type="label">
+			<description>GamerTag Label</description>
+			<posx>376</posx>
+			<posy>200</posy>
+			<angle>270</angle>
+			<include>GamerName</include>
+			<textcolor>TextcolorBlack</textcolor>
+			<shadowcolor>shadow-grey</shadowcolor>
+			<font>font14</font>
+			<visible>![Window.IsActive(1120) | Window.IsActive(1121)  | Window.IsActive(1122) | [Window.IsActive(mediasource) + !Window.IsActive(NetworkSettings)] | Window.IsActive(128)]</visible>
+			<animation effect="slide" time="250" start="-512,0">WindowOpen</animation>
+			<animation effect="slide" time="250" delay="250" end="-512,0">WindowClose</animation>
+		</control>
+		<!-- Use this when coming from dialogmediasource.xml -->
+		<control type="image">
+			<description>Guide Blade Background</description>
+			<posx>-159</posx>
+			<posy>0</posy>
+			<width>548</width>
+			<height>576</height>
+			<texture>background-grey.png</texture>
+			<visible>!Skin.String(GuidePanel)</visible>
+			<visible>[Window.IsActive(mediasource) + !Window.IsActive(NetworkSettings)] + !Window.IsActive(128)</visible>
+			<animation effect="slide" time="250" start="72,0">WindowOpen</animation>
+			<animation effect="slide" time="250" delay="250" end="72,0">WindowClose</animation>
+		</control>
+		<control type="image">
+			<description>Custom Guide Blade Background</description>
+			<posx>-159</posx>
+			<posy>0</posy>
+			<width>548</width>
+			<height>576</height>
+			<texture>-</texture>
+			<info>Skin.String(GuidePanel)</info>
+			<aspectratio>scale</aspectratio>
+			<visible>[Window.IsActive(mediasource) + !Window.IsActive(NetworkSettings)] + !Window.IsActive(128)</visible>
+			<animation effect="slide" time="250" start="72,0">WindowOpen</animation>
+			<animation effect="slide" time="250" delay="250" end="72,0">WindowClose</animation>
+		</control>
+		<control type="image">
+			<description>Guide Blade Overlay</description>
+			<posx>-72</posx>
+			<posy>0</posy>
+			<width>390</width>
+			<height>576</height>
+			<texture>guide-blade-overlay-tile.png</texture>
+			<visible>[Window.IsActive(mediasource) + !Window.IsActive(NetworkSettings)] + !Window.IsActive(128)</visible>
+			<animation effect="slide" time="250" start="72,0">WindowOpen</animation>
+			<animation effect="slide" time="250" delay="250" end="72,0">WindowClose</animation>
+		</control>
+		<control type="image">
+			<description>Guide Edge Overlay</description>
+			<posx>318</posx>
+			<posy>0</posy>
+			<width>100</width>
+			<height>576</height>
+			<texture>guide-blade-overlay-edge-left.png</texture>
+			<visible>[Window.IsActive(mediasource) + !Window.IsActive(NetworkSettings)] + !Window.IsActive(128)</visible>
+			<animation effect="slide" time="250" start="72,0">WindowOpen</animation>
+			<animation effect="slide" time="250" delay="250" end="72,0">WindowClose</animation>
+		</control>
+		<control type="label">
+			<description>GamerTag Label</description>
+			<posx>448</posx>
+			<posy>200</posy>
+			<angle>270</angle>
+			<include>GamerName</include>
+			<textcolor>TextcolorBlack</textcolor>
+			<shadowcolor>shadow-grey</shadowcolor>
+			<font>font14</font>
+			<visible>[Window.IsActive(mediasource) + !Window.IsActive(NetworkSettings)] + !Window.IsActive(128)</visible>
+			<animation effect="slide" time="250" end="-72,0">WindowOpen</animation>
+			<animation effect="slide" time="250" delay="250" start="-72,0">WindowClose</animation>
+		</control>
+		<!-- Use this when coming from dialogNetwork.xml -->
+		<control type="image">
+			<description>Guide Blade Background</description>
+			<posx>-159</posx>
+			<posy>0</posy>
+			<width>548</width>
+			<height>576</height>
+			<visible>Window.IsActive(128)</visible>
+			<texture>background-grey.png</texture>
+		</control>
+		<control type="image">
+			<description>Custom Guide Blade Background</description>
+			<posx>-159</posx>
+			<posy>0</posy>
+			<width>548</width>
+			<height>576</height>
+			<texture>-</texture>
+			<info>Skin.String(GuidePanel)</info>
+			<aspectratio>scale</aspectratio>
+			<visible>Window.IsActive(128)</visible>
+		</control>
+		<control type="image">
+			<description>Guide Blade Overlay</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>318</width>
+			<height>576</height>
+			<texture>guide-blade-overlay-tile.png</texture>
+			<visible>Window.IsActive(128)</visible>
+		</control>
+		<control type="image">
+			<description>Guide Edge Overlay</description>
+			<posx>318</posx>
+			<posy>0</posy>
+			<width>100</width>
+			<height>576</height>
+			<texture>guide-blade-overlay-edge-left.png</texture>
+			<visible>Window.IsActive(128)</visible>
+		</control>
+		<control type="label">
+			<description>GamerTag Label</description>
+			<posx>376</posx>
+			<posy>200</posy>
+			<angle>270</angle>
+			<label>time</label>
+			<include>GamerName</include>
+			<textcolor>TextcolorBlack</textcolor>
+			<shadowcolor>shadow-grey</shadowcolor>
+			<font>font14</font>
+			<visible>Window.IsActive(128)</visible>
+		</control>
+		<control type="label">
+			<description>Date label</description>
+			<posx>40</posx>
+			<posy>45</posy>
+			<label>date</label>
+			<info>System.Date</info>
+			<textcolor>TextcolorWhite</textcolor>
+			<font>font14</font>
+			<shadowcolor>shadow-black</shadowcolor>
+			<visible>Window.IsActive(128)</visible>
+			<animation effect="fade" time="100">Hidden</animation>
+			<animation effect="fade" delay="450" time="200">Visible</animation>
+			<animation effect="fade" delay="450" time="200">WindowOpen</animation>
+			<animation effect="fade" time="150">WindowClose</animation>
+		</control>
+		<control type="label">
+			<description>Time label</description>
+			<posx>335</posx>
+			<posy>45</posy>
+			<label>time</label>
+			<info>System.Time</info>
+			<align>right</align>
+			<textcolor>TextcolorWhite</textcolor>
+			<font>font14</font>
+			<visible>Window.IsActive(128)</visible>
+			<animation effect="fade" time="100">Hidden</animation>
+			<animation effect="fade" delay="450" time="200">Visible</animation>
+			<animation effect="fade" delay="450" time="200">WindowOpen</animation>
+			<animation effect="fade" time="150">WindowClose</animation>
+		</control>
+		<control type="label">
+			<description>Date label</description>
+			<posx>40</posx>
+			<posy>45</posy>
+			<label>date</label>
+			<info>System.Date</info>
+			<textcolor>TextcolorWhite</textcolor>
+			<font>font14</font>
+			<shadowcolor>shadow-black</shadowcolor>
+			<visible>![Window.IsActive(1120) | Window.IsActive(1121) | [Window.IsActive(mediasource) + !Window.IsActive(NetworkSettings)] | Window.IsActive(playercontrols)]</visible>
+			<animation effect="fade" time="100">Hidden</animation>
+			<animation effect="fade" delay="450" time="200">Visible</animation>
+			<animation effect="fade" delay="450" time="200">WindowOpen</animation>
+			<animation effect="fade" time="150">WindowClose</animation>
+		</control>
+		<control type="label">
+			<description>Time label</description>
+			<posx>335</posx>
+			<posy>45</posy>
+			<label>time</label>
+			<info>System.Time</info>
+			<align>right</align>
+			<textcolor>TextcolorWhite</textcolor>
+			<font>font14</font>
+			<visible>![Window.IsActive(1120) | Window.IsActive(1121) | [Window.IsActive(mediasource) + !Window.IsActive(NetworkSettings)] | Window.IsActive(playercontrols)]</visible>
+			<animation effect="fade" time="100">Hidden</animation>
+			<animation effect="fade" delay="450" time="200">Visible</animation>
+			<animation effect="fade" delay="450" time="200">WindowOpen</animation>
+			<animation effect="fade" time="150">WindowClose</animation>
+		</control>
+		<control type="image">
+			<description>Background For Thumb Display</description>
+			<posx>45</posx>
+			<posy>95</posy>
+			<width>162</width>
+			<height>149</height>
+			<animation effect="fade" delay="450" time="200">WindowOpen</animation>
+			<animation effect="fade" time="100">WindowClose</animation>
+			<texture>thumb-nofocus.png</texture>
+		</control>
+		<control type="image">
+			<description>Custom Background Thumb Display</description>
+			<posx>58</posx>
+			<posy>105</posy>
+			<width>136</width>
+			<height>129</height>
+			<texture>-</texture>
+			<info>ListItem.Thumb</info>
+			<animation effect="fade" delay="450" time="200">WindowOpen</animation>
+			<animation effect="fade" time="100">WindowClose</animation>
+		</control>
+		<control type="fadelabel" id="412">
+			<description>Custom Background Path Label</description>
+			<posx>28</posx>
+			<posy>246</posy>
+			<width>296</width>
+			<align>left</align>
+			<textcolor>TextcolorBlack</textcolor>
+			<font>special13</font>
+			<haspath>true</haspath>
+			<animation effect="fade" delay="450" time="200">WindowOpen</animation>
+			<animation effect="fade" time="100">WindowClose</animation>
+		</control>
+		<control type="listcontrol" id="450">
+			<description>Custom Background Listcontrol</description>
+			<posx>24</posx>
+			<posy>283</posy>
+			<width>300</width>
+			<height>200</height>
+			<onleft>413</onleft>
+			<onright>413</onright>
+			<onup>450</onup>
+			<ondown>450</ondown>
+			<texturefocus>guide-selectmediabutton-focus.png</texturefocus>
+			<texturenofocus>guide-selectmediabutton-nofocus.png</texturenofocus>
+			<textureheight>30</textureheight>
+			<animation effect="fade" delay="450" time="200">WindowOpen</animation>
+			<animation effect="fade" time="100">WindowClose</animation>
+		</control>
+		<control type="group">
+			<control type="button" id="413">
+				<description>OK button</description>
+				<posx>219</posx>
+				<posy>127</posy>
+				<width>90</width>
+				<height>50</height>
+				<align>center</align>
+				<aligny>-</aligny>
+				<textoffsety>8</textoffsety>
+				<label>186</label>
+				<onleft>450</onleft>
+				<onright>450</onright>
+				<onup>414</onup>
+				<ondown>414</ondown>
+				<texturefocus>guide-media-button-focus.png</texturefocus>
+				<texturenofocus>guide-media-button-nofocus.png</texturenofocus>
+				<animation effect="fade" delay="450" time="200">WindowOpen</animation>
+				<animation effect="fade" time="100">WindowClose</animation>
+			</control>
+			<control type="button" id="414">
+				<description>Cancel button</description>
+				<posx>219</posx>
+				<posy>165</posy>
+				<width>90</width>
+				<height>50</height>
+				<align>center</align>
+				<aligny>-</aligny>
+				<textoffsety>8</textoffsety>
+				<label>222</label>
+				<onleft>450</onleft>
+				<onright>450</onright>
+				<onup>413</onup>
+				<ondown>413</ondown>
+				<texturefocus>guide-media-button-focus.png</texturefocus>
+				<texturenofocus>guide-media-button-nofocus.png</texturenofocus>
+				<animation effect="fade" delay="450" time="200">WindowOpen</animation>
+				<animation effect="fade" time="100">WindowClose</animation>
+			</control>
+		</control>
+		<control type="image">
+			<description>Back Button</description>
+			<posx>315</posx>
+			<posy>475</posy>
+			<include>Button-Map-Texture-Width</include>
+			<height>21</height>
+			<texture>button-Back.png</texture>
+			<visible>Window.IsActive(128)</visible>
+			<animation effect="fade" time="100">Hidden</animation>
+			<animation effect="fade" delay="450" time="200">Visible</animation>
+			<animation effect="fade" delay="450" time="200">WindowOpen</animation>
+			<animation effect="fade" time="150">WindowClose</animation>
+		</control>
+		<control type="image">
+			<description>A Button</description>
+			<posx>330</posx>
+			<posy>498</posy>
+			<include>Button-Map-Texture-Width</include>
+			<height>21</height>
+			<texture>button-A.png</texture>
+			<visible>Window.IsActive(128)</visible>
+			<animation effect="fade" time="100">Hidden</animation>
+			<animation effect="fade" delay="450" time="200">Visible</animation>
+			<animation effect="fade" delay="450" time="200">WindowOpen</animation>
+			<animation effect="fade" time="150">WindowClose</animation>
+		</control>
+		<control type="image">
+			<description>Y Button</description>
+			<posx>45</posx>
+			<posy>475</posy>
+			<include>Button-Map-Texture-Width</include>
+			<height>21</height>
+			<texture>button-Y-turnedoff.png</texture>
+			<visible>Window.IsActive(128)</visible>
+			<animation effect="fade" time="100">Hidden</animation>
+			<animation effect="fade" delay="450" time="200">Visible</animation>
+			<animation effect="fade" delay="450" time="200">WindowOpen</animation>
+			<animation effect="fade" time="150">WindowClose</animation>
+		</control>
+		<control type="image">
+			<description>X Button</description>
+			<posx>30</posx>
+			<posy>498</posy>
+			<include>Button-Map-Texture-Width</include>
+			<height>21</height>
+			<texture>button-X-turnedoff.png</texture>
+			<visible>Window.IsActive(128)</visible>
+			<animation effect="fade" time="100">Hidden</animation>
+			<animation effect="fade" delay="450" time="200">Visible</animation>
+			<animation effect="fade" delay="450" time="200">WindowOpen</animation>
+			<animation effect="fade" time="150">WindowClose</animation>
+		</control>
+		<control type="label">
+			<description>Back Label</description>
+			<posx>309</posx>
+			<posy>479</posy>
+			<label>31027</label>
+			<align>right</align>
+			<font>font12</font>
+			<visible>Window.IsActive(128)</visible>
+			<animation effect="fade" time="100">Hidden</animation>
+			<animation effect="fade" delay="450" time="200">Visible</animation>
+			<animation effect="fade" delay="450" time="200">WindowOpen</animation>
+			<animation effect="fade" time="150">WindowClose</animation>
+		</control>
+		<control type="label">
+			<description>Select Label</description>
+			<posx>321</posx>
+			<posy>502</posy>
+			<label>31024</label>
+			<align>right</align>
+			<font>font12</font>
+			<visible>Window.IsActive(128)</visible>
+			<animation effect="fade" time="100">Hidden</animation>
+			<animation effect="fade" delay="450" time="200">Visible</animation>
+			<animation effect="fade" delay="450" time="200">WindowOpen</animation>
+			<animation effect="fade" time="150">WindowClose</animation>
+		</control>
+		<control type="image">
+			<description>Back Button</description>
+			<posx>315</posx>
+			<posy>475</posy>
+			<include>Button-Map-Texture-Width</include>
+			<height>21</height>
+			<texture>button-Back.png</texture>
+			<visible>![Window.IsActive(1120) | Window.IsActive(1121)  | Window.IsActive(1122) | [Window.IsActive(mediasource) + !Window.IsActive(NetworkSettings)]]</visible>
+			<animation effect="slide" time="250" start="-512,0">WindowOpen</animation>
+			<animation effect="slide" time="250" delay="250" end="-512,0">WindowClose</animation>
+		</control>
+		<control type="image">
+			<description>A Button</description>
+			<posx>330</posx>
+			<posy>498</posy>
+			<include>Button-Map-Texture-Width</include>
+			<height>21</height>
+			<texture>button-A.png</texture>
+			<visible>![Window.IsActive(1120) | Window.IsActive(1121)  | Window.IsActive(1122) | [Window.IsActive(mediasource) + !Window.IsActive(NetworkSettings)]]</visible>
+			<animation effect="slide" time="250" start="-512,0">WindowOpen</animation>
+			<animation effect="slide" time="250" delay="250" end="-512,0">WindowClose</animation>
+		</control>
+		<control type="image">
+			<description>Y Button</description>
+			<posx>45</posx>
+			<posy>475</posy>
+			<include>Button-Map-Texture-Width</include>
+			<height>21</height>
+			<texture>button-Y-turnedoff.png</texture>
+			<visible>![Window.IsActive(1120) | Window.IsActive(1121)  | Window.IsActive(1122) | [Window.IsActive(mediasource) + !Window.IsActive(NetworkSettings)]]</visible>
+			<animation effect="slide" time="250" start="-512,0">WindowOpen</animation>
+			<animation effect="slide" time="250" delay="250" end="-512,0">WindowClose</animation>
+		</control>
+		<control type="image">
+			<description>X Button</description>
+			<posx>30</posx>
+			<posy>498</posy>
+			<include>Button-Map-Texture-Width</include>
+			<height>21</height>
+			<texture>button-X-turnedoff.png</texture>
+			<visible>![Window.IsActive(1120) | Window.IsActive(1121)  | Window.IsActive(1122) | [Window.IsActive(mediasource) + !Window.IsActive(NetworkSettings)]]</visible>
+			<animation effect="slide" time="250" start="-512,0">WindowOpen</animation>
+			<animation effect="slide" time="250" delay="250" end="-512,0">WindowClose</animation>
+		</control>
+		<control type="label">
+			<description>Back Label</description>
+			<posx>309</posx>
+			<posy>479</posy>
+			<label>31027</label>
+			<align>right</align>
+			<font>font12</font>
+			<visible>![Window.IsActive(1120) | Window.IsActive(1121)  | Window.IsActive(1122) | [Window.IsActive(mediasource) + !Window.IsActive(NetworkSettings)]]</visible>
+			<animation effect="slide" time="250" start="-512,0">WindowOpen</animation>
+			<animation effect="slide" time="250" delay="250" end="-512,0">WindowClose</animation>
+		</control>
+		<control type="label">
+			<description>Select Label</description>
+			<posx>321</posx>
+			<posy>502</posy>
+			<label>31024</label>
+			<align>right</align>
+			<font>font12</font>
+			<visible>![Window.IsActive(1120) | Window.IsActive(1121)  | Window.IsActive(1122) | [Window.IsActive(mediasource) + !Window.IsActive(NetworkSettings)]]</visible>
+			<animation effect="slide" time="250" start="-512,0">WindowOpen</animation>
+			<animation effect="slide" time="250" delay="250" end="-512,0">WindowClose</animation>
+		</control>
+		<!-- Use this when coming from dialogmediasource.xml -->
+		<control type="label">
+			<description>Date label</description>
+			<posx>40</posx>
+			<posy>45</posy>
+			<label>date</label>
+			<info>System.Date</info>
+			<textcolor>TextcolorWhite</textcolor>
+			<font>font14</font>
+			<shadowcolor>shadow-black</shadowcolor>
+			<visible>[Window.IsActive(mediasource) + !Window.IsActive(NetworkSettings)] + !Window.IsActive(128)</visible>
+			<animation effect="fade" time="100">Hidden</animation>
+			<animation effect="fade" delay="450" time="200">Visible</animation>
+			<animation effect="fade" delay="450" time="200">WindowOpen</animation>
+			<animation effect="fade" time="150">WindowClose</animation>
+		</control>
+		<control type="label">
+			<description>Time label</description>
+			<posx>335</posx>
+			<posy>45</posy>
+			<label>time</label>
+			<info>System.Time</info>
+			<align>right</align>
+			<textcolor>TextcolorWhite</textcolor>
+			<font>font14</font>
+			<visible>[Window.IsActive(mediasource) + !Window.IsActive(NetworkSettings)] + !Window.IsActive(128)</visible>
+			<animation effect="fade" time="100">Hidden</animation>
+			<animation effect="fade" delay="450" time="200">Visible</animation>
+			<animation effect="fade" delay="450" time="200">WindowOpen</animation>
+			<animation effect="fade" time="150">WindowClose</animation>
+		</control>
+		<control type="image">
+			<description>Back Button</description>
+			<posx>315</posx>
+			<posy>475</posy>
+			<include>Button-Map-Texture-Width</include>
+			<height>21</height>
+			<texture>button-Back.png</texture>
+			<visible>[Window.IsActive(mediasource) + !Window.IsActive(NetworkSettings)] + !Window.IsActive(playercontrols) + !Window.IsActive(128)</visible>
+			<animation effect="fade" time="100">Hidden</animation>
+			<animation effect="fade" delay="450" time="200">Visible</animation>
+			<animation effect="fade" delay="450" time="200">WindowOpen</animation>
+			<animation effect="fade" time="150">WindowClose</animation>
+		</control>
+		<control type="image">
+			<description>A Button</description>
+			<posx>330</posx>
+			<posy>498</posy>
+			<include>Button-Map-Texture-Width</include>
+			<height>21</height>
+			<texture>button-A.png</texture>
+			<visible>[Window.IsActive(mediasource) + !Window.IsActive(NetworkSettings)] + !Window.IsActive(playercontrols) + !Window.IsActive(128)</visible>
+			<animation effect="fade" time="100">Hidden</animation>
+			<animation effect="fade" delay="450" time="200">Visible</animation>
+			<animation effect="fade" delay="450" time="200">WindowOpen</animation>
+			<animation effect="fade" time="150">WindowClose</animation>
+		</control>
+		<control type="image">
+			<description>Y Button</description>
+			<posx>45</posx>
+			<posy>475</posy>
+			<include>Button-Map-Texture-Width</include>
+			<height>21</height>
+			<texture>button-Y-turnedoff.png</texture>
+			<visible>[Window.IsActive(mediasource) + !Window.IsActive(NetworkSettings)] + !Window.IsActive(playercontrols) + !Window.IsActive(128)</visible>
+			<animation effect="fade" time="100">Hidden</animation>
+			<animation effect="fade" delay="450" time="200">Visible</animation>
+			<animation effect="fade" delay="450" time="200">WindowOpen</animation>
+			<animation effect="fade" time="150">WindowClose</animation>
+		</control>
+		<control type="image">
+			<description>X Button</description>
+			<posx>30</posx>
+			<posy>498</posy>
+			<include>Button-Map-Texture-Width</include>
+			<height>21</height>
+			<texture>button-X-turnedoff.png</texture>
+			<visible>[Window.IsActive(mediasource) + !Window.IsActive(NetworkSettings)] + !Window.IsActive(playercontrols) + !Window.IsActive(128)</visible>
+			<animation effect="fade" time="100">Hidden</animation>
+			<animation effect="fade" delay="450" time="200">Visible</animation>
+			<animation effect="fade" delay="450" time="200">WindowOpen</animation>
+			<animation effect="fade" time="150">WindowClose</animation>
+		</control>
+		<control type="label">
+			<description>Back Label</description>
+			<posx>309</posx>
+			<posy>479</posy>
+			<label>31027</label>
+			<align>right</align>
+			<font>font12</font>
+			<visible>[Window.IsActive(mediasource) + !Window.IsActive(NetworkSettings)] + !Window.IsActive(playercontrols) + !Window.IsActive(128)</visible>
+			<animation effect="fade" time="100">Hidden</animation>
+			<animation effect="fade" delay="450" time="200">Visible</animation>
+			<animation effect="fade" delay="450" time="200">WindowOpen</animation>
+			<animation effect="fade" time="150">WindowClose</animation>
+		</control>
+		<control type="label">
+			<description>Select Label</description>
+			<posx>321</posx>
+			<posy>502</posy>
+			<label>31024</label>
+			<align>right</align>
+			<font>font12</font>
+			<visible>[Window.IsActive(mediasource) + !Window.IsActive(NetworkSettings)] + !Window.IsActive(playercontrols) + !Window.IsActive(128)</visible>
+			<animation effect="fade" time="100">Hidden</animation>
+			<animation effect="fade" delay="450" time="200">Visible</animation>
+			<animation effect="fade" delay="450" time="200">WindowOpen</animation>
+			<animation effect="fade" time="150">WindowClose</animation>
+		</control>
+		<!-- This set is used when Playercontrols.xml is called from FileBrowser -->
+		<control type="image">
+			<description>Back Button</description>
+			<posx>315</posx>
+			<posy>475</posy>
+			<include>Button-Map-Texture-Width</include>
+			<height>21</height>
+			<texture>button-Back.png</texture>
+			<visible>[Window.IsActive(mediasource) + !Window.IsActive(NetworkSettings)] + Window.IsActive(playercontrols) + !Window.IsActive(128)</visible>
+			<animation effect="fade" time="100">Hidden</animation>
+			<animation effect="fade" delay="450" time="200">Visible</animation>
+			<animation effect="fade" delay="450" time="200">WindowOpen</animation>
+			<animation effect="fade" time="150">WindowClose</animation>
+		</control>
+		<control type="image">
+			<description>A Button</description>
+			<posx>330</posx>
+			<posy>498</posy>
+			<include>Button-Map-Texture-Width</include>
+			<height>21</height>
+			<texture>button-A.png</texture>
+			<visible>[Window.IsActive(mediasource) + !Window.IsActive(NetworkSettings)] + Window.IsActive(playercontrols) + !Window.IsActive(128)</visible>
+			<animation effect="fade" time="100">Hidden</animation>
+			<animation effect="fade" delay="450" time="200">Visible</animation>
+			<animation effect="fade" delay="450" time="200">WindowOpen</animation>
+			<animation effect="fade" time="150">WindowClose</animation>
+		</control>
+		<control type="image">
+			<description>Y Button</description>
+			<posx>45</posx>
+			<posy>475</posy>
+			<include>Button-Map-Texture-Width</include>
+			<height>21</height>
+			<texture>button-Y-turnedoff.png</texture>
+			<visible>[Window.IsActive(mediasource) + !Window.IsActive(NetworkSettings)] + Window.IsActive(playercontrols) + !Window.IsActive(128)</visible>
+			<animation effect="fade" time="100">Hidden</animation>
+			<animation effect="fade" delay="450" time="200">Visible</animation>
+			<animation effect="fade" delay="450" time="200">WindowOpen</animation>
+			<animation effect="fade" time="150">WindowClose</animation>
+		</control>
+		<control type="image">
+			<description>X Button</description>
+			<posx>30</posx>
+			<posy>498</posy>
+			<include>Button-Map-Texture-Width</include>
+			<height>21</height>
+			<texture>button-X-turnedoff.png</texture>
+			<visible>[Window.IsActive(mediasource) + !Window.IsActive(NetworkSettings)] + Window.IsActive(playercontrols) + !Window.IsActive(128)</visible>
+			<animation effect="fade" time="100">Hidden</animation>
+			<animation effect="fade" delay="450" time="200">Visible</animation>
+			<animation effect="fade" delay="450" time="200">WindowOpen</animation>
+			<animation effect="fade" time="150">WindowClose</animation>
+		</control>
+		<control type="label">
+			<description>Back Label</description>
+			<posx>309</posx>
+			<posy>479</posy>
+			<label>31027</label>
+			<align>right</align>
+			<font>font12</font>
+			<visible>[Window.IsActive(mediasource) + !Window.IsActive(NetworkSettings)] + Window.IsActive(playercontrols) + !Window.IsActive(128)</visible>
+			<animation effect="fade" time="100">Hidden</animation>
+			<animation effect="fade" delay="450" time="200">Visible</animation>
+			<animation effect="fade" delay="450" time="200">WindowOpen</animation>
+			<animation effect="fade" time="150">WindowClose</animation>
+		</control>
+		<control type="label">
+			<description>Select Label</description>
+			<posx>321</posx>
+			<posy>502</posy>
+			<label>31024</label>
+			<align>right</align>
+			<font>font12</font>
+			<visible>[Window.IsActive(mediasource) + !Window.IsActive(NetworkSettings)] + Window.IsActive(playercontrols) + !Window.IsActive(128)</visible>
+			<animation effect="fade" time="100">Hidden</animation>
+			<animation effect="fade" delay="450" time="200">Visible</animation>
+			<animation effect="fade" delay="450" time="200">WindowOpen</animation>
+			<animation effect="fade" time="150">WindowClose</animation>
+		</control>
+	</controls>
+</window>

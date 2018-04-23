@@ -1,0 +1,197 @@
+<window>
+	<defaultcontrol always="true">1000</defaultcontrol>
+	<resolution>PAL16x9</resolution>
+	<useincludes>false</useincludes>
+
+	<controls>
+		<control type="image" id="999">
+			<description>Context Menu Background Top</description>
+			<posx>135</posx>
+			<posy>110</posy>
+			<width>450</width>
+			<height>15</height>
+			<texture>dialog-context-top.png</texture>
+		</control>
+        
+		<control type="image" id="999">
+			<description>Context Menu Background Middle</description>
+			<posx>135</posx>
+			<posy>125</posy>
+			<width>450</width>
+			<height>320</height>
+			<texture>dialog-context-middle.png</texture>
+		</control>
+        
+		<control type="image" id="999">
+			<description>Context Menu Background Bottom</description>
+			<posx>135</posx>
+			<posy>444</posy>
+			<width>450</width>
+			<height>15</height>
+			<texture>dialog-context-bottom.png</texture>
+		</control>
+
+		<control type="image" id="999">
+			<description>Video Thumbnail</description>
+			<posx>175</posx>
+			<posy>160</posy>
+			<width>130</width>
+			<height>120</height>
+			<texture>dialog-context-middle.png</texture>
+		</control>
+
+		<control type="label" id="999">
+			<description>Title Label</description>
+			<width>370</width>
+			<posx>175</posx>
+			<posy>125</posy>
+			<align>left</align>
+			<label></label>
+			<font>font16</font>
+			<textcolor>FFFFFFFF</textcolor>
+		</control>
+
+		<control type="label" id="999">
+			<description>Author Label</description>
+			<font>font12</font>
+			<posx>365</posx>
+			<posy>165</posy>
+			<label>Author:</label>
+			<align>right</align>
+			<textcolor>FFFFFFFF</textcolor>
+			<shadowcolor>FF000000</shadowcolor>
+			<visible>true</visible>
+		</control>
+
+		<control type="label" id="999">
+			<description>Author Text Label</description>
+			<font>font12</font>
+			<width>210</width>
+			<posx>370</posx>
+			<posy>165</posy>
+			<label></label>
+			<textcolor>FFFFFFFF</textcolor>
+			<shadowcolor>FF000000</shadowcolor>
+			<visible>true</visible>
+		</control>
+
+		<control type="label" id="999">
+			<description>Length Label</description>
+			<font>font12</font>
+			<posx>365</posx>
+			<posy>185</posy>
+			<label>Length:</label>
+			<align>right</align>
+			<textcolor>FFFFFFFF</textcolor>
+			<shadowcolor>FF000000</shadowcolor>
+			<visible>true</visible>
+		</control>
+
+		<control type="label" id="999">
+			<description>Length Text Label</description>
+			<font>font12</font>
+			<width>210</width>
+			<posx>370</posx>
+			<posy>185</posy>
+			<label></label>
+			<align>left</align>
+			<textcolor>FFFFFFFF</textcolor>
+			<shadowcolor>FF000000</shadowcolor>
+			<visible>true</visible>
+		</control>
+
+		<control type="label" id="999">
+			<description>Rating Label</description>
+			<font>font12</font>
+			<posx>365</posx>
+			<posy>205</posy>
+			<label>Rating:</label>
+			<align>right</align>
+			<textcolor>FFFFFFFF</textcolor>
+			<shadowcolor>FF000000</shadowcolor>
+			<visible>true</visible>
+		</control>
+
+		<control type="label" id="999">
+			<description>Rating Text Label</description>
+			<font>font12</font>
+			<width>210</width>
+			<posx>370</posx>
+			<posy>205</posy>
+			<label></label>
+			<align>left</align>
+			<textcolor>FFFFFFFF</textcolor>
+			<shadowcolor>FF000000</shadowcolor>
+			<visible>true</visible>
+		</control>
+
+		<control type="label" id="999">
+			<description>Added Label</description>
+			<font>font12</font>
+			<posx>365</posx>
+			<posy>225</posy>
+			<label>Added:</label>
+			<align>right</align>
+			<textcolor>FFFFFFFF</textcolor>
+			<shadowcolor>FF000000</shadowcolor>
+			<visible>true</visible>
+		</control>
+
+		<control type="label" id="999">
+			<description>Added Text Label</description>
+			<font>font12</font>
+			<width>210</width>
+			<posx>370</posx>
+			<posy>225</posy>
+			<label></label>
+			<align>left</align>
+			<textcolor>FFFFFFFF</textcolor>
+			<shadowcolor>FF000000</shadowcolor>
+			<visible>true</visible>
+		</control>
+
+		<control type="label" id="999">
+			<description>Tags Label</description>
+			<font>font12</font>
+			<posx>365</posx>
+			<posy>245</posy>
+			<label>Tags:</label>
+			<align>right</align>
+			<textcolor>FFFFFFFF</textcolor>
+			<shadowcolor>FF000000</shadowcolor>
+			<visible>true</visible>
+		</control>
+
+		<control type="fadelabel" id="999">
+			<description>Tags Text Label</description>
+			<font>font12</font>
+			<width>190</width>
+			<posx>370</posx>
+			<posy>245</posy>
+			<label></label>
+			<align>left</align>
+			<textcolor>FFFFFFFF</textcolor>
+			<shadowcolor>FF000000</shadowcolor>
+			<visible>true</visible>
+		</control>
+
+		<control type="textbox" id="1000">
+			<description>Description</description>
+			<posx>175</posx>
+			<posy>285</posy>
+			<width>380</width>
+			<height>170</height>
+			<font>font12</font>
+			<textcolor>FFFFFFFF</textcolor>
+			<onup>1000</onup>
+			<ondown>1000</ondown>
+			<onleft>1000</onleft>
+			<onright>1000</onright>
+			<textureup>scroll-up.png</textureup>
+			<texturedown>scroll-down.png</texturedown>
+			<textureupfocus>scroll-up-focus.png</textureupfocus>
+			<texturedownfocus>scroll-down-focus.png</texturedownfocus>
+			<visible>true</visible>
+		</control>
+	</controls>
+</window>

@@ -1,0 +1,49 @@
+﻿<window id="107">
+	<defaultcontrol>402</defaultcontrol>
+	<coordinates>
+		<system>1</system>
+		<posx>260</posx>
+		<posy>470</posy>
+	</coordinates>
+	<controls>
+		<include>NotifyToast</include>
+		<control type="multiimage" id="1">
+			<description>Rotating Logo</description>
+			<posx>8</posx>
+			<posy>6</posy>
+			<width>50</width>
+			<height>50</height>
+			<imagepath>Notify_System</imagepath>
+			<timeperimage>0</timeperimage>
+			<fadetime>0</fadetime>
+			<loop>yes</loop>
+			<randomize>false</randomize>
+			<animation effect="zoom" start="0" end="100" center="0,25" time="200">WindowOpen</animation>
+			<animation effect="zoom" start="100" end="0" center="0,25" time="200" delay="100">WindowClose</animation>
+		</control>
+		<control type="label" id="401">
+			<description>Caption Label</description>
+			<posx>65</posx>
+			<posy>9</posy>
+			<width>120</width>
+			<font>font12</font>
+			<align>left</align>
+			<label>31226</label>
+			<scroll>true</scroll>
+			<animation effect="fade" delay="200" time="100">WindowOpen</animation>
+			<animation effect="fade" time="100">WindowClose</animation>
+		</control>
+		<control type="label" id="402">
+			<description>Description Button</description>
+			<posx>65</posx>
+			<posy>32</posy>
+			<width>120</width>
+			<label>31227</label>
+			<font>font10</font>
+			<align>left</align>
+			<scroll>true</scroll>
+			<animation effect="fade" delay="200" time="100">WindowOpen</animation>
+			<animation effect="fade" time="100">WindowClose</animation>
+		</control>
+	</controls>
+</window>

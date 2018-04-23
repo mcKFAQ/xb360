@@ -1,0 +1,444 @@
+<window id="3">
+	<defaultcontrol>20</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<controls>
+		<!-- Setup Background and Window Transition -->
+		<control type="group">
+			<visible>Window.Previous(1114)</visible>
+			<include>LiveBackGroundWhitewash</include>
+		</control>
+		<control type="group">
+			<visible>Window.Previous(1112)</visible>
+			<include>ProgramBackGroundWhiteWash</include>
+		</control>
+		<control type="group">
+			<visible>![Window.Previous(1112) | Window.Previous(home) | Window.Previous(1114)]</visible>
+			<include>SystemBackGroundWhitewash</include>
+		</control>
+		<control type="group">
+			<visible>Window.Previous(home)</visible>
+			<include>MediaIconBackGroundWhiteWash</include>
+		</control>
+		<!-- Start Normal Window Controls -->
+		<control type="group">
+			<animation effect="fade" delay="100" time="250">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<control type="label" id="1">
+				<description>description label</description>
+				<posx>102</posx>
+				<posy>42</posy>
+				<align>left</align>
+				<label>31025</label>
+				<textcolor>TextcolorWhite</textcolor>
+				<shadowcolor>shadow-black</shadowcolor>
+				<font>font18</font>
+			</control>
+			<control type="image">
+				<posx>91</posx>
+				<posy>75</posy>
+				<height>60</height>
+				<width>575</width>
+				<texture>big-wide-button-nofocus.png</texture>
+			</control>
+			<control type="label">
+				<description>drive f: free space</description>
+				<posx>625</posx>
+				<posy>50</posy>
+				<label>$INFO[System.Freespace(F)] free</label>
+				<align>right</align>
+				<font>font10</font>
+				<shadowcolor>shadow-black</shadowcolor>
+				<visible>System.HasDriveF</visible>
+			</control>
+			<control type="label">
+				<description>drive e: free space</description>
+				<posx>625</posx>
+				<posy>50</posy>
+				<label>$INFO[System.Freespace(E)] free</label>
+				<align>right</align>
+				<font>font10</font>
+				<shadowcolor>shadow-black</shadowcolor>
+				<visible>!System.HasDriveF</visible>
+			</control>
+			<control type="image">
+				<posx>630</posx>
+				<posy>35</posy>
+				<height>40</height>
+				<width>40</width>
+				<apectratio align="right">keep</apectratio>
+				<texture>icon-gamesaves.png</texture>
+			</control>
+			<control type="group">
+				<visible allowhiddenfocus="true">Control.HasFocus(21)</visible>
+				<control type="image">
+					<description>File Manager Tab Right</description>
+					<posx>358</posx>
+					<posy>75</posy>
+					<width>350</width>
+					<height>50</height>
+					<texture>button-tab-focus-right.png</texture>
+				</control>
+				<control type="image">
+					<description>File Manager Tab Right</description>
+					<posx>83</posx>
+					<posy>75</posy>
+					<width>275</width>
+					<height>50</height>
+					<texture>button-tab-nofocus.png</texture>
+				</control>
+				<control type="label" id="13">
+					<description>number of files in right list text label</description>
+					<posx>100</posx>
+					<posy>470</posy>
+					<label>-</label>
+					<font>font13</font>
+					<shadowcolor>shadow-black</shadowcolor>
+				</control>
+				<control type="list" id="21">
+					<posx>91</posx>
+					<posy>125</posy>
+					<width>585</width>
+					<height>345</height>
+					<onleft>20</onleft>
+					<onright>20</onright>
+					<onup>21</onup>
+					<ondown>21</ondown>
+					<pagecontrol>-</pagecontrol>
+					<scrolltime>1</scrolltime>
+					<itemlayout height="48">
+						<control type="image">
+							<posx>0</posx>
+							<posy>-3</posy>
+							<height>60</height>
+							<width>575</width>
+							<texture>big-wide-button-nofocus.png</texture>
+						</control>
+						<control type="image">
+							<posx>15</posx>
+							<posy>8</posy>
+							<width>42</width>
+							<height>42</height>
+							<texture>DefaultFileBig.png</texture>
+							<info>ListItem.Icon</info>
+						</control>
+						<control type="label">
+							<posx>65</posx>
+							<posy>17</posy>
+							<width>475</width>
+							<height>22</height>
+							<aligny>center</aligny>
+							<font>font13</font>
+							<selectedcolor>listselectedcolor</selectedcolor>
+							<textcolor>TextcolorBlack</textcolor>
+							<align>left</align>
+							<info>ListItem.Label</info>
+						</control>
+						<control type="label">
+							<posx>555</posx>
+							<posy>15</posy>
+							<width>200</width>
+							<height>22</height>
+							<aligny>center</aligny>
+							<font>font13</font>
+							<selectedcolor>listselectedcolor</selectedcolor>
+							<textcolor>TextcolorBlack</textcolor>
+							<align>right</align>
+							<info>ListItem.Label2</info>
+						</control>
+					</itemlayout>
+					<focusedlayout height="48">
+						<control type="image">
+							<posx>0</posx>
+							<posy>3</posy>
+							<height>55</height>
+							<width>575</width>
+							<texture>big-wide-button-focus.png</texture>
+						</control>
+						<control type="image">
+							<posx>15</posx>
+							<posy>8</posy>
+							<width>42</width>
+							<height>42</height>
+							<texture>DefaultFileBig.png</texture>
+							<info>ListItem.Icon</info>
+						</control>
+						<control type="label">
+							<posx>65</posx>
+							<posy>17</posy>
+							<width>475</width>
+							<height>22</height>
+							<aligny>center</aligny>
+							<font>font13</font>
+							<selectedcolor>listselectedcolor</selectedcolor>
+							<textcolor>TextcolorBlack</textcolor>
+							<align>left</align>
+							<info>ListItem.Label</info>
+						</control>
+						<control type="label">
+							<posx>555</posx>
+							<posy>15</posy>
+							<width>200</width>
+							<height>22</height>
+							<aligny>center</aligny>
+							<font>font13</font>
+							<selectedcolor>listselectedcolor</selectedcolor>
+							<textcolor>TextcolorBlack</textcolor>
+							<align>right</align>
+							<info>ListItem.Label2</info>
+						</control>
+					</focusedlayout>
+				</control>
+			</control>
+			<control type="group">
+				<visible allowhiddenfocus="true">Control.HasFocus(20)</visible>
+				<control type="image">
+					<description>File Manager Tab Left</description>
+					<posx>80</posx>
+					<posy>75</posy>
+					<width>330</width>
+					<height>50</height>
+					<texture>button-tab-focus-left.png</texture>
+				</control>
+				<control type="image">
+					<description>File Manager Tab Left</description>
+					<posx>410</posx>
+					<posy>75</posy>
+					<width>275</width>
+					<height>50</height>
+					<texture>button-tab-nofocus.png</texture>
+				</control>
+				<control type="label" id="12">
+					<description>number of files in left list text label</description>
+					<posx>100</posx>
+					<posy>470</posy>
+					<label>-</label>
+					<font>font13</font>
+					<shadowcolor>shadow-black</shadowcolor>
+				</control>
+				<control type="list" id="20">
+					<posx>91</posx>
+					<posy>125</posy>
+					<width>585</width>
+					<height>345</height>
+					<onleft>21</onleft>
+					<onright>21</onright>
+					<onup>20</onup>
+					<ondown>20</ondown>
+					<pagecontrol>-</pagecontrol>
+					<scrolltime>1</scrolltime>
+					<itemlayout height="48">
+						<control type="image">
+							<posx>0</posx>
+							<posy>-3</posy>
+							<height>60</height>
+							<width>575</width>
+							<texture>big-wide-button-nofocus.png</texture>
+						</control>
+						<control type="image">
+							<posx>15</posx>
+							<posy>8</posy>
+							<width>42</width>
+							<height>42</height>
+							<texture>DefaultFileBig.png</texture>
+							<info>ListItem.Icon</info>
+						</control>
+						<control type="label">
+							<posx>65</posx>
+							<posy>17</posy>
+							<width>540</width>
+							<height>22</height>
+							<aligny>center</aligny>
+							<font>font13</font>
+							<selectedcolor>listselectedcolor</selectedcolor>
+							<textcolor>TextcolorBlack</textcolor>
+							<align>left</align>
+							<info>ListItem.Label</info>
+						</control>
+						<control type="label">
+							<posx>555</posx>
+							<posy>15</posy>
+							<width>200</width>
+							<height>22</height>
+							<aligny>center</aligny>
+							<font>font13</font>
+							<selectedcolor>listselectedcolor</selectedcolor>
+							<textcolor>TextcolorBlack</textcolor>
+							<align>right</align>
+							<info>ListItem.Label2</info>
+						</control>
+					</itemlayout>
+					<focusedlayout height="48">
+						<control type="image">
+							<posx>0</posx>
+							<posy>3</posy>
+							<height>55</height>
+							<width>575</width>
+							<texture>big-wide-button-focus.png</texture>
+						</control>
+						<control type="image">
+							<posx>15</posx>
+							<posy>8</posy>
+							<width>42</width>
+							<height>42</height>
+							<texture>DefaultFileBig.png</texture>
+							<info>ListItem.Icon</info>
+						</control>
+						<control type="label">
+							<posx>65</posx>
+							<posy>17</posy>
+							<width>540</width>
+							<height>22</height>
+							<aligny>center</aligny>
+							<font>font13</font>
+							<selectedcolor>listselectedcolor</selectedcolor>
+							<textcolor>TextcolorBlack</textcolor>
+							<align>left</align>
+							<info>ListItem.Label</info>
+						</control>
+						<control type="label">
+							<posx>555</posx>
+							<posy>15</posy>
+							<width>200</width>
+							<height>22</height>
+							<aligny>center</aligny>
+							<font>font13</font>
+							<selectedcolor>listselectedcolor</selectedcolor>
+							<textcolor>TextcolorBlack</textcolor>
+							<align>right</align>
+							<info>ListItem.Label2</info>
+						</control>
+					</focusedlayout>
+				</control>
+			</control>
+			<control type="fadelabel" id="101">
+				<description>current Directory text label left</description>
+				<align>left</align>
+				<posx>100</posx>
+				<posy>90</posy>
+				<width>270</width>
+				<font>font16</font>
+				<textcolor>TextcolorBlack</textcolor>
+				<shadowcolor>shadow-grey</shadowcolor>
+			</control>
+			<control type="fadelabel" id="102">
+				<description>current Directory text label right</description>
+				<align>left</align>
+				<posx>410</posx>
+				<posy>90</posy>
+				<width>260</width>
+				<font>font16</font>
+				<textcolor>TextcolorBlack</textcolor>
+				<shadowcolor>shadow-grey</shadowcolor>
+			</control>
+			<control type="image">
+				<description>Y Button</description>
+				<posx>130</posx>
+				<posy>505</posy>
+				<include>Button-Map-Texture-Width</include>
+				<height>21</height>
+				<texture>button-Y.png</texture>
+			</control>
+			<control type="label">
+				<description>Select Label</description>
+				<posx>160</posx>
+				<posy>508</posy>
+				<label>31092</label>
+				<align>left</align>
+				<include>KeymapFont</include>
+			</control>
+			<control type="image">
+				<description>X Button</description>
+				<posx>117</posx>
+				<posy>525</posy>
+				<include>Button-Map-Texture-Width</include>
+				<height>21</height>
+				<texture>button-X.png</texture>
+				<visible>Player.HasVideo | Player.HasAudio</visible>
+			</control>
+			<control type="image">
+				<description>White Button Off</description>
+				<posx>117</posx>
+				<posy>525</posy>
+				<include>Button-Map-Texture-Width</include>
+				<height>21</height>
+				<texture>button-white.png</texture>
+				<visible>!Player.Hasmedia</visible>
+			</control>
+			<control type="label">
+				<description>Advanced options Label</description>
+				<include>KeymapFont</include>
+				<posx>150</posx>
+				<posy>528</posy>
+				<label>31073</label>
+				<align>left</align>
+				<visible>!Player.HasMedia</visible>
+			</control>
+			<control type="label">
+				<description>Full-Screen Visualisation Label</description>
+				<include>KeymapFont</include>
+				<posx>150</posx>
+				<posy>528</posy>
+				<label>31180</label>
+				<align>left</align>
+				<visible>Player.HasAudio</visible>
+			</control>
+			<control type="label">
+				<description>Full-Screen Video Label</description>
+				<include>KeymapFont</include>
+				<posx>150</posx>
+				<posy>528</posy>
+				<label>31181</label>
+				<align>left</align>
+				<visible>Player.HasVideo</visible>
+			</control>
+			<control type="image">
+				<description>B Button</description>
+				<posx>620</posx>
+				<posy>505</posy>
+				<include>Button-Map-Texture-Width</include>
+				<height>21</height>
+				<texture>button-B.png</texture>
+			</control>
+			<control type="label">
+				<description>Back Label</description>
+				<include>KeymapFont</include>
+				<posx>610</posx>
+				<posy>508</posy>
+				<label>31027</label>
+				<align>right</align>
+			</control>
+			<control type="image">
+				<description>A Button</description>
+				<posx>633</posx>
+				<posy>525</posy>
+				<include>Button-Map-Texture-Width</include>
+				<height>21</height>
+				<texture>button-A.png</texture>
+			</control>
+			<control type="label">
+				<description>Select Label</description>
+				<include>KeymapFont</include>
+				<posx>623</posx>
+				<posy>528</posy>
+				<label>31024</label>
+				<align>right</align>
+			</control>
+		</control>
+		<control type="group">
+			<visible>Window.Previous(1114)</visible>
+			<include>LiveCommonsBlades</include>
+		</control>
+		<control type="group">
+			<visible>![Window.Previous(1112) | Window.Previous(home) | Window.Previous(1114)]</visible>
+			<include>SystemCommonsBlades</include>
+		</control>
+		<control type="group">
+			<visible>Window.Previous(1112)</visible>
+			<include>ProgramsCommonsBlades</include>
+		</control>
+		<control type="group">
+			<visible>Window.Previous(home)</visible>
+			<include>MediaCommonsBlades</include>
+		</control>
+	</controls>
+</window>          

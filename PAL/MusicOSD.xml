@@ -1,0 +1,539 @@
+<window id="120">
+	<defaultcontrol>213</defaultcontrol>
+	<animation effect="fade" time="200">WindowOpen</animation>
+	<animation effect="fade" time="200">WindowClose</animation>
+	<controls>
+		<control type="group">
+			<animation effect="fade" start="100" end="0" time="200" condition="Window.IsActive(VisualisationSettings) | Window.IsActive(VisualisationPresetList)">Conditional</animation>
+			<control type="image" id="1">
+				<description>Shadow in the background</description>
+				<posx>0</posx>
+				<posy>450</posy>
+				<height>135</height>
+				<width>720</width>
+				<texture>video-osd-backgroundshadow.png</texture>
+				<visible>yes</visible>
+			</control>
+			<control type="group">
+				<posx>25</posx>
+				<visible>!Skin.HasSetting(USE_XBMC_Lyrics)</visible>
+				<control type="image" id="1">
+					<description>Black Information Panel</description>
+					<posx>185</posx>
+					<posy>490</posy>
+					<height>50</height>
+					<width>310</width>
+					<texture>video-osd-bottomdialogbox.png</texture>
+				</control>
+				<control type="image" id="1">
+					<description>Circle Behind Panel</description>
+					<posx>151</posx>
+					<posy>442</posy>
+					<height>67</height>
+					<width>67</width>
+					<texture>video-osd-backpanel-circle.png</texture>
+				</control>
+				<control type="image" id="1">
+					<description>Panel</description>
+					<posx>160</posx>
+					<posy>450</posy>
+					<height>50</height>
+					<width>350</width>
+					<texture>video-osd-backpanel.png</texture>
+				</control>
+				<control type="togglebutton" id="213">
+					<description>Play</description>
+					<posx>166</posx>
+					<posy>449</posy>
+					<width>50</width>
+					<height>50</height>
+					<texturefocus>video-osd-button-pause-FO.png</texturefocus>
+					<texturenofocus>video-osd-button-pause-NF.png</texturenofocus>
+					<usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
+					<alttexturefocus>video-osd-button-play-FO.png</alttexturefocus>
+					<alttexturenofocus>video-osd-button-play-NF.png</alttexturenofocus>
+					<label>-</label>
+					<font>-</font>
+					<onleft>208</onleft>
+					<onright>210</onright>
+					<onup>213</onup>
+					<ondown>213</ondown>
+					<onclick>XBMC.PlayerControl(Play)</onclick>
+				</control>
+				<control type="label">
+					<description>Pause Label</description>
+					<posx>235</posx>
+					<posy>504</posy>
+					<label>31182</label>
+					<align>left</align>
+					<font>bold14</font>
+					<textcolor>TextcolorWhite</textcolor>
+					<visible>Control.HasFocus(213) + Player.Playing</visible>
+					<animation effect="fade" time="100">WindowOpen</animation>
+				</control>
+				<control type="label">
+					<description>Play Label</description>
+					<posx>235</posx>
+					<posy>504</posy>
+					<label>31183</label>
+					<font>bold14</font>
+					<align>left</align>
+					<textcolor>TextcolorWhite</textcolor>
+					<visible>Control.HasFocus(213) + Player.Paused</visible>
+					<animation effect="fade" time="100">WindowOpen</animation>
+				</control>
+				<control type="button" id="210">
+					<description>Skip Bwd</description>
+					<posx>208</posx>
+					<posy>449</posy>
+					<width>50</width>
+					<height>50</height>
+					<texturefocus>video-osd-button-skipback-FO.png</texturefocus>
+					<texturenofocus>video-osd-button-skipback-NF.png</texturenofocus>
+					<onclick>XBMC.PlayerControl(Previous)</onclick>
+					<label>-</label>
+					<font>-</font>
+					<onleft>213</onleft>
+					<onright>215</onright>
+					<onup>210</onup>
+					<ondown>210</ondown>
+				</control>
+				<control type="label">
+					<description>Skip Back Label</description>
+					<posx>235</posx>
+					<posy>504</posy>
+					<label>31184</label>
+					<font>bold14</font>
+					<align>left</align>
+					<textcolor>TextcolorWhite</textcolor>
+					<visible>Control.HasFocus(210)</visible>
+					<animation effect="fade" time="100">WindowOpen</animation>
+				</control>
+				<control type="button" id="215">
+					<description>Skip Fwd</description>
+					<posx>254</posx>
+					<posy>449</posy>
+					<width>50</width>
+					<height>50</height>
+					<texturefocus>video-osd-button-skipforward-FO.png</texturefocus>
+					<texturenofocus>video-osd-button-skipforward-NF.png</texturenofocus>
+					<onclick>XBMC.PlayerControl(Next)</onclick>
+					<label>-</label>
+					<font>-</font>
+					<onleft>210</onleft>
+					<onright>920</onright>
+					<onup>215</onup>
+					<ondown>215</ondown>
+				</control>
+				<control type="label">
+					<description>Skip Fwd Label</description>
+					<posx>235</posx>
+					<posy>504</posy>
+					<label>31185</label>
+					<font>bold14</font>
+					<align>left</align>
+					<textcolor>TextcolorWhite</textcolor>
+					<visible>Control.HasFocus(215)</visible>
+					<animation effect="fade" time="100">WindowOpen</animation>
+				</control>
+				<control type="togglebutton" id="920">
+					<description>Vis Select</description>
+					<posx>300</posx>
+					<posy>449</posy>
+					<width>50</width>
+					<height>50</height>
+					<texturefocus>video-osd-button-vis-FO.png</texturefocus>
+					<texturenofocus>video-osd-button-vis-NF.png</texturenofocus>
+					<usealttexture>Window.IsActive(VisualisationPresetList)</usealttexture>
+					<alttexturefocus>video-osd-button-vis-FO.png</alttexturefocus>
+					<alttexturenofocus>video-osd-button-vis-FO.png</alttexturenofocus>
+					<onclick>XBMC.ActivateWindow(122)</onclick>
+					<label>-</label>
+					<font>-</font>
+					<onleft>215</onleft>
+					<onright>921</onright>
+					<onup>920</onup>
+					<ondown>920</ondown>
+				</control>
+				<control type="label">
+					<description>Vis Select Label</description>
+					<posx>235</posx>
+					<posy>504</posy>
+					<label>250</label>
+					<font>bold14</font>
+					<align>left</align>
+					<textcolor>TextcolorWhite</textcolor>
+					<visible>Control.HasFocus(920)</visible>
+					<animation effect="fade" time="100">WindowOpen</animation>
+				</control>
+				<control type="togglebutton" id="921">
+					<description>Vis Settings menu</description>
+					<posx>346</posx>
+					<posy>449</posy>
+					<width>50</width>
+					<height>50</height>
+					<texturefocus>video-osd-button-vis-setting-FO.png</texturefocus>
+					<texturenofocus>video-osd-button-vis-setting-NF.png</texturenofocus>
+					<usealttexture>Window.IsActive(VisualisationSettings)</usealttexture>
+					<alttexturefocus>video-osd-button-vis-setting-FO.png</alttexturefocus>
+					<alttexturenofocus>video-osd-button-vis-setting-FO.png</alttexturenofocus>
+					<onclick>XBMC.ActivateWindow(VisualisationSettings)</onclick>
+					<label>-</label>
+					<font>-</font>
+					<onleft>920</onleft>
+					<onright>918</onright>
+					<onup>921</onup>
+					<ondown>921</ondown>
+				</control>
+				<control type="label">
+					<description>Vis Settings Label</description>
+					<posx>235</posx>
+					<posy>504</posy>
+					<label>10004</label>
+					<font>bold14</font>
+					<align>left</align>
+					<textcolor>TextcolorWhite</textcolor>
+					<visible>Control.HasFocus(921)</visible>
+					<animation effect="fade" time="100">WindowOpen</animation>
+				</control>
+				<control type="button" id="918">
+					<description>playlist button</description>
+					<posx>392</posx>
+					<posy>449</posy>
+					<width>50</width>
+					<height>50</height>
+					<texturefocus>video-osd-button-playlist-FO.png</texturefocus>
+					<texturenofocus>video-osd-button-playlist-NF.png</texturenofocus>
+					<onclick>XBMC.ActivateWindow(500)</onclick>
+					<label>-</label>
+					<font>-</font>
+					<onleft>921</onleft>
+					<onright>208</onright>
+					<onup>918</onup>
+					<ondown>918</ondown>
+				</control>
+				<control type="label">
+					<description>Playlist Label</description>
+					<posx>235</posx>
+					<posy>504</posy>
+					<label>31188</label>
+					<font>bold14</font>
+					<align>left</align>
+					<textcolor>TextcolorWhite</textcolor>
+					<visible>Control.HasFocus(918)</visible>
+					<animation effect="fade" time="100">WindowOpen</animation>
+				</control>
+				<control type="image">
+					<description>Record button 2</description>
+					<posx>438</posx>
+					<posy>448</posy>
+					<width>50</width>
+					<height>50</height>
+					<texture>video-osd-button-record-OFF.png</texture>
+					<visible>!Player.CanRecord</visible>
+				</control>
+				<control type="button" id="208">
+					<description>Record button</description>
+					<posx>438</posx>
+					<posy>448</posy>
+					<width>50</width>
+					<height>50</height>
+					<texturefocus>video-osd-button-record-FO.png</texturefocus>
+					<texturenofocus>video-osd-button-record-NF.png</texturenofocus>
+					<label>-</label>
+					<font>-</font>
+					<onleft>919</onleft>
+					<onright>213</onright>
+					<onup>208</onup>
+					<ondown>208</ondown>
+					<onclick>XBMC.PlayerControl(Record)</onclick>
+					<visible>Player.CanRecord</visible>
+				</control>
+				<control type="label">
+					<description>Record Button Label</description>
+					<posx>235</posx>
+					<posy>504</posy>
+					<label>264</label>
+					<font>bold14</font>
+					<align>left</align>
+					<textcolor>TextcolorWhite</textcolor>
+					<visible>Control.HasFocus(208)</visible>
+					<animation effect="fade" time="100">WindowOpen</animation>
+				</control>
+			</control>
+			<control type="group">
+				<visible>Skin.HasSetting(USE_XBMC_Lyrics)</visible>
+				<control type="image" id="1">
+					<description>Black Information Panel</description>
+					<posx>185</posx>
+					<posy>490</posy>
+					<height>50</height>
+					<width>360</width>
+					<texture>video-osd-bottomdialogbox.png</texture>
+				</control>
+				<control type="image" id="1">
+					<description>Circle Behind Panel</description>
+					<posx>155</posx>
+					<posy>442</posy>
+					<height>67</height>
+					<width>67</width>
+					<texture>video-osd-backpanel-circle.png</texture>
+				</control>
+				<control type="image" id="1">
+					<description>Panel</description>
+					<posx>160</posx>
+					<posy>450</posy>
+					<height>50</height>
+					<width>400</width>
+					<texture>video-osd-backpanel.png</texture>
+				</control>
+				<control type="togglebutton" id="213">
+					<description>Play</description>
+					<posx>166</posx>
+					<posy>449</posy>
+					<width>50</width>
+					<height>50</height>
+					<texturefocus>video-osd-button-pause-FO.png</texturefocus>
+					<texturenofocus>video-osd-button-pause-NF.png</texturenofocus>
+					<usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
+					<alttexturefocus>video-osd-button-play-FO.png</alttexturefocus>
+					<alttexturenofocus>video-osd-button-play-NF.png</alttexturenofocus>
+					<label>-</label>
+					<font>-</font>
+					<onleft>208</onleft>
+					<onright>210</onright>
+					<onup>213</onup>
+					<ondown>213</ondown>
+					<onclick>XBMC.PlayerControl(Play)</onclick>
+				</control>
+				<control type="label">
+					<description>Pause Label</description>
+					<posx>235</posx>
+					<posy>504</posy>
+					<label>31182</label>
+					<align>left</align>
+					<textcolor>TextcolorWhite</textcolor>
+					<font>bold14</font>
+					<visible>Control.HasFocus(213) + Player.Playing</visible>
+					<animation effect="fade" time="100">WindowOpen</animation>
+				</control>
+				<control type="label">
+					<description>Play Label</description>
+					<posx>235</posx>
+					<posy>504</posy>
+					<label>31183</label>
+					<font>bold14</font>
+					<align>left</align>
+					<textcolor>TextcolorWhite</textcolor>
+					<visible>Control.HasFocus(213) + Player.Paused</visible>
+					<animation effect="fade" time="100">WindowOpen</animation>
+				</control>
+				<control type="button" id="210">
+					<description>Skip Bwd</description>
+					<posx>208</posx>
+					<posy>449</posy>
+					<width>50</width>
+					<height>50</height>
+					<texturefocus>video-osd-button-skipback-FO.png</texturefocus>
+					<texturenofocus>video-osd-button-skipback-NF.png</texturenofocus>
+					<onclick>XBMC.PlayerControl(Previous)</onclick>
+					<label>-</label>
+					<font>-</font>
+					<onleft>213</onleft>
+					<onright>215</onright>
+					<onup>210</onup>
+					<ondown>210</ondown>
+				</control>
+				<control type="label">
+					<description>Skip Back Label</description>
+					<posx>235</posx>
+					<posy>504</posy>
+					<label>31184</label>
+					<font>bold14</font>
+					<align>left</align>
+					<textcolor>TextcolorWhite</textcolor>
+					<visible>Control.HasFocus(210)</visible>
+					<animation effect="fade" time="100">WindowOpen</animation>
+				</control>
+				<control type="button" id="215">
+					<description>Skip Fwd</description>
+					<posx>254</posx>
+					<posy>449</posy>
+					<width>50</width>
+					<height>50</height>
+					<texturefocus>video-osd-button-skipforward-FO.png</texturefocus>
+					<texturenofocus>video-osd-button-skipforward-NF.png</texturenofocus>
+					<onclick>XBMC.PlayerControl(Next)</onclick>
+					<label>-</label>
+					<font>-</font>
+					<onleft>210</onleft>
+					<onright>920</onright>
+					<onup>215</onup>
+					<ondown>215</ondown>
+				</control>
+				<control type="label">
+					<description>Skip Fwd Label</description>
+					<posx>235</posx>
+					<posy>504</posy>
+					<label>31185</label>
+					<font>bold14</font>
+					<align>left</align>
+					<textcolor>TextcolorWhite</textcolor>
+					<visible>Control.HasFocus(215)</visible>
+					<animation effect="fade" time="100">WindowOpen</animation>
+				</control>
+				<control type="togglebutton" id="920">
+					<description>Vis Select</description>
+					<posx>300</posx>
+					<posy>449</posy>
+					<width>50</width>
+					<height>50</height>
+					<texturefocus>video-osd-button-vis-FO.png</texturefocus>
+					<texturenofocus>video-osd-button-vis-NF.png</texturenofocus>
+					<usealttexture>Window.IsActive(VisualisationPresetList)</usealttexture>
+					<alttexturefocus>video-osd-button-vis-FO.png</alttexturefocus>
+					<alttexturenofocus>video-osd-button-vis-FO.png</alttexturenofocus>
+					<onclick>XBMC.ActivateWindow(122)</onclick>
+					<label>-</label>
+					<font>-</font>
+					<onleft>215</onleft>
+					<onright>921</onright>
+					<onup>920</onup>
+					<ondown>920</ondown>
+				</control>
+				<control type="label">
+					<description>Vis Select Label</description>
+					<posx>235</posx>
+					<posy>504</posy>
+					<label>250</label>
+					<font>bold14</font>
+					<align>left</align>
+					<textcolor>TextcolorWhite</textcolor>
+					<visible>Control.HasFocus(920)</visible>
+					<animation effect="fade" time="100">WindowOpen</animation>
+				</control>
+				<control type="togglebutton" id="921">
+					<description>Vis Settings menu</description>
+					<posx>346</posx>
+					<posy>449</posy>
+					<width>50</width>
+					<height>50</height>
+					<texturefocus>video-osd-button-vis-setting-FO.png</texturefocus>
+					<texturenofocus>video-osd-button-vis-setting-NF.png</texturenofocus>
+					<usealttexture>Window.IsActive(VisualisationSettings)</usealttexture>
+					<alttexturefocus>video-osd-button-vis-setting-FO.png</alttexturefocus>
+					<alttexturenofocus>video-osd-button-vis-setting-FO.png</alttexturenofocus>
+					<onclick>XBMC.ActivateWindow(VisualisationSettings)</onclick>
+					<label>-</label>
+					<font>-</font>
+					<onleft>920</onleft>
+					<onright>918</onright>
+					<onup>921</onup>
+					<ondown>921</ondown>
+				</control>
+				<control type="label">
+					<description>Vis Settings Label</description>
+					<posx>235</posx>
+					<posy>504</posy>
+					<label>10004</label>
+					<font>bold14</font>
+					<align>left</align>
+					<textcolor>TextcolorWhite</textcolor>
+					<visible>Control.HasFocus(921)</visible>
+					<animation effect="fade" time="100">WindowOpen</animation>
+				</control>
+				<control type="button" id="918">
+					<description>playlist button</description>
+					<posx>392</posx>
+					<posy>449</posy>
+					<width>50</width>
+					<height>50</height>
+					<texturefocus>video-osd-button-playlist-FO.png</texturefocus>
+					<texturenofocus>video-osd-button-playlist-NF.png</texturenofocus>
+					<onclick>XBMC.ActivateWindow(500)</onclick>
+					<label>-</label>
+					<font>-</font>
+					<onleft>921</onleft>
+					<onright>919</onright>
+					<onup>918</onup>
+					<ondown>918</ondown>
+				</control>
+				<control type="label">
+					<description>Playlist Label</description>
+					<posx>235</posx>
+					<posy>504</posy>
+					<label>31188</label>
+					<font>bold14</font>
+					<align>left</align>
+					<textcolor>TextcolorWhite</textcolor>
+					<visible>Control.HasFocus(918)</visible>
+					<animation effect="fade" time="100">WindowOpen</animation>
+				</control>
+				<control type="button" id="919">
+					<description>Lyrics button</description>
+					<posx>438</posx>
+					<posy>449</posy>
+					<width>50</width>
+					<height>50</height>
+					<texturefocus>video-osd-button-lyrics-FO.png</texturefocus>
+					<texturenofocus>video-osd-button-lyrics-NF.png</texturenofocus>
+					<onclick>XBMC.RunScript(Q:\scripts\XBMC Lyrics\default.py)</onclick>
+					<label>-</label>
+					<font>-</font>
+					<onleft>918</onleft>
+					<onright>208</onright>
+					<onup>919</onup>
+					<ondown>919</ondown>
+				</control>
+				<control type="label">
+					<description>Lyrics Label</description>
+					<posx>235</posx>
+					<posy>504</posy>
+					<label>31210</label>
+					<font>bold14</font>
+					<align>left</align>
+					<textcolor>TextcolorWhite</textcolor>
+					<visible>Control.HasFocus(919)</visible>
+					<animation effect="fade" time="100">WindowOpen</animation>
+				</control>
+				<control type="image">
+					<description>Record button 2</description>
+					<posx>484</posx>
+					<posy>448</posy>
+					<width>50</width>
+					<height>50</height>
+					<texture>video-osd-button-record-OFF.png</texture>
+					<visible>!Player.CanRecord</visible>
+				</control>
+				<control type="button" id="208">
+					<description>Record button</description>
+					<posx>484</posx>
+					<posy>448</posy>
+					<width>50</width>
+					<height>50</height>
+					<texturefocus>video-osd-button-record-FO.png</texturefocus>
+					<texturenofocus>video-osd-button-record-NF.png</texturenofocus>
+					<label>-</label>
+					<font>-</font>
+					<onleft>919</onleft>
+					<onright>213</onright>
+					<onup>208</onup>
+					<ondown>208</ondown>
+					<onclick>XBMC.PlayerControl(Record)</onclick>
+					<visible>Player.CanRecord</visible>
+				</control>
+				<control type="label">
+					<description>Record Button Label</description>
+					<posx>235</posx>
+					<posy>504</posy>
+					<label>264</label>
+					<font>bold14</font>
+					<align>left</align>
+					<textcolor>TextcolorWhite</textcolor>
+					<visible>Control.HasFocus(208)</visible>
+					<animation effect="fade" time="100">WindowOpen</animation>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window> 

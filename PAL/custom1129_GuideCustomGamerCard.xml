@@ -1,0 +1,284 @@
+<window type="dialog" id="1129">
+	<defaultcontrol always="true">1</defaultcontrol>
+	<controls>
+		<control type="image">
+			<description>Divider</description>
+			<posx>45</posx>
+			<posy>98</posy>
+			<width>248</width>
+			<height>1</height>
+			<texture>divider.png</texture>
+			<visible>![Window.IsActive(1122) | Window.IsActive(1127)]</visible>
+			<animation effect="fade" time="100">WindowOpen</animation>
+		</control>
+		<control type="image">
+			<description>Button 1 Image</description>
+			<posx>22</posx>
+			<posy>88</posy>
+			<width>290</width>
+			<height>59</height>
+			<texture>guide-button-focus.png</texture>
+			<visible>![Window.IsActive(1122) | Window.IsActive(1127)] + Control.HasFocus(1)</visible>
+			<animation effect="fade" start="30" time="275" reversible="false">visible</animation>
+			<animation effect="fade" time="100">WindowOpen</animation>
+		</control>
+		<control type="button" id="1">
+			<description>Setup GamerCard</description>
+			<posx>22</posx>
+			<posy>88</posy>
+			<width>290</width>
+			<height>59</height>
+			<texturefocus>-</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<onclick>XBMC.ReplaceWindow(1122)</onclick>
+			<pulseonselect>no</pulseonselect>
+			<onleft>1</onleft>
+			<onright>1</onright>
+			<onup>6</onup>
+			<ondown>2</ondown>
+			<font>font14</font>
+			<label>31080</label>
+			<textoffsetx>30</textoffsetx>
+			<textcolor>TextcolorBlack</textcolor>
+			<shadowcolor>shadow-grey</shadowcolor>
+			<visible>![Window.IsActive(1122) | Window.IsActive(1127)]</visible>
+			<animation effect="slide" end="-2,0" time="275" reversible="false">focus</animation>
+			<animation effect="fade" time="100">WindowOpen</animation>
+		</control>
+		<control type="image">
+			<description>Divider</description>
+			<posx>45</posx>
+			<posy>134</posy>
+			<width>248</width>
+			<height>1</height>
+			<texture>divider.png</texture>
+			<visible>![Window.IsActive(1122) | Window.IsActive(1127)]</visible>
+			<animation effect="fade" time="100">WindowOpen</animation>
+		</control>
+		<control type="image">
+			<description>Button 2 Image</description>
+			<posx>22</posx>
+			<posy>124</posy>
+			<width>290</width>
+			<height>59</height>
+			<texture>guide-button-focus.png</texture>
+			<visible>![Window.IsActive(1122) | Window.IsActive(1127)] + Control.HasFocus(2)</visible>
+			<animation effect="fade" start="30" time="275" reversible="false">visible</animation>
+			<animation effect="fade" time="100">WindowOpen</animation>
+		</control>
+		<control type="button" id="2">
+			<description>Choose HomeCards Label</description>
+			<posx>22</posx>
+			<posy>124</posy>
+			<width>290</width>
+			<height>59</height>
+			<texturefocus>-</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<onclick>XBMC.ReplaceWindow(1127)</onclick>
+			<pulseonselect>no</pulseonselect>
+			<onleft>2</onleft>
+			<onright>2</onright>
+			<onup>1</onup>
+			<ondown>3</ondown>
+			<font>font14</font>
+			<label>31169</label>
+			<textoffsetx>30</textoffsetx>
+			<textcolor>TextcolorBlack</textcolor>
+			<shadowcolor>shadow-grey</shadowcolor>
+			<visible>![Window.IsActive(1122) | Window.IsActive(1127)]</visible>
+			<animation effect="slide" end="-2,0" time="275" reversible="false">focus</animation>
+			<animation effect="fade" time="100">WindowOpen</animation>
+		</control>
+		<control type="image">
+			<description>Divider</description>
+			<posx>45</posx>
+			<posy>170</posy>
+			<width>248</width>
+			<height>1</height>
+			<texture>divider.png</texture>
+			<visible>![Window.IsActive(1122) | Window.IsActive(1127)]</visible>
+			<animation effect="fade" time="100">WindowOpen</animation>
+		</control>
+		<control type="image">
+			<description>Button 3 Image</description>
+			<posx>22</posx>
+			<posy>160</posy>
+			<width>290</width>
+			<height>59</height>
+			<texture>guide-button-focus.png</texture>
+			<visible>![Window.IsActive(1122) | Window.IsActive(1127)] + Control.HasFocus(3)</visible>
+			<animation effect="fade" start="30" time="275" reversible="false">visible</animation>
+			<animation effect="fade" time="100">WindowOpen</animation>
+		</control>
+		<control type="radiobutton" id="3">
+			<description>Use Silver GamerCard Label</description>
+			<posx>22</posx>
+			<posy>160</posy>
+			<width>290</width>
+			<height>59</height>
+			<texturefocus>-</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<selected>Skin.HasSetting(gamercard)</selected>
+			<onclick>Skin.ToggleSetting(gamercard)</onclick>
+			<pulseonselect>no</pulseonselect>
+			<onleft>3</onleft>
+			<onright>3</onright>
+			<onup>2</onup>
+			<ondown>4</ondown>
+			<font>font14</font>
+			<label>31175</label>
+			<textoffsetx>30</textoffsetx>
+			<textcolor>TextcolorBlack</textcolor>
+			<shadowcolor>shadow-grey</shadowcolor>
+			<visible>![Window.IsActive(1122) | Window.IsActive(1127)]</visible>
+			<animation effect="slide" end="-2,0" time="275" reversible="false">focus</animation>
+			<animation effect="fade" time="100">WindowOpen</animation>
+		</control>
+		<control type="image">
+			<description>Divider</description>
+			<posx>45</posx>
+			<posy>206</posy>
+			<width>248</width>
+			<height>1</height>
+			<texture>divider.png</texture>
+			<visible>![Window.IsActive(1122) | Window.IsActive(1127)]</visible>
+			<animation effect="fade" time="100">WindowOpen</animation>
+		</control>
+		<control type="image">
+			<description>Button 4 Image</description>
+			<posx>22</posx>
+			<posy>196</posy>
+			<width>290</width>
+			<height>59</height>
+			<texture>guide-button-focus.png</texture>
+			<visible>![Window.IsActive(1122) | Window.IsActive(1127)] + Control.HasFocus(4)</visible>
+			<animation effect="fade" start="30" time="275" reversible="false">visible</animation>
+			<animation effect="fade" time="100">WindowOpen</animation>
+		</control>
+		<control type="radiobutton" id="4">
+			<description>Use Now Playing Card Label</description>
+			<posx>22</posx>
+			<posy>196</posy>
+			<width>290</width>
+			<height>59</height>
+			<texturefocus>-</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<selected>Skin.HasSetting(MusicCard)</selected>
+			<onclick>Skin.ToggleSetting(MusicCard)</onclick>
+			<pulseonselect>no</pulseonselect>
+			<onleft>4</onleft>
+			<onright>4</onright>
+			<onup>3</onup>
+			<ondown>5</ondown>
+			<font>font14</font>
+			<label>31173</label>
+			<textoffsetx>30</textoffsetx>
+			<textcolor>TextcolorBlack</textcolor>
+			<shadowcolor>shadow-grey</shadowcolor>
+			<visible>![Window.IsActive(1122) | Window.IsActive(1127)]</visible>
+			<animation effect="slide" end="-2,0" time="275" reversible="false">focus</animation>
+			<animation effect="fade" time="100">WindowOpen</animation>
+		</control>
+		<control type="image">
+			<description>Divider</description>
+			<posx>45</posx>
+			<posy>242</posy>
+			<width>248</width>
+			<height>1</height>
+			<texture>divider.png</texture>
+			<visible>![Window.IsActive(1122) | Window.IsActive(1127)]</visible>
+			<animation effect="fade" time="100">WindowOpen</animation>
+		</control>
+		<control type="image">
+			<description>Button 5 Image</description>
+			<posx>22</posx>
+			<posy>232</posy>
+			<width>290</width>
+			<height>59</height>
+			<texture>guide-button-focus.png</texture>
+			<visible>![Window.IsActive(1122) | Window.IsActive(1127)] + Control.HasFocus(5)</visible>
+			<animation effect="fade" start="30" time="275" reversible="false">visible</animation>
+			<animation effect="fade" time="100">WindowOpen</animation>
+		</control>
+		<control type="radiobutton" id="5">
+			<description>Auto Update Check Button</description>
+			<posx>22</posx>
+			<posy>232</posy>
+			<width>290</width>
+			<height>59</height>
+			<texturefocus>-</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<selected>Skin.HasSetting(UpdateCard)</selected>
+			<onclick>Skin.ToggleSetting(UpdateCard)</onclick>
+			<pulseonselect>no</pulseonselect>
+			<onleft>5</onleft>
+			<onright>5</onright>
+			<onup>4</onup>
+			<ondown>6</ondown>
+			<font>font14</font>
+			<label>31201</label>
+			<textoffsetx>30</textoffsetx>
+			<textcolor>TextcolorBlack</textcolor>
+			<shadowcolor>shadow-grey</shadowcolor>
+			<visible>![Window.IsActive(1122) | Window.IsActive(1127)]</visible>
+			<animation effect="slide" end="-2,0" time="275" reversible="false">focus</animation>
+			<animation effect="fade" time="100">WindowOpen</animation>
+		</control>
+		<control type="image">
+			<description>Divider</description>
+			<posx>45</posx>
+			<posy>278</posy>
+			<width>248</width>
+			<height>1</height>
+			<texture>divider.png</texture>
+			<visible>![Window.IsActive(1122) | Window.IsActive(1127)]</visible>
+			<animation effect="fade" time="100">WindowOpen</animation>
+		</control>
+		<control type="image">
+			<description>Button 6 Image</description>
+			<posx>22</posx>
+			<posy>268</posy>
+			<width>290</width>
+			<height>59</height>
+			<texture>guide-button-focus.png</texture>
+			<visible>![Window.IsActive(1122) | Window.IsActive(1127)] + Control.HasFocus(6)</visible>
+			<animation effect="fade" start="30" time="275" reversible="false">visible</animation>
+			<animation effect="fade" time="100">WindowOpen</animation>
+		</control>
+		<control type="button" id="6">
+			<description>Update Now Button</description>
+			<posx>22</posx>
+			<posy>268</posy>
+			<width>290</width>
+			<height>59</height>
+			<texturefocus>-</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<onclick>RunScript(Q:\skin\MC360\extras\gamercardupdate.py)</onclick>
+			<pulseonselect>no</pulseonselect>
+			<onleft>6</onleft>
+			<onright>6</onright>
+			<onup>5</onup>
+			<ondown>1</ondown>
+			<font>font14</font>
+			<label>31202</label>
+			<textoffsetx>30</textoffsetx>
+			<textcolor>TextcolorBlack</textcolor>
+			<shadowcolor>shadow-grey</shadowcolor>
+			<visible>System.HasNetwork</visible>
+			<visible>![Window.IsActive(1122) | Window.IsActive(1127)]</visible>
+			<animation effect="slide" end="-2,0" time="275" reversible="false">focus</animation>
+			<animation effect="fade" time="100">WindowOpen</animation>
+		</control>
+		<control type="image">
+			<description>Divider</description>
+			<posx>45</posx>
+			<posy>314</posy>
+			<width>248</width>
+			<height>1</height>
+			<texture>divider.png</texture>
+			<visible>System.HasNetwork</visible>
+			<visible>![Window.IsActive(1122) | Window.IsActive(1127)]</visible>
+			<animation effect="fade" time="100">WindowOpen</animation>
+		</control>
+	</controls>
+</window>    

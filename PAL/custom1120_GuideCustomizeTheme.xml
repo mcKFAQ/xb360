@@ -1,0 +1,239 @@
+<window type="dialog" id="1120">
+	<defaultcontrol always="true">1</defaultcontrol>
+	<controls>
+		<control type="image">
+			<description>Divider</description>
+			<posx>45</posx>
+			<posy>98</posy>
+			<width>248</width>
+			<height>1</height>
+			<texture>divider.png</texture>
+			<visible>![Window.IsActive(1128) | Window.IsActive(1126) | Window.IsActive(126)]</visible>
+			<animation effect="fade" time="100">WindowOpen</animation>
+		</control>
+		<control type="image">
+			<description>Button 1 Image</description>
+			<posx>22</posx>
+			<posy>88</posy>
+			<width>290</width>
+			<height>59</height>
+			<texture>guide-button-focus.png</texture>
+			<visible>![Window.IsActive(1128) | Window.IsActive(1126) | Window.IsActive(126)] + Control.HasFocus(1)</visible>
+			<animation effect="fade" start="30" time="275" reversible="false">visible</animation>
+			<animation effect="fade" time="100">WindowOpen</animation>
+		</control>
+		<control type="button" id="1">
+			<description>Custom Background Label</description>
+			<posx>22</posx>
+			<posy>88</posy>
+			<width>290</width>
+			<height>59</height>
+			<texturefocus>-</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<onclick>XBMC.ReplaceWindow(1128)</onclick>
+			<pulseonselect>no</pulseonselect>
+			<onleft>1</onleft>
+			<onright>1</onright>
+			<onup>4</onup>
+			<ondown>2</ondown>
+			<font>font14</font>
+			<label>31062</label>
+			<textoffsetx>30</textoffsetx>
+			<textcolor>TextcolorBlack</textcolor>
+			<shadowcolor>shadow-grey</shadowcolor>
+			<visible allowhiddenfocus="true">![Window.IsActive(1128) | Window.IsActive(1126) | Window.IsActive(126)]</visible>
+			<animation effect="slide" end="-2,0" time="275" reversible="false">focus</animation>
+			<animation effect="fade" time="100">WindowOpen</animation>
+		</control>
+		<control type="image">
+			<description>Divider</description>
+			<posx>45</posx>
+			<posy>134</posy>
+			<width>248</width>
+			<height>1</height>
+			<texture>divider.png</texture>
+			<visible>![Window.IsActive(1128) | Window.IsActive(1126) | Window.IsActive(126)]</visible>
+			<animation effect="fade" time="100">WindowOpen</animation>
+		</control>
+		<control type="image">
+			<description>Button 2 Image</description>
+			<posx>22</posx>
+			<posy>124</posy>
+			<width>290</width>
+			<height>59</height>
+			<texture>guide-button-focus.png</texture>
+			<visible>![Window.IsActive(1128) | Window.IsActive(1126) | Window.IsActive(126)] + Control.HasFocus(2)</visible>
+			<animation effect="fade" start="30" time="275" reversible="false">visible</animation>
+			<animation effect="fade" time="100">WindowOpen</animation>
+		</control>
+		<control type="radiobutton" id="2">
+			<description>Disable Animations Label</description>
+			<posx>22</posx>
+			<posy>124</posy>
+			<width>290</width>
+			<height>59</height>
+			<texturefocus>-</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<selected>Skin.HasSetting(backgroundani)</selected>
+			<onclick>Skin.ToggleSetting(backgroundani)</onclick>
+			<pulseonselect>no</pulseonselect>
+			<onleft>2</onleft>
+			<onright>2</onright>
+			<onup>1</onup>
+			<ondown>3</ondown>
+			<font>font14</font>
+			<label>31066</label>
+			<textoffsetx>30</textoffsetx>
+			<textcolor>TextcolorBlack</textcolor>
+			<shadowcolor>shadow-grey</shadowcolor>
+			<visible>![Window.IsActive(1128) | Window.IsActive(1126) | Window.IsActive(126)]</visible>
+			<animation effect="slide" end="-2,0" time="275" reversible="false">focus</animation>
+			<animation effect="fade" time="100">WindowOpen</animation>
+		</control>
+		<control type="image">
+			<description>Divider</description>
+			<posx>45</posx>
+			<posy>170</posy>
+			<width>248</width>
+			<height>1</height>
+			<texture>divider.png</texture>
+			<visible>![Window.IsActive(1128) | Window.IsActive(1126) | Window.IsActive(126)]</visible>
+			<animation effect="fade" time="100">WindowOpen</animation>
+		</control>
+		<control type="image">
+			<description>Button 3 Image</description>
+			<posx>22</posx>
+			<posy>160</posy>
+			<width>290</width>
+			<height>59</height>
+			<texture>guide-button-focus.png</texture>
+			<visible>![Window.IsActive(1128) | Window.IsActive(1126) | Window.IsActive(126)] + Control.HasFocus(3)</visible>
+			<animation effect="fade" start="30" time="275" reversible="false">visible</animation>
+			<animation effect="fade" time="100">WindowOpen</animation>
+		</control>
+		<control type="radiobutton" id="3">
+			<description>Disable Visualisation Label</description>
+			<posx>22</posx>
+			<posy>160</posy>
+			<width>290</width>
+			<height>59</height>
+			<texturefocus>-</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<selected>Skin.HasSetting(backgroundvis)</selected>
+			<onclick>Skin.ToggleSetting(backgroundvis)</onclick>
+			<pulseonselect>no</pulseonselect>
+			<onleft>3</onleft>
+			<onright>3</onright>
+			<onup>2</onup>
+			<ondown>10</ondown>
+			<font>font14</font>
+			<label>31174</label>
+			<textoffsetx>30</textoffsetx>
+			<textcolor>TextcolorBlack</textcolor>
+			<shadowcolor>shadow-grey</shadowcolor>
+			<visible>![Window.IsActive(1128) | Window.IsActive(1126) | Window.IsActive(126)]</visible>
+			<animation effect="slide" end="-2,0" time="275" reversible="false">focus</animation>
+			<animation effect="fade" time="100">WindowOpen</animation>
+		</control>
+		<control type="image">
+			<description>Divider</description>
+			<posx>45</posx>
+			<posy>206</posy>
+			<width>248</width>
+			<height>1</height>
+			<texture>divider.png</texture>
+			<visible>![Window.IsActive(1128) | Window.IsActive(1126) | Window.IsActive(126)]</visible>
+			<animation effect="fade" time="100">WindowOpen</animation>
+		</control>
+		<control type="image">
+			<description>Button 10 Image</description>
+			<posx>22</posx>
+			<posy>196</posy>
+			<width>290</width>
+			<height>59</height>
+			<texture>guide-button-focus.png</texture>
+			<visible>![Window.IsActive(1128) | Window.IsActive(1126) | Window.IsActive(126)] + Control.HasFocus(10)</visible>
+			<animation effect="fade" start="30" time="275" reversible="false">visible</animation>
+			<animation effect="fade" time="100">WindowOpen</animation>
+		</control>
+		<control type="radiobutton" id="10">
+			<description>Disable Video Label</description>
+			<posx>22</posx>
+			<posy>196</posy>
+			<width>290</width>
+			<height>59</height>
+			<texturefocus>-</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<selected>Skin.HasSetting(backgroundvideo)</selected>
+			<onclick>Skin.ToggleSetting(backgroundvideo)</onclick>
+			<pulseonselect>no</pulseonselect>
+			<onleft>10</onleft>
+			<onright>10</onright>
+			<onup>3</onup>
+			<ondown>4</ondown>
+			<font>font14</font>
+			<label>31164</label>
+			<textoffsetx>30</textoffsetx>
+			<textcolor>TextcolorBlack</textcolor>
+			<shadowcolor>shadow-grey</shadowcolor>
+			<visible>![Window.IsActive(1128) | Window.IsActive(1126) | Window.IsActive(126)]</visible>
+			<animation effect="slide" end="-2,0" time="275" reversible="false">focus</animation>
+			<animation effect="fade" time="100">WindowOpen</animation>
+		</control>
+		<control type="image">
+			<description>Divider</description>
+			<posx>45</posx>
+			<posy>242</posy>
+			<width>248</width>
+			<height>1</height>
+			<texture>divider.png</texture>
+			<visible>![Window.IsActive(1128) | Window.IsActive(1126) | Window.IsActive(126)]</visible>
+			<animation effect="fade" time="100">WindowOpen</animation>
+		</control>
+		<control type="image">
+			<description>Button 4 Image</description>
+			<posx>22</posx>
+			<posy>232</posy>
+			<width>290</width>
+			<height>59</height>
+			<texture>guide-button-focus.png</texture>
+			<visible>![Window.IsActive(1128) | Window.IsActive(1126) | Window.IsActive(126)] + Control.HasFocus(4)</visible>
+			<animation effect="fade" start="30" time="275" reversible="false">visible</animation>
+			<animation effect="fade" time="100">WindowOpen</animation>
+		</control>
+		<control type="radiobutton" id="4">
+			<description>Disable Blade Haze Button</description>
+			<posx>22</posx>
+			<posy>232</posy>
+			<width>290</width>
+			<height>59</height>
+			<texturefocus>-</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<selected>Skin.HasSetting(DisableHazes)</selected>
+			<onclick>Skin.ToggleSetting(DisableHazes)</onclick>
+			<pulseonselect>no</pulseonselect>
+			<onleft>4</onleft>
+			<onright>4</onright>
+			<onup>10</onup>
+			<ondown>1</ondown>
+			<font>font14</font>
+			<label>31162</label>
+			<textoffsetx>30</textoffsetx>
+			<textcolor>TextcolorBlack</textcolor>
+			<shadowcolor>shadow-grey</shadowcolor>
+			<visible>![Window.IsActive(1128) | Window.IsActive(1126) | Window.IsActive(126)]</visible>
+			<animation effect="slide" end="-2,0" time="275" reversible="false">focus</animation>
+			<animation effect="fade" time="100">WindowOpen</animation>
+		</control>
+		<control type="image">
+			<description>Divider</description>
+			<posx>45</posx>
+			<posy>278</posy>
+			<width>248</width>
+			<height>1</height>
+			<texture>divider.png</texture>
+			<visible>![Window.IsActive(1128) | Window.IsActive(1126) | Window.IsActive(126)]</visible>
+			<animation effect="fade" time="100">WindowOpen</animation>
+		</control>		
+	</controls>
+</window>    

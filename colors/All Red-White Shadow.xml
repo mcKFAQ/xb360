@@ -1,0 +1,13 @@
+<colors>
+	<color name="shadow-grey">a0dadada</color>
+	<color name="shadow-black">FFffffff</color>
+	<color name="shadow-white">FFffffff</color>
+
+	<color name="TextcolorGrey">FF888888</color>
+	<color name="TextcolorDarkGrey">FFff0000</color>
+	<color name="TextcolorWhite">FFff0000</color>
+	<color name="TextcolorBlack">FFff0000</color>
+	<color name="TextcolorDisabled1">60000000</color>
+	<color name="TextcolorDisabled2">60d0d0d0</color>
+	<color name="listselectedcolor">FFFFFFFF</color>
+</colors>

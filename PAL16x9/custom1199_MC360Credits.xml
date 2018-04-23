@@ -1,0 +1,92 @@
+<window id="1199">
+	<defaultcontrol>20</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<controls>
+		<control type="visualisation">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>576</height>
+			<visible>!Skin.HasSetting(backgroundvis)</visible>
+			<animation effect="fade" time="100">WindowOpen</animation>
+			<animation effect="fade" delay="100" time="750" condition="Window.Next(1203)">WindowClose</animation>
+		</control>
+		<control type="videowindow">
+			<description>video preview window</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>576</height>
+			<animation effect="fade" time="100">WindowOpen</animation>
+			<animation effect="fade" delay="100" time="750" condition="Window.Next(1203)">WindowClose</animation>
+		</control>
+		<control type="image">
+			<description>System Background</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>576</height>
+			<texture>background-purple.png</texture>
+			<animation effect="fade" delay="500" time="200">WindowOpen</animation>
+		</control>
+		<control type="image">
+			<description>Whitewash Overlay</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>576</height>
+			<texture>background-overlay-fullscreen.png</texture>
+			<animation effect="fade" delay="500" time="200">WindowOpen</animation>
+		</control>
+		<control type="image">
+			<description>Credits Background</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>576</height>
+			<texture>credits-background.png</texture>
+			<animation effect="fade" delay="100" time="450">WindowOpen</animation>
+			<animation effect="fade" delay="100" time="200" condition="Window.Next(1203)">WindowClose</animation>
+		</control>
+		<control type="image">
+			<description>Team Blackbolt Logo</description>
+			<posx>275</posx>
+			<posy>42</posy>
+			<width>165</width>
+			<height>183</height>
+			<texture>credits-tbblogo.png</texture>
+			<animation effect="fade" delay="1000" time="500">WindowOpen</animation>
+			<animation effect="fade" delay="100" time="200" condition="Window.Next(1203)">WindowClose</animation>
+		</control>
+		<control type="image">
+			<description>Team Background</description>
+			<posx>85</posx>
+			<posy>160</posy>
+			<width>542</width>
+			<height>360</height>
+			<texture>credits-team-black.png</texture>
+			<animation effect="fade" delay="100" time="200" condition="Window.Next(1203)">WindowClose</animation>
+		</control>
+		<control type="image">
+			<description>Team Image</description>
+			<posx>85</posx>
+			<posy>160</posy>
+			<width>542</width>
+			<height>360</height>
+			<texture>credits-team.png</texture>
+			<animation effect="fade" delay="550" time="500">WindowOpen</animation>
+			<animation effect="fade" delay="100" time="200" condition="Window.Next(1203)">WindowClose</animation>
+		</control>
+	  <control type="image">
+			<description>Credits Text</description>
+			<posx>85</posx>
+			<posy>180</posy>
+			<width>542</width>
+			<height>360</height>
+			<texture>credits-text.png</texture>
+			<animation effect="fade" delay="1000" time="500">WindowOpen</animation>
+			<animation effect="fade" delay="100" time="200" condition="Window.Next(1203)">WindowClose</animation>
+		</control>
+		<include>SubtoFullCommonsBlades</include>
+	</controls>
+</window><animation effect="fade" time="100">WindowOpen</animation>

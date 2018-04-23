@@ -1,0 +1,470 @@
+<includes>
+	<include name="GamerCardButton">
+		<!-- Card Buttons begin -->
+		<control type="togglebutton" id="40">
+			<description>GamerCard Button</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>250</width>
+			<height>125</height>
+			<texturefocus>gamecard_home-focus.png</texturefocus>
+			<texturenofocus>gamecard_home.png</texturenofocus>
+			<alttexturefocus>gamecard_home-silver-focus.png</alttexturefocus>
+			<alttexturenofocus>gamecard_home-silver.png</alttexturenofocus>
+			<usealttexture>Skin.HasSetting(Gamercard)</usealttexture>
+			<onclick>ActivateWindow(1122)</onclick>
+			<onleft>1</onleft>
+			<onright>2</onright>
+			<onup>10</onup>
+			<ondown>5</ondown>
+			<!-- Begin Fake Label Name for LCD displays dont touch -->
+			<label>31080</label>
+			<textcolor>00000000</textcolor>
+			<!-- End Fake Label Name for LCD displays dont touch -->
+		</control>
+		<include>GamerCardButtonCommons</include>	
+	</include>
+	<include name="WeatherCardButton">
+		<!-- Card Buttons begin -->
+		<control type="togglebutton" id="41">
+			<description>WeatherCard Button</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>250</width>
+			<height>125</height>
+			<texturefocus>gamecard_home-focus.png</texturefocus>
+			<texturenofocus>gamecard_home.png</texturenofocus>
+			<alttexturefocus>gamecard_home-silver-focus.png</alttexturefocus>
+			<alttexturenofocus>gamecard_home-silver.png</alttexturenofocus>
+			<usealttexture>Skin.HasSetting(Gamercard)</usealttexture>
+			<onclick>ActivateWindow(Weather)</onclick>
+			<onleft>1</onleft>
+			<onright>2</onright>
+			<onup>10</onup>
+			<ondown>5</ondown>
+			<!-- Begin Fake Label Name for LCD displays dont touch -->
+			<label>31166</label>
+			<textcolor>00000000</textcolor>
+			<!-- End Fake Label Name for LCD displays dont touch -->
+		</control>
+		<include>WeatherCardButtonCommons</include>	
+	</include>
+	<include name="SysInfoCardButton">
+		<!-- Card Buttons begin -->
+		<control type="togglebutton" id="42">
+			<description>WeatherCard Button</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>250</width>
+			<height>125</height>
+			<texturefocus>gamecard_home-focus.png</texturefocus>
+			<texturenofocus>gamecard_home.png</texturenofocus>
+			<alttexturefocus>gamecard_home-silver-focus.png</alttexturefocus>
+			<alttexturenofocus>gamecard_home-silver.png</alttexturenofocus>
+			<usealttexture>Skin.HasSetting(Gamercard)</usealttexture>
+			<onclick>ActivateWindow(MyFiles)</onclick>
+			<onleft>1</onleft>
+			<onright>2</onright>
+			<onup>10</onup>
+			<ondown>5</ondown>
+			<!-- Begin Fake Label Name for LCD displays dont touch -->
+			<label>31167</label>
+			<textcolor>00000000</textcolor>
+			<!-- End Fake Label Name for LCD displays dont touch -->
+		</control>
+		<include>SysInfoCardButtonCommons</include>	
+	</include>
+	<include name="NowPlayingCard">
+		<control type="image">
+			<description>Gold GamerCard</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>250</width>
+			<height>125</height>
+			<texture>gamecard_home.png</texture>
+			<visible>!Skin.HasSetting(Gamercard)</visible>
+		</control>
+		<control type="image">
+			<description>Silver GamerCard</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>250</width>
+			<height>125</height>
+			<texture>gamecard_home-silver.png</texture>
+			<visible>Skin.HasSetting(Gamercard)</visible>
+		</control>
+		<control type="multiimage">
+			<description>Gamercard Shine</description>
+			<posx>9</posx>
+			<posy>9</posy>
+			<width>230</width>
+			<height>26</height>
+			<include>CardShine</include>
+		</control>
+		<control type="label">
+			<description>Music Info Label</description>
+			<posx>19</posx>
+			<posy>12</posy>
+			<width>220</width>
+			<label>13350</label>
+			<name>font14</name>
+			<textcolor>TextcolorBlack</textcolor>
+			<shadowcolor>shadow-white</shadowcolor>
+		</control>
+		<control type="image">
+			<description>Album ART Pic</description>
+			<posx>10</posx>
+			<posy>41</posy>
+			<width>52</width>
+			<height>60</height>
+			<info>MusicPlayer.Cover</info>
+		</control>
+		<control type="fadelabel">
+			<description>Title</description>
+			<posx>64</posx>
+			<posy>38</posy>
+			<width>165</width>
+			<label>$INFO[MusicPlayer.TrackNumber] - $INFO[MusicPlayer.Title]</label>
+			<font>font12</font>
+			<textcolor>TextcolorBlack</textcolor>
+			<shadowcolor>shadow-grey</shadowcolor>
+		</control>
+		<control type="fadelabel">
+			<description>Artist</description>
+			<posx>64</posx>
+			<posy>60</posy>
+			<width>165</width>
+			<label>$INFO[MusicPlayer.Artist] - $INFO[MusicPlayer.Album]</label>
+			<font>font12</font>
+			<textcolor>TextcolorBlack</textcolor>
+			<shadowcolor>shadow-grey</shadowcolor>
+		</control>
+		<control type="fadelabel">
+			<description>Time</description>
+			<posx>64</posx>
+			<posy>80</posy>
+			<width>165</width>
+			<label>Time : $INFO[MusicPlayer.Time] - $INFO[MusicPlayer.Duration]</label>
+			<font>font12</font>
+			<textcolor>TextcolorBlack</textcolor>
+			<shadowcolor>shadow-grey</shadowcolor>
+		</control>
+	</include>
+	<include name="GamerCardButtonCommons">
+		<control type="textbox">
+			<description>Gamercard description Multiline</description>
+			<posx>260</posx>
+			<posy>128</posy>
+			<width>210</width>
+			<height>200</height>
+			<pagecontrol>-</pagecontrol>
+			<label>31106</label>
+			<font>font14</font>
+			<textcolor>TextcolorBlack</textcolor>
+			<shadowcolor>shadow-grey</shadowcolor>
+			<visible>!Skin.HasSetting(nodescriptions) + Control.Hasfocus(40)</visible>
+		</control>
+		<control type="multiimage">
+			<description>Gamercard Shine</description>
+			<posx>9</posx>
+			<posy>9</posy>
+			<width>230</width>
+			<height>26</height>
+			<include>CardShine</include>
+		</control>
+		<control type="label">
+			<description>Gamercard Name</description>
+			<posx>15</posx>
+			<posy>12</posy>
+			<width>220</width>
+			<include>GamerName</include>
+			<align>left</align>
+			<name>font14</name>
+			<textcolor>TextcolorBlack</textcolor>
+			<shadowcolor>shadow-white</shadowcolor>
+		</control>
+		<control type="label">
+			<description>Gamercard Name Not set</description>
+			<posx>15</posx>
+			<posy>12</posy>
+			<width>220</width>
+			<label>Gamertag Not Set</label>
+			<align>left</align>
+			<name>font14</name>
+			<textcolor>TextcolorBlack</textcolor>
+			<shadowcolor>shadow-white</shadowcolor>
+			<visible>!Skin.String(GamerName)</visible>
+		</control>
+		<control type="label">
+			<description>Gamercard Rep</description>
+			<posx>64</posx>
+			<posy>38</posy>
+			<label>Rep:</label>
+			<align>left</align>
+			<font>font12</font>
+			<textcolor>TextcolorBlack</textcolor>
+			<shadowcolor>shadow-grey</shadowcolor>
+		</control>
+		<control type="image">
+			<description>Gamercard Rep</description>
+			<posx>120</posx>
+			<posy>35</posy>
+			<width>105</width>
+			<height>32</height>
+			<include>GamerRep</include>
+		</control>
+		<control type="image">
+			<description>Gamercard Pic default</description>
+			<posx>17</posx>
+			<posy>50</posy>
+			<width>37</width>
+			<height>45</height>
+			<texture>gamercard_defaultgamerpic.png</texture>
+			<visible>!Skin.String(GamerIcon)</visible>
+		</control>
+		<control type="image">
+			<description>Gamercard Pic</description>
+			<posx>17</posx>
+			<posy>50</posy>
+			<width>37</width>
+			<height>45</height>
+			<include>GamerIcon</include>
+			<visible>Skin.String(GamerIcon)</visible>
+		</control>
+		<control type="image">
+			<description>Gamercard Pic Outline</description>
+			<posx>8</posx>
+			<posy>41</posy>
+			<width>52</width>
+			<height>64</height>
+			<texture>gamercard_iconoutline.png</texture>
+		</control>
+		<control type="image">
+			<description>Gamercard Score Icon</description>
+			<posx>64</posx>
+			<posy>64</posy>
+			<width>15</width>
+			<height>20</height>
+			<texture>icon-gamescore.png</texture>
+			<align>right</align>
+			<font>font12</font>
+			<textcolor>TextcolorBlack</textcolor>
+			<shadowcolor>shadow-grey</shadowcolor>
+		</control>
+		<control type="label">
+			<description>Gamercard Score Text</description>
+			<posx>80</posx>
+			<posy>63</posy>
+			<label>amerscore:</label>
+			<align>left</align>
+			<font>font12</font>
+			<textcolor>TextcolorBlack</textcolor>
+			<shadowcolor>shadow-grey</shadowcolor>
+		</control>
+		<control type="label">
+			<description>Gamercard Score</description>
+			<posx>230</posx>
+			<posy>63</posy>
+			<width>60</width>
+			<include>GamerScore</include>
+			<align>right</align>
+			<font>font12</font>
+			<textcolor>TextcolorBlack</textcolor>
+			<shadowcolor>shadow-grey</shadowcolor>
+		</control>
+		<control type="label">
+			<description>Gamercard Zone</description>
+			<posx>64</posx>
+			<posy>83</posy>
+			<label>Zone:</label>
+			<align>left</align>
+			<font>font12</font>
+			<textcolor>TextcolorBlack</textcolor>
+			<shadowcolor>shadow-grey</shadowcolor>
+		</control>
+		<control type="label">
+			<description>Gamercard Info Zone</description>
+			<posx>230</posx>
+			<posy>83</posy>
+			<include>GamerZone</include>
+			<width>120</width>
+			<align>right</align>
+			<font>font12</font>
+			<textcolor>TextcolorBlack</textcolor>
+			<shadowcolor>shadow-grey</shadowcolor>
+		</control>
+	</include>
+	<include name="WeatherCardButtonCommons">
+		<control type="textbox">
+			<description>Weather description Multiline</description>
+			<posx>260</posx>
+			<posy>128</posy>
+			<width>210</width>
+			<height>200</height>
+			<pagecontrol>-</pagecontrol>
+			<label>31105</label>
+			<font>font14</font>
+			<textcolor>TextcolorBlack</textcolor>
+			<shadowcolor>shadow-grey</shadowcolor>
+			<visible>!Skin.HasSetting(nodescriptions) + Control.Hasfocus(41)</visible>
+		</control>
+		<control type="multiimage">
+			<description>Gamercard Shine</description>
+			<posx>9</posx>
+			<posy>9</posy>
+			<width>230</width>
+			<height>26</height>
+			<include>CardShine</include>
+		</control>
+		<control type="label">
+			<description>Weather Location</description>
+			<posx>19</posx>
+			<posy>12</posy>
+			<width>220</width>
+			<info>Weather.Location</info>
+			<name>font14</name>
+			<textcolor>TextcolorBlack</textcolor>
+			<shadowcolor>shadow-white</shadowcolor>
+		</control>
+		<control type="label">
+			<description>Weather Label</description>
+			<posx>64</posx>
+			<posy>38</posy>
+			<label>31191</label>
+			<font>font12</font>
+			<textcolor>TextcolorBlack</textcolor>
+			<shadowcolor>shadow-grey</shadowcolor>
+		</control>
+		<control type="image">
+			<description>Weather Pic</description>
+			<posx>8</posx>
+			<posy>41</posy>
+			<width>52</width>
+			<height>64</height>
+			<info>Weather.Conditions</info>
+		</control>
+		<control type="label">
+			<description>Weather Conditions</description>
+			<posx>64</posx>
+			<posy>60</posy>
+			<label>31192</label>
+			<font>font12</font>
+			<textcolor>TextcolorBlack</textcolor>
+			<shadowcolor>shadow-grey</shadowcolor>
+		</control>
+		<control type="label">
+			<description>Weather Conditions</description>
+			<posx>225</posx>
+			<posy>60</posy>
+			<info>Weather.Temperature</info>
+			<align>right</align>
+			<font>font12</font>
+			<textcolor>TextcolorBlack</textcolor>
+			<shadowcolor>shadow-grey</shadowcolor>
+		</control>
+		<control type="label">
+			<description>Weather Conditions</description>
+			<posx>64</posx>
+			<posy>80</posy>
+			<width>160</width>
+			<info>Weather.Conditions</info>
+			<font>font12</font>
+			<textcolor>TextcolorBlack</textcolor>
+			<shadowcolor>shadow-grey</shadowcolor>
+		</control>
+	</include>
+	<include name="SysInfoCardButtonCommons">
+		<control type="textbox">
+			<description>SystemInfo description Multiline</description>
+			<posx>260</posx>
+			<posy>128</posy>
+			<width>210</width>
+			<height>200</height>
+			<pagecontrol>-</pagecontrol>
+			<label>31104</label>
+			<font>font14</font>
+			<textcolor>TextcolorBlack</textcolor>
+			<shadowcolor>shadow-grey</shadowcolor>
+			<visible>!Skin.HasSetting(nodescriptions) + Control.Hasfocus(42)</visible>
+		</control>
+		<control type="multiimage">
+			<description>Gamercard Shine</description>
+			<posx>9</posx>
+			<posy>9</posy>
+			<width>230</width>
+			<height>26</height>
+			<include>CardShine</include>
+		</control>
+		<control type="label">
+			<description>SystemInfo Label</description>
+			<posx>19</posx>
+			<posy>12</posy>
+			<width>220</width>
+			<label>130</label>
+			<name>font14</name>
+			<textcolor>TextcolorBlack</textcolor>
+			<shadowcolor>shadow-white</shadowcolor>
+		</control>
+		<control type="image">
+			<description>SystemInfo Pic</description>
+			<posx>8</posx>
+			<posy>41</posy>
+			<width>52</width>
+			<height>64</height>
+			<texture>defaultHardDiskBig.png</texture>
+		</control>
+		<control type="label">
+			<description>Network IP</description>
+			<posx>64</posx>
+			<posy>38</posy>
+			<info>Network.IPAddress</info>
+			<font>font12</font>
+			<textcolor>TextcolorBlack</textcolor>
+			<shadowcolor>shadow-grey</shadowcolor>
+		</control>
+		<control type="group">
+			<visible>!System.HasDriveG</visible>
+			<control type="label">
+				<description>Free Space E</description>
+				<posx>64</posx>
+				<posy>60</posy>
+				<info>System.Freespace(E)</info>
+				<font>font12</font>
+				<textcolor>TextcolorBlack</textcolor>
+				<shadowcolor>shadow-grey</shadowcolor>
+			</control>
+			<control type="label">
+				<description>Free Space F</description>
+				<posx>64</posx>
+				<posy>80</posy>
+				<width>160</width>
+				<info>System.Freespace(F)</info>
+				<font>font12</font>
+				<textcolor>TextcolorBlack</textcolor>
+				<shadowcolor>shadow-grey</shadowcolor>
+			</control>
+		</control>
+		<control type="group">
+			<visible>System.HasDriveG</visible>
+			<control type="label">
+				<description>Free Space F</description>
+				<posx>64</posx>
+				<posy>60</posy>
+				<info>System.Freespace(F)</info>
+				<font>font12</font>
+				<textcolor>TextcolorBlack</textcolor>
+				<shadowcolor>shadow-grey</shadowcolor>
+			</control>
+			<control type="label">
+				<description>Free Space G</description>
+				<posx>64</posx>
+				<posy>80</posy>
+				<width>160</width>
+				<info>System.Freespace(G)</info>
+				<font>font12</font>
+				<textcolor>TextcolorBlack</textcolor>
+				<shadowcolor>shadow-grey</shadowcolor>
+			</control>
+		</control>
+	</include>
+</includes>

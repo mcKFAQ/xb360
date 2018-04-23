@@ -1,0 +1,205 @@
+<window>
+	<animation effect="fade" time="200">WindowOpen</animation>
+	<animation effect="fade" time="200">WindowClose</animation>
+	<controls>
+		<include>TheDialogs</include>
+		<control type="group">
+			<animation effect="fade" delay="450" time="200">WindowOpen</animation>
+			<animation effect="fade" time="200">WindowClose</animation>
+			<!-- ** Required ** Do not change <description> -->
+			<control type="label" id="500">
+				<description>dialog Heading</description>
+				<posx>365</posx>
+				<posy>40</posy>
+				<width>300</width>
+				<label>-</label>
+				<align>left</align>
+				<include>DialogTitle</include>
+			</control>
+			<!-- skin selection controls -->
+			<!-- ** Required ** Do not change <description> or <type> -->
+			<control type="multiimage" id="501">
+				<posx>365</posx>
+				<posy>85</posy>
+				<width>315</width>
+				<height>160</height>
+				<imagepath>thumbs</imagepath>
+				<info>Skin.String(AMT-chooser-thumbfolder)</info>
+				<timeperimage>2000</timeperimage>
+				<fadetime>500</fadetime>
+				<visible>!Control.IsVisible(504)</visible>
+				<animation effect="fade" time="200">VisibleChange</animation>
+				<aspectratio>keep</aspectratio>
+			</control>
+		<!-- ** Required ** Do not change <description> -->
+			<control type="label" id="502">
+				<description>Chooser Warning Label</description>
+				<posx>205</posx>
+				<posy>170</posy>
+				<width>217</width>
+				<height>20</height>
+				<align>center</align>
+				<font>font10</font>
+				<textcolor>DDced8da</textcolor>
+				<label>-</label>
+				<visible>false</visible>
+			</control>
+		<!-- ** Required ** Do not change <id> or <type> -->
+			<control type="list" id="503">
+				<posx>365</posx>
+				<posy>250</posy>
+				<width>325</width>
+				<height>240</height>
+				<onleft>513</onleft>
+				<onright>513</onright>
+				<onup>503</onup>
+				<ondown>503</ondown>
+				<viewtype label="544">list</viewtype>
+				<scrolltime>200</scrolltime>
+				<pagecontrol>513</pagecontrol>
+				<itemlayout height="30">
+					<control type="image">
+						<posx>0</posx>
+						<posy>1</posy>
+						<width>325</width>
+						<height>30</height>
+						<texture>iconlist-nofocus.png</texture>
+					</control>
+					<control type="label">
+						<posx>5</posx>
+						<posy>4</posy>
+						<width>200</width>
+						<height>22</height>
+						<font>font13</font>
+						<align>left</align>
+						<aligny>center</aligny>
+						<textcolor>TextcolorBlack</textcolor>
+						<selectedcolor>listselectedcolor</selectedcolor>
+						<info>ListItem.Label</info>
+					</control>
+				</itemlayout>
+				<focusedlayout height="30">
+					<control type="image">
+						<posx>0</posx>
+						<posy>1</posy>
+						<width>325</width>
+						<height>30</height>
+						<texture>iconlist-focus.png</texture>
+						<visible>Control.HasFocus(503)</visible>
+					</control>
+					<control type="image">
+						<posx>0</posx>
+						<posy>1</posy>
+						<width>325</width>
+						<height>30</height>
+						<texture>iconlist-nofocus.png</texture>
+						<visible>!Control.HasFocus(503)</visible>
+					</control>
+					<control type="label">
+						<posx>5</posx>
+						<posy>4</posy>
+						<width>200</width>
+						<height>22</height>
+						<font>font13</font>
+						<align>left</align>
+						<aligny>center</aligny>
+						<textcolor>TextcolorBlack</textcolor>
+						<selectedcolor>listselectedcolor</selectedcolor>
+						<info>ListItem.Label</info>
+					</control>
+				</focusedlayout>
+			</control>
+			<control type="spincontrol" id="513">
+				<description>Next page button</description>
+				<posx>650</posx>
+				<posy>440</posy>
+				<subtype>page</subtype>
+				<font>font12</font>
+				<onleft>503</onleft>
+				<onright>503</onright>
+				<ondown>503</ondown>
+				<onup>503</onup>
+				<textcolor>TextcolorBlack</textcolor>
+				<showonepage>false</showonepage>
+			</control>
+		<!-- ** Required ** Do not change <id> or <type> -->
+			<control type="list" id="504">
+				<posx>365</posx>
+				<posy>85</posy>
+				<width>325</width>
+				<height>330</height>
+				<onleft>514</onleft>
+				<onright>514</onright>
+				<onup>504</onup>
+				<ondown>504</ondown>
+				<viewtype label="544">list</viewtype>
+				<scrolltime>200</scrolltime>
+				<pagecontrol>513</pagecontrol>
+				<itemlayout height="30">
+					<control type="image">
+						<posx>0</posx>
+						<posy>1</posy>
+						<width>325</width>
+						<height>30</height>
+						<texture>iconlist-nofocus.png</texture>
+					</control>
+					<control type="label">
+						<posx>5</posx>
+						<posy>4</posy>
+						<width>200</width>
+						<height>22</height>
+						<font>font13</font>
+						<align>left</align>
+						<aligny>center</aligny>
+						<textcolor>TextcolorBlack</textcolor>
+						<selectedcolor>listselectedcolor</selectedcolor>
+						<info>ListItem.Label</info>
+					</control>
+				</itemlayout>
+				<focusedlayout height="30">
+					<control type="image">
+						<posx>0</posx>
+						<posy>1</posy>
+						<width>325</width>
+						<height>30</height>
+						<texture>iconlist-focus.png</texture>
+						<visible>Control.HasFocus(504)</visible>
+					</control>
+					<control type="image">
+						<posx>0</posx>
+						<posy>1</posy>
+						<width>325</width>
+						<height>30</height>
+						<texture>iconlist-nofocus.png</texture>
+						<visible>!Control.HasFocus(504)</visible>
+					</control>
+					<control type="label">
+						<posx>5</posx>
+						<posy>4</posy>
+						<width>200</width>
+						<height>22</height>
+						<font>font13</font>
+						<align>left</align>
+						<aligny>center</aligny>
+						<textcolor>TextcolorBlack</textcolor>
+						<selectedcolor>listselectedcolor</selectedcolor>
+						<info>ListItem.Label</info>
+					</control>
+				</focusedlayout>
+			</control>
+			<control type="spincontrol" id="514">
+				<description>Next page button</description>
+				<posx>650</posx>
+				<posy>440</posy>
+				<subtype>page</subtype>
+				<font>font12</font>
+				<onleft>504</onleft>
+				<onright>504</onright>
+				<ondown>504</ondown>
+				<onup>504</onup>
+				<textcolor>TextcolorBlack</textcolor>
+				<showonepage>false</showonepage>
+			</control>
+		</control>
+	</controls>
+</window>

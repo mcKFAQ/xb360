@@ -1,0 +1,214 @@
+<window id="2005">
+	<defaultcontrol>13</defaultcontrol>
+	<controls>
+		<!-- codec infos -->
+		<control type="image" id="0">
+			<description>media info background image</description>
+			<posx>60</posx>
+			<posy>10</posy>
+			<width>600</width>
+			<height>80</height>
+			<colordiffuse>A1FFFFFF</colordiffuse>
+			<texture>video-osd_menu_bg.png</texture>
+		</control>
+		<control type="label" id="10">
+			<description>row 1 label</description>
+			<posx>70</posx>
+			<posy>15</posy>
+			<label>-</label>
+			<align>left</align>
+			<font>font12</font>
+		</control>
+		<control type="label" id="11">
+			<description>row 2 label</description>
+			<posx>70</posx>
+			<posy>40</posy>
+			<label>-</label>
+			<align>left</align>
+			<font>font12</font>
+		</control>
+		<control type="label" id="12">
+			<description>row 3 label</description>
+			<posx>70</posx>
+			<posy>65</posy>
+			<label>-</label>
+			<align>left</align>
+			<font>font12</font>
+		</control>
+		<!-- buffering dialog -->
+		<control type="label" id="24">
+			<description>buffering label</description>
+			<posx>210</posx>
+			<posy>520</posy>
+			<label>15107</label>
+			<width>291</width>
+			<align>center</align>
+			<font>font12</font>
+			<textcolor>TextcolorWhite</textcolor>
+		</control>
+		<control type="image" id="1">
+			<description>media info background image</description>
+			<posx>-10</posx>
+			<posy>455</posy>
+			<width>740</width>
+			<height>150</height>
+			<visible>Player.ShowInfo</visible>
+			<animation effect="fade" time="500">VisibleChange</animation>
+			<texture>video-osd-backgroundshadow.png</texture>
+		</control>
+		<control type="image" id="1">
+			<description>Video Info Panel</description>
+			<posx>40</posx>
+			<posy>398</posy>
+			<width>640</width>
+			<height>115</height>
+			<colordiffuse>A1FFFFFF</colordiffuse>
+			<visible>Player.ShowInfo</visible>
+			<animation effect="fade" time="500">WindowOpen</animation>
+			<animation effect="fade" time="500">VisibleChange</animation>
+			<texture>video-osd_menu_bg.png</texture>
+		</control>
+		<control type="image" id="1">
+			<description>Video Cover</description>
+			<posx>50</posx>
+			<posy>365</posy>
+			<width>150</width>
+			<height>180</height>
+			<visible>Player.ShowInfo</visible>
+			<texture>defaultVideoBig.png</texture>
+			<info>VideoPlayer.Cover</info>
+			<aspectratio>keep</aspectratio>
+			<animation effect="fade" time="500">WindowOpen</animation>
+			<animation effect="fade" time="500">VisibleChange</animation>
+		</control>
+		<control type="group" id="1">
+			<visible>!videoplayer.content(episodes) + !videoplayer.content(musicvideos)</visible>
+			<control type="fadelabel" id="1">
+				<description>Director label</description>
+				<width>425</width>
+				<posx>210</posx>
+				<posy>405</posy>
+				<info>VideoPlayer.Director</info>
+				<visible>Player.ShowInfo</visible>
+				<animation effect="fade" time="500">WindowOpen</animation>
+				<animation effect="fade" time="500">VisibleChange</animation>
+				<align>left</align>
+				<font>font14</font>
+			</control>
+			<control type="fadelabel" id="1">
+				<description>Title label</description>
+				<width>425</width>
+				<posx>210</posx>
+				<posy>428</posy>
+				<info>VideoPlayer.Title</info>
+				<visible>Player.ShowInfo</visible>
+				<animation effect="fade" time="500">WindowOpen</animation>
+				<animation effect="fade" time="500">VisibleChange</animation>
+				<align>left</align>
+				<font>font16</font>
+			</control>
+			<control type="fadelabel" id="1">
+				<description>Genre label</description>
+				<width>425</width>
+				<posx>210</posx>
+				<posy>458</posy>
+				<info>VideoPlayer.Genre</info>
+				<visible>Player.ShowInfo</visible>
+				<animation effect="fade" time="500">WindowOpen</animation>
+				<animation effect="fade" time="500">VisibleChange</animation>
+				<align>left</align>
+				<font>font12</font>
+			</control>
+		</control>
+		<control type="group" id="1">
+			<visible>videoplayer.content(episodes)</visible>
+			<control type="fadelabel" id="1">
+				<description>TVShow label</description>
+				<width>425</width>
+				<posx>210</posx>
+				<posy>405</posy>
+				<info>VideoPlayer.TVShowTitle</info>
+				<visible>Player.ShowInfo</visible>
+				<animation effect="fade" time="500">WindowOpen</animation>
+				<animation effect="fade" time="500">VisibleChange</animation>
+				<align>left</align>
+				<font>font14</font>
+			</control>
+			<control type="fadelabel" id="1">
+				<description>Title label</description>
+				<width>425</width>
+				<posx>210</posx>
+				<posy>428</posy>
+				<info>VideoPlayer.Title</info>
+				<visible>Player.ShowInfo</visible>
+				<animation effect="fade" time="500">WindowOpen</animation>
+				<animation effect="fade" time="500">VisibleChange</animation>
+				<align>left</align>
+				<font>font16</font>
+			</control>
+			<control type="fadelabel" id="1">
+				<description>Season Episode label</description>
+				<width>425</width>
+				<posx>210</posx>
+				<posy>458</posy>
+				<label>$LOCALIZE[20373] $INFO[VideoPlayer.Season] - $LOCALIZE[20359] $INFO[VideoPlayer.episode]</label>
+				<visible>Player.ShowInfo</visible>
+				<animation effect="fade" time="500">WindowOpen</animation>
+				<animation effect="fade" time="500">VisibleChange</animation>
+				<align>left</align>
+				<font>font12</font>
+			</control>
+		</control>
+		<control type="group" id="1">
+			<visible>videoplayer.content(musicvideos)</visible>
+			<control type="fadelabel" id="1">
+				<description>Artist label</description>
+				<width>425</width>
+				<posx>210</posx>
+				<posy>405</posy>
+				<info>VideoPlayer.Artist</info>
+				<visible>Player.ShowInfo</visible>
+				<animation effect="fade" time="500">WindowOpen</animation>
+				<animation effect="fade" time="500">VisibleChange</animation>
+				<align>left</align>
+				<font>font14</font>
+			</control>
+			<control type="fadelabel" id="1">
+				<description>Title label</description>
+				<width>425</width>
+				<posx>210</posx>
+				<posy>428</posy>
+				<info>VideoPlayer.Title</info>
+				<visible>Player.ShowInfo</visible>
+				<animation effect="fade" time="500">WindowOpen</animation>
+				<animation effect="fade" time="500">VisibleChange</animation>
+				<align>left</align>
+				<font>font16</font>
+			</control>
+			<control type="fadelabel" id="1">
+				<description>Genre label</description>
+				<width>425</width>
+				<posx>210</posx>
+				<posy>458</posy>
+				<info>VideoPlayer.Genre</info>
+				<visible>Player.ShowInfo</visible>
+				<animation effect="fade" time="500">WindowOpen</animation>
+				<animation effect="fade" time="500">VisibleChange</animation>
+				<align>left</align>
+				<font>font12</font>
+			</control>
+		</control>
+		<control type="label" id="1">
+			<description>time label</description>
+			<width>425</width>
+			<posx>210</posx>
+			<posy>480</posy>
+			<label>$INFO[player.Time]$INFO[player.Duration, / ]</label>
+			<visible>Player.ShowInfo</visible>
+			<animation effect="fade" time="500">WindowOpen</animation>
+			<animation effect="fade" time="500">VisibleChange</animation>
+			<align>left</align>
+			<font>font12</font>
+		</control>
+	</controls>
+</window>

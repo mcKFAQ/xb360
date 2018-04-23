@@ -1,0 +1,863 @@
+<window>
+	<defaultcontrol>9000</defaultcontrol>
+	<allowoverlays>false</allowoverlays>
+	<controls>
+		<control type="group">
+			<visible>!Window.Previous(home)</visible>
+			<include>LiveBackGroundWhitewash</include>
+		</control>
+		<control type="group">
+			<visible>Window.Previous(home)</visible>
+			<include>MediaIconBackGroundWhiteWash</include>
+		</control>
+		<control type="group">
+			<animation effect="fade" time="200" condition="Window.Previous(1112)">WindowOpen</animation>
+			<animation effect="fade" end="0" condition="Window.Next(1112)">WindowClose</animation>
+		<!-- ** Required ** Do not change id or type-->
+			<control type="label" id="20">
+				<description>Title label</description>
+				<posx>102</posx>
+				<posy>42</posy>
+				<textcolor>TextcolorWhite</textcolor>
+				<shadowcolor>shadow-black</shadowcolor>
+				<align>left</align>
+				<font>font18</font>
+			</control>
+			<!-- ** Required ** Do not change id or type-->
+			<control type="label" id="30">
+				<description>Category label</description>
+				<posx>650</posx>
+				<posy>42</posy>
+				<align>right</align>
+				<textcolor>TextcolorWhite</textcolor>
+				<shadowcolor>shadow-black</shadowcolor>
+				<align>left</align>
+				<font>font18</font>
+			</control>
+			<!-- Button Group -->
+			<!-- ** Required ** Do not change id or type-->
+			<control type="group" id="9000">
+				<posx>90</posx>
+				<posy>90</posy>
+				<visible>Control.IsVisible(3000) | Control.IsVisible(4000)</visible>
+				<control type="image">
+					<description>button image 1</description>
+					<posx>5</posx>
+					<posy>0</posy>
+					<width>140</width>
+					<height>1</height>
+					<texture>divider.png</texture>
+				</control>
+				<control type="button" id="2">
+					<description>View As Icons button</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<height>40</height>
+					<label>100</label>
+					<font>font13</font>
+					<shadowcolor>shadow-grey</shadowcolor>
+					<align>left</align>
+					<texturefocus>button-focus.png</texturefocus>
+					<texturenofocus>button-nofocus.png</texturenofocus>
+					<onleft>2070</onleft>
+					<onright>50</onright>
+					<onup>109</onup>
+					<ondown>100</ondown>
+					<enable>Control.IsVisible(3000)</enable>
+				</control>
+				<control type="button" id="100">
+					<description>Shortcut1 button</description>
+					<posx>0</posx>
+					<posy>35</posy>
+					<height>40</height>
+					<font>font13</font>
+					<shadowcolor>shadow-grey</shadowcolor>
+					<align>left</align>
+					<texturefocus>button-focus.png</texturefocus>
+					<texturenofocus>button-nofocus.png</texturenofocus>
+					<onleft>2070</onleft>
+					<onright>50</onright>
+					<onup>2</onup>
+					<ondown>101</ondown>
+					<onclick>-</onclick>
+				</control>
+				<control type="button" id="101">
+					<description>Shortcut2 button</description>
+					<posx>0</posx>
+					<posy>70</posy>
+					<height>40</height>
+					<font>font13</font>
+					<shadowcolor>shadow-grey</shadowcolor>
+					<align>left</align>
+					<texturefocus>button-focus.png</texturefocus>
+					<texturenofocus>button-nofocus.png</texturenofocus>
+					<onleft>2070</onleft>
+					<onright>50</onright>
+					<onup>100</onup>
+					<ondown>102</ondown>
+					<onclick>-</onclick>
+				</control>
+				<control type="button" id="102">
+					<description>Shortcut3 button</description>
+					<posx>0</posx>
+					<posy>105</posy>
+					<height>40</height>
+					<font>font13</font>
+					<shadowcolor>shadow-grey</shadowcolor>
+					<align>left</align>
+					<texturefocus>button-focus.png</texturefocus>
+					<texturenofocus>button-nofocus.png</texturenofocus>
+					<onleft>2070</onleft>
+					<onright>50</onright>
+					<onup>101</onup>
+					<ondown>103</ondown>
+					<onclick>-</onclick>
+				</control>
+				<control type="button" id="103">
+					<description>Genre button</description>
+					<posx>0</posx>
+					<posy>140</posy>
+					<height>40</height>
+					<font>font13</font>
+					<shadowcolor>shadow-grey</shadowcolor>
+					<align>left</align>
+					<texturefocus>button-focus.png</texturefocus>
+					<texturenofocus>button-nofocus.png</texturenofocus>
+					<onleft>2070</onleft>
+					<onright>50</onright>
+					<onup>102</onup>
+					<ondown>104</ondown>
+					<onclick>-</onclick>
+				</control>
+				<control type="button" id="104">
+					<description>Studio button</description>
+					<posx>0</posx>
+					<posy>175</posy>
+					<height>40</height>
+					<font>font13</font>
+					<shadowcolor>shadow-grey</shadowcolor>
+					<align>left</align>
+					<texturefocus>button-focus.png</texturefocus>
+					<texturenofocus>button-nofocus.png</texturenofocus>
+					<onleft>2070</onleft>
+					<onright>50</onright>
+					<onup>103</onup>
+					<ondown>105</ondown>
+					<onclick>-</onclick>
+				</control>
+				<control type="button" id="105">
+					<description>Actor button</description>
+					<posx>0</posx>
+					<posy>210</posy>
+					<height>40</height>
+					<font>font13</font>
+					<shadowcolor>shadow-grey</shadowcolor>
+					<align>left</align>
+					<texturefocus>button-focus.png</texturefocus>
+					<texturenofocus>button-nofocus.png</texturenofocus>
+					<onleft>2070</onleft>
+					<onright>50</onright>
+					<onup>104</onup>
+					<ondown>106</ondown>
+					<onclick>-</onclick>
+				</control>
+				<control type="button" id="106">
+					<description>Search button</description>
+					<posx>0</posx>
+					<posy>245</posy>
+					<height>40</height>
+					<font>font13</font>
+					<shadowcolor>shadow-grey</shadowcolor>
+					<align>left</align>
+					<texturefocus>button-focus.png</texturefocus>
+					<texturenofocus>button-nofocus.png</texturenofocus>
+					<onleft>2070</onleft>
+					<onright>50</onright>
+					<onup>105</onup>
+					<ondown>170</ondown>
+					<onclick>-</onclick>
+				</control>
+				<control type="button" id="175">
+					<description>Plot button</description>
+					<posx>0</posx>
+					<posy>280</posy>
+					<height>40</height>
+					<font>font13</font>
+					<label>Plot</label>
+					<shadowcolor>shadow-grey</shadowcolor>
+					<align>left</align>
+					<texturefocus>button-focus.png</texturefocus>
+					<texturenofocus>button-nofocus.png</texturenofocus>
+					<onleft>2070</onleft>
+					<onright>50</onright>
+					<onup>106</onup>
+					<ondown>170</ondown>
+					<onclick>-</onclick>
+					<enable>Control.IsVisible(50)</enable>
+				</control>
+				<control type="button" id="170">
+					<description>Cast button</description>
+					<posx>0</posx>
+					<posy>280</posy>
+					<height>40</height>
+					<font>font13</font>
+					<label>Cast</label>
+					<shadowcolor>shadow-grey</shadowcolor>
+					<align>left</align>
+					<texturefocus>button-focus.png</texturefocus>
+					<texturenofocus>button-nofocus.png</texturenofocus>
+					<onleft>2070</onleft>
+					<onright>50</onright>
+					<onup>175</onup>
+					<ondown>107</ondown>
+					<onclick>-</onclick>
+					<enable>Control.IsVisible(50)</enable>
+				</control>
+				<control type="button" id="107">
+					<description>Settings button</description>
+					<posx>0</posx>
+					<posy>315</posy>
+					<height>40</height>
+					<font>font13</font>
+					<shadowcolor>shadow-grey</shadowcolor>
+					<align>left</align>
+					<texturefocus>button-focus.png</texturefocus>
+					<texturenofocus>button-nofocus.png</texturenofocus>
+					<onleft>2070</onleft>
+					<onright>50</onright>
+					<onup>170</onup>
+					<ondown>108</ondown>
+					<onclick>-</onclick>
+				</control>
+				<control type="button" id="108">
+					<description>Credits button</description>
+					<posx>0</posx>
+					<posy>315</posy>
+					<height>40</height>
+					<font>font13</font>
+					<shadowcolor>shadow-grey</shadowcolor>
+					<align>left</align>
+					<texturefocus>button-focus.png</texturefocus>
+					<texturenofocus>button-nofocus.png</texturenofocus>
+					<onleft>2070</onleft>
+					<onright>50</onright>
+					<onup>107</onup>
+					<ondown>109</ondown>
+					<onclick>-</onclick>
+					<visible>false</visible>
+				</control>
+				<control type="button" id="109">
+					<description>Update Script button</description>
+					<posx>0</posx>
+					<posy>350</posy>
+					<height>40</height>
+					<font>font13</font>
+					<shadowcolor>shadow-grey</shadowcolor>
+					<align>left</align>
+					<texturefocus>button-focus.png</texturefocus>
+					<texturenofocus>button-nofocus.png</texturenofocus>
+					<onleft>2070</onleft>
+					<onright>50</onright>
+					<onup>108</onup>
+					<ondown>2</ondown>
+					<onclick>-</onclick>
+					<visible>false</visible>
+				</control>
+			</control>
+			<!-- Trailer list controls -->
+			<!-- ** Required ** Do not change id or type-->
+			<control type="group" id="3000">
+				<!-- ** Required ** Do not change id or type-->
+				<control type="list" id="50">
+					<posx>245</posx>
+					<posy>85</posy>
+					<width>420</width>
+					<height>210</height>
+					<onleft>9000</onleft>
+					<onright>2050</onright>
+					<onup>50</onup>
+					<ondown>50</ondown>
+					<viewtype label="544">list</viewtype>
+					<scrolltime>200</scrolltime>
+					<pagecontrol>2050</pagecontrol>
+					<itemlayout height="30">
+						<control type="image">
+							<width>420</width>
+							<height>30</height>
+							<posx>0</posx>
+							<posy>1</posy>
+							<texture>iconlist-nofocus.png</texture>
+						</control>
+						<control type="image">
+							<posx>5</posx>
+							<posy>5</posy>
+							<width>22</width>
+							<height>22</height>
+							<info>ListItem.Icon</info>
+						</control>
+						<control type="label">
+							<posx>30</posx>
+							<posy>4</posy>
+							<width>365</width>
+							<height>22</height>
+							<font>font13</font>
+							<align>left</align>
+							<aligny>center</aligny>
+							<textcolor>TextcolorBlack</textcolor>
+							<selectedcolor>listselectedcolor</selectedcolor>
+							<info>ListItem.Label</info>
+						</control>
+						<control type="label">
+							<posx>412</posx>
+							<posy>4</posy>
+							<width>300</width>
+							<height>22</height>
+							<font>font12</font>
+							<align>right</align>
+							<aligny>center</aligny>
+							<textcolor>TextcolorBlack</textcolor>
+							<selectedcolor>listselectedcolor</selectedcolor>
+							<info>ListItem.Label2</info>
+						</control>
+					</itemlayout>
+					<focusedlayout height="30">
+						<control type="image">
+							<width>420</width>
+							<height>30</height>
+							<posx>0</posx>
+							<posy>1</posy>
+							<texture>iconlist-focus.png</texture>
+							<visible>Control.HasFocus(50)</visible>
+						</control>
+						<control type="image">
+							<width>420</width>
+							<height>30</height>
+							<posx>0</posx>
+							<posy>1</posy>
+							<texture>iconlist-nofocus.png</texture>
+							<visible>!Control.HasFocus(50)</visible>
+						</control>
+						<control type="image">
+							<posx>5</posx>
+							<posy>5</posy>
+							<width>22</width>
+							<height>22</height>
+							<info>ListItem.Icon</info>
+						</control>
+						<control type="label">
+							<posx>30</posx>
+							<posy>4</posy>
+							<width>365</width>
+							<height>22</height>
+							<font>font13</font>
+							<align>left</align>
+							<aligny>center</aligny>
+							<textcolor>TextcolorBlack</textcolor>
+							<selectedcolor>listselectedcolor</selectedcolor>
+							<info>ListItem.Label</info>
+						</control>
+						<control type="label">
+							<posx>412</posx>
+							<posy>4</posy>
+							<width>300</width>
+							<height>22</height>
+							<font>font12</font>
+							<align>right</align>
+							<aligny>center</aligny>
+							<textcolor>TextcolorBlack</textcolor>
+							<selectedcolor>listselectedcolor</selectedcolor>
+							<info>ListItem.Label2</info>
+						</control>
+					</focusedlayout>
+				</control>
+				<control type="panel" id="51">
+					<posx>265</posx>
+					<posy>80</posy>
+					<width>384</width>
+					<height>399</height>
+					<onleft>9000</onleft>
+					<onright>2050</onright>
+					<onup>52</onup>
+					<ondown>52</ondown>
+					<viewtype label="536">icon</viewtype>
+					<pagecontrol>2050</pagecontrol>
+					<scrolltime>1</scrolltime>
+					<itemlayout height="133" width="128">
+						<control type="image">
+							<width>112</width>
+							<height>116</height>
+							<posx>8</posx>
+							<posy>7</posy>
+							<texture border="10">thumb-nofocus.png</texture>
+						</control>
+						<control type="image">
+							<posx>21</posx>
+							<posy>10</posy>
+							<width>86</width>
+							<height>86</height>
+							<info>ListItem.Icon</info>
+						</control>
+						<control type="image">
+							<posx>82</posx>
+							<posy>65</posy>
+							<width>32</width>
+							<height>32</height>
+							<info>ListItem.Overlay</info>
+						</control>
+						<control type="label">
+							<posx>65</posx>
+							<posy>97</posy>
+							<width>106</width>
+							<height>22</height>
+							<font>font12</font>
+							<textcolor>TextcolorBlack</textcolor>
+							<selectedcolor>listselectedcolor</selectedcolor>
+							<align>center</align>
+							<info>ListItem.Label</info>
+						</control>
+					</itemlayout>
+					<focusedlayout height="133" width="128">
+						<control type="image">
+							<width>120</width>
+							<height>124</height>
+							<posx>4</posx>
+							<posy>3</posy>
+							<texture border="10">thumb-focus.png</texture>
+							<animation effect="zoom" start="6,5,116,120" end="4,3,120,124" time="100">focus</animation>
+						</control>
+						<control type="image">
+							<posx>21</posx>
+							<posy>10</posy>
+							<width>86</width>
+							<height>86</height>
+							<info>ListItem.Icon</info>
+							<animation effect="zoom" start="21,10,86,86" end="19,8,90,90" time="100">focus</animation>
+						</control>
+						<control type="image">
+							<posx>82</posx>
+							<posy>65</posy>
+							<width>32</width>
+							<height>32</height>
+							<info>ListItem.Overlay</info>
+						</control>
+						<control type="label">
+							<posx>65</posx>
+							<posy>97</posy>
+							<width>110</width>
+							<height>22</height>
+							<font>font12</font>
+							<textcolor>TextcolorBlack</textcolor>
+							<selectedcolor>listselectedcolor</selectedcolor>
+							<align>center</align>
+							<info>ListItem.Label</info>
+							<animation effect="slide" start="0,0" end="0,2" time="100">focus</animation>
+						</control>
+					</focusedlayout>
+				</control>
+				<!-- ** Required ** Do not change id or type-->
+				<control type="label" id="2150">
+					<description>Trailer List Count Label</description>
+					<width>100</width>
+					<posx>490</posx>
+					<posy>335</posy>
+					<align>right</align>
+					<label>-</label>
+					<font>font10</font>
+					<textcolor>CCFFFFFF</textcolor>
+					<visible>false</visible>
+				</control>
+				<control type="group">
+					<visible>Control.IsVisible(50)</visible>
+					<control type="label" id="206">
+						<description>Trailer Title</description>
+						<posx>245</posx>
+						<posy>295</posy>
+						<width>350</width>
+						<height>32</height>
+						<align>left</align>
+						<aligny>center</aligny>
+						<info>ListItem.Title</info>
+						<font>font13</font>
+						<textcolor>TextcolorBlack</textcolor>
+						<scroll>true</scroll>
+					</control>
+					<control type="image">
+						<description>Trailer Poster</description>
+						<posx>245</posx>
+						<posy>330</posy>
+						<width>100</width>
+						<height>160</height>
+						<info>ListItem.ActualIcon</info>
+						<texture>-</texture>
+						<aspectratio>keep</aspectratio>
+					</control>
+					<control type="image">
+						<description>Trailer Poster HD Overlay</description>
+						<posx>200</posx>
+						<posy>330</posy>
+						<width>32</width>
+						<height>32</height>
+						<info>ListItem.Overlay</info>
+					</control>
+					<!-- ** Required ** Do not change id or type-->
+					<control type="image" id="202">
+						<description>Trailer Rating</description>
+						<posx>350</posx>
+						<posy>475</posy>
+						<width>66</width>
+						<height>15</height>
+						<texture>-</texture>
+						<aspectratio>keep</aspectratio>
+					</control>
+					<!-- ** Required ** Do not change id or type-->
+					<control type="image" id="203">
+						<description>Trailer Favorite Overlay</description>
+						<posx>650</posx>
+						<posy>328</posy>
+						<width>24</width>
+						<height>24</height>
+						<texture>overlay-favorite.png</texture>
+						<aspectratio>keep</aspectratio>
+						<visible>false</visible>
+					</control>
+					<!-- ** Required ** Do not change id or type-->
+					<control type="image" id="204">
+						<description>Trailer Watched Overlay</description>
+						<posx>650</posx>
+						<posy>328</posy>
+						<width>24</width>
+						<height>24</height>
+						<texture>overlay-watched.png</texture>
+						<aspectratio>keep</aspectratio>
+						<visible>false</visible>
+					</control>
+					<control type="image" id="205">
+						<description>Trailer Saved Overlay</description>
+						<posx>650</posx>
+						<posy>328</posy>
+						<width>24</width>
+						<height>24</height>
+						<texture>overlay-saved.png</texture>
+						<aspectratio>keep</aspectratio>
+						<visible>false</visible>
+					</control>
+				</control>
+				<control type="group">
+					<visible>Control.IsVisible(51)</visible>
+					<control type="image">
+						<posx>265</posx>
+						<posy>210</posy>
+						<width>384</width>
+						<height>2</height>
+						<texture>thumb-gridline-horiz.png</texture>
+					</control>
+					<control type="image">
+						<posx>265</posx>
+						<posy>343</posy>
+						<width>384</width>
+						<height>2</height>
+						<texture>thumb-gridline-horiz.png</texture>
+					</control>
+					<control type="image">
+						<posx>392</posx>
+						<posy>80</posy>
+						<width>2</width>
+						<height>399</height>
+						<texture>thumb-gridline-vert.png</texture>
+					</control>
+					<control type="image">
+						<posx>520</posx>
+						<posy>80</posy>
+						<width>2</width>
+						<height>399</height>
+						<texture>thumb-gridline-vert.png</texture>
+					</control>
+				</control>
+				<!-- ** Required ** Do not change id or type-->
+			</control>
+			<control type="spincontrol" id="2050">
+				<description>Next page button</description>
+				<posx>610</posx>
+				<posy>475</posy>
+				<subtype>page</subtype>
+				<font>font12</font>
+				<onleft>50</onleft>
+				<onright>2075</onright>
+				<ondown>50</ondown>
+				<onup>50</onup>
+				<textcolor>TextcolorBlack</textcolor>
+				<showonepage>false</showonepage>
+				<animation effect="slide" start="0,0" end="0,-170" time="0" condition="Control.IsVisible(50)">Conditional</animation>
+				<visible>Control.IsVisible(3000)</visible>
+			</control>
+			<control type="group">
+				<control type="image">
+					<description>background image</description>
+					<posx>190</posx>
+					<posy>385</posy>
+					<width>470</width>
+					<height>145</height>
+					<texture>scrollbar-bg.png</texture>
+					<colordiffuse>90FFFFFF</colordiffuse>
+					<visible>Control.IsVisible(75)</visible>
+				</control>
+				<!-- ** Required ** Do not change id or type-->
+				<control type="textbox" id="75">
+					<description>Trailer Plot</description>
+					<posx>350</posx>
+					<posy>325</posy>
+					<width>310</width>
+					<height>150</height>
+					<font>font12</font>
+					<textcolor>TextcolorBlack</textcolor>
+					<info>ListItem.Plot</info>
+					<onup>75</onup>
+					<ondown>75</ondown>
+					<onleft>2050</onleft>
+					<onright>2075</onright>
+					<pagecontrol>2075</pagecontrol>
+					<textureup>scroll-up.png</textureup>
+					<texturedown>scroll-down.png</texturedown>
+					<textureupfocus>scroll-up-focus.png</textureupfocus>
+					<texturedownfocus>scroll-down-focus.png</texturedownfocus>
+					<visible allowhiddenfocus="false">Control.IsVisible(170) + Control.IsVisible(50)</visible>
+				</control>
+				<control type="spincontrol" id="2075">
+					<description>Next page button</description>
+					<posx>610</posx>
+					<posy>475</posy>
+					<subtype>page</subtype>
+					<font>font12</font>
+					<onleft>75</onleft>
+					<onright>70</onright>
+					<ondown>2075</ondown>
+					<onup>2075</onup>
+					<textcolor>TextcolorBlack</textcolor>
+					<showonepage>false</showonepage>
+					<visible allowhiddenfocus="false">Control.IsVisible(170) + Control.IsVisible(50)</visible>
+				</control>
+				<!-- ** Required ** Do not change id or type-->
+				<control type="list" id="70">
+					<posx>350</posx>
+					<posy>330</posy>
+					<width>420</width>
+					<height>120</height>
+					<onleft>2075</onleft>
+					<onright>2070</onright>
+					<onup>50</onup>
+					<ondown>50</ondown>
+					<viewtype label="544">list</viewtype>
+					<scrolltime>200</scrolltime>
+					<pagecontrol>2070</pagecontrol>
+					<visible allowhiddenfocus="false">Control.IsVisible(175) + Control.IsVisible(50)</visible>
+					<itemlayout height="30">
+						<control type="image">
+							<width>315</width>
+							<height>30</height>
+							<posx>0</posx>
+							<posy>1</posy>
+							<texture>iconlist-nofocus.png</texture>
+						</control>
+						<control type="label">
+							<posx>10</posx>
+							<posy>4</posy>
+							<width>295</width>
+							<height>22</height>
+							<font>font13</font>
+							<align>left</align>
+							<aligny>center</aligny>
+							<textcolor>TextcolorBlack</textcolor>
+							<selectedcolor>listselectedcolor</selectedcolor>
+							<info>ListItem.Label</info>
+						</control>
+					</itemlayout>
+					<focusedlayout height="30">
+						<control type="image">
+							<width>315</width>
+							<height>30</height>
+							<posx>0</posx>
+							<posy>1</posy>
+							<texture>iconlist-focus.png</texture>
+							<visible>Control.HasFocus(70)</visible>
+						</control>
+						<control type="image">
+							<width>315</width>
+							<height>30</height>
+							<posx>0</posx>
+							<posy>1</posy>
+							<texture>iconlist-nofocus.png</texture>
+							<visible>!Control.HasFocus(70)</visible>
+						</control>
+						<control type="label">
+							<posx>10</posx>
+							<posy>4</posy>
+							<width>295</width>
+							<height>22</height>
+							<font>font13</font>
+							<align>left</align>
+							<aligny>center</aligny>
+							<textcolor>TextcolorBlack</textcolor>
+							<selectedcolor>listselectedcolor</selectedcolor>
+							<info>ListItem.Label</info>
+						</control>
+					</focusedlayout>
+				</control>
+				<control type="spincontrol" id="2070">
+					<description>Next page button</description>
+					<posx>610</posx>
+					<posy>475</posy>
+					<subtype>page</subtype>
+					<font>font12</font>
+					<onleft>70</onleft>
+					<onright>9000</onright>
+					<ondown>2070</ondown>
+					<onup>2070</onup>
+					<textcolor>TextcolorBlack</textcolor>
+					<showonepage>false</showonepage>
+					<visible allowhiddenfocus="false">Control.IsVisible(70)</visible>
+				</control>
+			</control>
+			<!-- ** Required ** Do not change <description> or <type> -->
+			<control type="group" id="4000">
+				<!-- Category list controls -->
+				<!-- ** Required ** Do not change <description> or <type> -->
+				<control type="list" id="60">
+					<posx>245</posx>
+					<posy>85</posy>
+					<width>420</width>
+					<height>390</height>
+					<onleft>9000</onleft>
+					<onright>2060</onright>
+					<onup>60</onup>
+					<ondown>60</ondown>
+					<viewtype label="544">list</viewtype>
+					<scrolltime>200</scrolltime>
+					<pagecontrol>2060</pagecontrol>
+					<itemlayout height="30">
+						<control type="image">
+							<width>420</width>
+							<height>30</height>
+							<posx>0</posx>
+							<posy>1</posy>
+							<texture>iconlist-nofocus.png</texture>
+						</control>
+						<control type="image">
+							<posx>5</posx>
+							<posy>5</posy>
+							<width>22</width>
+							<height>22</height>
+							<info>ListItem.Icon</info>
+						</control>
+						<control type="label">
+							<posx>30</posx>
+							<posy>4</posy>
+							<width>365</width>
+							<height>22</height>
+							<font>font13</font>
+							<align>left</align>
+							<aligny>center</aligny>
+							<textcolor>TextcolorBlack</textcolor>
+							<selectedcolor>listselectedcolor</selectedcolor>
+							<info>ListItem.Label</info>
+						</control>
+						<control type="label">
+							<posx>412</posx>
+							<posy>4</posy>
+							<width>300</width>
+							<height>22</height>
+							<font>font12</font>
+							<align>right</align>
+							<aligny>center</aligny>
+							<textcolor>TextcolorBlack</textcolor>
+							<selectedcolor>listselectedcolor</selectedcolor>
+							<info>ListItem.Label2</info>
+						</control>
+					</itemlayout>
+					<focusedlayout height="30">
+						<control type="image">
+							<width>420</width>
+							<height>30</height>
+							<posx>0</posx>
+							<posy>1</posy>
+							<texture>iconlist-focus.png</texture>
+							<visible>Control.HasFocus(60)</visible>
+						</control>
+						<control type="image">
+							<width>420</width>
+							<height>30</height>
+							<posx>0</posx>
+							<posy>1</posy>
+							<texture>iconlist-nofocus.png</texture>
+							<visible>!Control.HasFocus(60)</visible>
+						</control>
+						<control type="image">
+							<posx>5</posx>
+							<posy>5</posy>
+							<width>22</width>
+							<height>22</height>
+							<info>ListItem.Icon</info>
+						</control>
+						<control type="label">
+							<posx>30</posx>
+							<posy>4</posy>
+							<width>365</width>
+							<height>22</height>
+							<font>font13</font>
+							<align>left</align>
+							<aligny>center</aligny>
+							<textcolor>TextcolorBlack</textcolor>
+							<selectedcolor>listselectedcolor</selectedcolor>
+							<info>ListItem.Label</info>
+						</control>
+						<control type="label">
+							<posx>412</posx>
+							<posy>4</posy>
+							<width>300</width>
+							<height>22</height>
+							<font>font12</font>
+							<align>right</align>
+							<aligny>center</aligny>
+							<textcolor>TextcolorBlack</textcolor>
+							<selectedcolor>listselectedcolor</selectedcolor>
+							<info>ListItem.Label2</info>
+						</control>
+					</focusedlayout>
+				</control>
+				<control type="spincontrol" id="2060">
+					<description>Next page button</description>
+					<posx>610</posx>
+					<posy>475</posy>
+					<subtype>page</subtype>
+					<font>font12</font>
+					<onleft>60</onleft>
+					<onright>9000</onright>
+					<ondown>2060</ondown>
+					<onup>2060</onup>
+					<textcolor>TextcolorBlack</textcolor>
+					<showonepage>false</showonepage>
+					<visible>Control.IsVisible(60)</visible>
+				</control>
+				<control type="label" id="2160">
+					<description>Category List Count Label</description>
+					<width>100</width>
+					<posx>655</posx>
+					<posy>538</posy>
+					<align>right</align>
+					<label></label>
+					<font>font10</font>
+					<visible>false</visible>
+				</control>
+			</control>
+			<include>SystemCustomKeymaps</include>
+		</control>
+		<!-- Begin Real Blades -->
+		<control type="group">
+			<visible>!Window.Previous(home)</visible>
+			<include>LiveCommonsBlades</include>
+		</control>
+		<control type="group">
+			<visible>Window.Previous(home)</visible>
+			<include>MediaCommonsBlades</include>
+		</control>
+	</controls>
+</window>

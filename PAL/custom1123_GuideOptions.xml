@@ -1,0 +1,405 @@
+<window type="dialog" id="1123">
+	<defaultcontrol>1</defaultcontrol>
+	<controls>
+		<control type="image">
+			<description>Divider</description>
+			<posx>45</posx>
+			<posy>98</posy>
+			<width>230</width>
+			<height>1</height>
+			<texture>divider.png</texture>
+			<animation effect="fade" time="100">WindowOpen</animation>
+		</control>
+		<control type="image">
+			<description>Button 1 Image</description>
+			<posx>22</posx>
+			<posy>88</posy>
+			<width>290</width>
+			<height>59</height>
+			<texture>guide-button-focus.png</texture>
+			<visible>Control.HasFocus(1)</visible>
+			<animation effect="fade" start="30" time="275" reversible="false">visible</animation>
+			<animation effect="fade" time="100">WindowOpen</animation>
+		</control>
+		<control type="radiobutton" id="1">
+			<description>Clock on main blades</description>
+			<posx>22</posx>
+			<posy>88</posy>
+			<width>290</width>
+			<height>59</height>
+			<texturefocus>-</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<selected>Skin.HasSetting(BladeClock)</selected>
+			<onclick>Skin.ToggleSetting(BladeClock)</onclick>
+			<pulseonselect>no</pulseonselect>
+			<onleft>1</onleft>
+			<onright>1</onright>
+			<onup>9</onup>
+			<ondown>2</ondown>
+			<font>font14</font>
+			<label>31170</label>
+			<textoffsetx>30</textoffsetx>
+			<textcolor>TextcolorBlack</textcolor>
+			<shadowcolor>shadow-grey</shadowcolor>
+			<animation effect="fade" time="100">WindowOpen</animation>
+			<animation effect="slide" end="-2,0" time="275" reversible="false">focus</animation>
+		</control>
+		<control type="image">
+			<description>Divider</description>
+			<posx>45</posx>
+			<posy>134</posy>
+			<width>230</width>
+			<height>1</height>
+			<texture>divider.png</texture>
+			<animation effect="fade" time="100">WindowOpen</animation>
+		</control>
+		<control type="image">
+			<description>Button 2 Image</description>
+			<posx>22</posx>
+			<posy>124</posy>
+			<width>290</width>
+			<height>59</height>
+			<texture>guide-button-focus.png</texture>
+			<visible>Control.HasFocus(2)</visible>
+			<animation effect="fade" start="30" time="275" reversible="false">visible</animation>
+			<animation effect="fade" time="100">WindowOpen</animation>
+		</control>
+		<control type="radiobutton" id="2">
+			<description>Remote Control Button</description>
+			<posx>22</posx>
+			<posy>124</posy>
+			<width>290</width>
+			<height>59</height>
+			<texturefocus>-</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<selected>Skin.HasSetting(remote-control)</selected>
+			<onclick>Skin.ToggleSetting(remote-control)</onclick>
+			<pulseonselect>no</pulseonselect>
+			<onleft>2</onleft>
+			<onright>2</onright>
+			<onup>1</onup>
+			<ondown>3</ondown>
+			<font>font14</font>
+			<label>31161</label>
+			<textoffsetx>30</textoffsetx>
+			<textcolor>TextcolorBlack</textcolor>
+			<shadowcolor>shadow-grey</shadowcolor>
+			<animation effect="fade" time="100">WindowOpen</animation>
+			<animation effect="slide" end="-2,0" time="275" reversible="false">focus</animation>
+		</control>
+		<control type="image">
+			<description>Divider</description>
+			<posx>45</posx>
+			<posy>170</posy>
+			<width>230</width>
+			<height>1</height>
+			<texture>divider.png</texture>
+			<animation effect="fade" time="100">WindowOpen</animation>
+		</control>
+		<control type="image">
+			<description>Button 3 Image</description>
+			<posx>22</posx>
+			<posy>160</posy>
+			<width>290</width>
+			<height>59</height>
+			<texture>guide-button-focus.png</texture>
+			<visible>Control.HasFocus(3)</visible>
+			<animation effect="fade" start="30" time="275" reversible="false">visible</animation>
+			<animation effect="fade" time="100">WindowOpen</animation>
+		</control>
+		<control type="radiobutton" id="3">
+			<description>List Music Button Button</description>
+			<posx>22</posx>
+			<posy>160</posy>
+			<width>290</width>
+			<height>59</height>
+			<texturefocus>-</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<selected>Skin.HasSetting(ListMusicThumb)</selected>
+			<onclick>Skin.ToggleSetting(ListMusicThumb)</onclick>
+			<pulseonselect>no</pulseonselect>
+			<onleft>3</onleft>
+			<onright>3</onright>
+			<onup>2</onup>
+			<ondown>4</ondown>
+			<font>font14</font>
+			<label>31076</label>
+			<textoffsetx>30</textoffsetx>
+			<textcolor>TextcolorBlack</textcolor>
+			<shadowcolor>shadow-grey</shadowcolor>
+			<animation effect="fade" time="100">WindowOpen</animation>
+			<animation effect="slide" end="-2,0" time="275" reversible="false">focus</animation>
+		</control>
+		<control type="image">
+			<description>Divider</description>
+			<posx>45</posx>
+			<posy>206</posy>
+			<width>230</width>
+			<height>1</height>
+			<texture>divider.png</texture>
+			<animation effect="fade" time="100">WindowOpen</animation>
+		</control>
+		<control type="image">
+			<description>Button 4 Image</description>
+			<posx>22</posx>
+			<posy>196</posy>
+			<width>290</width>
+			<height>59</height>
+			<texture>guide-button-focus.png</texture>
+			<visible>Control.HasFocus(4)</visible>
+			<animation effect="fade" start="30" time="275" reversible="false">visible</animation>
+			<animation effect="fade" time="100">WindowOpen</animation>
+		</control>
+		<control type="radiobutton" id="4">
+			<description>ListItem Thumb Button</description>
+			<posx>22</posx>
+			<posy>196</posy>
+			<width>290</width>
+			<height>59</height>
+			<texturefocus>-</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<selected>Skin.HasSetting(ListItemThumb)</selected>
+			<onclick>Skin.ToggleSetting(ListItemThumb)</onclick>
+			<pulseonselect>no</pulseonselect>
+			<onleft>4</onleft>
+			<onright>4</onright>
+			<onup>3</onup>
+			<ondown>5</ondown>
+			<font>font14</font>
+			<label>31075</label>
+			<textoffsetx>30</textoffsetx>
+			<textcolor>TextcolorBlack</textcolor>
+			<shadowcolor>shadow-grey</shadowcolor>
+			<animation effect="fade" time="100">WindowOpen</animation>
+			<animation effect="slide" end="-2,0" time="275" reversible="false">focus</animation>
+		</control>
+		<control type="image">
+			<description>Divider</description>
+			<posx>45</posx>
+			<posy>242</posy>
+			<width>230</width>
+			<height>1</height>
+			<texture>divider.png</texture>
+			<animation effect="fade" time="100">WindowOpen</animation>
+		</control>
+		<control type="image">
+			<description>Button 5 Image</description>
+			<posx>22</posx>
+			<posy>232</posy>
+			<width>290</width>
+			<height>59</height>
+			<texture>guide-button-focus.png</texture>
+			<visible>Control.HasFocus(5)</visible>
+			<animation effect="fade" start="30" time="275" reversible="false">visible</animation>
+			<animation effect="fade" time="100">WindowOpen</animation>
+		</control>
+		<control type="radiobutton" id="5">
+			<description>Disable Descriptions Button</description>
+			<posx>22</posx>
+			<posy>232</posy>
+			<width>290</width>
+			<height>59</height>
+			<texturefocus>-</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<selected>Skin.HasSetting(nodescriptions)</selected>
+			<onclick>Skin.ToggleSetting(nodescriptions)</onclick>
+			<pulseonselect>no</pulseonselect>
+			<onleft>5</onleft>
+			<onright>5</onright>
+			<onup>4</onup>
+			<ondown>6</ondown>
+			<font>font14</font>
+			<label>31160</label>
+			<textoffsetx>30</textoffsetx>
+			<textcolor>TextcolorBlack</textcolor>
+			<shadowcolor>shadow-grey</shadowcolor>
+			<animation effect="fade" time="100">WindowOpen</animation>
+			<animation effect="slide" end="-2,0" time="275" reversible="false">focus</animation>
+		</control>
+		<control type="image">
+			<description>Divider</description>
+			<posx>45</posx>
+			<posy>278</posy>
+			<width>230</width>
+			<height>1</height>
+			<texture>divider.png</texture>
+			<animation effect="fade" time="100">WindowOpen</animation>
+		</control>
+		<control type="image">
+			<description>Button 6 Image</description>
+			<posx>22</posx>
+			<posy>268</posy>
+			<width>290</width>
+			<height>59</height>
+			<texture>guide-button-focus.png</texture>
+			<visible>Control.HasFocus(6)</visible>
+			<animation effect="fade" start="30" time="275" reversible="false">visible</animation>
+			<animation effect="fade" time="100">WindowOpen</animation>
+		</control>
+		<control type="radiobutton" id="6">
+			<description>Disable WideIcon Labels Button</description>
+			<posx>22</posx>
+			<posy>268</posy>
+			<width>290</width>
+			<height>59</height>
+			<texturefocus>-</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<selected>Skin.HasSetting(Wide_titles)</selected>
+			<onclick>Skin.ToggleSetting(Wide_titles)</onclick>
+			<pulseonselect>no</pulseonselect>
+			<onleft>6</onleft>
+			<onright>6</onright>
+			<onup>5</onup>
+			<ondown>7</ondown>
+			<font>font14</font>
+			<label>31203</label>
+			<textoffsetx>30</textoffsetx>
+			<textcolor>TextcolorBlack</textcolor>
+			<shadowcolor>shadow-grey</shadowcolor>
+			<animation effect="fade" time="100">WindowOpen</animation>
+			<animation effect="slide" end="-2,0" time="275" reversible="false">focus</animation>
+		</control>
+		<control type="image">
+			<description>Divider</description>
+			<posx>45</posx>
+			<posy>314</posy>
+			<width>230</width>
+			<height>1</height>
+			<texture>divider.png</texture>
+			<animation effect="fade" time="100">WindowOpen</animation>
+		</control>
+		<control type="image">
+			<description>Button 7 Image</description>
+			<posx>22</posx>
+			<posy>304</posy>
+			<width>290</width>
+			<height>59</height>
+			<texture>guide-button-focus.png</texture>
+			<visible>Control.HasFocus(7)</visible>
+			<animation effect="fade" start="30" time="275" reversible="false">visible</animation>
+			<animation effect="fade" time="100">WindowOpen</animation>
+		</control>
+		<control type="radiobutton" id="7">
+			<description>Use Lite Volume Button</description>
+			<posx>22</posx>
+			<posy>304</posy>
+			<width>290</width>
+			<height>59</height>
+			<texturefocus>-</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<selected>Skin.HasSetting(LiteVolume)</selected>
+			<onclick>Skin.ToggleSetting(LiteVolume)</onclick>
+			<pulseonselect>no</pulseonselect>
+			<onleft>7</onleft>
+			<onright>7</onright>
+			<onup>6</onup>
+			<ondown>8</ondown>
+			<font>font14</font>
+			<label>31077</label>
+			<textoffsetx>30</textoffsetx>
+			<textcolor>TextcolorBlack</textcolor>
+			<shadowcolor>shadow-grey</shadowcolor>
+			<animation effect="fade" time="100">WindowOpen</animation>
+			<animation effect="slide" end="-2,0" time="275" reversible="false">focus</animation>
+		</control>
+		<control type="image">
+			<description>Divider</description>
+			<posx>45</posx>
+			<posy>350</posy>
+			<width>230</width>
+			<height>1</height>
+			<texture>divider.png</texture>
+			<animation effect="fade" time="100">WindowOpen</animation>
+		</control>
+		<control type="image">
+			<description>Button 8 Image</description>
+			<posx>22</posx>
+			<posy>340</posy>
+			<width>290</width>
+			<height>59</height>
+			<texture>guide-button-focus.png</texture>
+			<visible>Control.HasFocus(8)</visible>
+			<animation effect="fade" start="30" time="275" reversible="false">visible</animation>
+			<animation effect="fade" time="100">WindowOpen</animation>
+		</control>
+		<control type="radiobutton" id="8">
+			<description>Check for Updates Button</description>
+			<posx>22</posx>
+			<posy>340</posy>
+			<width>290</width>
+			<height>59</height>
+			<texturefocus>-</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<selected>Skin.HasSetting(UpdateCheck)</selected>
+			<onclick>Skin.ToggleSetting(UpdateCheck)</onclick>
+			<pulseonselect>no</pulseonselect>
+			<onleft>8</onleft>
+			<onright>8</onright>
+			<onup>7</onup>
+			<ondown>9</ondown>
+			<font>font14</font>
+			<label>31200</label>
+			<textoffsetx>30</textoffsetx>
+			<textcolor>TextcolorBlack</textcolor>
+			<shadowcolor>shadow-grey</shadowcolor>
+			<visible>System.HasNetwork</visible>
+			<animation effect="fade" time="100">WindowOpen</animation>
+			<animation effect="slide" end="-2,0" time="275" reversible="false">focus</animation>
+		</control>
+		<control type="image">
+			<description>Divider</description>
+			<posx>45</posx>
+			<posy>386</posy>
+			<width>230</width>
+			<height>1</height>
+			<texture>divider.png</texture>
+			<visible>System.HasNetwork</visible>
+			<animation effect="fade" time="100">WindowOpen</animation>
+		</control>
+		<control type="image">
+			<description>Button 9 Image</description>
+			<posx>22</posx>
+			<posy>376</posy>
+			<width>290</width>
+			<height>59</height>
+			<texture>guide-button-focus.png</texture>
+			<visible>Control.HasFocus(9)</visible>
+			<animation effect="fade" start="30" time="275" reversible="false">visible</animation>
+			<animation effect="fade" time="100">WindowOpen</animation>
+		</control>
+		<control type="radiobutton" id="9">
+			<description>RSS Button</description>
+			<posx>22</posx>
+			<posy>376</posy>
+			<width>290</width>
+			<height>59</height>
+			<texturefocus>-</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<selected>Skin.HasSetting(rss-feeds)</selected>
+			<onclick>Skin.ToggleSetting(rss-feeds)</onclick>
+			<pulseonselect>no</pulseonselect>
+			<onleft>9</onleft>
+			<onright>9</onright>
+			<onup>8</onup>
+			<ondown>1</ondown>
+			<font>font14</font>
+			<label>31159</label>
+			<textoffsetx>30</textoffsetx>
+			<textcolor>TextcolorBlack</textcolor>
+			<shadowcolor>shadow-grey</shadowcolor>
+			<visible>System.HasNetwork</visible>
+			<animation effect="fade" time="100">WindowOpen</animation>
+			<animation effect="slide" end="-2,0" time="275" reversible="false">focus</animation>
+		</control>
+		<control type="image">
+			<description>Divider</description>
+			<posx>45</posx>
+			<posy>422</posy>
+			<width>230</width>
+			<height>1</height>
+			<texture>divider.png</texture>
+			<visible>System.HasNetwork</visible>
+			<animation effect="fade" time="100">WindowOpen</animation>
+		</control>
+	</controls>
+</window>    

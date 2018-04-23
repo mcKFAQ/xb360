@@ -1,0 +1,17 @@
+* Change the about dialog into an about window
+
+* Check resolution when loading skin
+
+* Add a settings window
+	* Strip invalid chars
+	* Username/password
+	* Always confirm filtered content
+	* Stream mode (direct, temp-download, store-download)
+	* Keep last search term
+	* Skin
+
+* Add download to youtube.py
+	* Add download-and-play mode
+	* Add store to disk mode
+
+* Do something about the ugly user menu handling.

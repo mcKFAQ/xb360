@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<strings>
+  <string id="0">Theme Browser</string>
+  <string id="1">Theme Vorschau</string>
+
+  <string id="15">Themes</string>
+  <string id="20">© </string>
+  <string id="25">KB</string>
+  <string id="30">MB</string>
+
+  <string id="101">Author: </string>
+  <string id="102">Größe: </string>
+  <string id="103">Hinzugefügt: </string>
+  <string id="104">Downloads: </string>
+  <string id="105">Beschreibung</string>
+
+  <string id="250">Ok</string>
+  <string id="251">Abbrechen</string>
+  <string id="252">Aktualisieren</string>
+  <string id="253">Credits</string>
+  <string id="254">Download</string>
+  <string id="255">Vorschau</string>
+  <string id="256">Zurück</string>
+
+  <!-- Download Dialog/Benachrichtigungen -->
+  <string id="300">Theme wird heruntergeladen:</string>
+  <string id="301">Theme heruntergeladen</string>
+  <string id="302">Download fehlgeschlagen</string>
+  <string id="303">Download abgebrochen</string>
+
+  <!-- Download abgeschlossen Dialog -->
+  <string id="305">Download abgeschlossen</string>
+  <string id="306"> </string>
+  <string id="307">Gehe in die Einstellungen um das Theme&#10;zu aktivieren.</string>
+
+  <!-- Abgebrochen/Fehlgeschlagen Dialog -->
+  <string id="310">Download abgebrochen</string>
+  <string id="311"> </string>
+  <string id="312">Die Datei konnte nicht heruntergeladen werden</string>
+
+  <!-- Theme bereits Installiert Dialog -->
+  <string id="315">Theme is bereits installiert.</string>
+  <string id="316"> </string>
+  <string id="317">Soll es erneut heruntergeladen werden?</string>
+
+  <string id="320">Das aktive Theme kann nicht heruntergeladen werden!</string>
+  <string id="321"> </string>
+  <string id="322">Gehe in die Einstellungen um das Theme zu wechseln.</string>
+
+  <!-- Reset Cache Dialog -->
+  <string id="325">Um den Image Cache zu leeren muss das Script&#10;neugestartet werden.</string>
+  <string id="326"> </string>
+  <string id="327">Soll der Cache wirklich gelöscht werden?</string>
+
+  <!-- Kategorien / Sortierung -->
+  <string id="401">Alphabetisch</string>
+  <string id="402">Neuste Themes</string>
+  <string id="403">Beliebteste Themes</string>
+
+  <!-- Theme Strings -->
+  <string id="500">Unbekannt</string>
+  <string id="501">Keine Beschreibung verfügbar</string>
+  <string id="502">Loading</string>
+  <string id="503">Nicht verfügbar</string>
+
+  <!-- Script Start Fehler Meldungen -->
+  <string id="638">Um das Theme Browser nutzen zu können muss&#10;die XBOX mit dem Internet verbunden sein.&#10;&#10;Bitte überprüfe die Netzwerkeinstellung&#10;und versuche es erneut.</string>
+  <string id="639">Dies skripte unterstützt nur&#10;Team Blackbolt's skin MC360.</string>
+  <string id="641">Fehler beim Verbindungsaufbau.&#10;Die Website kann nicht aufgerufen werden.&#10;&#10;Bitte versuche es noch einmal.</string>
+  <string id="642">Theme Liste konnte nicht geladen werden</string>
+</strings>

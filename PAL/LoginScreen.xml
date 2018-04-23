@@ -1,0 +1,414 @@
+<window id="29">
+	<defaultcontrol>52</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<controls>
+		<!-- My version Rocky5 start -->
+		<!-- Setup Background -->
+		<control type="image">
+			<description>Intro background</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>576</height>
+			<visible>yes</visible>
+			<texture>background-intro.png</texture>
+			<visible>!Skin.String(Login)</visible>
+			<animation effect="fade" time="0">WindowOpen</animation>
+			<animation effect="fade" delay="100" time="750">WindowClose</animation>
+		</control>
+		<control type="image">
+			<description>Custom Intro background</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>576</height>
+			<texture>-</texture>
+			<info>Skin.String(Login)</info>
+			<colordiffuse>D1FFFFFF</colordiffuse>
+			<animation effect="fade" time="0">WindowOpen</animation>
+			<animation effect="fade" delay="100" time="750">WindowClose</animation>
+		</control>
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>750</width>
+			<height>662</height>
+			<texture>guide-black.png</texture>
+			<colordiffuse>B5FFFFFF</colordiffuse>
+			<animation effect="fade" time="0">WindowOpen</animation>
+			<animation effect="fade" delay="100" time="750">WindowClose</animation>
+		</control>
+		<!-- Start Screen Close Animation -->
+		<control type="image">
+			<description>Intro Background Aimation</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>576</height>
+			<texture>background-intro.png</texture>
+			<visible>!Skin.String(Login)</visible>
+			<animation effect="fade" end="0">WindowOpen</animation>
+			<animation effect="fade" start="0" end="100" delay="100" time="750">WindowClose</animation>
+		</control>
+		<control type="image">
+			<description>Custom Intro Background Aimation</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>576</height>
+			<texture>-</texture>
+			<info>Skin.String(Login)</info>
+			<colordiffuse>D1FFFFFF</colordiffuse>
+			<animation effect="fade" end="0">WindowOpen</animation>
+			<animation effect="fade" start="0" end="100" delay="100" time="750">WindowClose</animation>
+		</control>
+		<control type="image">
+			<description>Left Blade Runner Fill-In</description>
+			<posx>-210</posx>
+			<posy>0</posy>
+			<width>99</width>
+			<height>576</height>
+			<texture>background-grey1.png</texture>
+			<animation effect="fade" end="0">WindowOpen</animation>
+			<animation effect="slide" delay="500" end="215,0" time="600">WindowClose</animation>
+		</control>
+		<control type="image">
+			<description>Left Blade Runner</description>
+			<posx>-111</posx>
+			<posy>0</posy>
+			<width>128</width>
+			<height>576</height>
+			<texture>blades-runner-left1.png</texture>
+			<animation effect="fade" end="0">WindowOpen</animation>
+			<animation effect="slide" delay="500" end="215,0" time="600">WindowClose</animation>
+		</control>
+		<control type="image">
+			<description>Right Blade Runner Fill-In</description>
+			<posx>833</posx>
+			<posy>0</posy>
+			<width>92</width>
+			<height>576</height>
+			<texture>background-grey1.png</texture>
+			<animation effect="fade" end="0">WindowOpen</animation>
+			<animation effect="slide" delay="500" end="-205,0" time="600">WindowClose</animation>
+		</control>
+		<control type="image">
+			<description>Right Blade Runner</description>
+			<posx>705</posx>
+			<posy>0</posy>
+			<width>128</width>
+			<height>576</height>
+			<texture>blades-runner-right.png</texture>
+			<animation effect="fade" end="0">WindowOpen</animation>
+			<animation effect="slide" delay="500" end="-205,0" time="600">WindowClose</animation>
+		</control>
+		<control type="image">
+			<description>Guide Blade Background</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>417</width>
+			<height>576</height>
+			<texture>background-grey.png</texture>
+			<animation effect="slide" time="250" start="-512,0">WindowOpen</animation>
+			<animation effect="slide" time="250" delay="250" end="-512,0">WindowClose</animation>
+		</control>
+		<control type="image">
+			<description>Guide Blade Overlay</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>318</width>
+			<height>576</height>
+			<texture>guide-blade-overlay-tile.png</texture>
+			<animation effect="slide" time="250" start="-512,0">WindowOpen</animation>
+			<animation effect="slide" time="250" delay="250" end="-512,0">WindowClose</animation>
+		</control>
+		<control type="image">
+			<description>Guide Edge Overlay</description>
+			<posx>318</posx>
+			<posy>0</posy>
+			<width>128</width>
+			<height>576</height>
+			<texture>guide-blade-overlay-edge-left.png</texture>
+			<animation effect="slide" time="250" start="-512,0">WindowOpen</animation>
+			<animation effect="slide" time="250" delay="250" end="-512,0">WindowClose</animation>
+		</control>
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>418</width>
+			<height>576</height>
+			<texture>guide-black.png</texture>
+			<colordiffuse>1DFFFFFF</colordiffuse>
+			<animation effect="slide" time="250" start="-512,0">WindowOpen</animation>
+			<animation effect="slide" time="250" delay="250" end="-512,0">WindowClose</animation>
+		</control>
+		<!-- Start Normal Window Controls -->
+		<control type="image">
+			<posx>65</posx>
+			<posy>170</posy>
+			<width>240</width>
+			<height>08</height>
+			<texture>home_logoshadow.png</texture>
+			<colordiffuse>D0FFFFFF</colordiffuse>
+			<animation effect="fade" delay="800" time="100">WindowOpen</animation>
+			<animation effect="fade" end="0" time="100">WindowClose</animation>
+		</control>
+		<control type="image">
+			<posx>65</posx>
+			<posy>347</posy>
+			<width>240</width>
+			<height>08</height>
+			<texture>home_logoshadow.png</texture>
+			<colordiffuse>D0FFFFFF</colordiffuse>
+			<animation effect="fade" delay="800" time="100">WindowOpen</animation>
+			<animation effect="fade" end="0" time="100">WindowClose</animation>
+		</control>
+		<control type="label">
+			<description>description label</description>
+			<posx>65</posx>
+			<posy>45</posy>
+			<label>31228</label>
+			<textcolor>TextcolorWhite</textcolor>
+			<font>font14</font>
+			<shadowcolor>shadow-black</shadowcolor>
+			<animation effect="fade" delay="800" time="250">WindowOpen</animation>
+			<animation effect="fade" end="0" time="100">WindowClose</animation>
+		</control>
+		<control type="image">
+			<description>B Button</description>
+			<posx>420</posx>
+			<posy>100</posy>
+			<width>300</width>
+			<height>320</height>
+			<texture>intrologo.png</texture>
+			<animation effect="fade" time="250" delay="400" start="0">WindowOpen</animation>
+			<animation effect="fade" time="250" end="0">WindowClose</animation>
+		</control>
+		<control type="list" id="52">
+			<posx>65</posx>
+			<posy>178</posy>
+			<width>250</width>
+			<height>165</height>
+			<onleft>52</onleft>
+			<onright>52</onright>
+			<onup>52</onup>
+			<ondown>52</ondown>
+			<viewtype label="535">list</viewtype>
+			<scrolltime>200</scrolltime>
+			<pagecontrol>-</pagecontrol>
+			<animation effect="fade" delay="800" time="250">WindowOpen</animation>
+			<animation effect="fade" end="0" time="100">WindowClose</animation>
+			<itemlayout height="55">
+				<control type="image">
+					<width>240</width>
+					<height>59</height>
+					<posx>0</posx>
+					<posy>0</posy>
+					<texture>guide-panel1.png</texture>
+				</control>
+				<control type="image">
+					<posx>7</posx>
+					<posy>7</posy>
+					<width>43</width>
+					<height>43</height>
+					<aspectratio>stretch</aspectratio>
+					<info>ListItem.Icon</info>
+					<texture>gamercard_defaultgamerpic.png</texture>
+				</control>
+				<control type="label">
+					<posx>55</posx>
+					<posy>4</posy>
+					<width>320</width>
+					<height>22</height>
+					<font>font13</font>
+					<align>left</align>
+					<textcolor>TextcolorBlack</textcolor>
+					<selectedcolor>listselectedcolor</selectedcolor>
+					<info>ListItem.Label</info>
+				</control>
+				<control type="label">
+					<posx>228</posx>
+					<posy>30</posy>
+					<width>300</width>
+					<height>22</height>
+					<font>font12</font>
+					<align>right</align>
+					<textcolor>TextcolorBlack</textcolor>
+					<selectedcolor>listselectedcolor</selectedcolor>
+					<label>HDD</label>
+				</control>
+			</itemlayout>
+			<focusedlayout height="55">
+				<control type="image">
+					<width>240</width>
+					<height>59</height>
+					<posx>0</posx>
+					<posy>0</posy>
+					<texture>guide-panel1-focus.png</texture>
+					<visible>Control.HasFocus(52)</visible>
+				</control>
+				<control type="image">
+					<width>240</width>
+					<height>59</height>
+					<posx>0</posx>
+					<posy>0</posy>
+					<texture>guide-panel1.png</texture>
+					<visible>!Control.HasFocus(52)</visible>
+				</control>
+				<control type="image">
+					<posx>7</posx>
+					<posy>7</posy>
+					<width>43</width>
+					<height>43</height>
+					<aspectratio>stretch</aspectratio>
+					<info>ListItem.Icon</info>
+					<texture>gamercard_defaultgamerpic.png</texture>
+				</control>
+				<control type="label">
+					<posx>55</posx>
+					<posy>4</posy>
+					<width>320</width>
+					<height>22</height>
+					<font>font13</font>
+					<align>left</align>
+					<textcolor>TextcolorBlack</textcolor>
+					<selectedcolor>listselectedcolor</selectedcolor>
+					<info>ListItem.Label</info>
+				</control>
+				<control type="label">
+					<posx>228</posx>
+					<posy>30</posy>
+					<width>300</width>
+					<height>22</height>
+					<font>font12</font>
+					<align>right</align>
+					<textcolor>TextcolorBlack</textcolor>
+					<selectedcolor>listselectedcolor</selectedcolor>
+					<label>HDD</label>
+				</control>
+			</focusedlayout>
+		</control>
+		<control type="label">
+			<description>Time label</description>
+			<posx>330</posx>
+			<posy>49</posy>
+			<width>100</width>
+			<label>time</label>
+			<info>System.Time</info>
+			<align>right</align>
+			<textcolor>TextcolorWhite</textcolor>
+			<font>font13</font>
+			<shadowcolor>shadow-black</shadowcolor>
+			<animation effect="fade" delay="800" time="250">WindowOpen</animation>
+			<animation effect="fade" end="0" time="100">WindowClose</animation>
+		</control>
+		<!-- Stop Normal Window Controls -->
+		<!-- Stop buttons -->
+		<control type="image">
+			<description>B Button</description>
+			<posx>315</posx>
+			<posy>475</posy>
+			<include>Button-Map-Texture-Width</include>
+			<height>21</height>
+			<texture>button-B-turnedoff.png</texture>
+			<animation effect="slide" time="250" start="-512,0">WindowOpen</animation>
+			<animation effect="slide" time="250" delay="250" end="-512,0">WindowClose</animation>
+		</control>
+		<control type="image">
+			<description>A Button</description>
+			<posx>330</posx>
+			<posy>498</posy>
+			<include>Button-Map-Texture-Width</include>
+			<height>21</height>
+			<texture>button-A-turnedoff.png</texture>
+			<animation effect="slide" time="250" start="-512,0">WindowOpen</animation>
+			<animation effect="slide" time="250" delay="250" end="-512,0">WindowClose</animation>
+		</control>
+		<control type="image">
+			<description>A Button</description>
+			<posx>330</posx>
+			<posy>498</posy>
+			<include>Button-Map-Texture-Width</include>
+			<height>21</height>
+			<texture>button-A.png</texture>
+			<animation effect="fade" delay="800" time="250">WindowOpen</animation>
+			<animation effect="fade" end="0" time="100">WindowClose</animation>
+		</control>
+		<control type="image">
+			<description>Y Button</description>
+			<posx>70</posx>
+			<posy>475</posy>
+			<include>Button-Map-Texture-Width</include>
+			<height>21</height>
+			<texture>button-Y-turnedoff.png</texture>
+			<animation effect="slide" time="250" start="-512,0">WindowOpen</animation>
+			<animation effect="slide" time="250" delay="250" end="-512,0">WindowClose</animation>
+		</control>
+		<control type="image">
+			<description>X Button</description>
+			<posx>55</posx>
+			<posy>498</posy>
+			<include>Button-Map-Texture-Width</include>
+			<height>21</height>
+			<texture>button-X-turnedoff.png</texture>
+			<animation effect="slide" time="250" start="-512,0">WindowOpen</animation>
+			<animation effect="slide" time="250" delay="250" end="-512,0">WindowClose</animation>
+		</control>
+		<control type="image">
+			<description>X Button</description>
+			<posx>55</posx>
+			<posy>498</posy>
+			<include>Button-Map-Texture-Width</include>
+			<height>21</height>
+			<texture>button-X.png</texture>
+			<visible>Player.HasAudio</visible>
+			<animation effect="fade" delay="800" time="250">WindowOpen</animation>
+			<animation effect="fade" end="0" time="100">WindowClose</animation>
+		</control>
+		<control type="image">
+			<description>X Button</description>
+			<posx>55</posx>
+			<posy>498</posy>
+			<include>Button-Map-Texture-Width</include>
+			<height>21</height>
+			<texture>button-X.png</texture>
+			<visible>Player.Hasvideo</visible>
+			<animation effect="fade" delay="800" time="250">WindowOpen</animation>
+			<animation effect="fade" end="0" time="100">WindowClose</animation>
+		</control>
+		<control type="label">
+			<description>Full-Screen Visualisation Label</description>
+			<include>KeymapFont</include>
+			<posx>80</posx>
+			<posy>502</posy>
+			<label>31180</label>
+			<align>left</align>
+			<visible>!Control.HasFocus(1) + !Control.HasFocus(2) + Player.HasAudio</visible>
+			<animation effect="fade" delay="800" time="250">WindowOpen</animation>
+			<animation effect="fade" end="0" time="100">WindowClose</animation>
+		</control>
+		<control type="label">
+			<description>Full-Screen Video Label</description>
+			<include>KeymapFont</include>
+			<posx>80</posx>
+			<posy>502</posy>
+			<label>31181</label>
+			<align>left</align>
+			<visible>!Control.HasFocus(1) + !Control.HasFocus(2) + Player.HasVideo</visible>
+			<animation effect="fade" delay="800" time="250">WindowOpen</animation>
+			<animation effect="fade" end="0" time="100">WindowClose</animation>
+		</control>
+		<control type="label">
+			<description>Select Label</description>
+			<posx>321</posx>
+			<posy>502</posy>
+			<label>31024</label>
+			<align>right</align>
+			<font>font12</font>
+			<shadowcolor>shadow-black</shadowcolor>
+			<animation effect="fade" delay="800" time="250">WindowOpen</animation>
+			<animation effect="fade" end="0" time="100">WindowClose</animation>
+		</control>
+		<!-- My version Rocky5 end -->
+	</controls>
+</window>        

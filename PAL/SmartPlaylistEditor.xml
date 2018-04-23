@@ -1,0 +1,352 @@
+<window id="136">
+	<defaultcontrol always="true">12</defaultcontrol>
+	<controls>
+		<control type="image">
+			<description>Black translucent backdrop</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>576</height>
+			<texture>guide-black.png</texture>
+			<colordiffuse>D0FFFFFF</colordiffuse>
+			<animation effect="fade" time="50">WindowOpen</animation>
+			<animation effect="fade" delay="450" time="100">WindowClose</animation>
+		</control>
+		<control type="group">
+			<animation effect="slide" time="250" start="700,0" end="100">WindowOpen</animation>
+			<animation effect="slide" time="250" delay="250" start="100" end="700,0">WindowClose</animation>
+			<animation effect="slide" time="250"  start="0,0" end="230,0" condition="Window.IsVisible(smartplaylistrule)">Conditional</animation>
+			<include>InfoDialogs</include>
+		</control>
+		<control type="group">
+			<visible>!Window.IsVisible(smartplaylistrule)</visible>
+			<animation effect="fade" delay="450" time="200">WindowOpen</animation>
+			<animation effect="fade" time="200">WindowClose</animation>
+			<animation effect="fade" delay="200" time="200">Visible</animation>
+			<control type="label">
+				<description>dialog Heading</description>
+				<posx>200</posx>
+				<posy>40</posy>
+				<width>270</width>
+				<label>21432</label>
+				<align>left</align>
+				<include>DialogTitle</include>
+			</control>
+			<control type="group">
+				<posx>200</posx>
+				<posy>90</posy>
+				<control type="label" id="0">
+					<description>Name Label</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>420</width>
+					<font>font14</font>
+					<textcolor>TextcolorBlack</textcolor>
+					<label>21433</label>
+				</control>
+				<control type="button" id="12">
+					<description>Name Button</description>
+					<posx>0</posx>
+					<posy>25</posy>
+					<width>480</width>
+					<height>40</height>
+					<font>font13</font>
+					<textoffsetx>12</textoffsetx>
+					<textwidth>380</textwidth>
+					<aligny>center</aligny>
+					<texturefocus border="9">guide-selectmediabutton-focus.png</texturefocus>
+					<texturenofocus border="9">guide-selectmediabutton-nofocus.png</texturenofocus>
+					<label>-</label>
+					<onup>9001</onup>
+					<onleft>12</onleft>
+					<onright>12</onright>
+					<ondown>10</ondown>
+				</control>
+				<control type="label">
+					<description>rules label</description>
+					<posx>0</posx>
+					<posy>65</posy>
+					<width>420</width>
+					<align>left</align>
+					<font>font14</font>
+					<label>21434</label>
+					<textcolor>TextcolorBlack</textcolor>
+				</control>
+				<control type="list" id="10">
+					<description>Rules List Control</description>
+					<posx>0</posx>
+					<posy>90</posy>
+					<width>370</width>
+					<height>116</height>
+					<onup>12</onup>
+					<onleft>9000</onleft>
+					<onright>9000</onright>
+					<ondown>16</ondown>
+					<itemlayout width="370" height="38">
+						<control type="image">
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>370</width>
+							<height>40</height>
+							<texture border="9">guide-selectmediabutton-nofocus.png</texture>
+						</control>
+						<control type="label">
+							<posx>10</posx>
+							<posy>0</posy>
+							<width>350</width>
+							<height>40</height>
+							<aligny>center</aligny>
+							<info>ListItem.Label</info>
+							<textcolor>TextcolorBlack</textcolor>
+							<selectedcolor>listselectedcolor</selectedcolor>
+							<font>font13</font>
+						</control>
+					</itemlayout>
+					<focusedlayout width="370" height="38">
+						<control type="image">
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>370</width>
+							<height>40</height>
+							<texture border="9">guide-selectmediabutton-focus.png</texture>
+							<visible>Control.HasFocus(10)</visible>
+						</control>
+						<control type="image">
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>370</width>
+							<height>40</height>
+							<texture border="9">guide-selectmediabutton-nofocus.png</texture>
+							<visible>!Control.HasFocus(10)</visible>
+						</control>
+						<control type="label">
+							<posx>10</posx>
+							<posy>0</posy>
+							<width>350</width>
+							<height>40</height>
+							<aligny>center</aligny>
+							<info>ListItem.Label</info>
+							<textcolor>TextcolorBlack</textcolor>
+							<selectedcolor>listselectedcolor</selectedcolor>
+							<font>font13</font>
+						</control>
+					</focusedlayout>
+				</control>
+				<control type="group" id="9000">
+					<control type="button" id="13">
+						<description>Add Rule Button</description>
+						<posx>380</posx>
+						<posy>90</posy>
+						<height>40</height>
+						<width>100</width>
+						<font>font12</font>
+						<textoffsetx>12</textoffsetx>
+						<label>15019</label>
+						<align>center</align>
+						<aligny>center</aligny>
+						<texturefocus border="9">guide-selectmediabutton-focus.png</texturefocus>
+						<texturenofocus border="9">guide-selectmediabutton-nofocus.png</texturenofocus>
+						<onup>17</onup>
+						<onleft>10</onleft>
+						<onright>10</onright>
+						<ondown>14</ondown>
+					</control>
+					<control type="button" id="14">
+						<description>Remove Rule Button</description>
+						<posx>380</posx>
+						<posy>128</posy>
+						<height>40</height>
+						<width>100</width>
+						<font>font12</font>
+						<textoffsetx>12</textoffsetx>
+						<label>1210</label>
+						<align>center</align>
+						<aligny>center</aligny>
+						<texturefocus border="9">guide-selectmediabutton-focus.png</texturefocus>
+						<texturenofocus border="9">guide-selectmediabutton-nofocus.png</texturenofocus>
+						<onup>13</onup>
+						<onleft>10</onleft>
+						<onright>10</onright>
+						<ondown>15</ondown>
+					</control>
+					<control type="button" id="15">
+						<description>Edit Rule Button</description>
+						<posx>380</posx>
+						<posy>166</posy>
+						<height>40</height>
+						<width>100</width>
+						<font>font12</font>
+						<textoffsetx>12</textoffsetx>
+						<label>21435</label>
+						<align>center</align>
+						<aligny>center</aligny>
+						<texturefocus border="9">guide-selectmediabutton-focus.png</texturefocus>
+						<texturenofocus border="9">guide-selectmediabutton-nofocus.png</texturenofocus>
+						<onup>14</onup>
+						<onleft>10</onleft>
+						<onright>10</onright>
+						<ondown>16</ondown>
+					</control>
+				</control>
+
+				<control type="spincontrolex" id="16">
+					<posx>0</posx>
+					<posy>210</posy>
+					<width>480</width>
+					<height>40</height>
+					<textoffsetx>12</textoffsetx>
+					<label>21424</label>
+					<font>font13</font>
+					<texturefocus border="9">guide-selectmediabutton-focus.png</texturefocus>
+					<texturenofocus border="9">guide-selectmediabutton-nofocus.png</texturenofocus>
+					<onright>16</onright>
+					<onleft>16</onleft>
+					<onup>10</onup>
+					<ondown>17</ondown>
+				</control>
+
+				<control type="spincontrolex" id="17">
+					<posx>0</posx>
+					<posy>250</posy>
+					<width>480</width>
+					<height>40</height>
+					<textoffsetx>12</textoffsetx>
+					<label>21427</label>
+					<font>font13</font>
+					<texturefocus border="9">guide-selectmediabutton-focus.png</texturefocus>
+					<texturenofocus border="9">guide-selectmediabutton-nofocus.png</texturenofocus>
+					<onright>17</onright>
+					<onleft>17</onleft>
+					<onup>16</onup>
+					<ondown>18</ondown>
+				</control>
+
+				<control type="spincontrolex" id="18">
+					<posx>0</posx>
+					<posy>290</posy>
+					<width>350</width>
+					<height>40</height>
+					<textoffsetx>12</textoffsetx>
+					<label>21429</label>
+					<font>font13</font>
+					<texturefocus border="9">guide-selectmediabutton-focus.png</texturefocus>
+					<texturenofocus border="9">guide-selectmediabutton-nofocus.png</texturenofocus>
+					<onright>19</onright>
+					<onleft>19</onleft>
+					<onup>17</onup>
+					<ondown>9001</ondown>
+				</control>
+
+				<control type="togglebutton" id="19">
+					<posx>350</posx>
+					<posy>290</posy>
+					<width>130</width>
+					<height>40</height>
+					<textoffsetx>12</textoffsetx>
+					<aligny>center</aligny>
+					<texturefocus border="9">guide-selectmediabutton-focus.png</texturefocus>
+					<texturenofocus border="9">guide-selectmediabutton-nofocus.png</texturenofocus>
+					<alttexturefocus border="9">guide-selectmediabutton-focus.png</alttexturefocus>
+					<alttexturenofocus border="9">guide-selectmediabutton-nofocus.png</alttexturenofocus>
+					<label>21431</label>
+					<altlabel>21430</altlabel>
+					<onright>18</onright>
+					<onleft>18</onleft>
+					<onup>17</onup>
+					<ondown>9001</ondown>
+				</control>
+				<control type="group" id="9001">
+					<control type="button" id="20">
+						<description>Ok Button</description>
+						<posx>280</posx>
+						<posy>335</posy>
+						<width>100</width>
+						<height>40</height>
+						<textoffsetx>12</textoffsetx>
+						<align>center</align>
+						<aligny>center</aligny>
+						<texturefocus border="9">guide-selectmediabutton-focus.png</texturefocus>
+						<texturenofocus border="9">guide-selectmediabutton-nofocus.png</texturenofocus>
+						<label>186</label>
+						<onup>18</onup>
+						<onleft>21</onleft>
+						<onright>21</onright>
+						<ondown>12</ondown>
+					</control>
+					<control type="button" id="21">
+						<description>Cancel Button</description>
+						<posx>380</posx>
+						<posy>335</posy>
+						<width>100</width>
+						<height>40</height>
+						<align>center</align>
+						<aligny>center</aligny>
+						<texturefocus border="9">guide-selectmediabutton-focus.png</texturefocus>
+						<texturenofocus border="9">guide-selectmediabutton-nofocus.png</texturenofocus>
+						<label>222</label>
+						<onup>18</onup>
+						<onleft>20</onleft>
+						<onright>20</onright>
+						<ondown>12</ondown>
+					</control>
+				</control>
+			</control>
+		</control>
+		<control type="group">
+			<animation effect="slide" time="250" start="600,0" end="0">WindowOpen</animation>
+			<animation effect="slide" time="250" delay="250" start="0" end="600,0">WindowClose</animation>
+			<control type="image">
+				<description>Back Button</description>
+				<posx>650</posx>
+				<posy>475</posy>
+				<include>Button-Map-Texture-Width</include>
+				<height>21</height>
+				<texture>button-Back.png</texture>
+			</control>
+			<control type="image">
+				<description>A Button</description>
+				<posx>665</posx>
+				<posy>498</posy>
+				<include>Button-Map-Texture-Width</include>
+				<height>21</height>
+				<texture>button-A.png</texture>
+			</control>
+			<control type="label">
+				<description>Back Label</description>
+				<posx>642</posx>
+				<posy>479</posy>
+				<label>31027</label>
+				<align>right</align>
+				<font>font12</font>
+				<textcolor>TextcolorWhite</textcolor>
+			</control>
+			<control type="label">
+				<description>Select Label</description>
+				<posx>656</posx>
+				<posy>501</posy>
+				<label>31024</label>
+				<align>right</align>
+				<font>font12</font>
+				<textcolor>TextcolorWhite</textcolor>
+			</control>
+			<control type="image">
+				<description>Y Button</description>
+				<posx>220</posx>
+				<posy>475</posy>
+				<include>Button-Map-Texture-Width</include>
+				<height>21</height>
+				<texture>button-Y-turnedoff.png</texture>
+				<animation effect="slide" time="250"  start="0,0" end="230,0" condition="Window.IsVisible(smartplaylistrule)">Conditional</animation>
+			</control>
+			<control type="image">
+				<description>X Button</description>
+				<posx>205</posx>
+				<posy>498</posy>
+				<include>Button-Map-Texture-Width</include>
+				<height>21</height>
+				<texture>button-X-turnedoff.png</texture>
+				<animation effect="slide" time="250"  start="0,0" end="230,0" condition="Window.IsVisible(smartplaylistrule)">Conditional</animation>
+			</control>
+		</control>
+	</controls>
+</window>      

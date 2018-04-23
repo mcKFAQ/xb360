@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<strings>
+  <string id="0">Theme Browser</string>
+  <string id="1">Thema Voorbeeld</string>
+
+  <string id="15">Thema's</string>
+  <string id="20">© </string>
+  <string id="25">KB</string>
+  <string id="30">MB</string>
+
+  <string id="101">Auteur: </string>
+  <string id="102">Grootte: </string>
+  <string id="103">Ingezonden: </string>
+  <string id="104">Downloads: </string>
+  <string id="105">Beschrijving</string>
+
+  <string id="250">Ok</string>
+  <string id="251">Afbreken</string>
+  <string id="252">Update</string>
+  <string id="253">Credits</string>
+  <string id="254">Download</string>
+  <string id="255">Voorbeeld</string>
+  <string id="256">Terug</string>
+
+  <!-- Download Dialoog/Notificaties -->
+  <string id="300">Downloaden van thema:</string>
+  <string id="301">Thema geinstaleerd</string>
+  <string id="302">Download mislukt</string>
+  <string id="303">Download afgebroken</string>
+
+  <!-- Voltooid Dialog -->
+  <string id="305">Download Voltooid</string>
+  <string id="306"> </string>
+  <string id="307">Bij Uiterlijk instellingen kan&#10;je de thema selecteren.</string>
+
+  <!-- Afgebroken/Mislukt Dialog -->
+  <string id="310">Download Afgebroken</string>
+  <string id="311"> </string>
+  <string id="312">Fout bij het downloaden van de server.</string>
+
+  <!-- Theme Geinstaleerd Dialoog -->
+  <string id="315">Thema is al geinstalleerd.</string>
+  <string id="316"> </string>
+  <string id="317">Wil je 'm opnieuw downloaden?</string>
+
+  <!-- Huidige/Actieve Thema Dialoog -->
+  <string id="320">Kan geen actieve thema downloaden!</string>
+  <string id="321"> </string>
+  <string id="322">Verander de huidige thema bij&#10;Uiterlijk instellingen om de thema&#10;opnieuw te kunnen downloaden.</string>
+
+  <!-- Reset Cache Dialoog -->
+  <string id="325">Het resetten van de cache vereist het script opnieuw te starten.</string>
+  <string id="326"> </string>
+  <string id="327">Weet je zeker dat je de cache wilt resetten?</string>
+
+  <!-- Sorteer categorieën -->
+  <string id="401">Alfabetische Volgorde</string>
+  <string id="402">Laatste Inzendingen</string>
+  <string id="403">Meest Gedownload</string>
+
+  <string id="500">Onbekend</string>
+  <string id="501">Geen omschrijving beschikbaar</string>
+  <string id="502">Laden</string>
+  <string id="503">Niet beschikbaar</string>
+
+  <!-- Begin Meldingen -->
+  <string id="638">Om de Theme Browser te kunnen&#10;gebruiken heeft je XBOX een&#10;werkende netwerk connectie nodig.&#10;&#10;Controleer je netwerk instellingen&#10;en probeer het opnieuw.</string>
+  <string id="639">Dit script ondersteund alleen&#10;Team Blackbolt's MC360 skin.</string>
+  <string id="641">De server is niet beschikbaar.&#10;Probeer het opnieuw.</string>
+  <string id="642">Het opvragen van de lijst met themas is mislukt.&#10;Probeer het opnieuw.</string>
+</strings>

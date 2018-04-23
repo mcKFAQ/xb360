@@ -1,0 +1,559 @@
+<window id="28">
+	<defaultcontrol always="true">9000</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<controls>
+		<include>MediaSubtoFullBackGroundWhitewash</include>
+		<control type="group">
+			<posx>85</posx>
+			<animation effect="fade" delay="100" time="100" condition="![Window.Previous(fullscreenvideo) | Window.Previous(visualisation)]">WindowOpen</animation>
+			<control type="label">
+				<description>Video - Playlist Label</description>
+				<posx>20</posx>
+				<posy>42</posy>
+				<label>31090</label>
+				<align>left</align>
+				<font>font18</font>
+				<shadowcolor>shadow-black</shadowcolor>
+			</control>
+			<control type="label">
+				<description>List Label - Now Playing</description>
+				<posx>270</posx>
+				<posy>85</posy>
+				<label>13350</label>
+				<align>left</align>
+				<font>font16</font>
+				<textcolor>TextcolorBlack</textcolor>
+				<shadowcolor>shadow-grey</shadowcolor>
+				<visible>Player.HasVideo</visible>
+			</control>
+			<control type="group" id="9000">
+				<control type="image" id="1">
+					<description>Media Background</description>
+					<posx>0</posx>
+					<posy>85</posy>
+					<width>260</width>
+					<height>405</height>
+					<texture border="10">guide-panel2.png</texture>
+				</control>
+				<control type="button" id="208">
+					<description>Skip Back Button</description>
+					<posx>10</posx>
+					<posy>100</posy>
+					<width>40</width>
+					<height>32</height>
+					<texturefocus>Playlist_Button_Active.png</texturefocus>
+					<texturenofocus>Playlist_Button.png</texturenofocus>
+					<pulseonselect>no</pulseonselect>
+					<onleft>50</onleft>
+					<onright>209</onright>
+					<onup>2</onup>
+					<ondown>2</ondown>
+					<onclick>XBMC.PlayerControl(Previous)</onclick>
+				</control>
+				<control type="image">
+					<description>Skip Back Button Icon</description>
+					<posy>106</posy>
+					<posx>20</posx>
+					<width>20</width>
+					<height>20</height>
+					<texture>mediacontrol-skipback.png</texture>
+				</control>
+				<control type="button" id="209">
+					<description>Rewind Back Button</description>
+					<posx>50</posx>
+					<posy>100</posy>
+					<width>40</width>
+					<height>32</height>
+					<texturefocus>Playlist_Button_Active.png</texturefocus>
+					<texturenofocus>Playlist_Button.png</texturenofocus>
+					<pulseonselect>no</pulseonselect>
+					<onleft>208</onleft>
+					<onright>210</onright>
+					<onup>2</onup>
+					<ondown>2</ondown>
+					<onclick>XBMC.PlayerControl(Rewind)</onclick>
+				</control>
+				<control type="image">
+					<description>Rewind Button Icon</description>
+					<posy>106</posy>
+					<posx>58</posx>
+					<width>20</width>
+					<height>20</height>
+					<texture>mediacontrol-rewind.png</texture>
+				</control>
+				<control type="button" id="210">
+					<description>Stop Button</description>
+					<posx>90</posx>
+					<posy>100</posy>
+					<width>40</width>
+					<height>32</height>
+					<texturefocus>Playlist_Button_Active.png</texturefocus>
+					<texturenofocus>Playlist_Button.png</texturenofocus>
+					<pulseonselect>no</pulseonselect>
+					<onleft>209</onleft>
+					<onright>211</onright>
+					<onup>2</onup>
+					<ondown>2</ondown>
+					<onclick>XBMC.PlayerControl(Stop)</onclick>
+				</control>
+				<control type="image">
+					<description>Stop Button Icon</description>
+					<posy>106</posy>
+					<posx>100</posx>
+					<width>20</width>
+					<height>20</height>
+					<texture>mediacontrol-stop.png</texture>
+				</control>
+				<control type="button" id="211">
+					<description>Pause Button</description>
+					<posx>130</posx>
+					<posy>100</posy>
+					<width>40</width>
+					<height>32</height>
+					<texturefocus>Playlist_Button_Active.png</texturefocus>
+					<texturenofocus>Playlist_Button.png</texturenofocus>
+					<pulseonselect>no</pulseonselect>
+					<onleft>210</onleft>
+					<onright>212</onright>
+					<onup>2</onup>
+					<ondown>2</ondown>
+					<onclick>XBMC.PlayerControl(Play)</onclick>
+				</control>
+				<control type="image">
+					<description>Pause Button Icon</description>
+					<posy>106</posy>
+					<posx>140</posx>
+					<width>20</width>
+					<height>20</height>
+					<texture>mediacontrol-pause.png</texture>
+					<visible>!Player.Paused</visible>
+				</control>
+				<control type="image">
+					<description>Play Button Icon</description>
+					<posy>106</posy>
+					<posx>140</posx>
+					<width>20</width>
+					<height>20</height>
+					<texture>mediacontrol-play.png</texture>
+					<visible>Player.Paused</visible>
+				</control>
+				<control type="button" id="212">
+					<description>FF Button</description>
+					<posx>170</posx>
+					<posy>100</posy>
+					<width>40</width>
+					<height>32</height>
+					<texturefocus>Playlist_Button_Active.png</texturefocus>
+					<texturenofocus>Playlist_Button.png</texturenofocus>
+					<pulseonselect>no</pulseonselect>
+					<onleft>211</onleft>
+					<onright>213</onright>
+					<onup>2</onup>
+					<ondown>2</ondown>
+					<onclick>XBMC.PlayerControl(Forward)</onclick>
+				</control>
+				<control type="image">
+					<description>Fast Forward Button Icon</description>
+					<posy>106</posy>
+					<posx>180</posx>
+					<width>20</width>
+					<height>20</height>
+					<texture>mediacontrol-fastforward.png</texture>
+				</control>
+				<control type="button" id="213">
+					<description>Skip Foward Button</description>
+					<posx>210</posx>
+					<posy>100</posy>
+					<width>40</width>
+					<height>32</height>
+					<texturefocus>Playlist_Button_Active.png</texturefocus>
+					<texturenofocus>Playlist_Button.png</texturenofocus>
+					<pulseonselect>no</pulseonselect>
+					<onleft>212</onleft>
+					<onright>50</onright>
+					<onup>2</onup>
+					<ondown>2</ondown>
+					<onclick>XBMC.PlayerControl(Next)</onclick>
+				</control>
+				<control type="image">
+					<description>Skip Forward Button Icon</description>
+					<posy>106</posy>
+					<posx>220</posx>
+					<width>20</width>
+					<height>20</height>
+					<texture>mediacontrol-skipforward.png</texture>
+				</control>
+			</control>
+			<control type="group" id="9001">
+				<control type="image">
+					<description>separator image</description>
+					<posx>20</posx>
+					<posy>140</posy>
+					<width>220</width>
+					<height>1</height>
+					<texture>divider.png</texture>
+				</control>
+				<control type="image">
+					<description>View As Icon</description>
+					<posx>25</posx>
+					<posy>147</posy>
+					<height>28</height>
+					<include>Sub-Common-Icon-Width</include>
+					<texture>icon-viewas.png</texture>
+				</control>
+				<control type="button" id="2">
+					<description>View As Icons button</description>
+					<posx>10</posx>
+					<posy>140</posy>
+					<width>240</width>
+					<height>45</height>
+					<texturefocus>button-focus.png</texturefocus>
+					<texturenofocus>button-nofocus.png</texturenofocus>
+					<align>left</align>
+					<textoffsetx>50</textoffsetx>
+					<label>100</label>
+					<onleft>50</onleft>
+					<onright>50</onright>
+					<onup>211</onup>
+					<ondown>20</ondown>
+					<shadowcolor>shadow-grey</shadowcolor>
+					<pulseonselect>no</pulseonselect>
+				</control>
+				<control type="image">
+					<description>Shuffle Icon</description>
+					<posx>25</posx>
+					<posy>187</posy>
+					<height>28</height>
+					<include>Sub-Common-Icon-Width</include>
+					<texture>icon-shuffle.png</texture>
+					<animation effect="fade" time="100">VisibleChange</animation>
+					<visible>ControlGroup(9001).HasFocus</visible>
+				</control>
+				<control type="radiobutton" id="20">
+					<description>Shuffle button</description>
+					<posx>10</posx>
+					<posy>180</posy>
+					<width>240</width>
+					<height>45</height>
+					<texturefocus>button-focus.png</texturefocus>
+					<texturenofocus>button-nofocus.png</texturenofocus>
+					<align>left</align>
+					<textoffsetx>50</textoffsetx>
+					<label>191</label>
+					<onleft>50</onleft>
+					<onright>50</onright>
+					<onup>2</onup>
+					<ondown>26</ondown>
+					<shadowcolor>shadow-grey</shadowcolor>
+					<animation effect="fade" time="100">VisibleChange</animation>
+					<visible>ControlGroup(9001).HasFocus</visible>
+				</control>
+				<control type="image">
+					<description>Repeat Icon</description>
+					<posx>25</posx>
+					<posy>227</posy>
+					<height>28</height>
+					<include>Sub-Common-Icon-Width</include>
+					<texture>icon-repeat.png</texture>
+					<animation effect="fade" time="100">VisibleChange</animation>
+					<visible>ControlGroup(9001).HasFocus</visible>
+				</control>
+				<control type="button" id="26">
+					<description>Repeat button</description>
+					<posx>10</posx>
+					<posy>220</posy>
+					<width>240</width>
+					<height>45</height>
+					<texturefocus>button-focus.png</texturefocus>
+					<texturenofocus>button-nofocus.png</texturenofocus>
+					<align>left</align>
+					<textoffsetx>50</textoffsetx>
+					<label>486</label>
+					<onleft>50</onleft>
+					<onright>50</onright>
+					<onup>20</onup>
+					<ondown>21</ondown>
+					<shadowcolor>shadow-grey</shadowcolor>
+					<animation effect="fade" time="100">VisibleChange</animation>
+					<visible>ControlGroup(9001).HasFocus</visible>
+				</control>
+				<control type="image">
+					<description>Save Icon</description>
+					<posx>25</posx>
+					<posy>267</posy>
+					<height>28</height>
+					<include>Sub-Common-Icon-Width</include>
+					<texture>icon-gamesaves.png</texture>
+					<animation effect="fade" time="100">VisibleChange</animation>
+					<visible>ControlGroup(9001).HasFocus</visible>
+				</control>
+				<control type="button" id="21">
+					<description>Save button</description>
+					<posx>10</posx>
+					<posy>260</posy>
+					<width>240</width>
+					<height>45</height>
+					<texturefocus>button-focus.png</texturefocus>
+					<texturenofocus>button-nofocus.png</texturenofocus>
+					<align>left</align>
+					<textoffsetx>50</textoffsetx>
+					<label>190</label>
+					<onleft>50</onleft>
+					<onright>50</onright>
+					<onup>26</onup>
+					<ondown>22</ondown>
+					<shadowcolor>shadow-grey</shadowcolor>
+					<animation effect="fade" time="100">VisibleChange</animation>
+					<visible>ControlGroup(9001).HasFocus</visible>
+				</control>
+				<control type="image">
+					<description>Clear Icon</description>
+					<posx>25</posx>
+					<posy>307</posy>
+					<height>28</height>
+					<include>Sub-Common-Icon-Width</include>
+					<texture>icon-clear.png</texture>
+					<animation effect="fade" time="100">VisibleChange</animation>
+					<visible>ControlGroup(9001).HasFocus</visible>
+				</control>
+				<control type="button" id="22">
+					<description>Clear button</description>
+					<posx>10</posx>
+					<posy>300</posy>
+					<width>240</width>
+					<height>45</height>
+					<texturefocus>button-focus.png</texturefocus>
+					<texturenofocus>button-nofocus.png</texturenofocus>
+					<align>left</align>
+					<textoffsetx>50</textoffsetx>
+					<label>192</label>
+					<onleft>50</onleft>
+					<onright>50</onright>
+					<onup>21</onup>
+					<ondown>211</ondown>
+					<shadowcolor>shadow-grey</shadowcolor>
+					<animation effect="fade" time="100">VisibleChange</animation>
+					<visible>ControlGroup(9001).HasFocus</visible>
+				</control>
+			</control>
+			<control type="group">
+				<visible>ControlGroup(9001).HasFocus</visible>
+				<animation effect="fade" end="100"time="100">VisibleChange</animation>
+				<control type="image" id="1">
+					<description>Vis Background small</description>
+					<posx>10</posx>
+					<posy>390</posy>
+					<width>240</width>
+					<height>90</height>
+					<texture>Playlist-Vis-Back.png</texture>
+				</control>
+				<control type="fadelabel">
+					<description>Small Video info label</description>
+					<posx>15</posx>
+					<posy>400</posy>
+					<width>230</width>
+					<height>14</height>
+					<textcolor>TextcolorGrey</textcolor>
+					<font>font12</font>
+					<label>31045</label>
+				</control>
+				<control type="fadelabel">
+					<description>Small Video Name label</description>
+					<posx>15</posx>
+					<posy>422</posy>
+					<width>230</width>
+					<height>14</height>
+					<font>font14</font>
+					<shadowcolor>shadow-grey</shadowcolor>
+					<info>VideoPlayer.Title</info>
+				</control>
+				<control type="progress">
+					<description>Small Progressbar</description>
+					<posx>15</posx>
+					<posy>452</posy>
+					<width>160</width>
+					<height>16</height>
+					<info>Player.Progress</info>
+					<texturebg>media-overlay-progress-bar.png</texturebg>
+					<lefttexture>Playlist-Progress-left.png</lefttexture>
+					<midtexture>Playlist-Progress.png</midtexture>
+					<righttexture>Playlist-Progress-right.png</righttexture>
+					<overlaytexture>-</overlaytexture>
+					<visible>Player.HasVideo</visible>
+				</control>
+				<control type="fadelabel">
+					<description>Small Video time label</description>
+					<posx>180</posx>
+					<posy>450</posy>
+					<width>65</width>
+					<height>14</height>
+					<textcolor>TextcolorGrey</textcolor>
+					<font>font12</font>
+					<info>VideoPlayer.Time</info>
+				</control>
+			</control>
+			<control type="group">
+				<visible>!ControlGroup(9001).HasFocus</visible>
+				<animation effect="fade" end="100"time="100">VisibleChange</animation>
+				<control type="image">
+					<description>Video Background</description>
+					<posx>10</posx>
+					<posy>185</posy>
+					<width>240</width>
+					<height>295</height>
+					<texture>Playlist-Vis-Back.png</texture>
+				</control>
+				<control type="videowindow">
+					<posx>20</posx>
+					<posy>270</posy>
+					<width>220</width>
+					<height>200</height>
+				</control>
+				<control type="fadelabel">
+					<description>Big Video info label</description>
+					<posx>15</posx>
+					<posy>195</posy>
+					<width>230</width>
+					<height>14</height>
+					<textcolor>TextcolorGrey</textcolor>
+					<font>font12</font>
+					<label>31045</label>
+				</control>
+				<control type="fadelabel">
+					<description>Big Video info label</description>
+					<posx>15</posx>
+					<posy>215</posy>
+					<width>230</width>
+					<height>14</height>
+					<font>font14</font>
+					<shadowcolor>shadow-grey</shadowcolor>
+					<info>VideoPlayer.Title</info>
+				</control>
+				<control type="progress">
+					<description>Big Progressbar</description>
+					<posx>15</posx>
+					<posy>242</posy>
+					<width>160</width>
+					<height>16</height>
+					<info>Player.Progress</info>
+					<texturebg>media-overlay-progress-bar.png</texturebg>
+					<lefttexture>Playlist-Progress-left.png</lefttexture>
+					<midtexture>Playlist-Progress.png</midtexture>
+					<righttexture>Playlist-Progress-right.png</righttexture>
+					<overlaytexture>-</overlaytexture>
+					<visible>Player.HasVideo</visible>
+				</control>
+				<control type="fadelabel">
+					<description>Big Video time label</description>
+					<posx>180</posx>
+					<posy>240</posy>
+					<width>65</width>
+					<height>14</height>
+					<textcolor>TextcolorGrey</textcolor>
+					<font>font12</font>
+					<info>VideoPlayer.Time</info>
+				</control>
+			</control>
+			<control type="label" id="12">
+				<description>number of files text label</description>
+				<posx>270</posx>
+				<posy>465</posy>
+				<align>Left</align>
+				<label>-</label>
+				<font>font12</font>
+				<textcolor>TextcolorBlack</textcolor>
+			</control>
+		</control>
+		<include>Playlist-Views</include>
+		<control type="group">
+			<animation effect="fade" delay="100" time="100"  condition="![Window.Previous(fullscreenvideo) | Window.Previous(visualisation)]">WindowOpen</animation>
+			<animation effect="fade" time="100" end="0">WindowClose</animation>
+			<control type="image">
+				<description>Y Button</description>
+				<posx>95</posx>
+				<posy>505</posy>
+				<include>Button-Map-Texture-Width</include>
+				<height>21</height>
+				<texture>button-Y-turnedoff.png</texture>
+			</control>
+			<control type="image">
+				<description>Y Button</description>
+				<posx>95</posx>
+				<posy>505</posy>
+				<include>Button-Map-Texture-Width</include>
+				<height>21</height>
+				<texture>button-Y.png</texture>
+				<visible>!Window.IsVisible(4) + Control.HasFocus(50) | Control.HasFocus(51)</visible>
+			</control>
+			<control type="label">
+				<description>Remove From Playlist Label</description>
+				<posx>125</posx>
+				<posy>508</posy>
+				<label>31091</label>
+				<align>left</align>
+				<include>KeymapFont</include>
+				<visible>!Window.IsVisible(4) + Control.HasFocus(50) | Control.HasFocus(51)</visible>
+			</control>
+			<control type="image">
+				<description>X Button</description>
+				<posx>82</posx>
+				<posy>525</posy>
+				<include>Button-Map-Texture-Width</include>
+				<height>21</height>
+				<texture>button-X.png</texture>
+				<visible>Player.HasAudio</visible>
+			</control>
+			<control type="image">
+				<description>X Button Off</description>
+				<posx>82</posx>
+				<posy>525</posy>
+				<include>Button-Map-Texture-Width</include>
+				<height>21</height>
+				<texture>button-X-turnedoff.png</texture>
+				<visible>!Player.HasAudio</visible>
+			</control>
+			<control type="label">
+				<description>Full-Screen Visualisation Label</description>
+				<include>KeymapFont</include>
+				<posx>115</posx>
+				<posy>528</posy>
+				<label>31180</label>
+				<align>left</align>
+				<visible>Player.HasAudio</visible>
+			</control>
+			<control type="image">
+				<description>B Button</description>
+				<posx>620</posx>
+				<posy>505</posy>
+				<include>Button-Map-Texture-Width</include>
+				<height>21</height>
+				<texture>button-B.png</texture>
+			</control>
+			<control type="label">
+				<description>Back Label</description>
+				<include>KeymapFont</include>
+				<posx>610</posx>
+				<posy>508</posy>
+				<label>31027</label>
+				<align>right</align>
+			</control>
+			<control type="image">
+				<description>A Button</description>
+				<posx>633</posx>
+				<posy>525</posy>
+				<include>Button-Map-Texture-Width</include>
+				<height>21</height>
+				<texture>button-A.png</texture>
+			</control>
+			<control type="label">
+				<description>Select Label</description>
+				<include>KeymapFont</include>
+				<posx>623</posx>
+				<posy>528</posy>
+				<label>31024</label>
+				<align>right</align>
+			</control>
+		</control>
+		<include>SubtoFullCommonsBlades</include>
+	</controls>
+</window>        

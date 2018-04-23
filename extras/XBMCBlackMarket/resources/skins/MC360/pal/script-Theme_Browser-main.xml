@@ -1,0 +1,749 @@
+<window id="3000">
+	<defaultcontrol always="true">50</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<controls>
+		<!-- SubToFull -->
+		<control type="group">
+			<animation effect="zoom" start="-77,0,892,576" end="18,0,702,576" time="100" delay="350">WindowClose</animation>
+			<animation effect="zoom" start="18,0,702,576" end="-77,0,892,576" time="100">WindowOpen</animation>
+			<include>Background-animation-sub-blades</include>
+			<include>Background-vis-sub-blades</include>
+			<control type="videowindow">
+				<description>video preview window</description>
+				<posx>-77</posx>
+				<posy>0</posy>
+				<width>892</width>
+				<height>576</height>
+				<visible>!Skin.HasSetting(backgroundvideo) + Player.HasVideo</visible>
+				<visible>!Window.IsActive(myvideoplaylist)</visible>
+			</control>
+			<control type="image">
+				<description>Orange Background Static Alpha</description>
+				<posx>-77</posx>
+				<posy>0</posy>
+				<width>892</width>
+				<height>576</height>
+				<visible>!Skin.String(KAI)</visible>
+				<texture>background-orange-alpha.png</texture>
+			</control>
+			<control type="image">
+				<description>Live Blade Background Static</description>
+				<posx>10</posx>
+				<posy>0</posy>
+				<width>702</width>
+				<height>576</height>
+				<texture>-</texture>
+				<info>Skin.String(KAI)</info>
+				<colordiffuse>D1FFFFFF</colordiffuse>
+				<animation effect="fade" delay="200" time="600">WindowOpen</animation>
+				<animation effect="zoom" start="18,0,702,576" end="-77,0,892,576" time="100">WindowOpen</animation>
+				<animation effect="fade" delay="200" time="600">WindowClose</animation>
+			</control>
+			<control type="image">
+				<description>Whitewash Glass Top Left</description>
+				<posx>-25</posx>
+				<posy>0</posy>
+				<width>16</width>
+				<height>64</height>
+				<include>Image-whitewash-glass-top-left</include>
+				<visible>!Skin.String(KAI)</visible>
+				<animation effect="slide" start="95,0" time="100" condition="![Window.Previous(fullscreenvideo) | Window.Previous(visualisation)]">WindowOpen</animation>
+				<animation effect="slide" end="95,0" time="100" delay="350" condition="![Window.Next(fullscreenvideo) | Window.Next(visualisation)]">WindowClose</animation>
+			</control>
+			<control type="image">
+				<description>Whitewash Glass Top Middle</description>
+				<posx>-9</posx>
+				<posy>0</posy>
+				<width>779</width>
+				<height>64</height>
+				<include>Image-whitewash-glass-top-middle</include>
+				<visible>!Skin.String(KAI)</visible>
+				<animation effect="zoom" end="86,0,589,64" time="100" delay="350" reversible="false" condition="![Window.Next(fullscreenvideo) | Window.Next(visualisation)]">WindowClose</animation>
+				<animation effect="zoom" start="86,0,589,64" time="100" reversible="false" condition="![Window.Previous(fullscreenvideo) | Window.Previous(visualisation)]">WindowOpen</animation>
+			</control>
+			<control type="image">
+				<description>Whitewash Glass Top Right</description>
+				<posx>770</posx>
+				<posy>0</posy>
+				<width>16</width>
+				<height>64</height>
+				<include>Image-whitewash-glass-top-right</include>
+				<visible>!Skin.String(KAI)</visible>
+				<animation effect="slide" start="-95,0" time="100" condition="![Window.Previous(fullscreenvideo) | Window.Previous(visualisation)]">WindowOpen</animation>
+				<animation effect="slide" end="-95,0" time="100" delay="350" condition="![Window.Next(fullscreenvideo) | Window.Next(visualisation)]">WindowClose</animation>
+			</control>
+			<control type="image">
+				<description>Whitewash Glass Bottom Left</description>
+				<posx>-25</posx>
+				<posy>512</posy>
+				<width>16</width>
+				<height>64</height>
+				<include>Image-whitewash-glass-bottom-left</include>
+				<visible>!Skin.String(KAI)</visible>
+				<animation effect="slide" start="95,0" time="100" condition="![Window.Previous(fullscreenvideo) | Window.Previous(visualisation)]">WindowOpen</animation>
+				<animation effect="slide" end="95,0" time="100" delay="350" condition="![Window.Next(fullscreenvideo) | Window.Next(visualisation)]">WindowClose</animation>
+			</control>
+			<control type="image">
+				<description>Whitewash Glass Bottom Middle</description>
+				<posx>-9</posx>
+				<posy>512</posy>
+				<width>779</width>
+				<height>64</height>
+				<include>Image-whitewash-glass-bottom-middle</include>
+				<visible>!Skin.String(KAI)</visible>
+				<animation effect="zoom" end="86,512,589,64" time="100" delay="350" reversible="false" condition="![Window.Next(fullscreenvideo) | Window.Next(visualisation)]">WindowClose</animation>
+				<animation effect="zoom" start="86,512,589,64" time="100" reversible="false" condition="![Window.Previous(fullscreenvideo) | Window.Previous(visualisation)]">WindowOpen</animation>
+			</control>
+			<control type="image">
+				<description>Whitewash Glass Bottom Right</description>
+				<posx>770</posx>
+				<posy>512</posy>
+				<width>16</width>
+				<height>64</height>
+				<include>Image-whitewash-glass-bottom-right</include>
+				<visible>!Skin.String(KAI)</visible>
+				<animation effect="slide" start="-95,0" time="100" condition="![Window.Previous(fullscreenvideo) | Window.Previous(visualisation)]">WindowOpen</animation>
+				<animation effect="slide" end="-95,0" time="100" delay="350" condition="![Window.Next(fullscreenvideo) | Window.Next(visualisation)]">WindowClose</animation>
+			</control>
+			<control type="image">
+				<description>Whitewash Overlay Left</description>
+				<posx>-35</posx>
+				<posy>0</posy>
+				<width>32</width>
+				<height>576</height>
+				<include>Image-whitewash-overlay-left</include>
+				<animation effect="slide" start="95,0" time="100" condition="![Window.Previous(fullscreenvideo) | Window.Previous(visualisation)]">WindowOpen</animation>
+				<animation effect="slide" end="95,0" time="100" delay="350" condition="![Window.Next(fullscreenvideo) | Window.Next(visualisation)]">WindowClose</animation>
+			</control>
+			<control type="image">
+				<description>Whitewash Overlay Middle</description>
+				<posx>-3</posx>
+				<posy>0</posy>
+				<width>741</width>
+				<height>576</height>
+				<include>Image-whitewash-overlay-middle</include>
+				<animation effect="zoom" end="92,0,551,576" time="100" delay="350" reversible="false" condition="![Window.Next(fullscreenvideo) | Window.Next(visualisation)]">WindowClose</animation>
+				<animation effect="zoom" start="92,0,551,576" time="100" reversible="false" condition="![Window.Previous(fullscreenvideo) | Window.Previous(visualisation)]">WindowOpen</animation>
+			</control>
+			<control type="image">
+				<description>Whitewash Overlay Right</description>
+				<posx>738</posx>
+				<posy>0</posy>
+				<width>64</width>
+				<height>576</height>
+				<include>Image-whitewash-overlay-right</include>
+				<animation effect="slide" start="-95,0" time="100" condition="![Window.Previous(fullscreenvideo) | Window.Previous(visualisation)]">WindowOpen</animation>
+				<animation effect="slide" end="-95,0" time="100" delay="350" condition="![Window.Next(fullscreenvideo) | Window.Next(visualisation)]">WindowClose</animation>
+			</control>
+		</control>
+		<control type="multiimage">
+			<description>Loading Indicator</description>
+			<posx>310</posx>
+			<posy>238</posy>
+			<width>100</width>
+			<height>100</height>
+			<imagepath>busy</imagepath>
+			<timeperimage>100</timeperimage>
+			<fadetime>0</fadetime>
+			<loop>yes</loop>
+			<visible>Skin.HasSetting(ThemeBrowserBusy)</visible>
+			<animation effect="fade" time="300" delay="100">WindowOpen</animation>
+		</control>
+		<!-- Main -->
+		<control type="group">
+			<visible>Skin.HasSetting(ThemeBrowserReady)</visible>
+			<animation effect="fade" time="200" delay="100">WindowOpen</animation>
+			<animation effect="fade" end="200">WindowClose</animation>
+			<!-- Label / Clock / Navigation -->
+			<control type="group">
+				<posx>85</posx>
+				<control type="group" id="30">
+					<animation effect="fade" time="200">WindowOpen</animation>
+					<animation effect="fade" end="0">WindowClose</animation>
+					<!-- Navigation -->
+					<control type="group">
+	
+						<!-- highlight -->
+						<control type="image">
+							<description>Highlight Focus</description>
+							<posx>18</posx>
+							<posy>93</posy>
+							<width>230</width>
+							<height>29</height>
+							<texture>big-wide-button-focus.png</texture>
+							<visible>![Control.HasFocus(50) | Control.HasFocus(60)] + [ControlGroup(30).HasFocus(101) | ControlGroup(30).HasFocus(102) | ControlGroup(30).HasFocus(103)]</visible>
+						</control>
+
+						<!-- arrows -->
+						<control type="image">
+							<description>Arrow Left</description>
+							<posx>0</posx>
+							<posy>97</posy>
+							<width>16</width>
+							<height>16</height>
+							<texture>left-nofocus.png</texture>
+							<visible>yes</visible>
+						</control>
+						<control type="image">
+							<description>Arrow Right</description>
+							<posx>250</posx>
+							<posy>97</posy>
+							<width>16</width>
+							<height>16</height>
+							<texture>right-nofocus.png</texture>
+							<visible>yes</visible>
+						</control>
+
+						<!-- labels -->
+						<control type="label" id="401">
+							<description>Left Label (large)</description>
+							<posx>50</posx>
+							<posy>97</posy>
+							<align>left</align>
+							<font>font13</font>
+							<textcolor>TextcolorBlack</textcolor>
+							<shadowcolor>shadow-grey</shadowcolor>
+							<label>-</label>
+						</control>
+						<control type="label" id="402">
+							<description>Middle Label (medium)</description>
+							<posx>300</posx>
+							<posy>97</posy>
+							<align>left</align>
+							<font>font10</font>
+							<textcolor>TextcolorDarkGrey</textcolor>
+							<shadowcolor>shadow-grey</shadowcolor>
+							<label>-</label>
+						</control>
+						<control type="label" id="403">
+							<description>Right Label (small)</description>
+							<posx>550</posx>
+							<posy>97</posy>
+							<align>right</align>
+							<font>font10</font>
+							<textcolor>TextcolorGrey</textcolor>
+							<label>-</label>
+						</control>
+
+						<!-- invisible buttons -->
+						<control type="button" id="101">
+							<description>Name Invisible Button</description>
+							<onright>102</onright>
+							<onleft>103</onleft>
+							<onup>101</onup>
+							<ondown>50</ondown>
+							<texturefocus>-</texturefocus>
+							<texturenofocus>-</texturenofocus>
+						</control>
+						<control type="button" id="102">
+							<description>Date Invisible Button</description>
+							<onright>103</onright>
+							<onleft>101</onleft>
+							<onup>102</onup>
+							<ondown>50</ondown>
+							<texturefocus>-</texturefocus>
+							<texturenofocus>-</texturenofocus>
+						</control>
+						<control type="button" id="103">
+							<description>Download Invisible Button</description>
+							<onright>101</onright>
+							<onleft>102</onleft>
+							<onup>103</onup>
+							<ondown>50</ondown>
+							<texturefocus>-</texturefocus>
+							<texturenofocus>-</texturenofocus>
+						</control>
+
+					</control>
+				</control>
+				<!-- Window Label and Clock-->
+				<control type="group">
+					<animation effect="fade" time="200">WindowOpen</animation>
+					<animation effect="fade" end="0">WindowClose</animation>
+					<control type="label" id="20">
+						<description>Window Label</description>
+						<posx>-10</posx>
+						<posy>42</posy>
+						<align>left</align>
+						<font>font18</font>
+						<shadowcolor>shadow-black</shadowcolor>
+						<label>-</label>
+					</control>
+					<control type="label" id="33">
+						<description>Clock Label</description>
+						<posx>572</posx>
+						<posy>48</posy>
+						<label>-</label>
+						<align>right</align>
+						<font>bold14</font>
+						<shadowcolor>shadow-black</shadowcolor>
+						<visible>true</visible>
+					</control>
+				</control>
+			</control>
+			<!-- Right Panel-->
+			<control type="group">
+				<animation effect="fade" time="200">WindowOpen</animation>
+				<animation effect="fade" end="0">WindowClose</animation>
+				<control type="image">
+					<description>Media Background</description>
+					<posx>355</posx>
+					<posy>135</posy>
+					<width>310</width>
+					<height>355</height>
+					<texture border="10">guide-panel2.png</texture>
+				</control>
+				<control type="image">
+					<description>Preview Banner</description>
+					<posx>362</posx>
+					<posy>140</posy>
+					<height>80</height>
+					<width>297</width>
+					<texture>preview.png</texture>
+					<animation effect="fade" time="200">WindowOpen</animation>
+				</control>
+				<control type="label" id="120">
+					<description>Preview Label</description>
+					<posx>362</posx>
+					<posy>140</posy>
+					<height>80</height>
+					<width>297</width>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>font20</font>
+					<shadowcolor>shadow-black</shadowcolor>
+					<label>-</label>
+					<animation effect="fade" time="200">WindowOpen</animation>
+				</control>
+				<control type="image">
+					<description>Theme Preview Banner</description>
+					<posx>362</posx>
+					<posy>140</posy>
+					<height>80</height>
+					<width>297</width>
+					<info>ListItem.Thumb</info>
+					<animation effect="fade" time="200">WindowOpen</animation>
+				</control>
+				<control type="image" id="99">
+					<description>Theme Preview Banner Overlay</description>
+					<posx>362</posx>
+					<posy>140</posy>
+					<height>80</height>
+					<width>297</width>
+					<info>ListItem.ActualIcon</info>
+					<animation effect="fade" time="200">VisibleChange</animation>
+					<animation effect="fade" time="100">Hidden</animation>
+				</control>
+				<control type="image">
+					<description>Divider Panel</description>
+					<posx>361</posx>
+					<posy>220</posy>
+					<width>298</width>
+					<height>1</height>
+					<texture>divider.png</texture>
+					<include>media-button-fades</include>
+					<animation effect="fade" time="200">WindowOpen</animation>
+					<animation effect="fade" end="0">WindowClose</animation>
+				</control>
+				<control type="multiimage">
+					<description>Header Background Shine</description>
+					<posx>260</posx>
+					<posy>140</posy>
+					<height>80</height>
+					<width>450</width>
+					<include>Shine</include>
+				</control>
+				<control type="label" id="21">
+					<visible>false</visible>
+					<description>Header Text</description>
+					<posx>370</posx>
+					<posy>155</posy>
+					<width>265</width>
+					<label>-</label>
+					<font>font13</font>
+					<textcolor>TextcolorBlack</textcolor>
+					<shadowcolor>shadow-grey</shadowcolor>
+				</control>
+				<control type="label">
+					<description>Theme Label</description>
+					<posx>370</posx>
+					<posy>225</posy>
+					<info>ListItem.Label</info>
+					<wrapmultiline>true</wrapmultiline>
+					<font>font13</font>
+					<textcolor>TextcolorBlack</textcolor>
+					<shadowcolor>shadow-grey</shadowcolor>
+				</control>
+				<control type="label">
+					<description>Theme Author</description>
+					<posx>370</posx>
+					<posy>245</posy>
+					<width>120</width>
+					<info>ListItem.Director</info>
+					<font>font10</font>
+					<textcolor>TextcolorDarkGrey</textcolor>
+					<selectedcolor>listselectedcolor</selectedcolor>
+				</control>
+				<control type="label" id="203">
+					<description>Theme Submit Label</description>
+					<posx>370</posx>
+					<posy>315</posy>
+					<label>-</label>
+					<font>font12</font>
+					<textcolor>TextcolorBlack</textcolor>
+					<shadowcolor>shadow-grey</shadowcolor>
+				</control>
+				<control type="label">
+					<description>Theme Submit Date</description>
+					<posx>370</posx>
+					<posy>335</posy>
+					<info>ListItem.Duration</info>
+					<font>font12</font>
+					<textcolor>TextcolorBlack</textcolor>
+					<shadowcolor>shadow-grey</shadowcolor>
+				</control>
+				<control type="label">
+					<description>Description Label</description>
+					<posx>370</posx>
+					<posy>367</posy>
+					<width>120</width>
+					<label>$LOCALIZE[15053]</label>
+					<wrapmultiline>true</wrapmultiline>
+					<font>font12</font>
+					<textcolor>TextcolorBlack</textcolor>
+					<shadowcolor>shadow-grey</shadowcolor>
+				</control>
+				<control type="textbox">
+					<description>Theme Description</description>
+					<posx>370</posx>
+					<posy>400</posy>
+					<height>100</height>
+					<width>280</width>
+					<font>font12</font>
+					<info>ListItem.PlotOutline</info>
+					<textcolor>TextcolorBlack</textcolor>
+					<shadowcolor>shadow-grey</shadowcolor>
+				</control>
+				<control type="image">
+					<description>Divider Panel</description>
+					<posx>361</posx>
+					<posy>362</posy>
+					<width>298</width>
+					<height>1</height>
+					<texture>divider.png</texture>
+					<include>media-button-fades</include>
+					<animation effect="fade" time="200">WindowOpen</animation>
+					<animation effect="fade" end="0">WindowClose</animation>
+				</control>
+				<control type="image">
+					<description>Divider Panel</description>
+					<posx>361</posx>
+					<posy>392</posy>
+					<width>298</width>
+					<height>1</height>
+					<texture>divider.png</texture>
+					<include>media-button-fades</include>
+					<animation effect="fade" time="200">WindowOpen</animation>
+					<animation effect="fade" end="0">WindowClose</animation>
+				</control>
+			</control>
+			<!-- List Dividers -->
+			<control type="group">
+				<animation effect="fade" time="200">WindowOpen</animation>
+				<animation effect="fade" end="0">WindowClose</animation>
+				<control type="image" id="201">
+					<description>Divider image 1</description>
+					<posx>80</posx>
+					<posy>137</posy>
+					<width>270</width>
+					<height>1</height>
+					<texture>divider.png</texture>
+					<include>media-button-fades</include>
+				</control>
+				<control type="image" id="202">
+					<description>Divider image 2</description>
+					<posx>80</posx>
+					<posy>194</posy>
+					<width>270</width>
+					<height>1</height>
+					<texture>divider.png</texture>
+					<include>media-button-fades</include>
+				</control>
+				<control type="image" id="203">
+					<description>Divider image 3</description>
+					<posx>80</posx>
+					<posy>250</posy>
+					<width>270</width>
+					<height>1</height>
+					<texture>divider.png</texture>
+					<include>media-button-fades</include>
+				</control>
+				<control type="image" id="204">
+					<description>Divider image 4</description>
+					<posx>80</posx>
+					<posy>306</posy>
+					<width>270</width>
+					<height>1</height>
+					<texture>divider.png</texture>
+					<include>media-button-fades</include>
+				</control>
+				<control type="image" id="205">
+					<description>Divider image 5</description>
+					<posx>80</posx>
+					<posy>362</posy>
+					<width>270</width>
+					<height>1</height>
+					<texture>divider.png</texture>
+					<include>media-button-fades</include>
+				</control>
+				<control type="image" id="206">
+					<description>Divider image 6</description>
+					<posx>80</posx>
+					<posy>418</posy>
+					<width>270</width>
+					<height>1</height>
+					<texture>divider.png</texture>
+					<include>media-button-fades</include>
+				</control>
+			</control>
+			<!-- Control List -->
+			<control type="group">
+				<control type="list" id="50">
+					<posx>77</posx>
+					<posy>137</posy>
+					<width>280</width>
+					<height>282</height>
+					<onleft>30</onleft>
+					<onright>60</onright>
+					<onup>50</onup>
+					<ondown>50</ondown>
+					<scrolltime>0</scrolltime>
+					<spacebetweenitems>0</spacebetweenitems>
+					<pagecontrol>60</pagecontrol>
+					<animation effect="fade" time="200">WindowOpen</animation>
+					<animation effect="fade" end="0">WindowClose</animation>
+					<itemlayout height="56">
+						<control type="label">
+							<posx>16</posx>
+							<posy>9</posy>
+							<width>220</width>
+							<font>font12</font>
+							<textcolor>TextcolorBlack</textcolor>
+							<shadowcolor>shadow-grey</shadowcolor>
+							<info>ListItem.Label</info>
+						</control>
+						<control type="label">
+							<posx>16</posx>
+							<posy>30</posy>
+							<width>220</width>
+							<height>22</height>
+							<font>font10</font>
+							<textcolor>TextcolorDarkGrey</textcolor>
+							<selectedcolor>listselectedcolor</selectedcolor>
+							<info>ListItem.Label2</info>
+						</control>
+					</itemlayout>
+					<focusedlayout height="56">
+						<control type="image" id="207">
+							<width>320</width>
+							<height>388</height>
+							<posx>-20</posx>
+							<posy>-249</posy>
+							<texture>homebutton-5a.png</texture>
+							<visible>Control.HasFocus(50)</visible>
+						</control>
+						<control type="image" id="208">
+							<width>320</width>
+							<height>388</height>
+							<posx>-20</posx>
+							<posy>-249</posy>
+							<texture>homebutton-5-shadow.png</texture>
+							<animation effect="fade" delay="100" time="175">Focus</animation>
+							<visible>Control.HasFocus(50)</visible>
+						</control>
+						<control type="image">
+							<width>320</width>
+							<height>388</height>
+							<posx>-20</posx>
+							<posy>-192</posy>
+							<texture>homebutton-nofocus.png</texture>
+							<visible>!Control.HasFocus(50)</visible>
+						</control>
+						<control type="image">
+							<width>320</width>
+							<height>388</height>
+							<posx>-20</posx>
+							<posy>-192</posy>
+							<texture>homebutton-shadow-nofocus.png</texture>
+							<visible>!Control.HasFocus(50)</visible>
+						</control>
+						<control type="label">
+							<posx>16</posx>
+							<posy>9</posy>
+							<width>220</width>
+							<height>22</height>
+							<font>font12</font>
+							<textcolor>TextcolorBlack</textcolor>
+							<shadowcolor>shadow-grey</shadowcolor>
+							<info>ListItem.Label</info>
+							<animation effect="slide" end="-3,0" time="275" condition="Control.HasFocus(50)">Focus</animation>
+						</control>
+						<control type="label">
+							<posx>16</posx>
+							<posy>30</posy>
+							<width>220</width>
+							<height>22</height>
+							<font>font10</font>
+							<textcolor>TextcolorDarkGrey</textcolor>
+							<selectedcolor>listselectedcolor</selectedcolor>
+							<info>ListItem.Label2</info>
+							<animation effect="slide" end="-3,0" time="275" condition="Control.HasFocus(50)">Focus</animation>
+						</control>
+					</focusedlayout>
+				</control>
+				<!-- Control List Spincontrol -->
+				<control type="group">
+					<animation effect="fade" time="200">WindowOpen</animation>
+					<animation effect="fade" end="0">WindowClose</animation>
+					<control type="spincontrol" id="60">
+						<description>Next page button</description>
+						<posx>310</posx>
+						<posy>446</posy>
+						<subtype>page</subtype>
+						<font>font12</font>
+						<onleft>50</onleft>
+						<ondown>60</ondown>
+						<onup>50</onup>
+						<textcolor>TextcolorBlack</textcolor>
+						<shadowcolor>shadow-grey</shadowcolor>
+						<showonepage>false</showonepage>
+					</control>
+				</control>
+				<control type="label">
+					<animation effect="fade" time="200">WindowOpen</animation>
+					<animation effect="fade" end="0">WindowClose</animation>
+					<description>number of files text label</description>
+					<posx>80</posx>
+					<posy>445</posy>
+					<subtype>page</subtype>
+					<info>Skin.String(ThemeBrowserListCount)</info>
+					<font>font12</font>
+					<textcolor>TextcolorBlack</textcolor>
+					<shadowcolor>shadow-grey</shadowcolor>
+				</control>
+			</control>
+			<!-- Bottom Controls-->
+			<control type="group">
+				<animation effect="fade" delay="100" time="100" condition="![Window.Previous(fullscreenvideo) | Window.Previous(visualisation)]">WindowOpen</animation>
+				<animation effect="fade" time="100" end="0">WindowClose</animation>
+				<control type="image">
+					<description>Y Button</description>
+					<posx>95</posx>
+					<posy>505</posy>
+					<include>Button-Map-Texture-Width</include>
+					<height>21</height>
+					<texture>button-Y-turnedoff.png</texture>
+					<visible>!Control.HasFocus(50)</visible>
+				</control>
+				<control type="image">
+					<description>Y Button</description>
+					<posx>95</posx>
+					<posy>505</posy>
+					<include>Button-Map-Texture-Width</include>
+					<height>21</height>
+					<texture>button-Y.png</texture>
+					<visible>Control.HasFocus(50)</visible>
+				</control>
+				<control type="label" id="405">
+					<description>Preview Label</description>
+					<posx>125</posx>
+					<posy>508</posy>
+					<label>-</label>
+					<align>left</align>
+					<include>KeymapFont</include>
+					<visible>Control.HasFocus(50)</visible>
+				</control>
+				<control type="image">
+					<description>X Button Off</description>
+					<posx>82</posx>
+					<posy>525</posy>
+					<include>Button-Map-Texture-Width</include>
+					<height>21</height>
+					<texture>button-X-turnedoff.png</texture>
+					<visible>!Player.HasMedia</visible>
+				</control>
+				<control type="image">
+					<description>X Button On</description>
+					<posx>82</posx>
+					<posy>525</posy>
+					<include>Button-Map-Texture-Width</include>
+					<height>21</height>
+					<texture>button-X.png</texture>
+					<visible>Player.HasMedia</visible>
+				</control>
+				<control type="label">
+					<description>Full-Screen Visualisation Label</description>
+					<include>KeymapFont</include>
+					<posx>115</posx>
+					<posy>528</posy>
+					<include>20002</include>
+					<align>left</align>
+					<visible>Player.HasAudio</visible>
+				</control>
+				<control type="label">
+					<description>Full-Screen Video Label</description>
+					<include>KeymapFont</include>
+					<posx>115</posx>
+					<posy>528</posy>
+					<include>20003</include>
+					<align>left</align>
+					<visible>Player.HasVideo</visible>
+				</control>
+				<control type="image">
+					<description>Back Button</description>
+					<posx>620</posx>
+					<posy>505</posy>
+					<include>Button-Map-Texture-Width</include>
+					<height>21</height>
+					<texture>button-back.png</texture>
+				</control>
+				<control type="label" id="406">
+					<description>Back Label</description>
+					<include>KeymapFont</include>
+					<posx>610</posx>
+					<posy>508</posy>
+					<label>-</label>
+					<align>right</align>
+				</control>
+				<control type="image">
+					<description>A Button</description>
+					<posx>633</posx>
+					<posy>525</posy>
+					<include>Button-Map-Texture-Width</include>
+					<height>21</height>
+					<texture>button-A.png</texture>
+					<visible>Control.HasFocus(50)</visible>
+				</control>
+				<control type="image">
+					<description>A Button Off</description>
+					<posx>633</posx>
+					<posy>525</posy>
+					<include>Button-Map-Texture-Width</include>
+					<height>21</height>
+					<texture>button-A-turnedoff.png</texture>
+					<visible>!Control.HasFocus(50)</visible>
+				</control>
+				<control type="label" id="404">
+					<description>Download Label</description>
+					<include>KeymapFont</include>
+					<posx>623</posx>
+					<posy>528</posy>
+					<label>-</label>
+					<align>right</align>
+					<visible>Control.HasFocus(50)</visible>
+				</control>
+			</control>
+		</control>
+		<include>SubtoFullCommonsBlades</include>
+	</controls>
+</window>

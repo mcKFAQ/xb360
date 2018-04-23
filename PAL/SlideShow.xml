@@ -1,0 +1,233 @@
+﻿<window id="2007">
+	<defaultcontrol>2</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<controls>
+		<!-- Image Dimensions infos -->
+		<control type="image">
+			<description>preset background image</description>
+			<posx>40</posx>
+			<posy>40</posy>
+			<width>640</width>
+			<height>90</height>
+			<colordiffuse>A1FFFFFF</colordiffuse>
+			<texture>video-osd_menu_bg.png</texture>
+			<visible>Player.ShowCodec</visible>
+			<animation effect="fade" time="500">WindowOpen</animation>
+			<animation effect="fade" time="500">VisibleChange</animation>
+		</control>
+		<control type="label" id="10">
+			<description>Row 1 label</description>
+			<width>600</width>
+			<posx>75</posx>
+			<posy>50</posy>
+			<label>-</label>
+			<align>left</align>
+			<font>font12</font>
+			<visible>Player.ShowCodec</visible>
+			<animation effect="fade" time="500">WindowOpen</animation>
+			<animation effect="fade" time="500">VisibleChange</animation>
+		</control>
+		<control type="label" id="11">
+			<description>Row 2 label</description>
+			<posx>75</posx>
+			<posy>75</posy>
+			<width>600</width>
+			<label>-</label>
+			<font>font12</font>
+			<align>left</align>
+			<visible>Player.ShowCodec</visible>
+			<animation effect="fade" time="500">WindowOpen</animation>
+			<animation effect="fade" time="500">VisibleChange</animation>
+		</control>
+		<control type="label" id="12">
+			<description>Row 3 label</description>
+			<posx>75</posx>
+			<posy>100</posy>
+			<width>600</width>
+			<label>-</label>
+			<font>font12</font>
+			<align>left</align>
+			<visible>Player.ShowCodec</visible>
+			<animation effect="fade" time="500">WindowOpen</animation>
+			<animation effect="fade" time="500">VisibleChange</animation>
+		</control>
+		<!-- Pause Image for no media info on screen -->
+		<control type="image" id="13">
+			<description>Slideshow Paused Image</description>
+			<posx>630</posx>
+			<posy>100</posy>
+			<width>20</width>
+			<height>20</height>
+			<colordiffuse>A1FFFFFF</colordiffuse>
+			<texture>mediacontrol-pause.png</texture>
+			<visible>Player.ShowCodec</visible>
+			<animation effect="fade" time="500">WindowOpen</animation>
+			<animation effect="fade" time="500">VisibleChange</animation>
+		</control>
+		<control type="label" id="13">
+			<description>Slideshow Pause label</description>
+			<width>200</width>
+			<posx>620</posx>
+			<posy>100</posy>
+			<label>$LOCALIZE[108] $LOCALIZE[112]</label>
+			<visible>Player.ShowCodec</visible>
+			<animation effect="fade" time="500">WindowOpen</animation>
+			<animation effect="fade" time="500">VisibleChange</animation>
+			<align>right</align>
+			<font>font12</font>
+		</control>
+		<!-- Pause Image for no media info on screen -->
+		<control type="image" id="13">
+			<description>Slideshow Pause Panel for no info</description>
+			<posx>480</posx>
+			<posy>30</posy>
+			<width>300</width>
+			<height>40</height>
+			<colordiffuse>A1FFFFFF</colordiffuse>
+			<texture>video-osd_menu_bg.png</texture>
+			<visible>!Player.ShowCodec</visible>
+			<animation effect="fade" time="200">WindowOpen</animation>
+			<animation effect="fade" time="200">VisibleChange</animation>
+		</control>
+		<control type="image" id="13">
+			<description>Slideshow Paused Image</description>
+			<posx>650</posx>
+			<posy>40</posy>
+			<width>20</width>
+			<height>20</height>
+			<colordiffuse>A1FFFFFF</colordiffuse>
+			<texture>mediacontrol-pause.png</texture>
+			<visible>!Player.ShowCodec</visible>
+			<animation effect="fade" time="200">WindowOpen</animation>
+			<animation effect="fade" time="200">VisibleChange</animation>
+		</control>
+		<control type="label" id="13">
+			<description>Slideshow Pause label</description>
+			<width>200</width>
+			<posx>640</posx>
+			<posy>40</posy>
+			<label>$LOCALIZE[108] $LOCALIZE[112]</label>
+			<align>right</align>
+			<font>font12</font>
+			<visible>!Player.ShowCodec</visible>
+			<animation effect="fade" time="200">WindowOpen</animation>
+			<animation effect="fade" time="200">VisibleChange</animation>
+		</control>
+		<!-- media infos -->
+		<control type="image">
+			<description>media info background image</description>
+			<posx>-10</posx>
+			<posy>455</posy>
+			<width>740</width>
+			<height>150</height>
+			<visible>Player.HasMedia + Player.ShowInfo</visible>
+			<animation effect="fade" time="500">VisibleChange</animation>
+			<texture>video-osd-backgroundshadow.png</texture>
+		</control>
+		<control type="image">
+			<description>Track Info Panel</description>
+			<posx>40</posx>
+			<posy>423</posy>
+			<width>640</width>
+			<height>115</height>
+			<colordiffuse>A1FFFFFF</colordiffuse>
+			<visible>Player.HasMedia + Player.ShowInfo</visible>
+			<animation effect="fade" time="500">WindowOpen</animation>
+			<animation effect="fade" time="500">VisibleChange</animation>
+			<texture>video-osd_menu_bg.png</texture>
+		</control>
+		<control type="image">
+			<description>Jewel CD Case Back</description>
+			<posx>85</posx>
+			<posy>393</posy>
+			<width>141</width>
+			<height>156</height>
+			<visible>Player.HasMedia + Player.ShowInfo</visible>
+			<texture>music-overlay-caseinside.png</texture>
+			<animation effect="fade" time="500">WindowOpen</animation>
+			<animation effect="fade" time="500">VisibleChange</animation>
+		</control>
+		<control type="image">
+			<description>music logo</description>
+			<posx>83</posx>
+			<posy>393</posy>
+			<width>145</width>
+			<height>156</height>
+			<visible>Player.HasMedia + Player.ShowInfo</visible>
+			<info>MusicPlayer.Cover</info>
+			<animation effect="fade" time="500">WindowOpen</animation>
+			<animation effect="fade" time="500">VisibleChange</animation>
+		</control>
+		<control type="image">
+			<description>Jewel CD Case</description>
+			<posx>55</posx>
+			<posy>385</posy>
+			<width>184</width>
+			<height>179</height>
+			<visible>Player.HasMedia + Player.ShowInfo</visible>
+			<texture>music-overlay-cdcase.png</texture>
+			<animation effect="fade" time="500">WindowOpen</animation>
+			<animation effect="fade" time="500">VisibleChange</animation>
+		</control>
+		<control type="fadelabel">
+			<description>Artist label</description>
+			<width>390</width>
+			<posx>260</posx>
+			<posy>430</posy>
+			<info>MusicPlayer.Artist</info>
+			<visible>Player.HasMedia + Player.ShowInfo</visible>
+			<animation effect="fade" time="500">WindowOpen</animation>
+			<animation effect="fade" time="500">VisibleChange</animation>
+			<align>left</align>
+			<font>font14</font>
+		</control>
+		<control type="fadelabel">
+			<description>Title label</description>
+			<width>390</width>
+			<posx>260</posx>
+			<posy>455</posy>
+			<info>MusicPlayer.Title</info>
+			<visible>Player.HasMedia + Player.ShowInfo</visible>
+			<animation effect="fade" time="500">WindowOpen</animation>
+			<animation effect="fade" time="500">VisibleChange</animation>
+			<align>left</align>
+			<font>font16</font>
+		</control>
+		<control type="fadelabel">
+			<description>Album label</description>
+			<width>390</width>
+			<posx>260</posx>
+			<posy>483</posy>
+			<info>MusicPlayer.Album</info>
+			<visible>Player.HasMedia + Player.ShowInfo</visible>
+			<animation effect="fade" time="500">WindowOpen</animation>
+			<animation effect="fade" time="500">VisibleChange</animation>
+			<align>left</align>
+			<font>font12</font>
+		</control>
+		<control type="label">
+			<description>time label</description>
+			<width>300</width>
+			<posx>260</posx>
+			<posy>505</posy>
+			<label>$INFO[musicplayer.Time]$INFO[musicplayer.Duration, / ]</label>
+			<visible>Player.HasMedia + Player.ShowInfo</visible>
+			<animation effect="fade" time="500">WindowOpen</animation>
+			<animation effect="fade" time="500">VisibleChange</animation>
+			<align>left</align>
+			<font>font12</font>
+		</control>
+		<control type="label">
+			<description>Playlist</description>
+			<width>200</width>
+			<posx>640</posx>
+			<posy>505</posy>
+			<label>$INFO[musicplayer.Playlistposition,$LOCALIZE[435] ]$INFO[musicplayer.Playlistlength, / ]</label>
+			<visible>Player.HasMedia + Player.ShowInfo</visible>
+			<animation effect="fade" time="500">WindowOpen</animation>
+			<animation effect="fade" time="500">VisibleChange</animation>
+			<align>right</align>
+			<font>font12</font>
+		</control>
+	</controls>
+</window>

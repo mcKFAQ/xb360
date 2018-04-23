@@ -1,0 +1,202 @@
+<window type="dialog" id="1116">
+	<defaultcontrol>1</defaultcontrol>
+	<controls>
+		<control type="image">
+			<description>Divider</description>
+			<posx>45</posx>
+			<posy>98</posy>
+			<width>230</width>
+			<height>1</height>
+			<texture>divider.png</texture>
+			<visible>![Window.IsActive(1120) | Window.IsActive(filebrowser) | Window.IsActive(1129) | Window.IsActive(1123) | Window.IsActive(1124)]</visible>
+			<animation effect="fade" time="100">WindowOpen</animation>
+		</control>
+		<control type="image">
+			<description>Button 1 Image</description>
+			<posx>22</posx>
+			<posy>88</posy>
+			<width>290</width>
+			<height>59</height>
+			<texture>guide-button-focus.png</texture>
+			<visible>![Window.IsActive(1120) | Window.IsActive(filebrowser) | Window.IsActive(1129) | Window.IsActive(1123) | Window.IsActive(1124)] + Control.HasFocus(1)</visible>
+			<animation effect="fade" start="30" time="275" reversible="false">visible</animation>
+			<animation effect="fade" time="100">WindowOpen</animation>
+		</control>
+		<control type="button" id="1">
+			<description>Card Configuration Label</description>
+			<posx>22</posx>
+			<posy>88</posy>
+			<width>290</width>
+			<height>59</height>
+			<texturefocus>-</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<onclick>XBMC.ReplaceWindow(1129)</onclick>
+			<pulseonselect>no</pulseonselect>
+			<onleft>1</onleft>
+			<onright>1</onright>
+			<onup>6</onup>
+			<ondown>4</ondown>
+			<font>font14</font>
+			<label>31081</label>
+			<textoffsetx>30</textoffsetx>
+			<textcolor>TextcolorBlack</textcolor>
+			<shadowcolor>shadow-grey</shadowcolor>
+			<visible>![Window.IsActive(1120) | Window.IsActive(filebrowser) | Window.IsActive(1129) | Window.IsActive(1123) | Window.IsActive(1124)]</visible>
+			<animation effect="slide" end="-2,0" time="275" reversible="false">focus</animation>
+			<animation effect="fade" time="100">WindowOpen</animation>
+		</control>
+		<control type="image">
+			<description>Divider</description>
+			<posx>45</posx>
+			<posy>134</posy>
+			<width>230</width>
+			<height>1</height>
+			<texture>divider.png</texture>
+			<visible>![Window.IsActive(1120) | Window.IsActive(filebrowser) | Window.IsActive(1129) | Window.IsActive(1123) | Window.IsActive(1124)]</visible>
+			<animation effect="fade" time="100">WindowOpen</animation>
+		</control>
+		<control type="image">
+			<description>Button 2 Image</description>
+			<posx>22</posx>
+			<posy>124</posy>
+			<width>290</width>
+			<height>59</height>
+			<texture>guide-button-focus.png</texture>
+			<visible>![Window.IsActive(1120) | Window.IsActive(filebrowser) | Window.IsActive(1129) | Window.IsActive(1123) | Window.IsActive(1124)] + Control.HasFocus(4)</visible>
+			<animation effect="fade" start="30" time="275" reversible="false">visible</animation>
+			<animation effect="fade" time="100">WindowOpen</animation>
+		</control>
+		<control type="button" id="4">
+			<description>Appearance Management</description>
+			<posx>22</posx>
+			<posy>124</posy>
+			<width>290</width>
+			<height>59</height>
+			<texturefocus>-</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<onclick>XBMC.ReplaceWindow(1120)</onclick>
+			<pulseonselect>no</pulseonselect>
+			<onleft>4</onleft>
+			<onright>4</onright>
+			<onup>1</onup>
+			<ondown>59</ondown>
+			<font>font14</font>
+			<label>31061</label>
+			<textoffsetx>30</textoffsetx>
+			<textcolor>TextcolorBlack</textcolor>
+			<shadowcolor>shadow-grey</shadowcolor>
+			<visible>![Window.IsActive(1120) | Window.IsActive(filebrowser) | Window.IsActive(1129) | Window.IsActive(1123) | Window.IsActive(1124)]</visible>
+			<animation effect="slide" end="-2,0" time="275" reversible="false">focus</animation>
+			<animation effect="fade" time="100">WindowOpen</animation>
+		</control>
+		<control type="image">
+			<description>Divider</description>
+			<posx>45</posx>
+			<posy>170</posy>
+			<width>230</width>
+			<height>1</height>
+			<texture>divider.png</texture>
+			<visible>![Window.IsActive(1120) | Window.IsActive(filebrowser) | Window.IsActive(1129) | Window.IsActive(1123) | Window.IsActive(1124)]</visible>
+			<animation effect="fade" time="100">WindowOpen</animation>
+		</control>
+		<control type="image">
+			<description>Button 3 Image</description>
+			<posx>22</posx>
+			<posy>160</posy>
+			<width>290</width>
+			<height>59</height>
+			<texture>guide-button-focus.png</texture>
+			<visible>![Window.IsActive(1120) | Window.IsActive(filebrowser) | Window.IsActive(1129) | Window.IsActive(1123) | Window.IsActive(1124)] + Control.HasFocus(59)</visible>
+			<animation effect="fade" start="30" time="275" reversible="false">visible</animation>
+			<animation effect="fade" time="100">WindowOpen</animation>
+		</control>
+		<control type="button" id="59">
+			<description>Options Button</description>
+			<posx>22</posx>
+			<posy>160</posy>
+			<width>290</width>
+			<height>59</height>
+			<texturefocus>-</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<onclick>XBMC.ReplaceWindow(1123)</onclick>
+			<pulseonselect>no</pulseonselect>
+			<onleft>59</onleft>
+			<onright>59</onright>
+			<onup>4</onup>
+			<ondown>6</ondown>
+			<font>font14</font>
+			<label>31074</label>
+			<textoffsetx>30</textoffsetx>
+			<textcolor>TextcolorBlack</textcolor>
+			<shadowcolor>shadow-grey</shadowcolor>
+			<visible>![Window.IsActive(1120) | Window.IsActive(filebrowser) | Window.IsActive(1129) | Window.IsActive(1123) | Window.IsActive(1124)]</visible>
+			<animation effect="slide" end="-2,0" time="275" reversible="false">focus</animation>
+			<animation effect="fade" time="100">WindowOpen</animation>
+		</control>
+		<control type="image">
+			<description>Divider</description>
+			<posx>45</posx>
+			<posy>206</posy>
+			<width>230</width>
+			<height>1</height>
+			<texture>divider.png</texture>
+			<visible>![Window.IsActive(1120) | Window.IsActive(filebrowser) | Window.IsActive(1129) | Window.IsActive(1123) | Window.IsActive(1124)]</visible>
+			<animation effect="fade" time="100">WindowOpen</animation>
+		</control>
+		<control type="image">
+			<description>Button 4 Image</description>
+			<posx>22</posx>
+			<posy>196</posy>
+			<width>290</width>
+			<height>59</height>
+			<texture>guide-button-focus.png</texture>
+			<visible>![Window.IsActive(1120) | Window.IsActive(filebrowser) | Window.IsActive(1129) | Window.IsActive(1123) | Window.IsActive(1124)] + Control.HasFocus(6)</visible>
+			<animation effect="fade" start="30" time="275" reversible="false">visible</animation>
+			<animation effect="fade" time="100">WindowOpen</animation>
+		</control>
+		<control type="image">
+			<description>Divider</description>
+			<posx>45</posx>
+			<posy>242</posy>
+			<width>230</width>
+			<height>1</height>
+			<texture>divider.png</texture>
+			<visible>![Window.IsActive(1120) | Window.IsActive(filebrowser) | Window.IsActive(1129) | Window.IsActive(1123) | Window.IsActive(1124)]</visible>
+			<animation effect="fade" time="100">WindowOpen</animation>
+		</control>
+		<control type="image">
+			<description>Button 5 Image</description>
+			<posx>22</posx>
+			<posy>196</posy>
+			<width>290</width>
+			<height>59</height>
+			<texture>guide-button-focus.png</texture>
+			<visible>![Window.IsActive(1120) | Window.IsActive(filebrowser) | Window.IsActive(1129) | Window.IsActive(1123) | Window.IsActive(1124)] + Control.HasFocus(7)</visible>
+			<animation effect="fade" start="30" time="275" reversible="false">visible</animation>
+			<animation effect="fade" time="100">WindowOpen</animation>
+		</control>
+		<control type="button" id="6">
+			<description>Reset Settings Label</description>
+			<posx>22</posx>
+			<posy>196</posy>
+			<width>290</width>
+			<height>59</height>
+			<texturefocus>-</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<onclick>XBMC.ReplaceWindow(1198)</onclick>
+			<pulseonselect>no</pulseonselect>
+			<onleft>7</onleft>
+			<onright>7</onright>
+			<onup>59</onup>
+			<ondown>1</ondown>
+			<font>font14</font>
+			<label>31072</label>
+			<textoffsetx>30</textoffsetx>
+			<textcolor>TextcolorBlack</textcolor>
+			<shadowcolor>shadow-grey</shadowcolor>
+			<visible>![Window.IsActive(1120) | Window.IsActive(filebrowser) | Window.IsActive(1129) | Window.IsActive(1123) | Window.IsActive(1124)]</visible>
+			<animation effect="slide" end="-2,0" time="275" reversible="false">focus</animation>
+			<animation effect="fade" time="100">WindowOpen</animation>
+		</control>
+	</controls>
+</window>   

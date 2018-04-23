@@ -1,0 +1,211 @@
+<window id="3001">
+	<controls>
+		<control type="image">
+			<description>Background</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>576</height>
+			<texture>guide-black.png</texture>
+			<colordiffuse>D0FFFFFF</colordiffuse>
+			<animation effect="fade" time="50">WindowOpen</animation>
+			<animation effect="fade" delay="500" time="150">WindowClose</animation>
+			<visible>true</visible>
+		</control>
+
+		<control type="group">
+			<description>Preview Blade</description>
+			<visible>!Skin.HasSetting(ThemeBrowserPreview)</visible>
+			<animation effect="slide" time="300" start="-655,0">WindowOpen</animation>
+			<animation effect="slide" delay="200" time="300" end="-655,0" condition="Skin.HasSetting(ThemeBrowserPreviewClose)">Conditional</animation>
+			<control type="image">
+				<description>Guide Blade Background</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>548</width>
+				<height>576</height>
+				<visible>!Skin.String(GuidePanel)</visible>
+				<texture>background-grey.png</texture>
+			</control>
+			<control type="image">
+				<description>Guide Blade Overlay</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>450</width>
+				<height>576</height>
+				<texture>guide-blade-overlay-tile.png</texture>
+			</control>
+			<control type="image">
+				<description>Guide Edge Overlay</description>
+				<posx>450</posx>
+				<posy>0</posy>
+				<width>128</width>
+				<height>576</height>
+				<texture>guide-blade-overlay-edge-left.png</texture>
+			</control>
+			<control type="label" id="102">
+				<description>dialog Heading</description>
+				<width>390</width>
+				<posx>45</posx>
+				<posy>45</posy>
+				<font>font13</font>
+				<align>left</align>
+				<label>-</label>
+			</control>
+		</control>
+		
+		<control type="group">
+			<description>Nagigation Arrows</description>
+			<visible>!Skin.HasSetting(ThemeBrowserPreviewBusy)</visible>
+			<animation effect="fade" time="100">Hidden</animation>
+			<animation effect="fade" delay="150" time="250">Visible</animation>
+			<animation effect="fade" delay="550" time="200">WindowOpen</animation>
+			<animation effect="slide" delay="200" time="300" end="-655,0" condition="Skin.HasSetting(ThemeBrowserPreviewClose)">Conditional</animation>
+			<control type="image">
+				<description>Left Arrow</description>
+				<posx>25</posx>
+				<posy>250</posy>
+				<width>16</width>
+				<height>32</height>
+				<texture>selectarrow-left.png</texture>
+			</control>
+			<control type="image">
+				<description>Right Arrow</description>
+				<posx>460</posx>
+				<posy>250</posy>
+				<width>16</width>
+				<height>32</height>
+				<texture>selectarrow-right.png</texture>
+			</control>
+		</control>
+		
+		<control type=group>
+			<description>Theme Preview Image</description>
+			<animation effect="fade" delay="450" time="200">Hidden</animation>
+			<animation effect="fade" delay="250" time="200">Visible</animation>
+			<animation effect="fade" delay="550" time="200">WindowOpen</animation>
+			<animation effect="fade" delay="550" time="200" condition="Skin.HasSetting(ThemeBrowserPreviewClose)">Conditional</animation>
+			<control type="label" id="120">
+				<description>Preview Label</description>
+				<posx>100</posx>
+				<posy>230</posy>
+				<height>80</height>
+				<width>297</width>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>font20</font>
+				<shadowcolor>shadow-black</shadowcolor>
+				<label>-</label>
+			</control>
+			<control type="image" id="100">
+				<description>Theme Preview Image</description>
+				<posx>54</posx>
+				<posy>116</posy>
+				<width>393</width>
+				<height>314</height>
+				<texture>nopreview.jpg</texture>
+				<visible>!Skin.HasSetting(ThemeBrowserPreviewClose)</visible>
+			</control>
+			<control type="image" id="104">
+				<description>Theme Preview Image Overlay</description>
+				<posx>50</posx>
+				<posy>342</posy>
+				<height>93</height>
+				<width>371</width>
+				<texture>overlay_installed.png</texture>
+				<visible>!Skin.HasSetting(ThemeBrowserPreviewClose)</visible>
+			</control>
+		</control>
+	
+		<control type="image">
+			<description>Theme Preview Image Panel</description>
+			<posx>40</posx>
+			<posy>105</posy>
+			<width>420</width>
+			<height>336</height>
+			<texture>guide-panel2.png</texture>
+			<visible>!Skin.HasSetting(ThemeBrowserPreview)</visible>
+			<animation effect="fade" time="100">Hidden</animation>
+			<animation effect="fade" delay="450" time="200">Visible</animation>
+			<animation effect="slide" time="300" start="-655,0">WindowOpen</animation>
+			<animation effect="slide" delay="200" time="300" end="-655,0" condition="Skin.HasSetting(ThemeBrowserPreviewClose)">Conditional</animation>
+		</control>
+		
+		<control type="multiimage">
+			<description>Preview Loading Indicator</description>
+			<posx>215</posx>
+			<posy>228</posy>
+			<width>75</width>
+			<height>75</height>
+			<imagepath>busy</imagepath>
+			<timeperimage>50</timeperimage>
+			<fadetime>0</fadetime>
+			<loop>yes</loop>
+			<visible>Skin.HasSetting(ThemeBrowserPreviewBusy)</visible>
+			<animation effect="fade" delay="300" time="100">Visible</animation>
+			<animation effect="slide" time="300" start="-655,0">WindowOpen</animation>
+			<animation effect="slide" delay="200" time="300" end="-655,0" condition="Skin.HasSetting(ThemeBrowserPreviewClose)">Conditional</animation>
+		</control>
+		
+		<control type="group">
+			<description>Blade Buttons</description>
+			<visible>!Skin.HasSetting(ThemeBrowserPreview)</visible>	
+			<animation effect="fade" time="100">Hidden</animation>
+			<animation effect="fade" delay="450" time="200">Visible</animation>
+			<animation effect="slide" time="300" start="-655,0">WindowOpen</animation>
+			<animation effect="slide" delay="200" time="300" end="-655,0" condition="Skin.HasSetting(ThemeBrowserPreviewClose)">Conditional</animation>
+			<control type="image">
+				<description>Y Button</description>
+				<posx>60</posx>
+				<posy>475</posy>
+				<include>Button-Map-Texture-Width</include>
+				<height>21</height>
+				<texture>button-Y-turnedoff.png</texture>
+				<visible>true</visible>
+			</control>
+			<control type="image">
+				<description>Back Button</description>
+				<posx>430</posx>
+				<posy>475</posy>
+				<include>Button-Map-Texture-Width</include>
+				<height>21</height>
+				<texture>button-Back.png</texture>
+			</control>
+			<control type="image" id="205">
+				<description>X Button</description>
+				<posx>45</posx>
+				<posy>498</posy>
+				<include>Button-Map-Texture-Width</include>
+				<height>21</height>
+				<texture>button-X-turnedoff.png</texture>
+			</control>
+			<control type="label" id="206">
+				<description>Back Label</description>
+				<posx>424</posx>
+				<posy>479</posy>
+				<label>-</label>
+				<align>right</align>
+				<font>font12</font>
+				<visible>true</visible>
+			</control>
+			<control type="image">
+				<description>A Button</description>
+				<posx>445</posx>
+				<posy>498</posy>
+				<include>Button-Map-Texture-Width</include>
+				<height>21</height>
+				<texture>button-A.png</texture>
+				<visible>true</visible>
+			</control>
+			<control type="label" id="204">
+				<description>Select Label</description>
+				<posx>436</posx>
+				<posy>502</posy>
+				<label>-</label>
+				<align>right</align>
+				<font>font12</font>
+				<visible>true</visible>
+			</control>
+		</control>
+	</controls>
+</window>

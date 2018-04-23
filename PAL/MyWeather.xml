@@ -1,0 +1,576 @@
+<window id="2600">
+	<defaultcontrol>2</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<controls>
+		<!-- Setup Background and Window Transition -->
+		<control type="group">
+			<visible>![Window.Previous(1112) | Window.Previous(home) | Window.Previous(settings)]</visible>
+			<include>LiveBackGroundWhitewash</include>
+		</control>
+		<control type="group">
+			<visible>Window.Previous(1112)</visible>
+			<include>ProgramBackGroundWhiteWash</include>
+		</control>
+		<control type="group">
+			<visible>Window.Previous(settings)</visible>
+			<include>SystemBackGroundWhitewash</include>
+		</control>
+		<control type="group">
+			<visible>Window.Previous(home)</visible>
+			<include>MediaIconBackGroundWhiteWash</include>
+		</control>
+		<!-- Start Normal Window Controls -->
+		<control type="group">
+			<posx>35</posx>
+			<animation effect="fade" delay="100" time="250">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<control type="label">
+				<description>description label</description>
+				<posx>67</posx>
+				<posy>42</posy>
+				<align>left</align>
+				<label>10508</label>
+				<textcolor>TextcolorWhite</textcolor>
+				<shadowcolor>shadow-black</shadowcolor>
+				<font>font18</font>
+			</control>
+			<!--    -->
+			<control type="image">
+				<description>divder image 1</description>
+				<posx>60</posx>
+				<posy>88</posy>
+				<width>128</width>
+				<height>1</height>
+				<texture>divider.png</texture>
+			</control>
+			<control type="image">
+				<description>divider image 2</description>
+				<posx>60</posx>
+				<posy>123</posy>
+				<width>128</width>
+				<height>1</height>
+				<texture>divider.png</texture>
+			</control>
+			<control type="image">
+				<description>divider image 3</description>
+				<posx>60</posx>
+				<posy>158</posy>
+				<width>128</width>
+				<height>1</height>
+				<texture>divider.png</texture>
+				<visible>Control.IsVisible(99)</visible>
+			</control>
+			<control type="image">
+				<description>Refresh Highlight Image</description>
+				<posx>45</posx>
+				<posy>88</posy>
+				<width>150</width>
+				<height>367</height>
+				<texture>systemhomebutton-1a.png</texture>
+				<visible>Control.HasFocus(2)</visible>
+			</control>
+			<control type="image">
+				<description>Refresh Highlight Image Shadow</description>
+				<posx>45</posx>
+				<posy>88</posy>
+				<width>150</width>
+				<height>367</height>
+				<texture>systemhomebutton-1-shadow.png</texture>
+				<visible>Control.HasFocus(2)</visible>
+				<include>button-shadow</include>
+			</control>
+			<control type="button" id="2">
+				<description>Refresh Push Button</description>
+				<include>Sub-Blade-Button-Commons</include>
+				<posx>73</posx>
+				<posy>93</posy>
+				<label>-</label>
+				<texturefocus>icon-repeat.png</texturefocus>
+				<texturenofocus>icon-repeat.png</texturenofocus>
+				<onleft>3</onleft>
+				<onright>3</onright>
+				<onup>99</onup>
+				<ondown>99</ondown>
+			</control>
+			<control type="image">
+				<description>Accuweather Highlight Image</description>
+				<posx>45</posx>
+				<posy>88</posy>
+				<width>150</width>
+				<height>367</height>
+				<texture>systemhomebutton-2a.png</texture>
+				<visible>Control.HasFocus(99)</visible>
+			</control>
+			<control type="image">
+				<description>Accuweather Highlight Image Shadow</description>
+				<posx>45</posx>
+				<posy>88</posy>
+				<width>150</width>
+				<height>367</height>
+				<texture>systemhomebutton-2-shadow.png</texture>
+				<visible>Control.HasFocus(99)</visible>
+				<include>button-shadow</include>
+			</control>
+			<control type="button" id="99">
+				<description>Accuweather Button</description>
+				<include>Sub-Blade-Button-Commons</include>
+				<posx>73</posx>
+				<posy>128</posy>
+				<label>31208</label>
+				<texturefocus>icon-weather.png</texturefocus>
+				<texturenofocus>icon-weather.png</texturenofocus>
+				<onclick>XBMC.RunScript(Q:\scripts\accuweather\default.py)</onclick>
+				<onleft>3</onleft>
+				<onright>3</onright>
+				<onup>2</onup>
+				<ondown>2</ondown>
+				<visible>Skin.HasSetting(USE_Accuweather)</visible>
+			</control>
+			<!--    -->
+			<control type="image" id="101">
+				<description>logo image</description>
+				<posx>80</posx>
+				<posy>190</posy>
+				<aspectratio>keep</aspectratio>
+				<texture>TWClogo_64px.png</texture>
+			</control>
+			<control type="image" id="1">
+				<description>Divider under weather select</description>
+				<posx>195</posx>
+				<posy>123</posy>
+				<width>465</width>
+				<height>1</height>
+				<texture>divider.png</texture>
+			</control>
+			<control type="spincontrol" id="3">
+				<description>weather location select</description>
+				<align>left</align>
+				<width>15</width>
+				<height>15</height>
+				<posx>205</posx>
+				<posy>98</posy>
+				<font>-</font>
+				<textcolor>TextcolorBlack</textcolor>
+				<shadowcolor>shadow-grey</shadowcolor>
+				<reverse>yes</reverse>
+				<onup>2</onup>
+				<ondown>2</ondown>
+				<onleft>2</onleft>
+				<onright>2</onright>
+				<disabledcolor>TextcolorDisabled2</disabledcolor>
+				<textoffsetx>0</textoffsetx>
+				<textoffsety>0</textoffsety>
+				<aligny>center</aligny>
+			</control>
+			<control type="label">
+				<description>weather location label</description>
+				<width>260</width>
+				<height>15</height>
+				<posx>245</posx>
+				<posy>98</posy>
+				<font>font14</font>
+				<info>Weather.Location</info>
+				<textcolor>TextcolorBlack</textcolor>
+				<shadowcolor>shadow-grey</shadowcolor>
+				<align>left</align>
+				<aligny>center</aligny>
+			</control>
+			<control type="label" id="11">
+				<description>update time label</description>
+				<align>right</align>
+				<posx>630</posx>
+				<posy>99</posy>
+				<label>-</label>
+				<font>font10</font>
+				<textcolor>TextcolorBlack</textcolor>
+				<shadowcolor>shadow-grey</shadowcolor>
+			</control>
+			<control type="label" id="223">
+				<description>current temp static label</description>
+				<posx>211</posx>
+				<posy>138</posy>
+				<label>Temp</label>
+				<font>font10</font>
+				<textcolor>TextcolorBlack</textcolor>
+				<shadowcolor>shadow-grey</shadowcolor>
+			</control>
+			<control type="label" id="224">
+				<description>current feels like static label</description>
+				<posx>211</posx>
+				<posy>158</posy>
+				<label>-</label>
+				<font>font10</font>
+				<textcolor>TextcolorBlack</textcolor>
+				<shadowcolor>shadow-grey</shadowcolor>
+			</control>
+			<control type="label" id="225">
+				<description>current UV Index static label</description>
+				<posx>211</posx>
+				<posy>218</posy>
+				<label>-</label>
+				<font>font10</font>
+				<textcolor>TextcolorBlack</textcolor>
+				<shadowcolor>shadow-grey</shadowcolor>
+			</control>
+			<control type="label" id="226">
+				<description>current wind static label</description>
+				<posx>211</posx>
+				<posy>238</posy>
+				<label>-</label>
+				<font>font10</font>
+				<textcolor>TextcolorBlack</textcolor>
+				<shadowcolor>shadow-grey</shadowcolor>
+			</control>
+			<control type="label" id="227">
+				<description>current dew static label</description>
+				<posx>211</posx>
+				<posy>178</posy>
+				<label>-</label>
+				<font>font10</font>
+				<textcolor>TextcolorBlack</textcolor>
+				<shadowcolor>shadow-grey</shadowcolor>
+			</control>
+			<control type="label" id="228">
+				<description>current humidity static label</description>
+				<posx>211</posx>
+				<posy>198</posy>
+				<label>-</label>
+				<font>font10</font>
+				<textcolor>TextcolorBlack</textcolor>
+				<shadowcolor>shadow-grey</shadowcolor>
+			</control>
+			<control type="image" id="21">
+				<description>current weather icon</description>
+				<posx>500</posx>
+				<posy>133</posy>
+				<height>128</height>
+				<width>128</width>
+				<aspectratio>keep</aspectratio>
+				<texture>background-myweather.png</texture>
+			</control>
+			<control type="label" id="22">
+				<description>current condition label</description>
+				<align>right</align>
+				<posx>490</posx>
+				<posy>148</posy>
+				<width>120</width>
+				<wrapmultiline>true</wrapmultiline>
+				<label>-</label>
+				<font>font10</font>
+				<textcolor>TextcolorBlack</textcolor>
+				<shadowcolor>shadow-grey</shadowcolor>
+			</control>
+			<control type="label" id="23">
+				<description>current temp label</description>
+				<posx>325</posx>
+				<posy>138</posy>
+				<label>-</label>
+				<font>font10</font>
+				<textcolor>TextcolorBlack</textcolor>
+				<shadowcolor>shadow-grey</shadowcolor>
+			</control>
+			<control type="label" id="24">
+				<description>current feels like label</description>
+				<posx>325</posx>
+				<posy>158</posy>
+				<label>-</label>
+				<font>font10</font>
+				<textcolor>TextcolorBlack</textcolor>
+				<shadowcolor>shadow-grey</shadowcolor>
+			</control>
+			<control type="label" id="25">
+				<description>current UV Index label</description>
+				<posx>325</posx>
+				<posy>218</posy>
+				<label>-</label>
+				<font>font10</font>
+				<textcolor>TextcolorBlack</textcolor>
+				<shadowcolor>shadow-grey</shadowcolor>
+			</control>
+			<control type="label" id="26">
+				<description>current wind label</description>
+				<posx>325</posx>
+				<posy>238</posy>
+				<label>-</label>
+				<font>font10</font>
+				<textcolor>TextcolorBlack</textcolor>
+				<shadowcolor>shadow-grey</shadowcolor>
+			</control>
+			<control type="label" id="27">
+				<description>current dew label</description>
+				<posx>325</posx>
+				<posy>178</posy>
+				<label>-</label>
+				<font>font10</font>
+				<textcolor>TextcolorBlack</textcolor>
+				<shadowcolor>shadow-grey</shadowcolor>
+			</control>
+			<control type="label" id="28">
+				<description>current humidity label</description>
+				<posx>325</posx>
+				<posy>198</posy>
+				<label>-</label>
+				<font>font10</font>
+				<textcolor>TextcolorBlack</textcolor>
+				<shadowcolor>shadow-grey</shadowcolor>
+			</control>
+			<control type="group">
+				<posx>190</posx>
+				<control type="button" id="31">
+					<description>day 0 label</description>
+					<align>center</align>
+					<height>28</height>
+					<width>110</width>
+					<posx>0</posx>
+					<posy>270</posy>
+					<label>-</label>
+					<font>font10</font>
+					<textcolor>TextcolorBlack</textcolor>
+					<shadowcolor>shadow-grey</shadowcolor>
+				</control>
+				<control type="label" id="32">
+					<description>day 0 Hi label</description>
+					<align>center</align>
+					<width>110</width>
+					<posx>0</posx>
+					<posy>308</posy>
+					<label>-</label>
+					<font>font10</font>
+					<textcolor>TextcolorBlack</textcolor>
+					<shadowcolor>shadow-grey</shadowcolor>
+				</control>
+				<control type="label" id="33">
+					<description>day 0 low label</description>
+					<align>center</align>
+					<width>110</width>
+					<posx>0</posx>
+					<posy>330</posy>
+					<label>-</label>
+					<font>font10</font>
+					<textcolor>TextcolorBlack</textcolor>
+					<shadowcolor>shadow-grey</shadowcolor>
+				</control>
+				<control type="label" id="34">
+					<description>day 0 general weather label</description>
+					<align>center</align>
+					<aligny>top</aligny>
+					<width>110</width>
+					<wrapmultiline>true</wrapmultiline>
+					<posx>0</posx>
+					<posy>425</posy>
+					<label>-</label>
+					<font>font10</font>
+					<textcolor>TextcolorBlack</textcolor>
+					<shadowcolor>shadow-grey</shadowcolor>
+				</control>
+				<control type="image" id="35">
+					<description>day 0 icon</description>
+					<posx>0</posx>
+					<posy>355</posy>
+					<height>64</height>
+					<width>110</width>
+					<aspectratio>keep</aspectratio>
+					<texture>background-myweather.png</texture>
+				</control>
+			</control>
+			<control type="group">
+				<posx>303</posx>
+				<control type="button" id="41">
+					<description>day 1 label</description>
+					<align>center</align>
+					<height>28</height>
+					<width>110</width>
+					<posx>0</posx>
+					<posy>270</posy>
+					<label>-</label>
+					<font>font10</font>
+					<textcolor>TextcolorBlack</textcolor>
+					<shadowcolor>shadow-grey</shadowcolor>
+				</control>
+				<control type="label" id="42">
+					<description>day 1 Hi label</description>
+					<align>center</align>
+					<width>110</width>
+					<posx>0</posx>
+					<posy>308</posy>
+					<label>-</label>
+					<font>font10</font>
+					<textcolor>TextcolorBlack</textcolor>
+					<shadowcolor>shadow-grey</shadowcolor>
+				</control>
+				<control type="label" id="43">
+					<description>day 1 low label</description>
+					<align>center</align>
+					<width>110</width>
+					<posx>0</posx>
+					<posy>330</posy>
+					<label>-</label>
+					<font>font10</font>
+					<textcolor>TextcolorBlack</textcolor>
+					<shadowcolor>shadow-grey</shadowcolor>
+				</control>
+				<control type="label" id="44">
+					<description>day 1 general weather label</description>
+					<align>center</align>
+					<aligny>top</aligny>
+					<width>110</width>
+					<wrapmultiline>true</wrapmultiline>
+					<posx>0</posx>
+					<posy>425</posy>
+					<label>-</label>
+					<font>font10</font>
+					<textcolor>TextcolorBlack</textcolor>
+					<shadowcolor>shadow-grey</shadowcolor>
+				</control>
+				<control type="image" id="45">
+					<description>day 1 icon</description>
+					<posx>0</posx>
+					<posy>355</posy>
+					<height>64</height>
+					<width>110</width>
+					<aspectratio>keep</aspectratio>
+					<texture>background-myweather.png</texture>
+				</control>
+			</control>
+			<control type="group">
+				<posx>416</posx>
+				<control type="button" id="51">
+					<description>day 2 label</description>
+					<align>center</align>
+					<height>28</height>
+					<width>110</width>
+					<posx>0</posx>
+					<posy>270</posy>
+					<label>-</label>
+					<font>font10</font>
+					<textcolor>TextcolorBlack</textcolor>
+					<shadowcolor>shadow-grey</shadowcolor>
+				</control>
+				<control type="label" id="52">
+					<description>day 2 Hi label</description>
+					<align>center</align>
+					<width>110</width>
+					<posx>0</posx>
+					<posy>308</posy>
+					<label>-</label>
+					<font>font10</font>
+					<textcolor>TextcolorBlack</textcolor>
+					<shadowcolor>shadow-grey</shadowcolor>
+				</control>
+				<control type="label" id="53">
+					<description>day 2 low label</description>
+					<align>center</align>
+					<width>110</width>
+					<posx>0</posx>
+					<posy>330</posy>
+					<label>-</label>
+					<font>font10</font>
+					<textcolor>TextcolorBlack</textcolor>
+					<shadowcolor>shadow-grey</shadowcolor>
+				</control>
+				<control type="label" id="54">
+					<description>day 2 general weather label</description>
+					<align>center</align>
+					<aligny>top</aligny>
+					<width>110</width>
+					<wrapmultiline>true</wrapmultiline>
+					<posx>0</posx>
+					<posy>425</posy>
+					<label>-</label>
+					<font>font10</font>
+					<textcolor>TextcolorBlack</textcolor>
+					<shadowcolor>shadow-grey</shadowcolor>
+				</control>
+				<control type="image" id="55">
+					<description>day 2 icon</description>
+					<posx>0</posx>
+					<posy>355</posy>
+					<height>64</height>
+					<width>110</width>
+					<aspectratio>keep</aspectratio>
+					<texture>background-myweather.png</texture>
+				</control>
+			</control>
+			<control type="group">
+				<posx>529</posx>
+				<control type="button" id="61">
+					<description>day 3 label</description>
+					<align>center</align>
+					<height>28</height>
+					<width>110</width>
+					<posx>0</posx>
+					<posy>270</posy>
+					<label>-</label>
+					<font>font10</font>
+					<textcolor>TextcolorBlack</textcolor>
+					<shadowcolor>shadow-grey</shadowcolor>
+				</control>
+				<control type="label" id="62">
+					<description>day 3 Hi label</description>
+					<align>center</align>
+					<width>110</width>
+					<posx>0</posx>
+					<posy>308</posy>
+					<label>-</label>
+					<font>font10</font>
+					<textcolor>TextcolorBlack</textcolor>
+					<shadowcolor>shadow-grey</shadowcolor>
+				</control>
+				<control type="label" id="63">
+					<description>day 3 low label</description>
+					<align>center</align>
+					<width>110</width>
+					<posx>0</posx>
+					<posy>330</posy>
+					<label>-</label>
+					<font>font10</font>
+					<textcolor>TextcolorBlack</textcolor>
+					<shadowcolor>shadow-grey</shadowcolor>
+				</control>
+				<control type="label" id="64">
+					<description>day 3 general weather label</description>
+					<align>center</align>
+					<aligny>top</aligny>
+					<width>110</width>
+					<wrapmultiline>true</wrapmultiline>
+					<posx>0</posx>
+					<posy>425</posy>
+					<label>-</label>
+					<font>font10</font>
+					<textcolor>TextcolorBlack</textcolor>
+					<shadowcolor>shadow-grey</shadowcolor>
+				</control>
+				<control type="image" id="65">
+					<description>day 3 icon</description>
+					<posx>0</posx>
+					<posy>355</posy>
+					<height>64</height>
+					<width>110</width>
+					<aspectratio>keep</aspectratio>
+					<texture>background-myweather.png</texture>
+				</control>
+			</control>
+		</control>
+		<control type="group">
+			<animation effect="fade" delay="100" time="250">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<include>SystemCustomKeymaps</include>
+		</control>
+		<control type="group">
+			<visible>![Window.Previous(1112) | Window.Previous(home) | Window.Previous(settings)]</visible>
+			<include>LiveCommonsBlades</include>
+		</control>
+		<control type="group">
+			<visible>Window.Previous(settings)</visible>
+			<include>SystemCommonsBlades</include>
+		</control>
+		<control type="group">
+			<visible>Window.Previous(1112)</visible>
+			<include>ProgramsCommonsBlades</include>
+		</control>
+		<control type="group">
+			<visible>Window.Previous(home)</visible>
+			<include>MediaCommonsBlades</include>
+		</control>
+	</controls>
+</window>          
