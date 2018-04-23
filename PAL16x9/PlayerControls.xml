@@ -398,7 +398,7 @@
 			<posy>257</posy>
 			<width>290</width>
 			<height>59</height>
-			<texturefocus>-</texturefocus>
+			<texturefocus>guide-button-focus.png</texturefocus>
 			<texturenofocus>-</texturenofocus>
 			<onclick>XBMC.ReplaceWindow(1116)</onclick>
 			<pulseonselect>no</pulseonselect>
